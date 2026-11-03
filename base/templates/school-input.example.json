@@ -1,0 +1,26 @@
+{
+  "schoolName": "请填写或保留未提供",
+  "spaceId": "campus-a",
+  "sourcePlans": [],
+  "knownDimensionsMetres": [],
+  "publicInformationFiles": [],
+  "artAssetFiles": [],
+  "assetRightsConfirmed": false,
+  "targetStyle": "2.5D / 3D 剖切概念空间",
+  "visualProgress": {
+    "stage": "结构原型",
+    "direction": "待选择；用户让 Agent 决定时可先用校园清爽",
+    "referenceFiles": [],
+    "nextStep": "入口与房间跑通后，主动引导画风与素材美化"
+  },
+  "mustHaveRooms": [],
+  "unknowns": ["学校未提供的事实不得编造"],
+  "acceptance": [
+    "入口与房间可达",
+    "跨层路线",
+    "接待引用自己的资料",
+    "一般交流",
+    "A2A 重复/取消/重启",
+    "原图推定清单"
+  ]
+}

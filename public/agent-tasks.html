@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>我的 A2A 任务 · 超维学园</title><link rel="stylesheet" href="/agent-tasks.css"><script type="module" src="/agent-tasks.js"></script></head>
+<body>
+  <header><a class="brand" href="/">HYPER CAMPUS</a><nav aria-label="校园导航"><a href="/">返回校园</a><a href="/agents.html">Agent 与委托</a><a href="/partners.html">合作工单</a></nav></header>
+  <main>
+    <div class="page-heading"><p class="eyebrow">BASE 1 · A2A</p><h1>我的 Agent 任务</h1><p>看进度、取结果、查回执。接待与 NPC 的任务都在这里。</p></div>
+    <p id="task-status" role="status" aria-live="polite">正在核对学校身份…</p>
+    <section id="task-login" hidden><h2>登录后查看自己的任务</h2><p>使用已加入学校的账号，查看本人和获准绑定访客产生的任务。</p><a href="/auth/login" class="button">前往校园登录</a></section>
+    <fieldset id="task-workspace" hidden>
+      <legend class="sr-only">任务工作台</legend>
+      <form id="task-filters"><label>学校<select id="task-school" required></select></label><label>Agent<select id="task-agent" required></select></label><label>状态<select id="task-state"><option value="">全部状态</option></select></label><button type="submit" id="task-refresh">刷新任务</button></form>
+      <div class="task-layout">
+        <section class="panel" aria-labelledby="task-list-heading"><h2 id="task-list-heading">任务记录</h2><p id="task-count"></p><div id="task-list"></div><div class="pagination"><button id="task-prev" type="button" disabled>上一页</button><span id="task-page" aria-live="polite"></span><button id="task-next" type="button" disabled>下一页</button></div></section>
+        <section id="task-detail" class="panel" aria-labelledby="task-detail-heading"><h2 id="task-detail-heading" tabindex="-1">任务详情</h2><p>选择一条记录，查看当前状态与执行结果。</p></section>
+      </div>
+    </fieldset>
+    <p class="task-note">任务记录按当前账号、学校和 Agent 隔离。工单取消请进入合作服务；会话正文的导出和删除仍在接待与 NPC 对话里操作。</p>
+    <dialog id="task-cancel-dialog" aria-labelledby="task-cancel-title"><h2 id="task-cancel-title">停止这条任务？</h2><p>停止尚未完成的 Agent 处理。已经执行的业务可在对应服务中查看和处理。</p><div class="dialog-actions"><button id="task-cancel-back" type="button">继续处理</button><button id="task-cancel-confirm" type="button">确认停止</button></div></dialog>
+  </main>
+</body></html>

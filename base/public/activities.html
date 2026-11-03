@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>活动与志愿 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/activities.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/"
+        >H↗ <span>HYPER DIMENSION<small>一起参与，留下值得记录的经历。</small></span></a
+      >
+      <nav aria-label="校园导航">
+        <a href="/m2.html">我的形象</a><a href="/partners.html">校园周边</a
+        ><a href="/m1.html">学校管理</a>
+      </nav>
+    </header>
+    <main>
+      <section class="heading">
+        <div>
+          <p class="eyebrow">BASE 03 / CAMPUS PARTICIPATION</p>
+          <h1>找到同路的人，一起做点事。</h1>
+          <p class="intro">
+            参加校园活动，选择一项志愿分工。报名、证明与核验记录，都有清楚的下一步。
+          </p>
+        </div>
+        <label>当前学校<select id="school" aria-label="当前学校"></select></label>
+      </section>
+      <p id="status" role="status" aria-live="polite">正在读取学校账号…</p>
+      <section id="login" class="panel" hidden>
+        <h2>登录学校账号后参与活动</h2>
+        <a class="button primary" href="/auth/login">登录 / 注册</a>
+      </section>
+      <section id="disabled" class="panel" hidden>
+        <h2>本校尚未启用活动模块</h2>
+        <a href="/">返回学校空间 →</a>
+      </section>
+      <div id="workspace" hidden>
+        <p id="integration-note" class="notice"></p>
+        <div class="tabs" role="tablist" aria-label="活动功能">
+          <button
+            id="tab-explore"
+            role="tab"
+            aria-controls="explore-panel"
+            aria-selected="true"
+            data-panel="explore"
+          >
+            发现活动</button
+          ><button
+            id="tab-mine"
+            role="tab"
+            aria-controls="mine-panel"
+            aria-selected="false"
+            data-panel="mine"
+          >
+            我的参与与记录</button
+          ><button
+            id="tab-manage"
+            role="tab"
+            aria-controls="manage-panel"
+            aria-selected="false"
+            data-panel="manage"
+          >
+            组织者工作台
+          </button>
+        </div>
+        <section id="explore-panel" role="tabpanel" aria-labelledby="tab-explore">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">MEET & CONTRIBUTE</p>
+              <h2>这次，想参与什么？</h2>
+            </div>
+            <button id="refresh">更新活动</button>
+          </div>
+          <div class="search-row">
+            <label
+              >查找活动<input id="search" type="search" placeholder="活动名称、主题或分工" /></label
+            ><label
+              >活动类型<select id="kind-filter">
+                <option value="">所有类型</option>
+                <option value="event">校园活动</option>
+                <option value="volunteer">志愿任务</option>
+              </select></label
+            ><label
+              >组织范围<select id="org-filter">
+                <option value="">所有获准范围</option>
+              </select></label
+            >
+          </div>
+          <div id="activities" class="cards"></div>
+        </section>
+        <section id="mine-panel" role="tabpanel" aria-labelledby="tab-mine" hidden>
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">MY PARTICIPATION</p>
+              <h2>每一次参与，都有记录。</h2>
+            </div>
+            <button id="refresh-mine">更新我的记录</button>
+          </div>
+          <p class="muted">
+            服务时长是负责人的核验记录，不自动等同学校学分或官方志愿时长。历史记录撤销时会保留原因。
+          </p>
+          <div id="my-records" class="cards"></div>
+        </section>
+        <section id="manage-panel" role="tabpanel" aria-labelledby="tab-manage" hidden>
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">ORGANIZER WORKSPACE</p>
+              <h2>从一次清楚的安排开始。</h2>
+            </div>
+            <button id="new-activity">新建活动 / 志愿任务</button>
+          </div>
+          <p class="muted">
+            负责人建立草稿并提交审核；指定核验者核对参与证明。角色权限与贡献值分别管理。
+          </p>
+          <div id="managed" class="cards"></div>
+        </section>
+        <section id="detail" class="panel detail" hidden>
+          <div class="section-head">
+            <div>
+              <p id="detail-kind" class="eyebrow"></p>
+              <h2 id="detail-title"></h2>
+            </div>
+            <button id="close-detail">收起详情</button>
+          </div>
+          <span id="detail-status" class="badge"></span>
+          <p id="detail-description"></p>
+          <dl id="detail-facts" class="facts"></dl>
+          <a id="location-link" hidden>查看活动所在空间 →</a>
+          <section id="task-section">
+            <h3>参与分工</h3>
+            <div id="task-list" class="task-list"></div>
+          </section>
+          <section id="join-section" class="inset">
+            <label id="join-task-label">选择一项分工<select id="join-task"></select></label>
+            <p id="join-note"></p>
+            <button id="join" class="primary">报名参加</button>
+          </section>
+          <section id="own-participation" class="inset" hidden></section>
+          <div id="activity-actions" class="actions spaced"></div>
+          <section id="recap-section" class="subsection" hidden>
+            <h3>活动回顾</h3>
+            <p id="recap-text"></p>
+          </section>
+          <section id="participants-section" class="subsection" hidden>
+            <div class="section-head">
+              <h3>参与名单与核验</h3>
+              <button id="refresh-participants">更新名单</button>
+            </div>
+            <p class="muted">
+              证明详情仅提供给本人和当前指定核验者。个人自述、附件上传和报名本身均不会自动计分。
+            </p>
+            <div id="participants" class="cards compact"></div>
+          </section>
+        </section>
+      </div>
+    </main>
+    <dialog id="edit-dialog">
+      <form id="edit-form">
+        <p class="eyebrow">PLAN A PARTICIPATION</p>
+        <h2 id="edit-heading">新建活动草稿</h2>
+        <input id="edit-id" type="hidden" />
+        <div class="form-grid">
+          <label>所属范围<select id="edit-org"></select></label
+          ><label
+            >类型<select id="edit-kind">
+              <option value="event">校园活动</option>
+              <option value="volunteer">志愿任务</option>
+            </select></label
+          ><label class="wide"
+            >活动名称<input id="edit-title" required minlength="2" maxlength="160" /></label
+          ><label class="wide"
+            >活动介绍<textarea
+              id="edit-description"
+              required
+              minlength="5"
+              maxlength="5000"
+              rows="3"
+            ></textarea></label
+          ><label class="wide"
+            >参与条件<textarea
+              id="edit-conditions"
+              required
+              minlength="2"
+              maxlength="2000"
+              rows="2"
+            ></textarea></label
+          ><label>开始时间<input id="edit-start" type="datetime-local" required /></label
+          ><label>结束时间<input id="edit-end" type="datetime-local" required /></label
+          ><label>报名截止<input id="edit-close" type="datetime-local" required /></label
+          ><label
+            >正式名额<input
+              id="edit-capacity"
+              type="number"
+              min="1"
+              max="100000"
+              value="30"
+              required /></label
+          ><label
+            >提前提醒（分钟）<input
+              id="edit-remind"
+              type="number"
+              min="0"
+              max="10080"
+              value="60"
+              required /></label
+          ><label>场景编号（可选）<input id="edit-scene" maxlength="128" /></label
+          ><label>地点编号（与场景一起填写）<input id="edit-entity" maxlength="128" /></label
+          ><label class="wide"
+            >志愿分工（每行：任务名称 | 具体说明）<textarea
+              id="edit-tasks"
+              rows="3"
+              placeholder="迎新引导 | 帮助新同学了解校园设施"
+            ></textarea>
+          </label>
+          <fieldset class="wide">
+            <legend>指定参与核验者</legend>
+            <p class="muted">至少一人。核验者不能批准本人的参与记录。</p>
+            <div id="verifier-options" class="verifier-options"></div>
+          </fieldset>
+        </div>
+        <p id="scope-note" class="muted"></p>
+        <div class="actions">
+          <button id="save-draft" class="primary">保存草稿</button
+          ><button type="button" data-close>取消编辑</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="evidence-dialog">
+      <form id="evidence-form">
+        <p class="eyebrow">PARTICIPATION EVIDENCE</p>
+        <h2>补充你的参与证明</h2>
+        <p id="evidence-title"></p>
+        <p class="muted">
+          内容仅供你和指定核验者查看。请如实说明，附件不会自动成为接待 Agent 的公开资料。
+        </p>
+        <label
+          >参与内容与可核验事实<textarea
+            id="evidence-note"
+            required
+            minlength="5"
+            maxlength="3000"
+            rows="5"
+          ></textarea></label
+        ><label
+          >附加凭据（可选，单个不超过 512 KiB）<input
+            id="evidence-files"
+            type="file"
+            multiple
+            accept=".png,.jpg,.jpeg,.pdf,.txt"
+        /></label>
+        <p id="evidence-upload-note" class="muted"></p>
+        <div class="actions">
+          <button class="primary">提交给核验者</button
+          ><button type="button" data-close>保留未提交内容</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="decision-dialog">
+      <form id="decision-form">
+        <p class="eyebrow">REVIEW & RECORD</p>
+        <h2 id="decision-title"></h2>
+        <p id="decision-note"></p>
+        <label id="minutes-label" hidden
+          >核实的服务分钟数<input id="decision-minutes" type="number" min="0" value="0" /></label
+        ><label
+          >处理依据<textarea
+            id="decision-reason"
+            required
+            minlength="3"
+            maxlength="5000"
+            rows="4"
+          ></textarea>
+        </label>
+        <div class="actions">
+          <button id="decision-submit" class="primary">确认并记录</button
+          ><button type="button" data-close>返回</button>
+        </div>
+      </form>
+    </dialog>
+    <footer>Hyper Dimension Base · 参与记录、来源与权限可追溯</footer>
+    <script type="module" src="/activities.js"></script>
+  </body>
+</html>

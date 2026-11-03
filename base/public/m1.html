@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>校园 Base · 账号与组织</title>
+    <link rel="stylesheet" href="/m1.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <small>HYPER DIMENSION · M1</small>
+        <h1>校园协作管理台</h1>
+        <p>账号、组织、审核记录和数据恢复有据可查。</p>
+      </div>
+      <nav>
+        <a href="/knowledge.html">接待资料</a>
+        <a href="/reception-admin.html">接待会话政策</a>
+        <a href="/network.html">校友、学长与机会</a>
+        <a href="/annual.html">学年与个人计划</a>
+        <a id="avatar-link" href="/m0.html">人物与空间</a><a href="/social.html">校园交流</a
+        ><a href="/auth/login" id="login">登录</a><a href="/auth/register" id="register">注册账号</a
+        ><button id="logout" hidden>退出</button>
+      </nav>
+    </header>
+    <main>
+      <p id="status" role="status">正在检查登录状态…</p>
+      <section id="invitation">
+        <h2>加入学校或组织</h2>
+        <p>先注册并验证邮箱，再使用负责人提供的一次性邀请。学校资格不会根据邮箱域名自动分配。</p>
+        <form id="accept">
+          <label>邀请凭据<input id="inviteToken" required autocomplete="off" /></label
+          ><button>接受邀请</button>
+        </form>
+      </section>
+      <div id="workspace" hidden>
+        <section class="toolbar">
+          <label>学校<select id="school"></select></label
+          ><label
+            >管理范围<select id="organization">
+              <option value="">学校</option>
+            </select></label
+          ><button id="refresh">刷新</button>
+        </section>
+        <div class="grid">
+          <section>
+            <h2>成员与权限</h2>
+            <p>仅当前范围负责人可以邀请或调整成员。最后一位负责人不能被撤销。</p>
+            <form id="invite">
+              <label>验证过的邮箱<input id="email" type="email" required /></label
+              ><label
+                >角色<select id="role">
+                  <option value="student">学校成员</option>
+                  <option value="moderator">审核员</option>
+                  <option value="member">组织成员</option>
+                  <option value="partner">合作方成员</option>
+                </select></label
+              ><button>生成邀请</button>
+            </form>
+            <output id="inviteResult"></output>
+            <div id="members"></div>
+          </section>
+          <section>
+            <h2>组织</h2>
+            <p>为学生组织与合作方分别建立范围，再分发权限。</p>
+            <form id="createOrg">
+              <label>稳定 ID<input id="orgId" pattern="[a-zA-Z0-9._:-]{1,128}" required /></label
+              ><label>名称<input id="orgName" required maxlength="120" /></label
+              ><label
+                >类型<select id="orgKind">
+                  <option value="student">学生组织</option>
+                  <option value="partner">合作方</option>
+                </select></label
+              ><button>创建组织</button>
+            </form>
+            <div id="orgs"></div>
+          </section>
+          <section>
+            <h2>范围内投稿</h2>
+            <form id="submit">
+              <label>标题<input id="title" required minlength="3" maxlength="80" /></label
+              ><label
+                >正文<textarea
+                  id="content"
+                  required
+                  minlength="8"
+                  maxlength="3000"
+                ></textarea></label
+              ><button>提交审核</button>
+            </form>
+            <div id="posts"></div>
+          </section>
+          <section>
+            <h2>通知与对账</h2>
+            <div id="notifications"></div>
+            <button id="reconcile">核对源事件与账本</button>
+            <pre id="reconcileResult"></pre>
+            <details>
+              <summary>权限审计记录</summary>
+              <pre id="audit"></pre>
+            </details>
+          </section>
+        </div>
+      </div>
+      <footer>
+        备份恢复由服务器维护者通过受控命令执行。此测试入口使用虚拟学校，SMTP
+        验证结果不代表真实邮件投递。
+      </footer>
+    </main>
+    <script type="module" src="/m1.js"></script>
+  </body>
+</html>

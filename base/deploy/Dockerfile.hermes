@@ -1,0 +1,22 @@
+ARG HD_CORE_IMAGE=hyper-dimension-base:integrations
+FROM python:3.13-slim-bookworm@sha256:e32be0e55814a08977501ca863271d9bd02443710db8f2afaf8372e2c4508530 AS python313
+ARG HD_PIP_INDEX_URL=https://pypi.org/simple
+COPY integrations/hermes /opt/hermes-source
+COPY deploy/hermes-bootstrap.txt /opt/hermes-bootstrap.txt
+RUN python3.13 -m pip install --no-cache-dir --no-index --require-hashes -r /opt/hermes-bootstrap.txt
+COPY integrations/hermes-cache /opt/hd-hermes-cache
+RUN if [ -d /opt/hd-hermes-cache/uv ]; then mkdir -p /root/.cache/uv && cp -a /opt/hd-hermes-cache/uv/. /root/.cache/uv/; fi
+RUN python3.13 -c 'import hashlib,json,pathlib; p=pathlib.Path("/opt/hermes-source"); m=json.loads((p/"SOURCE.json").read_text()); assert hashlib.sha256((p/m["archive"]).read_bytes()).hexdigest()==m["archiveSha256"]' \
+ && mkdir /opt/hermes \
+ && tar -xzf /opt/hermes-source/source.tar.gz -C /opt/hermes --strip-components=1 \
+ && UV_PYTHON_DOWNLOADS=never uv sync --project /opt/hermes --frozen --no-dev --no-default-groups --python /usr/local/bin/python3.13 --link-mode copy --index-url "$HD_PIP_INDEX_URL" \
+ && /opt/hermes/.venv/bin/python -c 'import sys; assert sys.version_info[:2]==(3,13)' \
+ && chmod -R a+rX /opt/hermes
+FROM ${HD_CORE_IMAGE}
+USER root
+COPY --from=python313 /usr/local /usr/local
+COPY --from=python313 /opt/hermes /opt/hermes
+COPY deploy/entry.mjs deploy/reception-env.mjs /app/deploy/
+RUN ldconfig && /opt/hermes/.venv/bin/python -c 'import openai; import sys; assert sys.version_info[:2]==(3,13)'
+LABEL org.hyper-dimension.reception="hermes-0.19.1-zero-tools" org.hyper-dimension.hermes-commit="0a62610f10cc34d696b2239b2c69fa1ba0f1ca63"
+# The inherited tini/entry.mjs command starts no permanent Hermes gateway or per-visitor daemon.

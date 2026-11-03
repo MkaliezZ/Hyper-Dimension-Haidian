@@ -1,0 +1,52 @@
+@import url('/partners.css');
+.check {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 18px 0;
+}
+.check input {
+  width: auto;
+  margin-top: 4px;
+}
+.cards {
+  margin-top: 22px;
+}
+.card p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.claim-meta {
+  font-size: 13px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.demo {
+  background: #f4e5d1;
+  color: #7a481d;
+}
+.reward-status {
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 9px;
+  background: #e7eddf;
+  border-radius: 20px;
+}
+#edit-dialog {
+  max-width: 820px;
+}
+#history-events li {
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+}
+#search {
+  max-width: 540px;
+  margin-bottom: 8px;
+}
+.card .actions {
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+.form-grid .wide {
+  grid-column: 1/-1;
+}

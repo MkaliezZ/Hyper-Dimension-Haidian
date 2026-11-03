@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>校园周边 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/partners.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/"
+        >H↗ <span>HYPER DIMENSION<small>校园生活，向外延伸。</small></span></a
+      >
+      <nav aria-label="校园导航">
+        <a href="/delegations.html">授权本地 Agent</a>
+        <a href="/m2.html">我的形象与背包</a><a href="/social.html">私信</a
+        ><a href="/m1.html">学校管理</a>
+      </nav>
+    </header>
+    <main>
+      <section class="heading">
+        <div>
+          <p class="eyebrow">BASE 04 / CAMPUS NEIGHBOURHOOD</p>
+          <h1>把校园的便利，连到身边。</h1>
+          <p class="intro">
+            查看学校审核过的服务，确认条件再预约；属于你的权益与每一笔办理进度，都在这里。
+          </p>
+        </div>
+        <label>当前学校<select id="school" aria-label="当前学校"></select></label>
+      </section>
+      <p id="status" role="status" aria-live="polite">正在读取学校账号…</p>
+      <section id="login" class="panel" hidden>
+        <h2>登录后查看本校合作服务</h2>
+        <p>使用同一个学校账号管理预约、权益和合作资料。</p>
+        <a class="button primary" href="/auth/login">登录 / 注册</a>
+      </section>
+      <section id="unavailable" class="panel" hidden>
+        <h2>本校尚未启用合作服务</h2>
+        <p>空间、人物和已有学校功能可继续使用。请由学校负责人配置合作模块后再进入。</p>
+        <a href="/">返回空间 →</a>
+      </section>
+      <div id="workspace" hidden>
+        <p id="adapter-note" class="notice"></p>
+        <div class="tabs" role="tablist" aria-label="合作服务功能">
+          <button
+            id="tab-directory"
+            role="tab"
+            aria-controls="directory-panel"
+            aria-selected="true"
+            data-panel="directory"
+          >
+            发现服务
+          </button>
+          <button
+            id="tab-mine"
+            role="tab"
+            aria-controls="mine-panel"
+            aria-selected="false"
+            data-panel="mine"
+          >
+            我的预约与权益
+          </button>
+          <button
+            id="tab-manage"
+            role="tab"
+            aria-controls="manage-panel"
+            aria-selected="false"
+            data-panel="manage"
+          >
+            合作方工作台
+          </button>
+          <button
+            id="tab-redeem"
+            role="tab"
+            aria-controls="redeem-panel"
+            aria-selected="false"
+            data-panel="redeem"
+          >
+            权益核销
+          </button>
+        </div>
+        <section id="directory-panel" role="tabpanel" aria-labelledby="tab-directory">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">REVIEWED BY YOUR SCHOOL</p>
+              <h2>可用的校园周边服务</h2>
+            </div>
+            <button id="refresh-directory">更新目录</button>
+          </div>
+          <div class="search-row">
+            <label
+              >查找服务<input
+                id="search"
+                type="search"
+                placeholder="服务名称、办理条件或地点" /></label
+            ><span id="directory-count" class="muted"></span>
+          </div>
+          <div id="directory" class="cards" aria-live="polite"></div>
+          <section id="service-detail" class="panel detail" hidden aria-labelledby="service-title">
+            <div class="section-head">
+              <div>
+                <p id="service-partner" class="eyebrow"></p>
+                <h2 id="service-title"></h2>
+              </div>
+              <button id="close-service">收起详情</button>
+            </div>
+            <p id="service-description"></p>
+            <dl id="service-facts" class="facts"></dl>
+            <div class="actions">
+              <a id="official-link" class="button" target="_blank" rel="noopener noreferrer" hidden
+                >打开官方入口 ↗</a
+              ><a id="location-link" class="button" hidden>查看所在空间 ↗</a
+              ><button id="new-request" class="primary">咨询 / 预约这项服务</button>
+            </div>
+            <p id="service-source" class="muted"></p>
+            <h3>这家合作方的可领权益</h3>
+            <div id="service-offers" class="cards compact"></div>
+          </section>
+        </section>
+        <section id="mine-panel" role="tabpanel" aria-labelledby="tab-mine" hidden>
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">MY REQUESTS & BENEFITS</p>
+              <h2>每一步，都有进度。</h2>
+            </div>
+            <button id="refresh-mine">更新我的记录</button>
+          </div>
+          <h3>咨询与预约</h3>
+          <div id="my-tasks" class="cards"></div>
+          <h3 class="spaced">我的权益</h3>
+          <p class="muted">核销码只在本人页面显示。到店或参加活动时，交给该合作方获准的核销员。</p>
+          <div id="my-entitlements" class="cards"></div>
+        </section>
+        <section id="manage-panel" role="tabpanel" aria-labelledby="tab-manage" hidden>
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">PARTNER WORKSPACE</p>
+              <h2 id="manage-title">我负责的合作服务</h2>
+            </div>
+            <button id="refresh-manage">更新工作台</button>
+          </div>
+          <details class="panel">
+            <summary>申请成为学校合作方</summary>
+            <p>申请先交学校负责人审核，通过后再提交具体服务和权益。</p>
+            <form id="application-form" class="form-grid">
+              <label
+                >合作方名称<input
+                  id="apply-name"
+                  required
+                  minlength="2"
+                  maxlength="100"
+                  placeholder="例如：校门口的校园书店"
+              /></label>
+              <label
+                >服务类别<input
+                  id="apply-category"
+                  required
+                  minlength="2"
+                  maxlength="80"
+                  placeholder="餐饮、银行、通信、文化等"
+              /></label>
+              <label class="wide"
+                >合作简介<textarea
+                  id="apply-description"
+                  required
+                  minlength="5"
+                  maxlength="3000"
+                  rows="3"
+                ></textarea>
+              </label>
+              <label>合作有效至<input id="apply-until" type="datetime-local" required /></label>
+              <label id="apply-org-field" hidden
+                >关联合作组织（可选）<input
+                  id="apply-org"
+                  maxlength="128"
+                  placeholder="已建立的合作组织编号"
+              /></label>
+              <div class="wide actions"><button class="primary">提交入驻申请</button></div>
+            </form>
+          </details>
+          <div id="my-partners" class="cards compact"></div>
+          <section id="partner-workspace" class="panel" hidden>
+            <div class="section-head">
+              <div>
+                <p id="partner-category" class="eyebrow"></p>
+                <h2 id="partner-name"></h2>
+              </div>
+              <span id="partner-status" class="badge"></span>
+            </div>
+            <p id="partner-description"></p>
+            <p id="partner-review-reason" class="muted"></p>
+            <div id="partner-actions" class="actions"></div>
+            <section id="staff-section" class="subsection" hidden>
+              <h3>资料维护与核销权限</h3>
+              <p class="muted">
+                资料维护者可管理资料、查看已授权工单；核销员仅核销本商户权益。学校负责人负责授予和撤销。
+              </p>
+              <div id="staff-list"></div>
+              <form id="staff-form" class="form-grid" hidden>
+                <label>学校账号<select id="staff-user" required></select></label
+                ><label
+                  >职责<select id="staff-role">
+                    <option value="maintainer">资料维护者</option>
+                    <option value="redeemer">权益核销员</option>
+                  </select></label
+                >
+                <label class="check"
+                  ><input id="staff-active" type="checkbox" checked />授予有效权限</label
+                ><label
+                  >变更原因<input id="staff-reason" required minlength="3" maxlength="500"
+                /></label>
+                <div class="wide"><button>保存人员权限</button></div>
+              </form>
+            </section>
+            <div id="partner-maintenance" hidden>
+              <section class="subsection">
+                <div class="section-head">
+                  <h3>公开服务资料</h3>
+                  <button id="new-service">添加服务</button>
+                </div>
+                <p class="muted">新建或修改后重新审核，待审版本不会向访客或接待 Agent 展示。</p>
+                <div id="managed-services" class="cards compact"></div>
+                <form id="service-form" class="form-grid inset" hidden>
+                  <h4 id="service-form-title" class="wide">添加服务</h4>
+                  <input id="edit-service-id" type="hidden" />
+                  <label
+                    >服务名称<input
+                      id="edit-service-title"
+                      required
+                      minlength="2"
+                      maxlength="160" /></label
+                  ><label
+                    >开放时间<input
+                      id="edit-service-hours"
+                      required
+                      minlength="2"
+                      maxlength="300"
+                      placeholder="周一至周五 09:00–17:00"
+                  /></label>
+                  <label class="wide"
+                    >服务介绍<textarea
+                      id="edit-service-description"
+                      required
+                      minlength="5"
+                      maxlength="5000"
+                      rows="3"
+                    ></textarea></label
+                  ><label class="wide"
+                    >办理条件<textarea
+                      id="edit-service-conditions"
+                      required
+                      minlength="2"
+                      maxlength="2000"
+                      rows="2"
+                    ></textarea>
+                  </label>
+                  <label
+                    >官方入口（可选，HTTPS）<input
+                      id="edit-service-url"
+                      type="url"
+                      placeholder="https://" /></label
+                  ><label
+                    >资料有效至<input id="edit-service-until" type="datetime-local" required
+                  /></label>
+                  <label>场景编号（可选）<input id="edit-service-scene" maxlength="128" /></label
+                  ><label
+                    >地点编号（与场景一起填写）<input id="edit-service-entity" maxlength="128"
+                  /></label>
+                  <div class="wide actions">
+                    <button class="primary">保存并提交审核</button
+                    ><button id="cancel-service" type="button">取消编辑</button>
+                  </div>
+                </form>
+              </section>
+              <section class="subsection">
+                <div class="section-head">
+                  <h3>合作权益</h3>
+                  <button id="new-offer">添加权益</button>
+                </div>
+                <div id="managed-offers" class="cards compact"></div>
+                <form id="offer-form" class="form-grid inset" hidden>
+                  <h4 id="offer-form-title" class="wide">添加权益</h4>
+                  <input id="edit-offer-id" type="hidden" />
+                  <label
+                    >权益名称<input
+                      id="edit-offer-title"
+                      required
+                      minlength="2"
+                      maxlength="160" /></label
+                  ><label
+                    >总份数<input
+                      id="edit-offer-stock"
+                      type="number"
+                      required
+                      min="1"
+                      max="1000000"
+                      value="20"
+                  /></label>
+                  <label class="wide"
+                    >使用条件<textarea
+                      id="edit-offer-terms"
+                      required
+                      minlength="5"
+                      maxlength="3000"
+                      rows="3"
+                    ></textarea>
+                  </label>
+                  <label
+                    >最低贡献值<input
+                      id="edit-offer-score"
+                      type="number"
+                      required
+                      min="0"
+                      max="1000000"
+                      value="0" /></label
+                  ><label
+                    >贡献周期（留空为全部）<input id="edit-offer-period" maxlength="128"
+                  /></label>
+                  <label>限定组织（可选）<input id="edit-offer-org" maxlength="128" /></label
+                  ><label
+                    >权益有效至<input id="edit-offer-until" type="datetime-local" required
+                  /></label>
+                  <label class="wide"
+                    >合作方退出时，已领取权益如何处理<select id="edit-offer-policy">
+                      <option value="honor">按原约定履行，保留至权益到期</option>
+                      <option value="revoke">撤销未使用权益并通知持有人</option>
+                    </select></label
+                  >
+                  <div class="wide actions">
+                    <button class="primary">保存并提交审核</button
+                    ><button id="cancel-offer" type="button">取消编辑</button>
+                  </div>
+                </form>
+              </section>
+              <section class="subsection">
+                <h3>用户已授权的工单</h3>
+                <p class="muted">仅展示本合作方需要办理且已获用户确认的内容。</p>
+                <div id="managed-tasks" class="cards compact"></div>
+              </section>
+              <section class="subsection">
+                <h3>本合作方的服务统计</h3>
+                <p id="metrics-note" class="muted"></p>
+                <div id="metrics" class="metrics"></div>
+                <div id="entitlement-metrics" class="actions muted"></div>
+              </section>
+            </div>
+          </section>
+        </section>
+        <section id="redeem-panel" role="tabpanel" aria-labelledby="tab-redeem" hidden>
+          <p class="eyebrow">REDEEM A BENEFIT</p>
+          <h2>核对权益，再完成核销。</h2>
+          <section class="panel narrow">
+            <p>只有本合作方获准的核销员或学校负责人可以操作。请让持有人从“我的权益”出示核销码。</p>
+            <form id="redeem-form">
+              <label>由我负责核销的合作方<select id="redeem-partner" required></select></label
+              ><label
+                >持有人出示的核销码<textarea
+                  id="redeem-code"
+                  rows="4"
+                  required
+                  spellcheck="false"
+                  autocomplete="off"
+                  placeholder="粘贴 HDV1. 开头的完整核销码"
+                ></textarea></label
+              ><label class="check"
+                ><input
+                  id="redeem-confirm"
+                  type="checkbox"
+                  required
+                />已核对实际服务，将这份权益记为已使用</label
+              ><button class="primary">确认核销一次</button>
+            </form>
+            <p id="redemption-result" role="status"></p>
+          </section>
+        </section>
+      </div>
+    </main>
+    <dialog id="request-dialog" aria-labelledby="request-heading">
+      <form id="request-form">
+        <p class="eyebrow">STEP 1 / 准备内容</p>
+        <h2 id="request-heading">咨询或预约</h2>
+        <p id="request-recipient"></p>
+        <label
+          >办理类型<select id="request-kind">
+            <option value="consultation">先咨询</option>
+            <option value="appointment">预约办理</option>
+          </select></label
+        ><label
+          >想咨询或办理什么<textarea
+            id="request-question"
+            required
+            minlength="2"
+            maxlength="1500"
+            rows="3"
+          ></textarea></label
+        ><label id="request-time-field" hidden
+          >希望的预约时间<input id="request-time" type="datetime-local"
+        /></label>
+        <div class="form-grid">
+          <label>称呼（可选）<input id="request-name" maxlength="100" autocomplete="off" /></label
+          ><label
+            >联系方式（可选）<input
+              id="request-contact"
+              minlength="2"
+              maxlength="200"
+              autocomplete="off"
+          /></label>
+        </div>
+        <p class="muted">下一步会完整列出收件方和将分享的字段，由你再次确认。</p>
+        <div class="actions">
+          <button class="primary">继续，检查授权内容</button
+          ><button type="button" data-close>暂不办理</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="consent-dialog" aria-labelledby="consent-heading">
+      <form id="consent-form">
+        <p class="eyebrow">STEP 2 / 由你确认</p>
+        <h2 id="consent-heading">确认分享与提交</h2>
+        <p id="consent-recipient"></p>
+        <p id="consent-purpose"></p>
+        <dl id="consent-fields" class="facts"></dl>
+        <p id="consent-source" class="muted"></p>
+        <p id="consent-adapter" class="notice"></p>
+        <label class="check"
+          ><input
+            id="consent-check"
+            type="checkbox"
+            required
+          />我同意向上述合作方分享所列字段，用于这次办理</label
+        >
+        <div class="actions">
+          <button class="primary">确认授权并提交</button
+          ><button type="button" data-close>保留待确认</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="claim-dialog" aria-labelledby="claim-heading">
+      <form id="claim-form">
+        <p class="eyebrow">YOUR BENEFIT</p>
+        <h2 id="claim-heading"></h2>
+        <p id="claim-terms"></p>
+        <dl id="claim-facts" class="facts"></dl>
+        <label class="check"
+          ><input
+            id="claim-check"
+            type="checkbox"
+            required
+          />我已阅读并接受上述条件及退出处理约定</label
+        >
+        <div class="actions">
+          <button class="primary">领取一份权益</button
+          ><button type="button" data-close>暂不领取</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="decision-dialog" aria-labelledby="decision-heading">
+      <form id="decision-form">
+        <h2 id="decision-heading"></h2>
+        <p id="decision-description"></p>
+        <label
+          >操作原因<textarea
+            id="decision-reason"
+            required
+            minlength="3"
+            maxlength="500"
+            rows="3"
+          ></textarea>
+        </label>
+        <div class="actions">
+          <button id="decision-submit" class="primary">确认</button
+          ><button type="button" data-close>返回</button>
+        </div>
+      </form>
+    </dialog>
+    <footer>Hyper Dimension Base · 学校、合作方与个人信息按权限管理</footer>
+    <script type="module" src="/partners.js"></script>
+  </body>
+</html>

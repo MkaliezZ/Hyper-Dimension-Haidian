@@ -1,0 +1,6 @@
+{
+  "provider": "ollama",
+  "endpoint": "http://127.0.0.1:11434/api/embed",
+  "model": "replace-with-your-installed-embedding-model",
+  "dimensions": 512
+}

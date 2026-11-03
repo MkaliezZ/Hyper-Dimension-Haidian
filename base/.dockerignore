@@ -1,0 +1,12 @@
+.git
+.local
+.private-inputs
+projects
+qa
+dist
+node_modules/playwright-core
+node_modules/prettier
+admin/node_modules
+**/*.log
+.env*
+deploy/private

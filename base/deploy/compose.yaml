@@ -1,0 +1,136 @@
+name: ${HD_STACK_NAME:-hd-base}
+x-runtime: &runtime
+  image: ${HD_STACK_IMAGE:-hyper-dimension-base:integrations}
+  build: { context: .., dockerfile: deploy/Dockerfile }
+  network_mode: host
+  restart: unless-stopped
+  user: '10001:10001'
+  environment: &env
+    HD_M0_CONFIG: /runtime/services/private/config.json
+    HD_M1_TEST_FIXTURE: ${HD_M1_TEST_FIXTURE:-0}
+  volumes: [runtime:/runtime]
+  stop_grace_period: 45s
+  security_opt: [no-new-privileges:true]
+  cap_drop: [ALL]
+  mem_limit: 768m
+  logging: { driver: json-file, options: { max-size: 10m, max-file: '3' } }
+services:
+  postgres:
+    mem_limit: 1024m
+    image: pgvector/pgvector:pg17@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d
+    network_mode: host
+    command: [postgres, -c, 'listen_addresses=127.0.0.1', -p, '${HD_PG_PORT:-55439}']
+    environment:
+      POSTGRES_USER: hd_bootstrap
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+    secrets: [postgres_password]
+    volumes: [postgres:/var/lib/postgresql/data]
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [CMD-SHELL, 'pg_isready -h 127.0.0.1 -p ${HD_PG_PORT:-55439} -U hd_bootstrap -d postgres']
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  init:
+    <<: *runtime
+    restart: 'no'
+    user: '0:0'
+    cap_drop: []
+    mem_limit: 1536m
+    command: [init]
+    secrets: [postgres_password, smtp_config]
+    volumes: [runtime:/runtime, backups:/backups]
+    environment:
+      <<: *env
+      HD_NAMESPACE: ${HD_NAMESPACE:-hdcontainer}
+      HD_PG_PORT: ${HD_PG_PORT:-55439}
+      HD_BASE_PORT: ${HD_BASE_PORT:-6180}
+      HD_IDP_PORT: ${HD_IDP_PORT:-9180}
+      HD_FORUM_PORT: ${HD_FORUM_PORT:-5567}
+      HD_NAKAMA_PORT: ${HD_NAKAMA_PORT:-9350}
+      HD_PUBLIC_ORIGIN: ${HD_PUBLIC_ORIGIN:-http://127.0.0.1:6180}
+      HD_IDP_ORIGIN: ${HD_IDP_ORIGIN:-http://127.0.0.1:9180}
+    depends_on: { postgres: { condition: service_healthy } }
+  keycloak:
+    <<: *runtime
+    mem_limit: 1024m
+    command: [keycloak]
+    depends_on: { init: { condition: service_completed_successfully } }
+    healthcheck:
+      test: [CMD, node, deploy/entry.mjs, health, keycloak]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+  forum-north:
+    <<: *runtime
+    mem_limit: 512m
+    command: [forum, north]
+    depends_on: { init: { condition: service_completed_successfully } }
+    healthcheck: &forum-health
+      test: [CMD, node, deploy/entry.mjs, health, forum, north]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+  forum-south:
+    <<: *runtime
+    mem_limit: 512m
+    command: [forum, south]
+    depends_on: { init: { condition: service_completed_successfully } }
+    healthcheck:
+      <<: *forum-health
+      test: [CMD, node, deploy/entry.mjs, health, forum, south]
+  nakama-north:
+    <<: *runtime
+    mem_limit: 256m
+    command: [nakama, north]
+    depends_on: { init: { condition: service_completed_successfully } }
+    healthcheck: &nakama-health
+      test: [CMD, node, deploy/entry.mjs, health, nakama, north]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  nakama-south:
+    <<: *runtime
+    mem_limit: 256m
+    command: [nakama, south]
+    depends_on: { init: { condition: service_completed_successfully } }
+    healthcheck:
+      <<: *nakama-health
+      test: [CMD, node, deploy/entry.mjs, health, nakama, south]
+  base:
+    <<: *runtime
+    command: [base]
+    depends_on:
+      keycloak: { condition: service_healthy }
+      forum-north: { condition: service_healthy }
+      forum-south: { condition: service_healthy }
+      nakama-north: { condition: service_healthy }
+      nakama-south: { condition: service_healthy }
+    healthcheck:
+      test: [CMD, node, deploy/entry.mjs, health, base]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  utility:
+    <<: *runtime
+    profiles: [tools]
+    restart: 'no'
+    command: [status]
+    environment:
+      <<: *env
+      HD_INTEGRATION_EVIDENCE: /runtime/evidence/integrations
+      HD_INTEGRATION_PRIVATE: /runtime/integration-qa
+    volumes: [runtime:/runtime, backups:/backups]
+volumes:
+  runtime:
+  postgres:
+  backups:
+secrets:
+  smtp_config:
+    file: ${HD_SMTP_FILE:-./smtp.unconfigured.json}
+  postgres_password:
+    file: ${HD_POSTGRES_PASSWORD_FILE:?Set an absolute path to a private bootstrap password file}

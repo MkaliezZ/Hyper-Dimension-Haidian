@@ -1,0 +1,189 @@
+{
+  "protocol": "hyper-dimension.base/v1",
+  "baseVersion": "0.1.0",
+  "spaceId": "north",
+  "name": "北岸示例空间",
+  "description": "可由 Agent 续建的独立空间示例",
+  "theme": {
+    "accent": "#2b6860"
+  },
+  "scenes": [
+    {
+      "format": "hyper-dimension.scene/v1",
+      "sceneId": "north-hall",
+      "name": "北岸学生中心",
+      "units": "m",
+      "axes": "Y_UP_X_EAST_Z_SOUTH",
+      "size": [20, 16],
+      "cellSize": 0.4,
+      "entry": {
+        "levelId": "L1",
+        "z": 10
+      },
+      "levels": [
+        {
+          "id": "L1",
+          "name": "一层 · 迎新与展览",
+          "elevation": 0,
+          "height": 3.6,
+          "rooms": [
+            {
+              "entityId": "north-hall-gallery",
+              "name": "项目展厅",
+              "rect": [6, 0.4, 7, 5],
+              "access": "public",
+              "door": {
+                "edge": "south",
+                "offset": 3.5,
+                "width": 1.8
+              },
+              "kind": "exhibit",
+              "description": "项目展厅的概念展示空间。展项和材质可由学校 Agent 继续补充。"
+            },
+            {
+              "entityId": "north-hall-club",
+              "name": "社团空间",
+              "rect": [13.4, 0.4, 6.199999999999999, 5],
+              "access": "public",
+              "door": {
+                "edge": "south",
+                "offset": 3.0999999999999996,
+                "width": 1.8
+              },
+              "kind": "exhibit",
+              "description": "社团空间的概念展示空间。展项和材质可由学校 Agent 继续补充。"
+            }
+          ],
+          "voids": []
+        },
+        {
+          "id": "L2",
+          "name": "二层 · 共享工作室",
+          "elevation": 3.6,
+          "height": 3.6,
+          "rooms": [
+            {
+              "entityId": "north-hall-studio",
+              "name": "共享工作室",
+              "rect": [7, 0.4, 12.6, 5],
+              "access": "public",
+              "door": {
+                "edge": "south",
+                "offset": 6.3,
+                "width": 1.8
+              },
+              "kind": "exhibit",
+              "description": "共享工作室的概念展示空间。展项和材质可由学校 Agent 继续补充。"
+            }
+          ],
+          "voids": [
+            [1.5, 6.2, 4, 1.6],
+            [8, 9, 5, 4]
+          ]
+        }
+      ],
+      "connectors": [
+        {
+          "entityId": "north-hall-stairs",
+          "type": "stairs",
+          "from": {
+            "levelId": "L1",
+            "point": [1, 7]
+          },
+          "to": {
+            "levelId": "L2",
+            "point": [6, 7]
+          },
+          "width": 1.6
+        }
+      ],
+      "source": {
+        "kind": "original-synthetic",
+        "measured": ["Original dimensioned fixture, metres"],
+        "inferred": ["3.6 m floor height", "Concept furniture"],
+        "unknown": ["School-specific content is intentionally absent"]
+      },
+      "artwork": [
+        {
+          "assetId": "project-poster",
+          "entityId": "north-hall-gallery",
+          "levelId": "L1",
+          "kind": "billboard",
+          "point": [10, 1.6, 1.2],
+          "scale": [2.4, 1.3, 1],
+          "footprint": [8.8, 0.9, 2.4, 0.6]
+        }
+      ]
+    }
+  ],
+  "spawn": {
+    "sceneId": "north-hall",
+    "levelId": "L1",
+    "point": [-3, 0, 10]
+  },
+  "knowledge": [
+    {
+      "id": "welcome",
+      "title": "访问须知",
+      "body": "北岸示例空间是虚拟示例，公众可参观一层展览与二层工作室；需要进一步咨询可在接待处留言。",
+      "keywords": ["你好", "参观", "访问", "学校", "介绍"],
+      "published": true,
+      "revision": 1
+    },
+    {
+      "id": "gallery",
+      "title": "项目展览",
+      "body": "项目展厅位于一层北侧。这里展示学生项目的目标、过程、图片与公开成果；资料由空间维护者发布。",
+      "keywords": ["展览", "项目", "位置", "gallery", "project"],
+      "published": true,
+      "revision": 1,
+      "sceneId": "north-hall",
+      "entityId": "north-hall-gallery"
+    },
+    {
+      "id": "hours",
+      "title": "开放时间",
+      "body": "示例空间线上开放时间为每日 09:00–21:00；实体建筑开放时间需要学校维护者另行核实。",
+      "keywords": ["几点", "时间", "hours", "open"],
+      "published": true,
+      "revision": 1
+    },
+    {
+      "id": "private-note",
+      "title": "内部维护记录",
+      "body": "PRIVATE_FIXTURE_NOT_FOR_PUBLIC_RECEPTION",
+      "published": false
+    }
+  ],
+  "agents": [
+    {
+      "agentId": "north-reception",
+      "name": "北岸示例空间接待 Agent",
+      "skills": ["space.information", "navigation.route", "message.leave"]
+    }
+  ],
+  "source": {
+    "kind": "original-synthetic"
+  },
+  "contacts": {
+    "public": "请通过接待 Agent 留言联系维护者"
+  },
+  "assets": [
+    {
+      "id": "project-poster",
+      "file": "assets/projects.png",
+      "published": true
+    }
+  ],
+  "exhibits": [
+    {
+      "id": "student-projects",
+      "entityId": "north-hall-gallery",
+      "title": "学生项目 · 虚拟示例",
+      "body": "这是原创示意展板，用于演示学校如何替换自己的项目图片、介绍与成果。没有引用真实学校或真实学生履历。",
+      "assetIds": ["project-poster"],
+      "published": true,
+      "revision": 1
+    }
+  ]
+}

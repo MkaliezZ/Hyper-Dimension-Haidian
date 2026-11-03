@@ -1,0 +1,11 @@
+**
+!deploy/
+!deploy/Dockerfile.hermes
+!deploy/hermes-bootstrap.txt
+!deploy/entry.mjs
+!deploy/reception-env.mjs
+!integrations/
+!integrations/hermes/
+!integrations/hermes/**
+!integrations/hermes-cache/
+!integrations/hermes-cache/**

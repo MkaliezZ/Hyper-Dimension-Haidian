@@ -1,0 +1,23 @@
+#preferences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+#preferences label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#preferences input {
+  width: auto;
+}
+#requests article,
+#directory article {
+  border-bottom: 1px solid #d8dfe5;
+  padding: 0.8rem 0;
+}
+#requests button,
+#directory button {
+  margin: 0.35rem 0.35rem 0.35rem 0;
+}

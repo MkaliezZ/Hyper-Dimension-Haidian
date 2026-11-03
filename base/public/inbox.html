@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>校园订阅与收件箱</title><link rel="stylesheet" href="/inbox.css"></head>
+<body><header><a href="/m2.html">H↗ 校园空间</a><nav><a href="/profile.html">个人主页</a><a href="/social.html">私信</a><a href="/m1.html">学校管理</a></nav></header>
+<main><p class="eyebrow">KEEP IN TOUCH</p><h1>留意你关心的校园动态。</h1><p>订阅学校或组织。离线期间收到的通知会保留，重新进入后仍能查看。</p>
+<p id="status" role="status">正在读取账号…</p><a id="login" href="/auth/login" hidden>登录学校账号</a><label>当前学校 <select id="school"></select></label>
+<div class="grid"><section><h2>我的订阅</h2><label>通知偏好 <input id="enabled" type="checkbox">接收订阅动态</label><label>订阅范围 <select id="scope"><option value="">全校</option></select></label><p id="scope-note" class="muted"></p><div id="subscriptions"></div><p class="muted">退订后停止接收新动态。账号安全、私信和业务回执仍在对应入口保留。</p></section>
+<section><h2>收件箱 <button id="refresh">刷新</button></h2><div id="messages"></div><button id="older" hidden>查看更早的通知</button></section></div>
+<section id="publisher" hidden><h2>发布范围公告</h2><p>向当前范围发布简短公告；只有选择订阅的人收到通知。组织公告只对有权访问的成员可见。</p><form id="announce"><label>公告标题 <input id="title" maxlength="160" required></label><label>到期时间（可选） <input id="expiry" type="datetime-local"></label><button>发布公告</button></form><div id="announcements"></div></section>
+</main><script type="module" src="/inbox.js"></script></body></html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>合作 Agent 授权</title>
+    <link rel="stylesheet" href="/partners.css" />
+  </head>
+  <body>
+    <header><a href="/partners.html">← 合作服务</a></header>
+    <main>
+      <h1>授权本地 Agent 办理合作服务</h1>
+      <p>
+        仅授权你选中的学校、服务与操作。Agent
+        只能创建待确认申请；向合作方转交资料仍需你本人在业务页确认。令牌只显示一次，勿公开、勿放进学校资料库。
+      </p>
+      <p id="status" role="status">正在读取…</p>
+      <form id="grant" class="panel" hidden>
+        <label>学校<select id="school"></select></label
+        ><label
+          >Agent 名称<input
+            id="label"
+            required
+            minlength="2"
+            maxlength="100"
+            value="我的本地 Agent"
+        /></label>
+        <fieldset>
+          <legend>允许使用的已审核服务</legend>
+          <div id="services"></div>
+        </fieldset>
+        <fieldset>
+          <legend>允许的操作</legend>
+          <label
+            ><input
+              type="checkbox"
+              name="skill"
+              value="partner.services.list"
+              checked
+            />查询服务目录</label
+          ><label
+            ><input
+              type="checkbox"
+              name="skill"
+              value="partner.service.get"
+              checked
+            />查询服务详情</label
+          ><label
+            ><input type="checkbox" name="skill" value="partner.task.get" />查看我的办理记录</label
+          ><label
+            ><input
+              type="checkbox"
+              name="skill"
+              value="partner.task.propose"
+            />创建待我确认的申请</label
+          ><label
+            ><input type="checkbox" name="skill" value="partner.task.cancel" />取消我的申请</label
+          >
+        </fieldset>
+        <label
+          >有效期<select id="hours">
+            <option value="1">1 小时</option>
+            <option value="24">24 小时</option>
+            <option value="168">7 天</option>
+          </select></label
+        ><label
+          ><input id="confirmed" type="checkbox" required />我确认将以上操作委托给这个 Agent</label
+        ><button>创建授权</button>
+      </form>
+      <section id="secret" class="panel" hidden>
+        <h2>请安全交给本地 Agent</h2>
+        <p>本页刷新后不再显示。若丢失，请撤销这次授权后重新创建。</p>
+        <label>令牌<input id="token" readonly autocomplete="off" /></label>
+        <p id="endpoint"></p>
+        <button id="clear" type="button">清除本页令牌显示</button>
+      </section>
+      <section class="panel">
+        <h2>我创建的授权</h2>
+        <div id="grants"></div>
+      </section>
+    </main>
+    <script type="module" src="/delegations.js"></script>
+  </body>
+</html>

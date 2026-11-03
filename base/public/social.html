@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>校园交流 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/m1.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <small>HYPER DIMENSION</small>
+        <h1>校园交流</h1>
+        <p>与同学私信，或加入学校、组织的讨论。</p>
+      </div>
+      <nav>
+        <a href="/m1.html">账号与组织</a
+        ><a id="contact-nav" href="/contacts.html" hidden>联系人授权</a><a href="/m0.html">空间</a
+        ><a href="/auth/login">登录</a>
+      </nav>
+    </header>
+    <main>
+      <p id="status" role="status">正在读取账号…</p>
+      <section class="toolbar">
+        <label>学校<select id="school"></select></label
+        ><label
+          >范围<select id="org">
+            <option value="">学校</option>
+          </select></label
+        ><button id="room">进入讨论室</button>
+      </section>
+      <div class="grid">
+        <section>
+          <h2>联系人</h2>
+          <p>
+            私信仅双方可见。校园版需双方明确同意后才能发送；旧会话保留为只读历史，可申请联系。被举报的单条消息可由对应范围审核员留痕审查。
+          </p>
+          <div id="contacts"></div>
+          <h2>我的会话与未读</h2>
+          <button id="refresh">刷新会话</button>
+          <div id="conversations"></div>
+          <details>
+            <summary>屏蔽名单</summary>
+            <div id="blocks"></div>
+          </details>
+        </section>
+        <section>
+          <h2 id="heading">先选择联系人或讨论室</h2>
+          <p id="connection" role="status"></p>
+          <div id="messages" aria-live="polite"></div>
+          <form id="send">
+            <label>消息<textarea id="text" maxlength="4000" required></textarea></label
+            ><button>发送</button>
+          </form>
+          <div id="controls"></div>
+          <p id="reads"></p>
+        </section>
+      </div>
+      <details>
+        <summary>处理举报（需范围审核权限）</summary>
+        <button id="reportsButton">读取当前范围举报</button>
+        <div id="reports"></div>
+      </details>
+      <footer>聊天、私信及举报不会自动进入公开接待知识库。</footer>
+    </main>
+    <script type="module" src="/social.js"></script>
+  </body>
+</html>

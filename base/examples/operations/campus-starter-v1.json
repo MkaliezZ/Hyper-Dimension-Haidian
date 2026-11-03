@@ -1,0 +1,78 @@
+{
+  "schema": "hyper-dimension.operations/v1",
+  "packageId": "campus-starter",
+  "version": 1,
+  "name": "校园参与试运行模板",
+  "description": "原创虚构示例：供负责人逐项调整条件、容量、负责人、核验与排期，不代表学校已批准的运营政策。",
+  "sourceLabel": "Hyper Dimension 原创虚构示例，不含用户旧运营材料",
+  "exampleOnly": true,
+  "templates": [
+    {
+      "templateId": "welcome",
+      "kind": "event",
+      "title": "迎新与空间导览",
+      "description": "介绍学校公开设施与组织入口，记录参与反馈；内容由负责人核对。",
+      "conditions": "自愿报名；不收集与活动无关的私人资料。",
+      "tasks": [],
+      "dayOffset": 0,
+      "durationMinutes": 60,
+      "registrationMinutesBefore": 0,
+      "capacity": 30,
+      "remindBeforeMinutes": 60,
+      "responsibility": "学校负责人组织，指定人员核验实际参与。"
+    },
+    {
+      "templateId": "reading",
+      "kind": "event",
+      "title": "校园读书交流",
+      "description": "围绕获准主题组织交流，活动结束由负责人发布回顾。",
+      "conditions": "自愿参加；分享内容需有权使用。",
+      "tasks": [],
+      "dayOffset": 7,
+      "durationMinutes": 60,
+      "registrationMinutesBefore": 30,
+      "capacity": 20,
+      "remindBeforeMinutes": 60,
+      "responsibility": "组织负责人准备资料，主持人维护讨论秩序。"
+    },
+    {
+      "templateId": "volunteer",
+      "kind": "volunteer",
+      "title": "校园志愿服务",
+      "description": "按照明确任务提供非强制志愿服务，核验人检查实际证明后确认服务记录。",
+      "conditions": "由负责人确认服务时间与内容；自述不能直接获得贡献。",
+      "tasks": [
+        {
+          "id": "guide",
+          "title": "公共设施引导",
+          "description": "帮助访客了解公开设施，提交可核对且不含私人信息的服务说明。"
+        },
+        {
+          "id": "materials",
+          "title": "公开资料整理",
+          "description": "整理经授权的公开校园资料，保留来源，由负责人检查。"
+        }
+      ],
+      "dayOffset": 14,
+      "durationMinutes": 120,
+      "registrationMinutesBefore": 60,
+      "capacity": 15,
+      "remindBeforeMinutes": 120,
+      "responsibility": "任务负责人分配任务，指定核验人确认服务成果。"
+    },
+    {
+      "templateId": "graduation",
+      "kind": "event",
+      "title": "毕业记忆分享",
+      "description": "邀请成员分享可公开的校园记忆，投稿仍走社区审核，活动回顾引用已获准内容。",
+      "conditions": "尊重参与者意愿和图片权利；不公开他人私人联系信息。",
+      "tasks": [],
+      "dayOffset": 100,
+      "durationMinutes": 60,
+      "registrationMinutesBefore": 0,
+      "capacity": 40,
+      "remindBeforeMinutes": 60,
+      "responsibility": "届别组织负责人协调，版主审核独立的社区投稿。"
+    }
+  ]
+}

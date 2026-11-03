@@ -1,0 +1,2 @@
+# uv is used only to install the upstream frozen lock under pinned Python 3.13 (Linux amd64).
+/opt/hermes-source/uv-0.12.1-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl --hash=sha256:27211df9b277f440dea438a4e525ba40250fb721ad39b8927eefc2d91f9aea15

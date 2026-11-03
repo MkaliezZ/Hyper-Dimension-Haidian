@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>我的校园名片 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/profile.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">HYPER DIMENSION</a>
+      <nav aria-label="校园功能">
+        <a href="/m2.html">人物与背包</a><a href="/social.html">私信与讨论</a
+        ><a href="/m1.html">校园管理</a>
+      </nav>
+    </header>
+    <main>
+      <div class="heading">
+        <div>
+          <p class="eyebrow">YOUR CAMPUS STORY</p>
+          <h1>我的校园名片</h1>
+          <p>介绍自己，记录作品，决定哪些内容向同校成员展示。</p>
+        </div>
+        <label>当前学校<select id="school" aria-label="当前学校"></select></label>
+      </div>
+      <p id="status" role="status" aria-live="polite">正在读取账号…</p>
+      <a id="login" href="/auth/login" hidden>登录学校账号</a>
+      <div id="workspace" hidden>
+        <section class="viewer">
+          <form id="view-form">
+            <label
+              >查看指定同校成员<input
+                id="target"
+                placeholder="粘贴对方的成员 ID"
+                aria-label="成员 ID" /></label
+            ><button>查看名片</button
+            ><button id="my-profile" type="button" class="secondary">返回我的名片</button>
+          </form>
+          <p class="hint">成员 ID 由对方分享；这里没有全校人员名录或私人联系方式。</p>
+          <p id="own-link" class="hint"></p>
+        </section>
+        <div class="columns">
+          <div>
+            <section class="card">
+              <p class="eyebrow">PROFILE</p>
+              <h2 id="name">校园成员</h2>
+              <div id="profile-view"></div>
+              <form id="profile-form" hidden>
+                <label>自我介绍<textarea id="bio" maxlength="500" rows="4"></textarea></label
+                ><label class="visibility"
+                  >介绍可见范围<select id="v-bio">
+                    <option value="private">仅自己</option>
+                    <option value="school">同校成员</option>
+                  </select></label
+                >
+                <div class="pair">
+                  <label>院系<input id="department" maxlength="80" /></label
+                  ><label
+                    >院系可见范围<select id="v-department">
+                      <option value="private">仅自己</option>
+                      <option value="school">同校成员</option>
+                    </select></label
+                  >
+                </div>
+                <div class="pair">
+                  <label>年级 / 届别<input id="year" maxlength="32" /></label
+                  ><label
+                    >年级可见范围<select id="v-year">
+                      <option value="private">仅自己</option>
+                      <option value="school">同校成员</option>
+                    </select></label
+                  >
+                </div>
+                <div class="pair">
+                  <label>兴趣（最多8项，逗号分隔）<input id="interests" maxlength="264" /></label
+                  ><label
+                    >兴趣可见范围<select id="v-interests">
+                      <option value="private">仅自己</option>
+                      <option value="school">同校成员</option>
+                    </select></label
+                  >
+                </div>
+                <button>保存名片与隐私</button>
+              </form>
+            </section>
+            <section class="card">
+              <p class="eyebrow">BELONGING</p>
+              <h2>我的组织</h2>
+              <div id="organizations"></div>
+              <button id="save-organizations" hidden>保存组织可见范围</button>
+              <p class="hint">组织身份来自学校当前成员权限；退出组织后自动停止展示。</p>
+            </section>
+            <section class="card">
+              <p class="eyebrow">RECOGNITION</p>
+              <h2>社区徽章</h2>
+              <p class="hint">学校空间负责人发放的社区认可，不代表学籍或法定身份认证。</p>
+              <div id="badges"></div>
+            </section>
+          </div>
+          <div>
+            <section class="card">
+              <p class="eyebrow">SELECTED WORK</p>
+              <h2>作品与校园经历</h2>
+              <div id="works"></div>
+              <button id="new-work" hidden class="secondary">添加作品</button>
+              <form id="work-form" hidden>
+                <h3 id="work-heading">添加作品</h3>
+                <label>作品名称<input id="work-title" maxlength="100" required /></label
+                ><label
+                  >介绍<textarea id="work-description" maxlength="2000" rows="4"></textarea></label
+                ><label
+                  >作品链接（可留空）<input
+                    id="work-link"
+                    type="url"
+                    placeholder="https://…"
+                    maxlength="2048"
+                /></label>
+                <p class="hint">
+                  只保存 HTTPS 外链。访问时会离开校园空间，不自动抓取或嵌入外部内容。
+                </p>
+                <div class="pair">
+                  <label
+                    >状态<select id="work-status">
+                      <option value="draft">草稿</option>
+                      <option value="published">发布</option>
+                      <option value="withdrawn">撤回</option>
+                    </select></label
+                  ><label
+                    >可见范围<select id="work-visibility">
+                      <option value="private">仅自己</option>
+                      <option value="school">同校成员</option>
+                    </select></label
+                  >
+                </div>
+                <p class="hint">
+                  选择“发布 + 同校成员”才会在同校名片中展示；草稿与撤回内容只有自己可见。
+                </p>
+                <button>保存作品</button
+                ><button id="cancel-work" type="button" class="secondary">取消编辑</button>
+              </form>
+            </section>
+            <section id="badge-admin" class="card" hidden>
+              <p class="eyebrow">SCHOOL STEWARD</p>
+              <h2>发放社区徽章</h2>
+              <form id="issue-form">
+                <label>接收者成员 ID<input id="badge-user" required /></label
+                ><label>徽章名称<input id="badge-label" maxlength="60" required /></label
+                ><label
+                  >发放理由<textarea
+                    id="badge-reason"
+                    minlength="3"
+                    maxlength="500"
+                    required
+                  ></textarea></label
+                ><button>发放（默认仅本人可见）</button>
+              </form>
+              <h3>近期发放记录</h3>
+              <button id="refresh-admin" type="button" class="secondary">刷新发放记录</button>
+              <label
+                >撤回理由<input id="revoke-reason" maxlength="500" placeholder="撤回前填写至少3字"
+              /></label>
+              <div id="managed-badges"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>每个学校独立保存 · 私人资料不会自动进入接待知识库</footer>
+    <script type="module" src="/profile.js"></script>
+  </body>
+</html>

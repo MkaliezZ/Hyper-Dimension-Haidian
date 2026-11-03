@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>论坛原帖与修订</title>
+    <link rel="stylesheet" href="/m1.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <small>HYPER DIMENSION · NODEBB</small>
+        <h1>论坛原帖与修订</h1>
+        <p>修改通过审核后保存到原帖，保留帖子 ID 与贡献记录。</p>
+      </div>
+      <nav><a href="/m1.html">返回管理台</a><a href="/social.html">校园交流</a></nav>
+    </header>
+    <main>
+      <p role="status" id="status">正在读取…</p>
+      <section>
+        <h2 id="heading"></h2>
+        <pre id="published" style="white-space: pre-wrap"></pre>
+        <p id="version"></p>
+      </section>
+      <section id="editPanel" hidden>
+        <h2>提交修订</h2>
+        <form id="edit">
+          <label>标题<input id="title" minlength="3" maxlength="80" required /></label
+          ><label
+            >正文<textarea id="content" minlength="8" maxlength="3000" required></textarea></label
+          ><button>提交修订审核</button>
+        </form>
+      </section>
+      <section id="draftPanel" hidden>
+        <h2>待审修订</h2>
+        <pre id="draft" style="white-space: pre-wrap"></pre>
+        <div id="moderation"></div>
+      </section>
+      <section>
+        <h2>回复此主题</h2>
+        <form id="reply">
+          <label
+            >回复正文<textarea
+              id="replyContent"
+              minlength="8"
+              maxlength="3000"
+              required
+            ></textarea></label
+          ><button>提交回复审核</button>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="/forum-editor.js"></script>
+  </body>
+</html>

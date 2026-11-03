@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hyper Dimension Base · 空间工作台</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/vendor/three/three.module.js",
+          "three/addons/": "/vendor/three/addons/",
+          "@pixiv/three-vrm": "/vendor/vrm/three-vrm.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/"
+        ><span class="brand-symbol">H<span>↗</span></span
+        ><span>HYPER DIMENSION <small>BASE / 空间工作台</small></span></a
+      >
+      <div class="header-right">
+        <a id="account-editor" href="/m0.html" hidden>我的形象与记忆</a>
+        <span class="tag">CONCEPT SCENE</span><label class="sr" for="space">选择空间</label
+        ><select id="space"></select>
+      </div>
+    </header>
+    <main>
+      <aside class="panel" id="explore">
+        <div class="eyebrow">EXPLORE YOUR SPACE</div>
+        <h1 id="space-name">正在打开空间</h1>
+        <p class="intro" id="description"></p>
+        <div class="divider"></div>
+        <div class="section-heading">
+          <h2>楼层导览</h2>
+          <span id="level-count"></span>
+        </div>
+        <div id="floors" class="floors"></div>
+        <div class="section-heading">
+          <h2>空间目录</h2>
+          <span id="room-count"></span>
+        </div>
+        <div id="rooms" class="rooms"></div>
+        <section id="bag-tools" hidden></section>
+        <details id="source">
+          <summary>模型依据与待核项</summary>
+          <div id="source-notes"></div>
+        </details>
+        <p class="footnote">
+          图纸 → 场景数据 → 模型与寻路<br />同一份几何定义，交给 Agent 继续搭建。
+        </p>
+      </aside>
+      <section class="viewport" aria-label="可交互三维建筑场景">
+        <canvas id="world"></canvas>
+        <div id="labels" aria-hidden="true"></div>
+        <div class="viewport-head">
+          <span class="live-dot"></span><span id="scene-name">准备场景…</span
+          ><span class="view-tag">三维剖切 / CUTAWAY</span>
+        </div>
+        <div id="welcome" class="welcome">
+          <span>01 / ARRIVAL</span>
+          <h2>把平面图，变成可以走进去的空间。</h2>
+          <p>拖动旋转视角 · 滚轮缩放 · 点击地面移动<br />选择房间后，可沿真实连通路线前往。</p>
+          <button id="start-tour">开始参观 <span>↗</span></button>
+        </div>
+        <div id="selection" class="selection hidden">
+          <button id="close-selection" aria-label="关闭房间详情">×</button
+          ><span class="eyebrow">SPACE DETAIL</span>
+          <h2 id="room-name"></h2>
+          <p id="room-description"></p>
+          <p><a id="room-community" hidden>这个地点的校园记忆 ↗</a></p>
+          <p><a id="room-environment" hidden>场所公告、负责人和问题反馈 ↗</a></p>
+          <p><a id="room-network" hidden>此地点的校友、学长支持与职业机会 ↗</a></p>
+          <div id="exhibits"></div>
+          <button id="enter-room">前往这个房间 <span>→</span></button>
+        </div>
+        <div class="viewport-tools">
+          <button id="reset-view" title="还原视角">⌖ <span>还原视角</span></button
+          ><button id="return-entry">↙ <span>返回入口</span></button
+          ><button id="toggle-labels">Aa <span>房间标记</span></button>
+        </div>
+        <div class="status-bar">
+          <span id="status" role="status">正在加载建筑模型</span><span id="position">—</span>
+        </div>
+        <div class="loading" id="loading">正在构建空间…</div>
+      </section>
+      <aside class="reception">
+        <div class="agent-heading">
+          <div class="agent-mark"><i></i><i></i></div>
+          <div>
+            <div class="eyebrow">SPACE RECEPTION</div>
+            <h2 id="reception-name">空间接待 Agent</h2>
+          </div>
+          <span class="online" title="服务已连接"></span>
+        </div>
+        <p class="agent-intro">找地方、了解展项，也可以聊学习和创意。具体空间信息会附资料来源。</p>
+        <p id="reception-responsibility" class="protocol-note">正在核对接待身份与维护职责。</p>
+        <a id="reception-directory" href="/agents.html" hidden>接待身份、活动与合作服务助手 →</a>
+        <div class="mode" id="mode">资料接待 · 只引用已发布内容</div>
+        <div class="session-tools">
+          <label for="reception-session">我的接待会话</label>
+          <select id="reception-session" aria-label="我的接待会话"></select>
+          <div>
+            <button id="reception-new" type="button">新会话</button>
+            <button id="reception-export" type="button" disabled>导出 JSON</button>
+            <button id="reception-delete" type="button" disabled>删除会话</button>
+          </div>
+          <p id="reception-retention" class="protocol-note">默认保留 30 天，可由学校配置。</p>
+        </div>
+        <div id="conversation" class="conversation" aria-live="polite">
+          <div class="bubble agent">
+            你好，欢迎来到这个超维空间。可以问我建筑概况、参观路线，或有什么项目值得一看。
+          </div>
+        </div>
+        <div class="suggestions">
+          <button data-question="介绍一下建筑和参观路线">建筑与路线</button
+          ><button data-question="帮我想三个校园迎新活动创意">聊聊校园创意</button>
+        </div>
+        <form id="chat">
+          <label class="sr" for="message">向接待 Agent 提问</label
+          ><textarea
+            id="message"
+            placeholder="向接待 Agent 提问…"
+            maxlength="4000"
+            rows="2"
+            required
+          ></textarea>
+          <div class="chat-actions">
+            <label><input type="checkbox" id="leave-message" /> 给维护者留言</label
+            ><button id="send" type="submit" aria-label="发送消息">↑</button>
+          </div>
+        </form>
+        <div class="protocol-note">
+          A2A 1.0 · 可连接你的 Agent<br />公开接待不拥有个人文件或本机工具权限。
+        </div>
+      </aside>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

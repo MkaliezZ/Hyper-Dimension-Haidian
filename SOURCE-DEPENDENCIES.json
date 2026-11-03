@@ -1,0 +1,20 @@
+{
+  "purpose": "Public pinned dependencies omitted from Git; restore only these exact bytes when building the complete dependency image. Never copy live credentials or user state.",
+  "files": [
+    {
+      "path": "base/integrations/hermes/source.tar.gz",
+      "bytes": 62895546,
+      "sha256": "fa07aefa305da4f40d7b2f357a3a08eff0cc6127a0e286d07ef6ffc5d495862d"
+    },
+    {
+      "path": "base/integrations/hermes/uv-0.12.1-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 22386347,
+      "sha256": "27211df9b277f440dea438a4e525ba40250fb721ad39b8927eefc2d91f9aea15"
+    },
+    {
+      "path": "base/models/bge-small-zh-v1.5/model_quantized.onnx",
+      "bytes": 24010842,
+      "sha256": "15b717c382bcb518ba457b93ea6850ede7f4f1cd8937454aa06972366cd19bcc"
+    }
+  ]
+}

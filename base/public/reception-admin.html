@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>接待会话管理</title>
+    <link rel="stylesheet" href="/m1.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <small>HYPER DIMENSION / BASE 1</small>
+        <h1>接待会话管理</h1>
+        <p>管理保留政策与运行状态；这里不提供任意用户会话正文浏览。</p>
+      </div>
+      <nav>
+        <a href="/">返回空间</a><a href="/m1.html">账号与权限</a><a href="/auth/login">登录</a>
+      </nav>
+    </header>
+    <main>
+      <p id="status" role="status">正在读取账号…</p>
+      <section class="toolbar">
+        <label>学校<select id="school"></select></label><button id="refresh">刷新</button>
+      </section>
+      <section>
+        <h2>新会话政策</h2>
+        <p>
+          期限从会话创建时计算。调整只影响之后新建的会话；已有会话按其原到期时间清理。用户可导出或删除自己的会话。备份副本由学校另行按备份保留政策清理，恢复后先执行到期清理。
+        </p>
+        <form id="policy">
+          <label
+            >保留天数（1–365）<input type="number" id="days" min="1" max="365" required /></label
+          ><label
+            >每人每个接待 Agent 的活动会话上限<input
+              type="number"
+              id="sessions"
+              min="1"
+              max="100"
+              required /></label
+          ><label>每会话轮数上限<input type="number" id="turns" min="1" max="500" required /></label
+          ><label
+            >模型上下文轮数<input type="number" id="context" min="1" max="12" required /></label
+          ><label>调整原因<input id="reason" minlength="3" maxlength="1000" required /></label
+          ><button id="save">保存政策（学校负责人）</button>
+        </form>
+      </section>
+      <section>
+        <h2>清理与诊断</h2>
+        <p id="summary"></p>
+        <button id="expire">执行到期清理（负责人/管理员）</button>
+        <div id="diagnostics"></div>
+      </section>
+    </main>
+    <script type="module" src="/reception-admin.js"></script>
+  </body>
+</html>

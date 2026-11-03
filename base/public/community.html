@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>校园社区 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/community.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/" class="brand"
+        >H↗ <span>HYPER DIMENSION<small>校园社区与记忆</small></span></a
+      >
+      <nav>
+        <a href="/history.html">历史检索</a>
+        <a href="/annual.html">学年计划</a>
+        <a href="/m2.html">我的形象</a><a href="/profile.html">个人主页</a
+        ><a href="/social.html">私信与聊天</a><a href="/m1.html">账号与权限</a>
+      </nav>
+    </header>
+    <main>
+      <p class="eyebrow">STORIES, PEOPLE & PLACES</p>
+      <h1>让校园的故事，有处可留。</h1>
+      <p class="intro">在学校与组织板块交流，把回忆留在地点上。发布、审核和申诉都保留记录。</p>
+      <p id="status" role="status">正在读取账号…</p>
+      <a id="login" href="/auth/login" hidden>登录学校账号</a>
+      <div id="workspace" hidden>
+        <section class="toolbar">
+          <label>学校<select id="school"></select></label
+          ><label>社区范围<select id="organization"></select></label
+          ><button id="refresh">刷新</button><a id="space-link" href="/">进入空间 ↗</a>
+        </section>
+        <section class="home">
+          <div>
+            <p class="eyebrow">01 / COMMUNITY HOME</p>
+            <h2 id="home-name"></h2>
+            <p id="home-summary"></p>
+            <p id="home-owners"></p>
+            <p id="home-anchor"></p>
+            <a id="activities-link" href="/activities.html">组织活动与参与 →</a>
+          </div>
+          <form id="home-form" hidden>
+            <label>主页介绍<textarea id="home-input" maxlength="2000"></textarea></label
+            ><label>关联地点<select id="home-place"></select></label><button>保存主页</button>
+          </form>
+        </section>
+        <div class="columns">
+          <section>
+            <p class="eyebrow">02 / STORIES</p>
+            <h2>论坛与地图记忆</h2>
+            <form id="search-form" class="filters">
+              <label>板块<select id="category-filter"></select></label
+              ><label
+                >正文搜索<input
+                  id="query"
+                  maxlength="80"
+                  placeholder="搜索已获准查看的内容" /></label
+              ><label>地图地点<select id="map-filter"></select></label><button>查询</button>
+            </form>
+            <form id="category-form" hidden>
+              <label
+                >新增板块<input id="category-name" minlength="2" maxlength="80" required /></label
+              ><label>说明<input id="category-description" maxlength="500" /></label
+              ><button>创建板块</button>
+            </form>
+            <div id="posts"></div>
+            <div class="pager">
+              <button id="previous">上一页</button><span id="page-info"></span
+              ><button id="next">下一页</button>
+            </div>
+          </section>
+          <section>
+            <p class="eyebrow">03 / WRITE A MEMORY</p>
+            <h2 id="compose-heading">写一篇校园故事</h2>
+            <form id="compose">
+              <label>标题<input id="title" minlength="3" maxlength="80" required /></label
+              ><label
+                >正文<textarea
+                  id="content"
+                  minlength="8"
+                  maxlength="3000"
+                  required
+                ></textarea></label
+              ><label>板块<select id="category"></select></label
+              ><label>关联地图地点<select id="place"></select></label>
+              <div class="actions">
+                <button id="save-draft">保存草稿</button
+                ><button id="submit-draft" type="button" disabled>提交审核</button
+                ><button id="new-draft" type="button">新建</button>
+              </div>
+            </form>
+            <p id="draft-state">草稿仅自己可见；提交后由当前范围版主审核。</p>
+            <form id="attach-form" hidden>
+              <label
+                >添加附件（单个 ≤512 KiB）<input
+                  type="file"
+                  id="attachment-file"
+                  accept=".png,.jpg,.jpeg,.pdf,.txt"
+                  required /></label
+              ><button>上传并绑定草稿</button>
+            </form>
+            <div id="drafts"></div>
+          </section>
+        </div>
+        <section id="detail" hidden>
+          <p class="eyebrow">04 / CONVERSATION</p>
+          <h2 id="detail-title"></h2>
+          <p id="detail-meta"></p>
+          <pre id="detail-content"></pre>
+          <div id="attachments"></div>
+          <div id="detail-actions" class="actions"></div>
+          <label
+            >操作理由<textarea
+              id="reason"
+              minlength="3"
+              maxlength="500"
+              placeholder="审核、举报、撤回或申诉需填写理由"
+            ></textarea>
+          </label>
+          <div id="reports"></div>
+          <div id="trail"></div>
+          <h3>评论</h3>
+          <div id="replies"></div>
+          <button id="reply">写评论</button>
+        </section>
+      </div>
+    </main>
+    <footer>
+      Hyper Dimension Base · 内容与正文版本由 NodeBB 持有；当前学校与组织权限决定可见范围。
+    </footer>
+    <script type="module" src="/community.js"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>校园运营计划 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/operations.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/"
+        >H↗ <span>HYPER DIMENSION<small>把校园想法，安排成可执行的下一步。</small></span></a
+      >
+      <nav>
+        <a href="/annual.html">学年运营与个人计划</a><a href="/community.html">校园社区</a
+        ><a href="/activities.html">活动与志愿</a><a href="/m1.html">账号与权限</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">BASE 03 / OPERATIONS</p>
+        <h1>让每一届，都能接着做好。</h1>
+        <p>
+          预览运营材料、保留版本，再把选定模板变成真实活动草稿。每份排期都有负责人和可追溯的复盘。
+        </p>
+      </section>
+      <p id="status" role="status" aria-live="polite">正在读取当前管理范围…</p>
+      <section id="login" class="panel" hidden>
+        <h2>需要获准的学校或组织负责人账号</h2>
+        <p>运营权限来自角色授权，与贡献排名无关。</p>
+        <a href="/auth/login">登录学校账号 →</a>
+      </section>
+      <section class="panel scope">
+        <label>学校<select id="school"></select></label
+        ><label>管理范围<select id="organization"></select></label
+        ><button id="refresh">刷新</button>
+      </section>
+      <div id="workspace" hidden>
+        <section class="panel">
+          <p class="eyebrow">01 / SOURCE & VERSION</p>
+          <h2>先看清来源，再导入</h2>
+          <p>
+            示例仅用于试运行准备。旧运营资料可以由 Agent
+            整理为下方固定结构；导入不会创建活动、改历史积分或发放奖励。
+          </p>
+          <div class="toolbar">
+            <button id="load-example">读取虚构校园示例</button
+            ><label class="file"
+              >上传运营 JSON<input type="file" id="package-file" accept=".json,application/json"
+            /></label>
+          </div>
+          <details>
+            <summary>查看或调整结构化运营材料</summary>
+            <label
+              >运营包 JSON<textarea id="document" rows="14" spellcheck="false"></textarea>
+            </label>
+          </details>
+          <button id="preview-package">校验并预览变化</button>
+          <div id="package-preview" class="preview" hidden></div>
+          <form id="import-form" hidden>
+            <label
+              >本次导入理由<input
+                id="import-reason"
+                minlength="3"
+                maxlength="500"
+                required
+                placeholder="例如：负责人核对了迎新安排与公开条件" /></label
+            ><label class="check"
+              ><input
+                id="import-confirm"
+                type="checkbox"
+                required
+              />我已核对来源与变化，确认导入这个不可变版本。</label
+            ><button class="primary">确认导入版本</button>
+          </form>
+          <h3>版本档案</h3>
+          <div id="packages"></div>
+          <label class="check"
+            ><input
+              id="activation-confirm"
+              type="checkbox"
+            />我确认激活选定版本，仅影响以后新建的排期。</label
+          ><label
+            >激活理由<input
+              id="activation-reason"
+              maxlength="500"
+              placeholder="说明为什么采用这个版本"
+          /></label>
+        </section>
+        <section class="panel">
+          <p class="eyebrow">02 / TIMELINE</p>
+          <h2>把模板安排成活动草稿</h2>
+          <form id="plan-form">
+            <div class="grid">
+              <label>已激活模板<select id="active-package" required></select></label
+              ><label
+                >本次计划名称<input
+                  id="plan-title"
+                  maxlength="160"
+                  required
+                  placeholder="例如：本学期校园参与计划" /></label
+              ><label
+                >第 0 天的开始时间（本地时区）<input
+                  id="starts-at"
+                  type="datetime-local"
+                  required /></label
+              ><label>负责交接与跟进的人<select id="responsible" required></select></label
+              ><label>活动地点<select id="place"></select></label
+              ><label>贡献规则参考<select id="rule"></select></label
+              ><label>已发布奖励参考<select id="reward"></select></label>
+            </div>
+            <fieldset>
+              <legend>选择要安排的活动</legend>
+              <div id="templates"></div>
+            </fieldset>
+            <fieldset>
+              <legend>指定参与核验人员</legend>
+              <div id="verifiers"></div>
+            </fieldset>
+            <p>
+              创建后仍需到活动中心逐项审核发布。规则参考不会自动建立计分时期；奖励参考不会自动发放权益。
+            </p>
+            <button class="primary">预览排期与影响</button>
+          </form>
+          <div id="plan-preview" class="preview" hidden></div>
+          <form id="schedule-form" hidden>
+            <label class="check"
+              ><input
+                id="schedule-confirm"
+                type="checkbox"
+                required
+              />确认创建这些活动草稿，后续发布与核验由获准人员完成。</label
+            ><button class="primary">创建真实活动草稿</button>
+          </form>
+        </section>
+        <section class="panel">
+          <p class="eyebrow">03 / REVIEW & HANDOFF</p>
+          <h2>跟进、复盘与交接</h2>
+          <div id="runs"></div>
+          <div id="review" hidden>
+            <h3 id="review-title"></h3>
+            <p id="review-owner"></p>
+            <div id="timeline"></div>
+            <button id="export">下载当前复盘 JSON</button>
+            <form id="handoff-form">
+              <h3>记录负责人交接</h3>
+              <p>
+                先在账号与权限中完成正式授权，再交给已获准的新负责人。此处不会授予角色或更改旧活动。
+              </p>
+              <div class="grid">
+                <label>接手负责人<select id="handoff-person"></select></label
+                ><label
+                  >交接说明<input id="handoff-reason" minlength="3" maxlength="500" required
+                /></label>
+              </div>
+              <button>记录交接</button>
+            </form>
+            <div id="handoff-history"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      Hyper Dimension Base · 原始材料与历史版本保留，事实由活动、贡献和奖励权威记录提供。
+    </footer>
+    <script type="module" src="/operations.js"></script>
+  </body>
+</html>

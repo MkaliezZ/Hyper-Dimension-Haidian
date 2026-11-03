@@ -1,0 +1,8 @@
+* -text
+*.png binary
+*.jpg binary
+*.webp binary
+*.glb binary
+*.zip binary
+# Applied migration digests use exact bytes; Git must not normalize SQL on checkout.
+*.sql -text

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "library",
+    "title": "虚拟校园图书借阅规则",
+    "body": "这是原创虚拟校园示例。学生借阅图书须出示有效校园卡；每次最多借四册，借期二十一天。逾期归还规则由学校另行发布。",
+    "published": true,
+    "revision": 1,
+    "sourceLabel": "虚拟学生手册 / 图书借阅"
+  },
+  {
+    "id": "studio",
+    "title": "虚拟校园创客空间预约",
+    "body": "这是原创虚拟校园示例。使用激光切割设备前，学生须先完成安全培训，再通过创客空间管理员预约。未经培训不能独自使用设备。",
+    "published": true,
+    "revision": 1,
+    "sourceLabel": "虚拟学生手册 / 创客空间"
+  },
+  {
+    "id": "internal",
+    "title": "内部维护占位记录",
+    "body": "PRIVATE_KB_FIXTURE_MUST_NOT_BE_EMBEDDED_OR_PUBLISHED",
+    "published": false,
+    "revision": 1
+  }
+]

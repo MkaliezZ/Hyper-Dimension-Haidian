@@ -1,0 +1,1667 @@
+{
+  "format": "uw.street-building-atlases/v1",
+  "version": "0.8.0",
+  "artVersion": "uw-streets-1.0.0",
+  "geometryHash": "e77afd817acd8f7912598ec09feb7900329830c228580cfc593115a26a1dfe3d",
+  "origin": "original deterministic code-native pixel artwork",
+  "generator": "scripts/export-building-assets.mjs",
+  "sourcePixelRatio": 2,
+  "scope": "All 68 secondary buildings; six photo-referenced landmarks remain separate. Every source footprint and courtyard is unchanged. Roof/material/entrance details are illustrative artistic inferences, not measured UW features.",
+  "styles": {
+    "sandstone": 20,
+    "contemporary": 17,
+    "brick": 16,
+    "collegiate": 12,
+    "timber": 3
+  },
+  "files": [
+    {
+      "path": "street-buildings-1-v1.png",
+      "width": 2048,
+      "height": 1911,
+      "bytes": 1022734,
+      "sha256": "79b02007a972ae212797b79a1771e3fbca5e454bfa3056ad5208ddc1e6e1b976"
+    },
+    {
+      "path": "street-buildings-2-v1.png",
+      "width": 2048,
+      "height": 325,
+      "bytes": 157563,
+      "sha256": "7f273d33132e4b33c077b9ba1be00b69cd9306d62c4ca698132a8f4f1842dfae"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "sea-99040-0",
+      "code": "JHN",
+      "name": "Johnson Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        2,
+        2,
+        418,
+        342
+      ],
+      "worldRect": [
+        79.8204,
+        132.458,
+        209,
+        171
+      ],
+      "depth": 150.1773,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 31157,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-77310-0",
+      "code": "LAW",
+      "name": "William H. Gates Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        424,
+        2,
+        455,
+        329
+      ],
+      "worldRect": [
+        -983.0388,
+        -172.3064,
+        227.5,
+        164.5
+      ],
+      "depth": -5.5575,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 47007,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-99156-0",
+      "code": "PAB",
+      "name": "Physics-Astronomy Building",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        883,
+        2,
+        565,
+        323
+      ],
+      "worldRect": [
+        -25.635599999999986,
+        350.54319999999996,
+        282.5,
+        161.5
+      ],
+      "depth": 254.40089999999998,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 55392,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-47588-0",
+      "code": "CMU",
+      "name": "Communications Building",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1452,
+        2,
+        266,
+        322
+      ],
+      "worldRect": [
+        113.01720000000002,
+        -298.2268,
+        133,
+        161
+      ],
+      "depth": -70.21170000000001,
+      "style": "collegiate",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 28108,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-31027-0",
+      "code": "SMI",
+      "name": "Smith Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1722,
+        2,
+        263,
+        315
+      ],
+      "worldRect": [
+        -80.75040000000001,
+        -163.8718,
+        131.5,
+        157.5
+      ],
+      "depth": -4.793100000000001,
+      "style": "collegiate",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 27742,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-59787-0",
+      "code": "PWR",
+      "name": "Power Plant",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        2,
+        348,
+        541,
+        307
+      ],
+      "worldRect": [
+        782.8812,
+        -123.73580000000001,
+        270.5,
+        153.5
+      ],
+      "depth": 13.369200000000012,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 41535,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-99092-0",
+      "code": "BAG",
+      "name": "Bagley Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        547,
+        348,
+        639,
+        307
+      ],
+      "worldRect": [
+        264.9456,
+        204.6002,
+        319.5,
+        153.5
+      ],
+      "depth": 177.39540000000002,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 66890,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-98914-0",
+      "code": "PCAR",
+      "name": "PACCAR Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1190,
+        348,
+        483,
+        305
+      ],
+      "worldRect": [
+        -689.2908,
+        -332.74460000000005,
+        241.5,
+        152.5
+      ],
+      "depth": -91.70069999999998,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 46457,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-63189-0",
+      "code": "HRC",
+      "name": "Hans Rosling Center for Population Health",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        2,
+        659,
+        451,
+        299
+      ],
+      "worldRect": [
+        -259.01160000000004,
+        284.02479999999997,
+        225.5,
+        149.5
+      ],
+      "depth": 215.1318,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 35383,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-77732-0",
+      "code": "PDL",
+      "name": "Padelford Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        457,
+        659,
+        286,
+        290
+      ],
+      "worldRect": [
+        221.62439999999998,
+        -370.325,
+        143,
+        145
+      ],
+      "depth": -114.2193,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 18439,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-99089-0",
+      "code": "MEB",
+      "name": "Mechanical Engineering Building",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        747,
+        659,
+        438,
+        286
+      ],
+      "worldRect": [
+        719.7168,
+        -68.4182,
+        219,
+        143
+      ],
+      "depth": 35.67329999999999,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 38084,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-97010-0",
+      "code": "MGH",
+      "name": "Mary Gates Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1189,
+        659,
+        482,
+        279
+      ],
+      "worldRect": [
+        145.8708,
+        13.057400000000015,
+        241,
+        139.5
+      ],
+      "depth": 74.56020000000001,
+      "style": "collegiate",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 43719,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-58161-0",
+      "code": "MNY",
+      "name": "Meany Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        2,
+        962,
+        466,
+        276
+      ],
+      "worldRect": [
+        -303.1752,
+        128.095,
+        233,
+        138
+      ],
+      "depth": 131.3247,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 45527,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-45092-0",
+      "code": "OUG",
+      "name": "Odegaard Library",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        472,
+        962,
+        356,
+        268
+      ],
+      "worldRect": [
+        -425.0112,
+        38.24340000000001,
+        178,
+        134
+      ],
+      "depth": 84.4701,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 35143,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-99164-0",
+      "code": "OAK",
+      "name": "Oak Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        832,
+        962,
+        231,
+        268
+      ],
+      "worldRect": [
+        -351.11400000000003,
+        -475.77040000000005,
+        115.5,
+        134
+      ],
+      "depth": -172.4229,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 15925,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-66523-0",
+      "code": "AVA",
+      "name": "Faye G. Allen Center for the Visual Arts",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1067,
+        962,
+        391,
+        267
+      ],
+      "worldRect": [
+        -544.1172,
+        129.0856,
+        195.5,
+        133.5
+      ],
+      "depth": 129.6126,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 27065,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-58585-0",
+      "code": "ECE",
+      "name": "Electrical and Computer Engineering Building",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1462,
+        962,
+        549,
+        261
+      ],
+      "worldRect": [
+        549.9888000000001,
+        52.980999999999995,
+        274.5,
+        130.5
+      ],
+      "depth": 90.129,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 52051,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-90463-0",
+      "code": "MCM",
+      "name": "McMahon Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        2,
+        1242,
+        397,
+        257
+      ],
+      "worldRect": [
+        25.813199999999956,
+        -492.83959999999996,
+        198.5,
+        128.5
+      ],
+      "depth": -183.88500000000002,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 34667,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-8014-0",
+      "code": "MLR",
+      "name": "Miller Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        403,
+        1242,
+        143,
+        246
+      ],
+      "worldRect": [
+        -29.114400000000014,
+        -260.32660000000004,
+        71.5,
+        123
+      ],
+      "depth": -70.1922,
+      "style": "collegiate",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 15632,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-36455-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        550,
+        1242,
+        327,
+        240
+      ],
+      "worldRect": [
+        -119.73480000000006,
+        -580.8364,
+        163.5,
+        120
+      ],
+      "depth": -232.14360000000002,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 21952,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-99173-0",
+      "code": "ART",
+      "name": "Art Building",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        881,
+        1242,
+        322,
+        238
+      ],
+      "worldRect": [
+        -287.7468,
+        -353.5834,
+        161,
+        119
+      ],
+      "depth": -118.89930000000001,
+      "style": "collegiate",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 31162,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-60806-0",
+      "code": "SIG",
+      "name": "Sieg Building",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1207,
+        1242,
+        189,
+        235
+      ],
+      "worldRect": [
+        346.51800000000003,
+        -48.2524,
+        94.5,
+        117.5
+      ],
+      "depth": 32.935500000000005,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 12339,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-37621-0",
+      "code": "MOL",
+      "name": "Molecular Engineering & Sciences Building",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1400,
+        1242,
+        330,
+        231
+      ],
+      "worldRect": [
+        3.2556000000000305,
+        183.61540000000002,
+        165,
+        115.5
+      ],
+      "depth": 147.9387,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 25734,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-92872-0",
+      "code": "LOW",
+      "name": "Loew Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1734,
+        1242,
+        246,
+        223
+      ],
+      "worldRect": [
+        658.128,
+        -107.0984,
+        123,
+        111.5
+      ],
+      "depth": 0.5537999999999952,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 17019,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-58718-0",
+      "code": "ARC",
+      "name": "Architecture Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        2,
+        1503,
+        263,
+        212
+      ],
+      "worldRect": [
+        -125.19480000000003,
+        242.0636,
+        131.5,
+        106
+      ],
+      "depth": 172.3059,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 14175,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-37371-0",
+      "code": "PAR",
+      "name": "Parrington Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        269,
+        1503,
+        208,
+        208
+      ],
+      "worldRect": [
+        -559.9044,
+        -33.7834,
+        104,
+        104
+      ],
+      "depth": 33.47370000000001,
+      "style": "collegiate",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 12596,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-76205-0",
+      "code": "HLL",
+      "name": "David C. Hall Building",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        481,
+        1503,
+        286,
+        206
+      ],
+      "worldRect": [
+        380.4012,
+        -290.74660000000006,
+        143,
+        103
+      ],
+      "depth": -95.47980000000001,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 16848,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-28352-0",
+      "code": "GTH",
+      "name": "Guthrie Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        771,
+        1503,
+        245,
+        202
+      ],
+      "worldRect": [
+        -17.586000000000034,
+        300.0254,
+        122.5,
+        101
+      ],
+      "depth": 198.8922,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 14450,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-92195-0",
+      "code": "GUG",
+      "name": "Guggenheim Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1020,
+        1503,
+        254,
+        202
+      ],
+      "worldRect": [
+        454.5948000000001,
+        2.9077999999999946,
+        127,
+        101
+      ],
+      "depth": 50.3373,
+      "style": "collegiate",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 16246,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-27182-0",
+      "code": "BNS",
+      "name": "Benson Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1278,
+        1503,
+        256,
+        197
+      ],
+      "worldRect": [
+        286.53600000000006,
+        309.62440000000004,
+        128,
+        98.5
+      ],
+      "depth": 202.51919999999998,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 17496,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-23269-0",
+      "code": "CSE2",
+      "name": "Bill & Melinda Gates Center for Computer Science & Engineering",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1538,
+        1503,
+        505,
+        194
+      ],
+      "worldRect": [
+        855.0468,
+        19.07440000000002,
+        252.5,
+        97
+      ],
+      "depth": 56.49540000000001,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 31783,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-65360-0",
+      "code": "KIR",
+      "name": "Kirsten Wind Tunnel",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        2,
+        1719,
+        198,
+        190
+      ],
+      "worldRect": [
+        502.50239999999997,
+        -43.907799999999995,
+        99,
+        95
+      ],
+      "depth": 23.9616,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 7795,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-33261-0",
+      "code": "FAC",
+      "name": "University of Washington Club (Faculty Center)",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        204,
+        1719,
+        216,
+        189
+      ],
+      "worldRect": [
+        493.3452,
+        -241.7236,
+        108,
+        94.5
+      ],
+      "depth": -75.2778,
+      "style": "timber",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 9737,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-81258-0",
+      "code": "CLK",
+      "name": "Clark Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        424,
+        1719,
+        172,
+        189
+      ],
+      "worldRect": [
+        56.6232,
+        -366.3356,
+        86,
+        94.5
+      ],
+      "depth": -137.65050000000002,
+      "style": "collegiate",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 7770,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-15377-0",
+      "code": "GRB",
+      "name": "Gerberding Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        600,
+        1719,
+        302,
+        187
+      ],
+      "worldRect": [
+        -110.51520000000001,
+        97.79480000000004,
+        151,
+        93.5
+      ],
+      "depth": 94.13430000000001,
+      "style": "collegiate",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 13096,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-80940-0",
+      "code": "KIN",
+      "name": "Kincaid Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        906,
+        1719,
+        206,
+        181
+      ],
+      "worldRect": [
+        255.97560000000004,
+        405.58000000000004,
+        103,
+        90.5
+      ],
+      "depth": 246.519,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 11780,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-11847-0",
+      "code": "FLK",
+      "name": "Fluke Hall",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1116,
+        1719,
+        222,
+        179
+      ],
+      "worldRect": [
+        545.6988,
+        -285.0086,
+        111,
+        89.5
+      ],
+      "depth": -99.48899999999999,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 3908,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-40985-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-1-v1.png",
+      "rect": [
+        1342,
+        1719,
+        397,
+        176
+      ],
+      "worldRect": [
+        97.80720000000001,
+        272.195,
+        198.5,
+        88
+      ],
+      "depth": 178.3665,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 15538,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-23714-0",
+      "code": "MUS",
+      "name": "Music Building",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        2,
+        2,
+        330,
+        173
+      ],
+      "worldRect": [
+        -89.15879999999999,
+        -317.2822,
+        165,
+        86.5
+      ],
+      "depth": -116.9259,
+      "style": "collegiate",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 14272,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-34718-0",
+      "code": "FNDR",
+      "name": "Founders Hall",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        336,
+        2,
+        245,
+        169
+      ],
+      "worldRect": [
+        -434.18399999999997,
+        -328.5014,
+        122.5,
+        84.5
+      ],
+      "depth": -123.6066,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 18205,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-10275-0",
+      "code": "INT",
+      "name": "Intellectual House",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        585,
+        2,
+        188,
+        162
+      ],
+      "worldRect": [
+        -48.9732,
+        -422.07520000000005,
+        94,
+        81
+      ],
+      "depth": -172.1616,
+      "style": "timber",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 7837,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-99146-0",
+      "code": "ERS",
+      "name": "East Receiving Station",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        777,
+        2,
+        137,
+        157
+      ],
+      "worldRect": [
+        813.8003999999999,
+        -148.09140000000002,
+        68.5,
+        78.5
+      ],
+      "depth": -36.425999999999995,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 2044,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-52234-0",
+      "code": "MOR",
+      "name": "More Hall",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        918,
+        2,
+        370,
+        156
+      ],
+      "worldRect": [
+        888.7272,
+        87.925,
+        185,
+        78
+      ],
+      "depth": 81.393,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 15222,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-92604-0",
+      "code": "PO4",
+      "name": "Plant Operations Annex 4",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1292,
+        2,
+        153,
+        154
+      ],
+      "worldRect": [
+        728.0472,
+        -184.1546,
+        76.5,
+        77
+      ],
+      "depth": -55.1265,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 4674,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-83020-0",
+      "code": "AER",
+      "name": "Aerospace and Engineering Research Building",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1449,
+        2,
+        196,
+        151
+      ],
+      "worldRect": [
+        586.29,
+        17.0464,
+        98,
+        75.5
+      ],
+      "depth": 44.748599999999996,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 8925,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-36951-0",
+      "code": "HUT",
+      "name": "Hutchinson Hall",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1649,
+        2,
+        124,
+        146
+      ],
+      "worldRect": [
+        -412.39079999999996,
+        -416.7976,
+        62,
+        73
+      ],
+      "depth": -173.5032,
+      "style": "collegiate",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 3247,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-2903-0",
+      "code": "ELB",
+      "name": "Engineering Library",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1777,
+        2,
+        161,
+        145
+      ],
+      "worldRect": [
+        630.204,
+        -117.4334,
+        80.5,
+        72.5
+      ],
+      "depth": -24.18,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 7423,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-40128-0",
+      "code": "LEW",
+      "name": "Lewis Hall",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        2,
+        179,
+        200,
+        144
+      ],
+      "worldRect": [
+        -219.40319999999997,
+        -436.201,
+        100,
+        72
+      ],
+      "depth": -183.729,
+      "style": "collegiate",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 5773,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-27601-0",
+      "code": "GUA",
+      "name": "Guggenheim Annex",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        206,
+        179,
+        109,
+        141
+      ],
+      "worldRect": [
+        425.68800000000005,
+        1.4074000000000026,
+        54.5,
+        70.5
+      ],
+      "depth": 34.3356,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 3724,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-50185-1",
+      "code": "L125",
+      "name": "George F. Russell, Jr. Hall, 1414 NE 42nd Street",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        319,
+        179,
+        139,
+        135
+      ],
+      "worldRect": [
+        -943.0716000000001,
+        3.099199999999989,
+        69.5,
+        67.5
+      ],
+      "depth": 33.55949999999999,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 821,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-26867-0",
+      "code": "ICH",
+      "name": "Cunningham Hall",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        462,
+        179,
+        127,
+        134
+      ],
+      "worldRect": [
+        -576.2376,
+        50.16820000000001,
+        63.5,
+        67
+      ],
+      "depth": 56.846399999999996,
+      "style": "timber",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 2698,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-26936-0",
+      "code": "LSB",
+      "name": "Life Sciences Building",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        593,
+        179,
+        155,
+        131
+      ],
+      "worldRect": [
+        371.4624,
+        405.94660000000005,
+        77.5,
+        65.5
+      ],
+      "depth": 234.1014,
+      "style": "contemporary",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 3643,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-79960-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        752,
+        179,
+        26,
+        125
+      ],
+      "worldRect": [
+        -570.8556,
+        -305.09360000000004,
+        13,
+        62.5
+      ],
+      "depth": -122.9787,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 736,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-33014-0",
+      "code": "PO6",
+      "name": "Plant Operations Annex 6",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        782,
+        179,
+        80,
+        108
+      ],
+      "worldRect": [
+        811.554,
+        -154.9522,
+        40,
+        54
+      ],
+      "depth": -52.170300000000005,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 204,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-40631-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        866,
+        179,
+        78,
+        105
+      ],
+      "worldRect": [
+        79.25880000000004,
+        259.96020000000004,
+        39,
+        52.5
+      ],
+      "depth": 154.60379999999998,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 643,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-68504-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        948,
+        179,
+        60,
+        99
+      ],
+      "worldRect": [
+        -550.716,
+        114.66720000000001,
+        30,
+        49.5
+      ],
+      "depth": 80.33999999999999,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 832,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-10755-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1012,
+        179,
+        90,
+        97
+      ],
+      "worldRect": [
+        268.1904,
+        19.7374,
+        45,
+        48.5
+      ],
+      "depth": 32.3895,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 1083,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-75635-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1106,
+        179,
+        69,
+        96
+      ],
+      "worldRect": [
+        311.8548,
+        -59.53020000000001,
+        34.5,
+        48
+      ],
+      "depth": -7.378799999999996,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 666,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-61671-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1179,
+        179,
+        37,
+        94
+      ],
+      "worldRect": [
+        -294.6732,
+        -176.4872,
+        18.5,
+        47
+      ],
+      "depth": -66.3507,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 521,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-34106-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1220,
+        179,
+        38,
+        93
+      ],
+      "worldRect": [
+        592.9044,
+        -73.0616,
+        19,
+        46.5
+      ],
+      "depth": -14.972100000000006,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 251,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-81423-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1262,
+        179,
+        43,
+        93
+      ],
+      "worldRect": [
+        235.7892,
+        259.9696,
+        21.5,
+        46.5
+      ],
+      "depth": 151.57739999999998,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 380,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-52604-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1309,
+        179,
+        55,
+        91
+      ],
+      "worldRect": [
+        478.1508,
+        -39.382000000000005,
+        27.5,
+        45.5
+      ],
+      "depth": 1.4390999999999992,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 405,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-4180-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1368,
+        179,
+        52,
+        90
+      ],
+      "worldRect": [
+        -898.4868,
+        -14.910199999999978,
+        26,
+        45
+      ],
+      "depth": 13.509600000000017,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 331,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-98769-1",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1424,
+        179,
+        41,
+        89
+      ],
+      "worldRect": [
+        124.79519999999994,
+        527.6422,
+        20.5,
+        44.5
+      ],
+      "depth": 284.5635,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 240,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-12838-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1469,
+        179,
+        48,
+        86
+      ],
+      "worldRect": [
+        -327.35519999999997,
+        -355.87160000000006,
+        24,
+        43
+      ],
+      "depth": -157.9422,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 547,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-92774-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1521,
+        179,
+        29,
+        86
+      ],
+      "worldRect": [
+        -536.5044,
+        -202.9394,
+        14.5,
+        43
+      ],
+      "depth": -81.51389999999999,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 204,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-20342-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1554,
+        179,
+        37,
+        85
+      ],
+      "worldRect": [
+        112.89239999999995,
+        347.71720000000005,
+        18.5,
+        42.5
+      ],
+      "depth": 193.5258,
+      "style": "sandstone",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 223,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    },
+    {
+      "id": "sea-17829-0",
+      "code": "",
+      "name": "",
+      "atlas": "street-buildings-2-v1.png",
+      "rect": [
+        1595,
+        179,
+        36,
+        82
+      ],
+      "worldRect": [
+        132.96959999999999,
+        358.95160000000004,
+        18,
+        41
+      ],
+      "depth": 198.4398,
+      "style": "brick",
+      "heightStatus": "inferred",
+      "sourcePixelRatio": 2,
+      "roofPixels": 216,
+      "detail": "masonry, stone bands, framed windows, entrance, cornice and textured continuous roof"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {campusCatalog} from '../src/campus-catalog.mjs';
+
+test('campus discovery retains the Base contract, outdoor scene and current membership/delegation scope without private payloads',()=>{
+  const input={principal:{spaces:['uw-seattle']},pack:{spaceId:'uw-seattle',name:'UW',description:'Published campus',agents:[{agentId:'uw-reception'},{agentId:'uw-seattle-partner-services'}],knowledge:[{body:'PRIVATE_KNOWLEDGE'}],profiles:[{bio:'PRIVATE_BIO'}]},platform:{extensions:['m1','agents']},reception:{live:true,provider:'hermes',general:true},knowledge:{mode:'postgres'},geometryHash:'geometry-fixture'};
+  const value=campusCatalog(input);assert.equal(value.version,'0.2.1');assert.equal(value.platform,'m0');assert.equal(value.receptionProvider,'hermes');
+  assert.equal(value.spaces.length,1);assert.equal(value.spaces[0].sceneContract,'hyper-dimension.geo-campus/v1');assert.equal(value.spaces[0].scenes[0].sceneId,'uw-outdoors');
+  assert(!JSON.stringify(value).includes('PRIVATE_'));
+  assert.equal(campusCatalog({...input,principal:{spaces:[]}}).spaces.length,0);
+  assert.equal(campusCatalog({...input,principal:{spaces:['foreign']}}).spaces.length,0);
+  const limited=campusCatalog({...input,principal:{spaces:['uw-seattle'],allowedAgents:['uw-seattle-partner-services']}});
+  assert.deepEqual(limited.spaces[0].agents,[{agentId:'uw-seattle-partner-services'}]);
+  limited.spaces[0].agents[0].agentId='changed';assert.equal(input.pack.agents[1].agentId,'uw-seattle-partner-services');
+});

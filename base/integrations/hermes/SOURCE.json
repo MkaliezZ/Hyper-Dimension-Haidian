@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/NousResearch/hermes-agent",
+  "commit": "0a62610f10cc34d696b2239b2c69fa1ba0f1ca63",
+  "tree": "6ebe17489913d635736acf9b00b9f3a4fb045203",
+  "version": "0.19.1",
+  "license": "MIT; upstream license and notices retained in source archive",
+  "archive": "source.tar.gz",
+  "archiveSha256": "fa07aefa305da4f40d7b2f357a3a08eff0cc6127a0e286d07ef6ffc5d495862d",
+  "provenance": "git archive --format=tar.gz --prefix=hermes/ of the exact published upstream commit, tracked files only; no personal config/history/credentials",
+  "dependencies": "upstream uv.lock, frozen core installation without optional tool extras",
+  "python": ">=3.11,<3.14; container uses a pinned Python 3.13 image"
+}

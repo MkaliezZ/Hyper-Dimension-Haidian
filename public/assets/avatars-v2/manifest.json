@@ -1,0 +1,569 @@
+{
+  "format": "uw.detailed-avatar-assets/v1",
+  "version": "0.8.0",
+  "catalog": "uw-visitors-5",
+  "generator": "uw-pixel-2.0.0",
+  "rendererHash": "86d21e8dc36f0920f9c7c6cd0a6e30a5b10cf6c1a07505574a6e2aea6f28afcc",
+  "origin": "original deterministic code-native pixel artwork; no outside photographs",
+  "sourcePixelRatio": 2,
+  "mapDisplayScale": 0.7,
+  "legacyRecipes": "v1-v4 accepted with their original renderer hashes; current presentation is read-only until an explicit save",
+  "files": [
+    {
+      "path": "visitor-campus-v2.png",
+      "width": 192,
+      "height": 768,
+      "bytes": 12039,
+      "sha256": "f24550abb1f2b329dd29df1b06de9576bc8a5b37635d4c2f79db3913dc902703",
+      "preset": "campus",
+      "recipe": {
+        "schema": "hyper-dimension.avatar/v2",
+        "catalogVersion": "uw-visitors-5",
+        "skeletonVersion": "campus-humanoid-1",
+        "generatorVersion": "uw-pixel-2.0.0",
+        "height": "standard",
+        "presentation": "neutral",
+        "skin": "warm",
+        "parts": {
+          "body": "body-regular",
+          "hair": "hair-sidepart",
+          "top": "top-varsity",
+          "bottom": "bottom-trousers",
+          "shoes": "shoes-sneakers",
+          "glasses": "glasses-none",
+          "accessory": "accessory-satchel"
+        },
+        "colors": {
+          "hair": "#332b29",
+          "top": "#347b70",
+          "bottom": "#354653",
+          "shoes": "#f4eee0"
+        }
+      }
+    },
+    {
+      "path": "visitor-library-v2.png",
+      "width": 192,
+      "height": 768,
+      "bytes": 12850,
+      "sha256": "b3412c554f65341e30e42e70f37f4ada2cfcee95cd0ecc14f665e251dd942911",
+      "preset": "library",
+      "recipe": {
+        "schema": "hyper-dimension.avatar/v2",
+        "catalogVersion": "uw-visitors-5",
+        "skeletonVersion": "campus-humanoid-1",
+        "generatorVersion": "uw-pixel-2.0.0",
+        "height": "standard",
+        "presentation": "soft",
+        "skin": "warm",
+        "parts": {
+          "body": "body-regular",
+          "hair": "hair-long",
+          "top": "top-cardigan",
+          "bottom": "bottom-culottes",
+          "shoes": "shoes-sneakers",
+          "glasses": "glasses-oval",
+          "accessory": "accessory-bow"
+        },
+        "colors": {
+          "hair": "#332b29",
+          "top": "#b7775e",
+          "bottom": "#354653",
+          "shoes": "#f4eee0"
+        }
+      }
+    },
+    {
+      "path": "visitor-sports-v2.png",
+      "width": 192,
+      "height": 768,
+      "bytes": 12439,
+      "sha256": "31f4d6320734cbfc50b34d14c268e28c162a54c0cd056be44cd2bf4c6b85cfe2",
+      "preset": "sports",
+      "recipe": {
+        "schema": "hyper-dimension.avatar/v2",
+        "catalogVersion": "uw-visitors-5",
+        "skeletonVersion": "campus-humanoid-1",
+        "generatorVersion": "uw-pixel-2.0.0",
+        "height": "standard",
+        "presentation": "neutral",
+        "skin": "warm",
+        "parts": {
+          "body": "body-regular",
+          "hair": "hair-braids",
+          "top": "top-polo",
+          "bottom": "bottom-shorts",
+          "shoes": "shoes-high",
+          "glasses": "glasses-none",
+          "accessory": "accessory-headphones"
+        },
+        "colors": {
+          "hair": "#332b29",
+          "top": "#347b70",
+          "bottom": "#354653",
+          "shoes": "#f4eee0"
+        }
+      }
+    },
+    {
+      "path": "visitor-creative-v2.png",
+      "width": 192,
+      "height": 768,
+      "bytes": 12496,
+      "sha256": "04bda8c81a6417e9782f1bfef990b9a5d55a77a90956b1f9d0004be76c202614",
+      "preset": "creative",
+      "recipe": {
+        "schema": "hyper-dimension.avatar/v2",
+        "catalogVersion": "uw-visitors-5",
+        "skeletonVersion": "campus-humanoid-1",
+        "generatorVersion": "uw-pixel-2.0.0",
+        "height": "standard",
+        "presentation": "neutral",
+        "skin": "deep",
+        "parts": {
+          "body": "body-regular",
+          "hair": "hair-bun",
+          "top": "top-vest",
+          "bottom": "bottom-cargo",
+          "shoes": "shoes-boots",
+          "glasses": "glasses-square",
+          "accessory": "accessory-backpack"
+        },
+        "colors": {
+          "hair": "#332b29",
+          "top": "#6c6792",
+          "bottom": "#354653",
+          "shoes": "#f4eee0"
+        }
+      }
+    },
+    {
+      "path": "visitor-parts-v2.png",
+      "width": 576,
+      "height": 400,
+      "bytes": 10676,
+      "sha256": "835f42ea700d85e0cea6ea7669dff5d4d3cf1e8ea5543f428c9710251ebf2cba",
+      "purpose": "All 38 selectable part previews; original higher-detail fibers, clothing seams, eyewear and footwear",
+      "parts": [
+        {
+          "id": "body-regular",
+          "slot": "body",
+          "label": "标准体型",
+          "rect": [
+            4,
+            8,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "body-slim",
+          "slot": "body",
+          "label": "纤细体型",
+          "rect": [
+            76,
+            8,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "body-athletic",
+          "slot": "body",
+          "label": "运动体型",
+          "rect": [
+            148,
+            8,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-short",
+          "slot": "hair",
+          "label": "清爽短发",
+          "rect": [
+            220,
+            8,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-sidepart",
+          "slot": "hair",
+          "label": "侧分短发",
+          "rect": [
+            292,
+            8,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-bob",
+          "slot": "hair",
+          "label": "齐耳短发",
+          "rect": [
+            364,
+            8,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-ponytail",
+          "slot": "hair",
+          "label": "马尾",
+          "rect": [
+            436,
+            8,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-curly",
+          "slot": "hair",
+          "label": "蓬松卷发",
+          "rect": [
+            508,
+            8,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "top-tee",
+          "slot": "top",
+          "label": "校园短袖",
+          "rect": [
+            4,
+            88,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "top-varsity",
+          "slot": "top",
+          "label": "学院夹克",
+          "rect": [
+            76,
+            88,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "top-hoodie",
+          "slot": "top",
+          "label": "连帽卫衣",
+          "rect": [
+            148,
+            88,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "bottom-trousers",
+          "slot": "bottom",
+          "label": "直筒长裤",
+          "rect": [
+            220,
+            88,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "bottom-skirt",
+          "slot": "bottom",
+          "label": "百褶裙",
+          "rect": [
+            292,
+            88,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "bottom-shorts",
+          "slot": "bottom",
+          "label": "休闲短裤",
+          "rect": [
+            364,
+            88,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "shoes-sneakers",
+          "slot": "shoes",
+          "label": "低帮运动鞋",
+          "rect": [
+            436,
+            88,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "shoes-high",
+          "slot": "shoes",
+          "label": "高帮运动鞋",
+          "rect": [
+            508,
+            88,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "shoes-loafers",
+          "slot": "shoes",
+          "label": "乐福鞋",
+          "rect": [
+            4,
+            168,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "glasses-none",
+          "slot": "glasses",
+          "label": "不戴眼镜",
+          "rect": [
+            76,
+            168,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "glasses-round",
+          "slot": "glasses",
+          "label": "圆框眼镜",
+          "rect": [
+            148,
+            168,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "glasses-square",
+          "slot": "glasses",
+          "label": "方框眼镜",
+          "rect": [
+            220,
+            168,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-none",
+          "slot": "accessory",
+          "label": "不加配饰",
+          "rect": [
+            292,
+            168,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-satchel",
+          "slot": "accessory",
+          "label": "校园挎包",
+          "rect": [
+            364,
+            168,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-scarf",
+          "slot": "accessory",
+          "label": "围巾",
+          "rect": [
+            436,
+            168,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-cap",
+          "slot": "accessory",
+          "label": "棒球帽",
+          "rect": [
+            508,
+            168,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-braids",
+          "slot": "hair",
+          "label": "双辫",
+          "rect": [
+            4,
+            248,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-bun",
+          "slot": "hair",
+          "label": "高丸子头",
+          "rect": [
+            76,
+            248,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-long",
+          "slot": "hair",
+          "label": "披肩长发",
+          "rect": [
+            148,
+            248,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "top-polo",
+          "slot": "top",
+          "label": "翻领短袖",
+          "rect": [
+            220,
+            248,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "top-cardigan",
+          "slot": "top",
+          "label": "开衫",
+          "rect": [
+            292,
+            248,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "top-vest",
+          "slot": "top",
+          "label": "衬衫针织背心",
+          "rect": [
+            364,
+            248,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "bottom-jeans",
+          "slot": "bottom",
+          "label": "牛仔长裤",
+          "rect": [
+            436,
+            248,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "bottom-cargo",
+          "slot": "bottom",
+          "label": "工装长裤",
+          "rect": [
+            508,
+            248,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "bottom-culottes",
+          "slot": "bottom",
+          "label": "宽腿裙裤",
+          "rect": [
+            4,
+            328,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "shoes-boots",
+          "slot": "shoes",
+          "label": "圆头短靴",
+          "rect": [
+            76,
+            328,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "glasses-oval",
+          "slot": "glasses",
+          "label": "椭圆金属眼镜",
+          "rect": [
+            148,
+            328,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-headphones",
+          "slot": "accessory",
+          "label": "头戴耳机",
+          "rect": [
+            220,
+            328,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-backpack",
+          "slot": "accessory",
+          "label": "校园双肩包",
+          "rect": [
+            292,
+            328,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-bow",
+          "slot": "accessory",
+          "label": "发侧蝴蝶结",
+          "rect": [
+            364,
+            328,
+            64,
+            64
+          ]
+        }
+      ]
+    }
+  ]
+}

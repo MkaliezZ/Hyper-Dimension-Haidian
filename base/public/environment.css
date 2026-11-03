@@ -1,0 +1,109 @@
+.toolbar,
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: end;
+}
+.toolbar label,
+.form-grid label {
+  min-width: 180px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.grid:has(#announcement-manager[hidden]) {
+  grid-template-columns: 1fr;
+}
+#feedback-form,
+#announcement-form {
+  display: block;
+}
+#announcement-form input:not([type='hidden']),
+#announcement-form textarea,
+#feedback-form textarea {
+  width: 100%;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0.5rem 0;
+}
+input,
+select,
+textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+textarea {
+  width: 100%;
+}
+.check {
+  max-width: 330px;
+  flex-direction: row;
+  align-items: center;
+}
+.check input {
+  width: auto;
+}
+article {
+  padding: 1rem;
+  border: 1px solid #d9e6df;
+  border-radius: 10px;
+  margin: 0.8rem 0;
+  overflow-wrap: anywhere;
+}
+article p {
+  white-space: pre-wrap;
+}
+article button {
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.role {
+  font-weight: 600;
+  color: #174d40;
+}
+.error {
+  color: #ae302b;
+}
+footer {
+  color: #516b60;
+  padding: 1rem 0;
+}
+button:disabled {
+  opacity: 0.55;
+}
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .toolbar > * {
+    width: 100%;
+    min-width: 0;
+  }
+  .form-grid > * {
+    width: 100%;
+    min-width: 0;
+  }
+  .check {
+    max-width: none;
+  }
+  header {
+    display: block;
+  }
+  nav {
+    flex-wrap: wrap;
+  }
+  section {
+    min-width: 0;
+  }
+}

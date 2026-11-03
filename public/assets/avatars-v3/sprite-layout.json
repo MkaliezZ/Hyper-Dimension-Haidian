@@ -1,0 +1,1480 @@
+{
+  "format": "uw.pixel-sprites/v3",
+  "frame": {
+    "width": 48,
+    "height": 64,
+    "anchor": [
+      24,
+      63
+    ],
+    "sourcePixelRatio": 2,
+    "directions": [
+      "south",
+      "southwest",
+      "west",
+      "northwest",
+      "north",
+      "northeast",
+      "east",
+      "southeast"
+    ],
+    "frames": 4
+  },
+  "actions": [
+    "idle",
+    "walk",
+    "wave"
+  ],
+  "directions": [
+    "south",
+    "southwest",
+    "west",
+    "northwest",
+    "north",
+    "northeast",
+    "east",
+    "southeast"
+  ],
+  "frames": [
+    {
+      "direction": "south",
+      "action": "idle",
+      "frame": 0,
+      "rect": [
+        0,
+        0,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "idle",
+      "frame": 1,
+      "rect": [
+        48,
+        0,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "idle",
+      "frame": 2,
+      "rect": [
+        96,
+        0,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "idle",
+      "frame": 3,
+      "rect": [
+        144,
+        0,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "walk",
+      "frame": 0,
+      "rect": [
+        0,
+        64,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "walk",
+      "frame": 1,
+      "rect": [
+        48,
+        64,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "walk",
+      "frame": 2,
+      "rect": [
+        96,
+        64,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "walk",
+      "frame": 3,
+      "rect": [
+        144,
+        64,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "wave",
+      "frame": 0,
+      "rect": [
+        0,
+        128,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "wave",
+      "frame": 1,
+      "rect": [
+        48,
+        128,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "wave",
+      "frame": 2,
+      "rect": [
+        96,
+        128,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "wave",
+      "frame": 3,
+      "rect": [
+        144,
+        128,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southwest",
+      "action": "idle",
+      "frame": 0,
+      "rect": [
+        0,
+        192,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southwest",
+      "action": "idle",
+      "frame": 1,
+      "rect": [
+        48,
+        192,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southwest",
+      "action": "idle",
+      "frame": 2,
+      "rect": [
+        96,
+        192,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southwest",
+      "action": "idle",
+      "frame": 3,
+      "rect": [
+        144,
+        192,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southwest",
+      "action": "walk",
+      "frame": 0,
+      "rect": [
+        0,
+        256,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southwest",
+      "action": "walk",
+      "frame": 1,
+      "rect": [
+        48,
+        256,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southwest",
+      "action": "walk",
+      "frame": 2,
+      "rect": [
+        96,
+        256,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southwest",
+      "action": "walk",
+      "frame": 3,
+      "rect": [
+        144,
+        256,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southwest",
+      "action": "wave",
+      "frame": 0,
+      "rect": [
+        0,
+        320,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southwest",
+      "action": "wave",
+      "frame": 1,
+      "rect": [
+        48,
+        320,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southwest",
+      "action": "wave",
+      "frame": 2,
+      "rect": [
+        96,
+        320,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southwest",
+      "action": "wave",
+      "frame": 3,
+      "rect": [
+        144,
+        320,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "idle",
+      "frame": 0,
+      "rect": [
+        0,
+        384,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "idle",
+      "frame": 1,
+      "rect": [
+        48,
+        384,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "idle",
+      "frame": 2,
+      "rect": [
+        96,
+        384,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "idle",
+      "frame": 3,
+      "rect": [
+        144,
+        384,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "walk",
+      "frame": 0,
+      "rect": [
+        0,
+        448,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "walk",
+      "frame": 1,
+      "rect": [
+        48,
+        448,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "walk",
+      "frame": 2,
+      "rect": [
+        96,
+        448,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "walk",
+      "frame": 3,
+      "rect": [
+        144,
+        448,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "wave",
+      "frame": 0,
+      "rect": [
+        0,
+        512,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "wave",
+      "frame": 1,
+      "rect": [
+        48,
+        512,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "wave",
+      "frame": 2,
+      "rect": [
+        96,
+        512,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "wave",
+      "frame": 3,
+      "rect": [
+        144,
+        512,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northwest",
+      "action": "idle",
+      "frame": 0,
+      "rect": [
+        0,
+        576,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northwest",
+      "action": "idle",
+      "frame": 1,
+      "rect": [
+        48,
+        576,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northwest",
+      "action": "idle",
+      "frame": 2,
+      "rect": [
+        96,
+        576,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northwest",
+      "action": "idle",
+      "frame": 3,
+      "rect": [
+        144,
+        576,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northwest",
+      "action": "walk",
+      "frame": 0,
+      "rect": [
+        0,
+        640,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northwest",
+      "action": "walk",
+      "frame": 1,
+      "rect": [
+        48,
+        640,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northwest",
+      "action": "walk",
+      "frame": 2,
+      "rect": [
+        96,
+        640,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northwest",
+      "action": "walk",
+      "frame": 3,
+      "rect": [
+        144,
+        640,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northwest",
+      "action": "wave",
+      "frame": 0,
+      "rect": [
+        0,
+        704,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northwest",
+      "action": "wave",
+      "frame": 1,
+      "rect": [
+        48,
+        704,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northwest",
+      "action": "wave",
+      "frame": 2,
+      "rect": [
+        96,
+        704,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northwest",
+      "action": "wave",
+      "frame": 3,
+      "rect": [
+        144,
+        704,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "idle",
+      "frame": 0,
+      "rect": [
+        0,
+        768,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "idle",
+      "frame": 1,
+      "rect": [
+        48,
+        768,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "idle",
+      "frame": 2,
+      "rect": [
+        96,
+        768,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "idle",
+      "frame": 3,
+      "rect": [
+        144,
+        768,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "walk",
+      "frame": 0,
+      "rect": [
+        0,
+        832,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "walk",
+      "frame": 1,
+      "rect": [
+        48,
+        832,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "walk",
+      "frame": 2,
+      "rect": [
+        96,
+        832,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "walk",
+      "frame": 3,
+      "rect": [
+        144,
+        832,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "wave",
+      "frame": 0,
+      "rect": [
+        0,
+        896,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "wave",
+      "frame": 1,
+      "rect": [
+        48,
+        896,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "wave",
+      "frame": 2,
+      "rect": [
+        96,
+        896,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "wave",
+      "frame": 3,
+      "rect": [
+        144,
+        896,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northeast",
+      "action": "idle",
+      "frame": 0,
+      "rect": [
+        0,
+        960,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northeast",
+      "action": "idle",
+      "frame": 1,
+      "rect": [
+        48,
+        960,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northeast",
+      "action": "idle",
+      "frame": 2,
+      "rect": [
+        96,
+        960,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northeast",
+      "action": "idle",
+      "frame": 3,
+      "rect": [
+        144,
+        960,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northeast",
+      "action": "walk",
+      "frame": 0,
+      "rect": [
+        0,
+        1024,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northeast",
+      "action": "walk",
+      "frame": 1,
+      "rect": [
+        48,
+        1024,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northeast",
+      "action": "walk",
+      "frame": 2,
+      "rect": [
+        96,
+        1024,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northeast",
+      "action": "walk",
+      "frame": 3,
+      "rect": [
+        144,
+        1024,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northeast",
+      "action": "wave",
+      "frame": 0,
+      "rect": [
+        0,
+        1088,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northeast",
+      "action": "wave",
+      "frame": 1,
+      "rect": [
+        48,
+        1088,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northeast",
+      "action": "wave",
+      "frame": 2,
+      "rect": [
+        96,
+        1088,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "northeast",
+      "action": "wave",
+      "frame": 3,
+      "rect": [
+        144,
+        1088,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "idle",
+      "frame": 0,
+      "rect": [
+        0,
+        1152,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "idle",
+      "frame": 1,
+      "rect": [
+        48,
+        1152,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "idle",
+      "frame": 2,
+      "rect": [
+        96,
+        1152,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "idle",
+      "frame": 3,
+      "rect": [
+        144,
+        1152,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "walk",
+      "frame": 0,
+      "rect": [
+        0,
+        1216,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "walk",
+      "frame": 1,
+      "rect": [
+        48,
+        1216,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "walk",
+      "frame": 2,
+      "rect": [
+        96,
+        1216,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "walk",
+      "frame": 3,
+      "rect": [
+        144,
+        1216,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "wave",
+      "frame": 0,
+      "rect": [
+        0,
+        1280,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "wave",
+      "frame": 1,
+      "rect": [
+        48,
+        1280,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "wave",
+      "frame": 2,
+      "rect": [
+        96,
+        1280,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "wave",
+      "frame": 3,
+      "rect": [
+        144,
+        1280,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southeast",
+      "action": "idle",
+      "frame": 0,
+      "rect": [
+        0,
+        1344,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southeast",
+      "action": "idle",
+      "frame": 1,
+      "rect": [
+        48,
+        1344,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southeast",
+      "action": "idle",
+      "frame": 2,
+      "rect": [
+        96,
+        1344,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southeast",
+      "action": "idle",
+      "frame": 3,
+      "rect": [
+        144,
+        1344,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southeast",
+      "action": "walk",
+      "frame": 0,
+      "rect": [
+        0,
+        1408,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southeast",
+      "action": "walk",
+      "frame": 1,
+      "rect": [
+        48,
+        1408,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southeast",
+      "action": "walk",
+      "frame": 2,
+      "rect": [
+        96,
+        1408,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southeast",
+      "action": "walk",
+      "frame": 3,
+      "rect": [
+        144,
+        1408,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southeast",
+      "action": "wave",
+      "frame": 0,
+      "rect": [
+        0,
+        1472,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southeast",
+      "action": "wave",
+      "frame": 1,
+      "rect": [
+        48,
+        1472,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southeast",
+      "action": "wave",
+      "frame": 2,
+      "rect": [
+        96,
+        1472,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "southeast",
+      "action": "wave",
+      "frame": 3,
+      "rect": [
+        144,
+        1472,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    }
+  ]
+}

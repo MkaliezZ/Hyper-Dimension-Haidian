@@ -1,0 +1,22 @@
+{
+  "format": "uw.data-manifest/v1",
+  "version": "0.1.0",
+  "geometryHash": "e77afd817acd8f7912598ec09feb7900329830c228580cfc593115a26a1dfe3d",
+  "files": [
+    {
+      "path": "data/campus.json",
+      "bytes": 400021,
+      "sha256": "2b6d4fb564f5f17c7c58eceddf804217031c29caf3f33af45f45a31400d0695f"
+    },
+    {
+      "path": "data/reception.json",
+      "bytes": 4151,
+      "sha256": "f9e3e4efb07c15a215ffce9bb0df686fef585e008166194349188ca8a40237b1"
+    },
+    {
+      "path": "data/terrain-uw-dem.tif",
+      "bytes": 1721902,
+      "sha256": "390a291e4bc9030b45d94624fd4e6124c3d32ffc7f749ce2778ded0340cca6b2"
+    }
+  ]
+}

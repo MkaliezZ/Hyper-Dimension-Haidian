@@ -1,0 +1,31 @@
+article {
+  border: 1px solid #d9e6df;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-wrap: anywhere;
+}
+article button {
+  display: block;
+  margin-top: 1rem;
+}
+.error {
+  color: #a52d2d;
+}
+#next {
+  margin-top: 1rem;
+}
+button:disabled {
+  opacity: 0.6;
+}
+@media (max-width: 700px) {
+  header {
+    display: block;
+  }
+  nav {
+    flex-wrap: wrap;
+  }
+  section {
+    min-width: 0;
+  }
+}

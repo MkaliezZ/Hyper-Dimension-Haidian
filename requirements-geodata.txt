@@ -1,0 +1,5 @@
+# Preparation only; no Python required to start the packaged MVP.
+numpy==2.3.5
+rasterio==1.5.2
+pyproj==3.8.0
+shapely==2.2.0

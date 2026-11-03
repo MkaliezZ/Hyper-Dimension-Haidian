@@ -1,0 +1,571 @@
+{
+  "schema": "hyper-dimension.avatar-catalog/v1",
+  "version": "campus-original-1",
+  "skeletonVersion": "campus-humanoid-1",
+  "generatorVersion": "campus-rig-1.0.0",
+  "license": "MIT",
+  "parts": [
+    {
+      "id": "body-regular",
+      "slot": "body",
+      "label": "标准体型",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/body-regular.glb",
+      "bytes": 144796,
+      "sha256": "1d8d677bcf266cfc48065d2b6c0fecf598499b4d5624b890b761ae6ec64e4452",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "body-slim",
+      "slot": "body",
+      "label": "纤细体型",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/body-slim.glb",
+      "bytes": 144792,
+      "sha256": "8681ef7fdab2e7673aa4b509566e1acfc76e129b323646395e20d0d7818a3ffc",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "body-athletic",
+      "slot": "body",
+      "label": "运动体型",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/body-athletic.glb",
+      "bytes": 144800,
+      "sha256": "3d91ba29c062c8174efc51a1bbec8bde5697b6f17da0461e7a8f2760223b8eb6",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "hair-short",
+      "slot": "hair",
+      "label": "清爽短发",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/hair-short.glb",
+      "bytes": 23208,
+      "sha256": "964c505ba306dcb9c7f0f704aa63526abdf6f7bd503b5efb59ec54f4bdd1becd",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "hair-sidepart",
+      "slot": "hair",
+      "label": "侧分短发",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/hair-sidepart.glb",
+      "bytes": 28688,
+      "sha256": "007f49df624ebd8bbd67b85b7c94be01d5ce9676f9658eac530619b70cc30bf1",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "hair-bob",
+      "slot": "hair",
+      "label": "齐耳短发",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/hair-bob.glb",
+      "bytes": 39584,
+      "sha256": "9bf159147d2bdd1e12667eb2a14dda2127813d51a7e2b2bcd628b675ea41099c",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "hair-ponytail",
+      "slot": "hair",
+      "label": "马尾",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/hair-ponytail.glb",
+      "bytes": 38592,
+      "sha256": "0a46b214fe916822c04330b288eb2bc27fced03cb418c011c5ffadc407eee543",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "hair-curly",
+      "slot": "hair",
+      "label": "蓬松卷发",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/hair-curly.glb",
+      "bytes": 83408,
+      "sha256": "aa2ae89e341d81c308e11a1f808b4abe25292d742670f35fbb553e457a6ac062",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "top-tee",
+      "slot": "top",
+      "label": "校园短袖",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/top-tee.glb",
+      "bytes": 29792,
+      "sha256": "93d4136ee7dd880313f9c09fd5a2fd306575be7fc503ebc2afa96d9f2cba7699",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "top-varsity",
+      "slot": "top",
+      "label": "学院夹克",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/top-varsity.glb",
+      "bytes": 55792,
+      "sha256": "752a69f6a1b8240fe84780104bc45429fdaceabccf41ffc24218350e3e68d60b",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "top-hoodie",
+      "slot": "top",
+      "label": "连帽卫衣",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/top-hoodie.glb",
+      "bytes": 65352,
+      "sha256": "0d96f7e96331d753424bb3510552cec4fc51f3accf0dcd7317ea082a2d6c87c3",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "bottom-trousers",
+      "slot": "bottom",
+      "label": "直筒长裤",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/bottom-trousers.glb",
+      "bytes": 34044,
+      "sha256": "96deb4ab936a5f007d57ca3ae3da6d4dace30bf5f23cf6700113bf3a693d8980",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "bottom-skirt",
+      "slot": "bottom",
+      "label": "百褶裙",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/bottom-skirt.glb",
+      "bytes": 19660,
+      "sha256": "61345d55f0024c5f3dbc6b08bd90b1bbd16cb76a4ddfa83f32ae1d17ab844abb",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "bottom-shorts",
+      "slot": "bottom",
+      "label": "休闲短裤",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/bottom-shorts.glb",
+      "bytes": 25420,
+      "sha256": "bfe144796c54ce36f15c55de5ec84ac7634e5bca0e238ecc2c143504c0371433",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "shoes-sneakers",
+      "slot": "shoes",
+      "label": "低帮运动鞋",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/shoes-sneakers.glb",
+      "bytes": 30508,
+      "sha256": "b5061258cd4111d87a14ff2a311119347e57d7d45364209d9e9f7a48b08c3c9b",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "shoes-high",
+      "slot": "shoes",
+      "label": "高帮运动鞋",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/shoes-high.glb",
+      "bytes": 37948,
+      "sha256": "1d63a2e1581c348806767f8dc9a93e5b0f3f3b016e3aaaf986a09392b0864211",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "shoes-loafers",
+      "slot": "shoes",
+      "label": "乐福鞋",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/shoes-loafers.glb",
+      "bytes": 27940,
+      "sha256": "8bd9a4ebed282e4eb8618bcf5e4c1165bd365d68be6e34f454a45efee24fe627",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "glasses-none",
+      "slot": "glasses",
+      "label": "不戴眼镜",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/glasses-none.glb",
+      "bytes": 10632,
+      "sha256": "6396e91ddf1b7b4d9a11f69b702173e34d8cbc50fc5f438bad788b6ef112a84e",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "glasses-round",
+      "slot": "glasses",
+      "label": "圆框眼镜",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/glasses-round.glb",
+      "bytes": 18880,
+      "sha256": "72a9e12bde2ce5f659af1500621831de42691ed31aa03d09731af266831916ab",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "glasses-square",
+      "slot": "glasses",
+      "label": "方框眼镜",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/glasses-square.glb",
+      "bytes": 17212,
+      "sha256": "fc9e27e993420c36de63c93fd08a21fad997aa9052fce9c1da21dbe7f7736188",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "accessory-none",
+      "slot": "accessory",
+      "label": "不加配饰",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/accessory-none.glb",
+      "bytes": 10628,
+      "sha256": "1e61c0391925b2ab01255b7548b4a743a8d6d1b16d583de7f54ac322ed6cd46b",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "accessory-satchel",
+      "slot": "accessory",
+      "label": "校园挎包",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/accessory-satchel.glb",
+      "bytes": 21960,
+      "sha256": "c6db2f9743d7e537b55a946e6848daad8a51ddd8af2f437a2d3b2761d86f2904",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "accessory-scarf",
+      "slot": "accessory",
+      "label": "围巾",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/accessory-scarf.glb",
+      "bytes": 19696,
+      "sha256": "d01d8e806fe456cf0e23e2bc2cafcf8dc681baefe31330eaa92bb3d532691ae8",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    },
+    {
+      "id": "accessory-cap",
+      "slot": "accessory",
+      "label": "棒球帽",
+      "skeleton": "campus-humanoid-1",
+      "license": "MIT",
+      "author": "Hyper Dimension Base",
+      "source": "original procedural geometry",
+      "version": 1,
+      "asset": "/avatar-library/parts/accessory-cap.glb",
+      "bytes": 21376,
+      "sha256": "501ac466986e44e24423ea3bce9f424b9c1a2183ff6feacbea59811fec02ceff",
+      "compatibleSkeletons": [
+        "campus-humanoid-1"
+      ]
+    }
+  ],
+  "skins": {
+    "porcelain": "#f2d0b4",
+    "light": "#deb38d",
+    "warm": "#bd8965",
+    "tan": "#9c674c",
+    "deep": "#754831",
+    "ebony": "#4d3026"
+  },
+  "heights": [
+    "short",
+    "standard",
+    "tall"
+  ],
+  "presentations": [
+    "neutral",
+    "soft",
+    "angular"
+  ],
+  "incompatible": [
+    [
+      "hair-curly",
+      "accessory-cap",
+      "卷发与帽子的轮廓重叠，请选择其他发型或配饰。"
+    ],
+    [
+      "top-hoodie",
+      "accessory-scarf",
+      "围巾与卫衣帽领重叠，请更换其中一项。"
+    ]
+  ],
+  "presets": [
+    {
+      "id": "campus",
+      "label": "校园日常",
+      "recipe": {
+        "schema": "hyper-dimension.avatar/v2",
+        "catalogVersion": "campus-original-1",
+        "skeletonVersion": "campus-humanoid-1",
+        "generatorVersion": "campus-rig-1.0.0",
+        "height": "standard",
+        "presentation": "neutral",
+        "skin": "warm",
+        "parts": {
+          "body": "body-regular",
+          "hair": "hair-sidepart",
+          "top": "top-varsity",
+          "bottom": "bottom-trousers",
+          "shoes": "shoes-sneakers",
+          "glasses": "glasses-none",
+          "accessory": "accessory-satchel"
+        },
+        "colors": {
+          "hair": "#332b29",
+          "top": "#347b70",
+          "bottom": "#354653",
+          "shoes": "#f4eee0"
+        }
+      },
+      "asset": "/avatar-library/presets/campus.glb"
+    },
+    {
+      "id": "library",
+      "label": "图书馆的一天",
+      "recipe": {
+        "schema": "hyper-dimension.avatar/v2",
+        "catalogVersion": "campus-original-1",
+        "skeletonVersion": "campus-humanoid-1",
+        "generatorVersion": "campus-rig-1.0.0",
+        "height": "standard",
+        "presentation": "soft",
+        "skin": "warm",
+        "parts": {
+          "body": "body-regular",
+          "hair": "hair-bob",
+          "top": "top-hoodie",
+          "bottom": "bottom-skirt",
+          "shoes": "shoes-sneakers",
+          "glasses": "glasses-round",
+          "accessory": "accessory-none"
+        },
+        "colors": {
+          "hair": "#332b29",
+          "top": "#b7775e",
+          "bottom": "#354653",
+          "shoes": "#f4eee0"
+        }
+      },
+      "asset": "/avatar-library/presets/library.glb"
+    },
+    {
+      "id": "sports",
+      "label": "校园轻运动",
+      "recipe": {
+        "schema": "hyper-dimension.avatar/v2",
+        "catalogVersion": "campus-original-1",
+        "skeletonVersion": "campus-humanoid-1",
+        "generatorVersion": "campus-rig-1.0.0",
+        "height": "standard",
+        "presentation": "neutral",
+        "skin": "warm",
+        "parts": {
+          "body": "body-regular",
+          "hair": "hair-short",
+          "top": "top-tee",
+          "bottom": "bottom-shorts",
+          "shoes": "shoes-high",
+          "glasses": "glasses-none",
+          "accessory": "accessory-cap"
+        },
+        "colors": {
+          "hair": "#332b29",
+          "top": "#347b70",
+          "bottom": "#354653",
+          "shoes": "#f4eee0"
+        }
+      },
+      "asset": "/avatar-library/presets/sports.glb"
+    },
+    {
+      "id": "creative",
+      "label": "创作与社团",
+      "recipe": {
+        "schema": "hyper-dimension.avatar/v2",
+        "catalogVersion": "campus-original-1",
+        "skeletonVersion": "campus-humanoid-1",
+        "generatorVersion": "campus-rig-1.0.0",
+        "height": "standard",
+        "presentation": "neutral",
+        "skin": "deep",
+        "parts": {
+          "body": "body-regular",
+          "hair": "hair-curly",
+          "top": "top-varsity",
+          "bottom": "bottom-trousers",
+          "shoes": "shoes-sneakers",
+          "glasses": "glasses-square",
+          "accessory": "accessory-none"
+        },
+        "colors": {
+          "hair": "#332b29",
+          "top": "#6c6792",
+          "bottom": "#354653",
+          "shoes": "#f4eee0"
+        }
+      },
+      "asset": "/avatar-library/presets/creative.glb"
+    }
+  ],
+  "budget": {
+    "maxTriangles": 22000,
+    "maxDrawCalls": 90,
+    "maxGlbBytes": 1600000
+  },
+  "defaultRecipe": {
+    "schema": "hyper-dimension.avatar/v2",
+    "catalogVersion": "campus-original-1",
+    "skeletonVersion": "campus-humanoid-1",
+    "generatorVersion": "campus-rig-1.0.0",
+    "height": "standard",
+    "presentation": "neutral",
+    "skin": "warm",
+    "parts": {
+      "body": "body-regular",
+      "hair": "hair-sidepart",
+      "top": "top-varsity",
+      "bottom": "bottom-trousers",
+      "shoes": "shoes-sneakers",
+      "glasses": "glasses-none",
+      "accessory": "accessory-satchel"
+    },
+    "colors": {
+      "hair": "#332b29",
+      "top": "#347b70",
+      "bottom": "#354653",
+      "shoes": "#f4eee0"
+    }
+  },
+  "catalogHash": "945bd70c4e68f3e63f61b6ad82e3b5994539cd4096dde97181b9b7926a3a9ba0"
+}

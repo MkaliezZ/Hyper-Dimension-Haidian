@@ -1,0 +1,92 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  align-items: end;
+}
+.entries {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+.entries article,
+#mine article,
+#tasks article {
+  border: 1px solid #d9ded5;
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 16px;
+  min-width: 0;
+  background: #fffdf7;
+}
+article h3 {
+  margin: 0 0 12px;
+}
+article p,
+article dd {
+  overflow-wrap: anywhere;
+}
+dt {
+  font-weight: 600;
+  margin-top: 10px;
+}
+dd {
+  margin: 4px 0 12px;
+}
+label {
+  display: block;
+  margin: 10px 0;
+}
+input[type='checkbox'] {
+  width: auto;
+  margin-right: 8px;
+}
+textarea,
+select,
+input {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+button {
+  margin: 6px 10px 6px 0;
+}
+details {
+  margin-top: 12px;
+}
+a.action {
+  display: inline-block;
+  margin: 8px 12px 8px 0;
+}
+article .muted {
+  color: #5b6664;
+}
+main {
+  max-width: 1360px;
+  margin: auto;
+  padding: 20px;
+}
+.panel {
+  min-width: 0;
+}
+@media (max-width: 500px) {
+  .entries,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  main {
+    padding: 12px;
+  }
+  header {
+    flex-wrap: wrap;
+  }
+  nav {
+    flex-wrap: wrap;
+  }
+  article {
+    padding: 14px;
+  }
+}

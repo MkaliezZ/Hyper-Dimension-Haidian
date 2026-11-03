@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>地点服务与反馈 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/m1.css" />
+    <link rel="stylesheet" href="/environment.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <small>HYPER DIMENSION</small>
+        <h1>地点服务与反馈</h1>
+        <p>参观者提建议，地点负责人跟进，管理员审核公告。</p>
+      </div>
+      <nav>
+        <a href="/">返回空间</a><a href="/m1.html">账号与组织权限</a
+        ><a id="login" href="/auth/login">登录</a>
+      </nav>
+    </header>
+    <main>
+      <p id="status" role="status">正在读取地点…</p>
+      <section class="toolbar">
+        <label
+          >学校<input id="school" list="schools" placeholder="从学校空间入口进入" /><datalist
+            id="schools"
+          ></datalist></label
+        ><button id="school-load">进入学校</button
+        ><label>公共地点<select id="place"></select></label><button id="refresh">刷新地点</button>
+      </section>
+      <section>
+        <h2 id="place-name">公共地点</h2>
+        <p id="role" class="role"></p>
+        <p id="public-duty"></p>
+        <div id="public-notices"></div>
+      </section>
+      <section id="assignment" hidden>
+        <h2>地点负责人分配</h2>
+        <p>分配仅授予本地点公告草稿和反馈处理能力。学校与组织人员权限仍在账号管理中维护。</p>
+        <form id="assignment-form" class="form-grid">
+          <label
+            >处理团队<select id="organization">
+              <option value="">学校团队</option>
+            </select></label
+          ><label>当前有效成员<select id="manager-user"></select></label
+          ><label
+            >公开职务称谓<input
+              id="role-label"
+              maxlength="80"
+              placeholder="例如：图书馆学生服务负责人" /></label
+          ><label class="check"
+            ><input
+              id="publish-label"
+              type="checkbox"
+            />明确公开该职务称谓（不要填写姓名或联系方式）</label
+          ><button>保存地点分配</button>
+        </form>
+      </section>
+      <div class="grid">
+        <section>
+          <h2>提出地点问题或建议</h2>
+          <p id="feedback-guide"></p>
+          <form id="feedback-form" hidden>
+            <label
+              >类型<select id="feedback-kind">
+                <option value="problem">地点问题</option>
+                <option value="suggestion">改善建议</option>
+              </select></label
+            ><label
+              >说明<textarea
+                id="feedback-body"
+                rows="5"
+                minlength="5"
+                maxlength="3000"
+                required
+                placeholder="请描述看到的问题与希望改进的地方。不要填写证件、密码等敏感资料。"
+              ></textarea></label
+            ><button>提交给地点处理团队</button>
+          </form>
+          <h3>反馈进度</h3>
+          <div class="tabs">
+            <button id="my-feedback">我的反馈</button
+            ><button id="managed-feedback" hidden>本地点处理队列</button>
+          </div>
+          <div id="feedback-list"></div>
+        </section>
+        <section id="announcement-manager" hidden>
+          <h2>本地点公告管理</h2>
+          <p>草稿和待审内容只有地点负责人及授权管理员可见。经管理员审核发布后才对访客展示。</p>
+          <form id="announcement-form">
+            <input id="announcement-id" type="hidden" /><label
+              >标题<input id="announcement-title" minlength="2" maxlength="150" required /></label
+            ><label
+              >正文<textarea
+                id="announcement-body"
+                rows="6"
+                minlength="5"
+                maxlength="5000"
+                required
+              ></textarea></label
+            ><button>保存公告草稿</button
+            ><button type="button" id="new-announcement">新建草稿</button>
+          </form>
+          <div id="announcement-list"></div>
+        </section>
+      </div>
+      <footer>
+        公开界面仅展示明确公开的职务称谓与已审核公告。反馈正文只由提交者和本地点当前处理人员查看；本页不提供几何编辑或他人私信访问。
+      </footer>
+    </main>
+    <script type="module" src="/environment.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "database": { "provider": "postgres", "connectionEnv": "HDBASE_DATABASE_URL" },
+  "embedding": {
+    "provider": "onnx",
+    "python": "/absolute/path/to/python",
+    "modelDir": "models/bge-small-zh-v1.5"
+  },
+  "topK": 4,
+  "minScore": 0.45
+}

@@ -1,0 +1,480 @@
+{
+  "version": "uw-pixel-3.0.0",
+  "rendererHash": "09085c4afe27dd195b531038c718d72faa878b5b76c65a082b845b6c03a63ce6",
+  "author": "Hyper Campus original procedural pixel art",
+  "license": "MIT",
+  "provenance": "Code-authored eight-view characters. Softer facial clusters, profile torso and limbs, separate front/back three-quarter views. No photo or generated bitmap source.",
+  "files": [
+    {
+      "path": "visitor-campus-v3.png",
+      "width": 192,
+      "height": 1536,
+      "bytes": 23243,
+      "sha256": "0c6baadf67606feee6b36746b54836837d3b395c21a8e50693a1aadfe9589300",
+      "preset": "campus",
+      "purpose": "eight-direction wardrobe sprite receipt"
+    },
+    {
+      "path": "visitor-library-v3.png",
+      "width": 192,
+      "height": 1536,
+      "bytes": 23284,
+      "sha256": "0672d5c33fda7493566069d82a9a5acfef7d3e5557b2c97879988cd05ffb63e7",
+      "preset": "library",
+      "purpose": "eight-direction wardrobe sprite receipt"
+    },
+    {
+      "path": "visitor-sports-v3.png",
+      "width": 192,
+      "height": 1536,
+      "bytes": 23037,
+      "sha256": "3f7eb0a94abec6bfe4b92ff12b05dca0ea32a9ec66438ea2adf6847e6f30f28c",
+      "preset": "sports",
+      "purpose": "eight-direction wardrobe sprite receipt"
+    },
+    {
+      "path": "visitor-creative-v3.png",
+      "width": 192,
+      "height": 1536,
+      "bytes": 23106,
+      "sha256": "6d60af1f4df2baea1661b6d392e2a36dd89f131771edcc12c659e5c45623257b",
+      "preset": "creative",
+      "purpose": "eight-direction wardrobe sprite receipt"
+    },
+    {
+      "path": "parts-v3.png",
+      "width": 512,
+      "height": 320,
+      "bytes": 10326,
+      "sha256": "6c0bc45ebdeb8dee1a88d34d7ee2f6d460bf8db90e2d886f690fd0246e514ce9",
+      "parts": [
+        {
+          "id": "body-regular",
+          "slot": "body",
+          "label": "标准体型",
+          "rect": [
+            0,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "body-slim",
+          "slot": "body",
+          "label": "纤细体型",
+          "rect": [
+            64,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "body-athletic",
+          "slot": "body",
+          "label": "运动体型",
+          "rect": [
+            128,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-short",
+          "slot": "hair",
+          "label": "清爽短发",
+          "rect": [
+            192,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-sidepart",
+          "slot": "hair",
+          "label": "侧分短发",
+          "rect": [
+            256,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-bob",
+          "slot": "hair",
+          "label": "齐耳短发",
+          "rect": [
+            320,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-ponytail",
+          "slot": "hair",
+          "label": "马尾",
+          "rect": [
+            384,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-curly",
+          "slot": "hair",
+          "label": "蓬松卷发",
+          "rect": [
+            448,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "top-tee",
+          "slot": "top",
+          "label": "校园短袖",
+          "rect": [
+            0,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "top-varsity",
+          "slot": "top",
+          "label": "学院夹克",
+          "rect": [
+            64,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "top-hoodie",
+          "slot": "top",
+          "label": "连帽卫衣",
+          "rect": [
+            128,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "bottom-trousers",
+          "slot": "bottom",
+          "label": "直筒长裤",
+          "rect": [
+            192,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "bottom-skirt",
+          "slot": "bottom",
+          "label": "百褶裙",
+          "rect": [
+            256,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "bottom-shorts",
+          "slot": "bottom",
+          "label": "休闲短裤",
+          "rect": [
+            320,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "shoes-sneakers",
+          "slot": "shoes",
+          "label": "低帮运动鞋",
+          "rect": [
+            384,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "shoes-high",
+          "slot": "shoes",
+          "label": "高帮运动鞋",
+          "rect": [
+            448,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "shoes-loafers",
+          "slot": "shoes",
+          "label": "乐福鞋",
+          "rect": [
+            0,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "glasses-none",
+          "slot": "glasses",
+          "label": "不戴眼镜",
+          "rect": [
+            64,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "glasses-round",
+          "slot": "glasses",
+          "label": "圆框眼镜",
+          "rect": [
+            128,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "glasses-square",
+          "slot": "glasses",
+          "label": "方框眼镜",
+          "rect": [
+            192,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-none",
+          "slot": "accessory",
+          "label": "不加配饰",
+          "rect": [
+            256,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-satchel",
+          "slot": "accessory",
+          "label": "校园挎包",
+          "rect": [
+            320,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-scarf",
+          "slot": "accessory",
+          "label": "围巾",
+          "rect": [
+            384,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-cap",
+          "slot": "accessory",
+          "label": "棒球帽",
+          "rect": [
+            448,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-braids",
+          "slot": "hair",
+          "label": "双辫",
+          "rect": [
+            0,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-bun",
+          "slot": "hair",
+          "label": "高丸子头",
+          "rect": [
+            64,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "hair-long",
+          "slot": "hair",
+          "label": "披肩长发",
+          "rect": [
+            128,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "top-polo",
+          "slot": "top",
+          "label": "翻领短袖",
+          "rect": [
+            192,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "top-cardigan",
+          "slot": "top",
+          "label": "开衫",
+          "rect": [
+            256,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "top-vest",
+          "slot": "top",
+          "label": "衬衫针织背心",
+          "rect": [
+            320,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "bottom-jeans",
+          "slot": "bottom",
+          "label": "牛仔长裤",
+          "rect": [
+            384,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "bottom-cargo",
+          "slot": "bottom",
+          "label": "工装长裤",
+          "rect": [
+            448,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "bottom-culottes",
+          "slot": "bottom",
+          "label": "宽腿裙裤",
+          "rect": [
+            0,
+            256,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "shoes-boots",
+          "slot": "shoes",
+          "label": "圆头短靴",
+          "rect": [
+            64,
+            256,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "glasses-oval",
+          "slot": "glasses",
+          "label": "椭圆金属眼镜",
+          "rect": [
+            128,
+            256,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-headphones",
+          "slot": "accessory",
+          "label": "头戴耳机",
+          "rect": [
+            192,
+            256,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-backpack",
+          "slot": "accessory",
+          "label": "校园双肩包",
+          "rect": [
+            256,
+            256,
+            64,
+            64
+          ]
+        },
+        {
+          "id": "accessory-bow",
+          "slot": "accessory",
+          "label": "发侧蝴蝶结",
+          "rect": [
+            320,
+            256,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "path": "eight-view-board-v3.png",
+      "width": 1152,
+      "height": 768,
+      "bytes": 29611,
+      "sha256": "47626464cbc6fc0139e6e68aef51c5dff8d97f7ce9d68be03bd8cf2cb6d365df",
+      "purpose": "visual review of all presets and directions"
+    }
+  ]
+}

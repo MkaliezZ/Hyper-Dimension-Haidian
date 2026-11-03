@@ -1,0 +1,7 @@
+{
+  "provider": "http",
+  "endpoint": "https://your-embedding-service.example/v1/embeddings",
+  "model": "your-fixed-embedding-model",
+  "dimensions": 1024,
+  "apiKeyEnv": "EMBEDDING_API_KEY"
+}

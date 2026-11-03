@@ -1,0 +1,9 @@
+{
+  "name": "nodebb-plugin-hd-base",
+  "version": "0.0.1",
+  "license": "GPL-3.0-only",
+  "main": "index.cjs",
+  "nbbpm": {
+    "compatibility": "^4.16.3"
+  }
+}

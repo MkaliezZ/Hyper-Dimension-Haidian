@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>接待与服务助手 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/agents.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/"
+        >H↗ <span>HYPER DIMENSION<small>先了解谁在回应，再选择下一步。</small></span></a
+      >
+      <nav aria-label="校园导航">
+        <a href="/activities.html">活动与志愿</a><a href="/partners.html">合作服务</a
+        ><a href="/profile.html">个人主页</a>
+      </nav>
+    </header>
+    <main>
+      <section class="heading">
+        <div>
+          <p class="eyebrow">BASE 01 / AGENT DIRECTORY</p>
+          <h1>找到合适的接待与助手。</h1>
+          <p class="intro">
+            查看维护职责、信息依据和实际能力。涉及报名或信息转交时，由你阅读条件并确认。
+          </p>
+        </div>
+        <label>当前学校<select id="school"></select></label>
+      </section>
+      <p id="status" role="status" aria-live="polite">正在读取账号…</p>
+      <section id="login" class="panel" hidden>
+        <h2>登录后查看学校服务</h2>
+        <a class="button primary" href="/auth/login">登录 / 注册</a>
+      </section>
+      <section id="workspace" hidden>
+        <div class="search-row">
+          <label
+            >查找服务<input id="search" type="search" placeholder="名称、活动或合作服务" /></label
+          ><label
+            >类型<select id="kind">
+              <option value="">全部类型</option>
+              <option value="reception-agent">接待 Agent</option>
+              <option value="activity-workflow">活动流程助手</option>
+              <option value="partner-business-agent">合作服务 Agent</option>
+            </select></label
+          ><button id="refresh">核对当前服务</button>
+        </div>
+        <p id="summary"></p>
+        <div id="cards" class="cards"></div>
+      </section>
+      <section class="panel">
+        <h2>每一次操作，你都能知道发生了什么。</h2>
+        <p>
+          接待提供已发布资料、导航和注明性质的通用交流。活动与合作流程助手展示获准资料并引导你进入实际办理页面；任务状态和回执以办理页面记录为准。
+        </p>
+        <p>
+          个人私信、联系人、私人收藏与内部附件不会因打开本目录而转交给模型。接待回复不能授予权限、发放奖励、替你报名或代表你提交预约。
+        </p>
+      </section>
+    </main>
+    <footer>Hyper Dimension Base · 资料撤回或权限变化后，重新打开卡片会重新核对。</footer>
+    <script type="module" src="/agents.js"></script>
+  </body>
+</html>

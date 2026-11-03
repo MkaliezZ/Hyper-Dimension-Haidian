@@ -1,0 +1,220 @@
+{
+  "schema": "hyper-dimension.annual-operations/v1",
+  "packageId": "annual-starter",
+  "version": 1,
+  "name": "原创虚构学年运营示例",
+  "sourceLabel": "本包原创示例，未经真实学校批准",
+  "sourceHash": null,
+  "exampleOnly": true,
+  "startMonth": 8,
+  "cohorts": [
+    {
+      "id": "new-student",
+      "name": "新生"
+    },
+    {
+      "id": "graduating",
+      "name": "毕业年级"
+    }
+  ],
+  "references": [],
+  "assumptions": [
+    "每条是可选择的情境，不是必须完成的任务。",
+    "8月至次年7月为示例学年；实际学校可调整开始月份。",
+    "导入不发布内容、不计分、不发送通知或联系家人。"
+  ],
+  "entries": [
+    {
+      "month": 8,
+      "cohortIds": [
+        "new-student"
+      ],
+      "category": "objective",
+      "channel": "public",
+      "description": "原创虚构示例，按本校实际需求与安排核对。",
+      "studentNeed": "了解可用的校园资源。",
+      "familyNeed": "",
+      "applicability": "仅在本人需要且学校提供时适用。",
+      "eventWindow": "按学校当年日历核对，不预设硬截止。",
+      "bestWindow": "提前准备窗口由负责人确认。",
+      "processWindow": "到实际完成或不适用时结束。",
+      "directImpact": "当前学期的安排。",
+      "downstream": "按实际情况复查，不默认持续整个学年。",
+      "suggestedPriority": null,
+      "sourceRefs": [],
+      "requiresDateVerification": true,
+      "targetBase": 1,
+      "entryId": "calendar-review",
+      "chainId": "official-calendar",
+      "title": "核对本校学期与服务窗口"
+    },
+    {
+      "month": 8,
+      "cohortIds": [
+        "new-student"
+      ],
+      "category": "community",
+      "channel": "event",
+      "description": "原创虚构示例，按本校实际需求与安排核对。",
+      "studentNeed": "了解可用的校园资源。",
+      "familyNeed": "",
+      "applicability": "仅在本人需要且学校提供时适用。",
+      "eventWindow": "按学校当年日历核对，不预设硬截止。",
+      "bestWindow": "提前准备窗口由负责人确认。",
+      "processWindow": "到实际完成或不适用时结束。",
+      "directImpact": "当前学期的安排。",
+      "downstream": "按实际情况复查，不默认持续整个学年。",
+      "suggestedPriority": null,
+      "sourceRefs": [],
+      "requiresDateVerification": true,
+      "targetBase": 3,
+      "entryId": "welcome-tour",
+      "chainId": "welcome",
+      "title": "迎新空间导览"
+    },
+    {
+      "month": 8,
+      "cohortIds": [
+        "new-student"
+      ],
+      "category": "life",
+      "channel": "public",
+      "description": "原创虚构示例，按本校实际需求与安排核对。",
+      "studentNeed": "了解可用的校园资源。",
+      "familyNeed": "",
+      "applicability": "仅在本人需要且学校提供时适用。",
+      "eventWindow": "按学校当年日历核对，不预设硬截止。",
+      "bestWindow": "提前准备窗口由负责人确认。",
+      "processWindow": "到实际完成或不适用时结束。",
+      "directImpact": "当前学期的安排。",
+      "downstream": "按实际情况复查，不默认持续整个学年。",
+      "suggestedPriority": null,
+      "sourceRefs": [],
+      "requiresDateVerification": true,
+      "targetBase": 1,
+      "entryId": "guide-review",
+      "chainId": "campus-guides",
+      "title": "审核图书馆与生活服务指南"
+    },
+    {
+      "month": 9,
+      "cohortIds": [
+        "new-student"
+      ],
+      "category": "academic",
+      "channel": "private",
+      "description": "原创虚构示例，按本校实际需求与安排核对。",
+      "studentNeed": "了解可用的校园资源。",
+      "familyNeed": "",
+      "applicability": "仅在本人需要且学校提供时适用。",
+      "eventWindow": "按学校当年日历核对，不预设硬截止。",
+      "bestWindow": "提前准备窗口由负责人确认。",
+      "processWindow": "到实际完成或不适用时结束。",
+      "directImpact": "当前学期的安排。",
+      "downstream": "按实际情况复查，不默认持续整个学年。",
+      "suggestedPriority": null,
+      "sourceRefs": [],
+      "requiresDateVerification": true,
+      "targetBase": 3,
+      "entryId": "questions",
+      "chainId": "student-qa",
+      "title": "安排新生私域答疑"
+    },
+    {
+      "month": 8,
+      "cohortIds": [
+        "new-student"
+      ],
+      "category": "academic",
+      "channel": "event",
+      "description": "原创虚构示例，按本校实际需求与安排核对。",
+      "studentNeed": "了解可用的校园资源。",
+      "familyNeed": "",
+      "applicability": "仅在本人需要且学校提供时适用。",
+      "eventWindow": "按学校当年日历核对，不预设硬截止。",
+      "bestWindow": "提前准备窗口由负责人确认。",
+      "processWindow": "到实际完成或不适用时结束。",
+      "directImpact": "当前学期的安排。",
+      "downstream": "按实际情况复查，不默认持续整个学年。",
+      "suggestedPriority": "B",
+      "sourceRefs": [],
+      "requiresDateVerification": true,
+      "targetBase": 3,
+      "entryId": "study-august",
+      "chainId": "study-support",
+      "title": "选课前了解学习支持"
+    },
+    {
+      "month": 9,
+      "cohortIds": [
+        "new-student"
+      ],
+      "category": "academic",
+      "channel": "event",
+      "description": "原创虚构示例，按本校实际需求与安排核对。",
+      "studentNeed": "了解可用的校园资源。",
+      "familyNeed": "",
+      "applicability": "仅在本人需要且学校提供时适用。",
+      "eventWindow": "按学校当年日历核对，不预设硬截止。",
+      "bestWindow": "提前准备窗口由负责人确认。",
+      "processWindow": "到实际完成或不适用时结束。",
+      "directImpact": "当前学期的安排。",
+      "downstream": "按实际情况复查，不默认持续整个学年。",
+      "suggestedPriority": "B",
+      "sourceRefs": [],
+      "requiresDateVerification": true,
+      "targetBase": 3,
+      "entryId": "study-september",
+      "chainId": "study-support",
+      "title": "复查学习支持安排"
+    },
+    {
+      "month": 5,
+      "cohortIds": [
+        "graduating"
+      ],
+      "category": "community",
+      "channel": "public",
+      "description": "原创虚构示例，按本校实际需求与安排核对。",
+      "studentNeed": "了解可用的校园资源。",
+      "familyNeed": "",
+      "applicability": "仅在本人需要且学校提供时适用。",
+      "eventWindow": "按学校当年日历核对，不预设硬截止。",
+      "bestWindow": "提前准备窗口由负责人确认。",
+      "processWindow": "到实际完成或不适用时结束。",
+      "directImpact": "当前学期的安排。",
+      "downstream": "按实际情况复查，不默认持续整个学年。",
+      "suggestedPriority": null,
+      "sourceRefs": [],
+      "requiresDateVerification": true,
+      "targetBase": 3,
+      "entryId": "graduation-memory",
+      "chainId": "graduation-memory",
+      "title": "征集毕业校园记忆"
+    },
+    {
+      "month": 8,
+      "cohortIds": [
+        "new-student"
+      ],
+      "category": "life",
+      "channel": "event",
+      "description": "原创虚构示例，按本校实际需求与安排核对。",
+      "studentNeed": "了解可用的校园资源。",
+      "familyNeed": "",
+      "applicability": "仅在本人需要且学校提供时适用。",
+      "eventWindow": "按学校当年日历核对，不预设硬截止。",
+      "bestWindow": "提前准备窗口由负责人确认。",
+      "processWindow": "到实际完成或不适用时结束。",
+      "directImpact": "当前学期的安排。",
+      "downstream": "按实际情况复查，不默认持续整个学年。",
+      "suggestedPriority": null,
+      "sourceRefs": [],
+      "requiresDateVerification": true,
+      "targetBase": 4,
+      "entryId": "partner-onboarding",
+      "chainId": "partner-onboarding",
+      "title": "核对迎新合作服务与资料转交范围"
+    }
+  ]
+}

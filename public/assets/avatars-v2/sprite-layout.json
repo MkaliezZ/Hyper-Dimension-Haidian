@@ -1,0 +1,752 @@
+{
+  "format": "uw.pixel-sprites/v2",
+  "frame": {
+    "width": 48,
+    "height": 64,
+    "anchor": [
+      24,
+      63
+    ],
+    "sourcePixelRatio": 2,
+    "directions": [
+      "south",
+      "west",
+      "east",
+      "north"
+    ],
+    "frames": 4
+  },
+  "actions": [
+    "idle",
+    "walk",
+    "wave"
+  ],
+  "directions": [
+    "south",
+    "west",
+    "east",
+    "north"
+  ],
+  "frames": [
+    {
+      "direction": "south",
+      "action": "idle",
+      "frame": 0,
+      "rect": [
+        0,
+        0,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "idle",
+      "frame": 1,
+      "rect": [
+        48,
+        0,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "idle",
+      "frame": 2,
+      "rect": [
+        96,
+        0,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "idle",
+      "frame": 3,
+      "rect": [
+        144,
+        0,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "walk",
+      "frame": 0,
+      "rect": [
+        0,
+        64,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "walk",
+      "frame": 1,
+      "rect": [
+        48,
+        64,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "walk",
+      "frame": 2,
+      "rect": [
+        96,
+        64,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "walk",
+      "frame": 3,
+      "rect": [
+        144,
+        64,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "wave",
+      "frame": 0,
+      "rect": [
+        0,
+        128,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "wave",
+      "frame": 1,
+      "rect": [
+        48,
+        128,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "wave",
+      "frame": 2,
+      "rect": [
+        96,
+        128,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "south",
+      "action": "wave",
+      "frame": 3,
+      "rect": [
+        144,
+        128,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "idle",
+      "frame": 0,
+      "rect": [
+        0,
+        192,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "idle",
+      "frame": 1,
+      "rect": [
+        48,
+        192,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "idle",
+      "frame": 2,
+      "rect": [
+        96,
+        192,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "idle",
+      "frame": 3,
+      "rect": [
+        144,
+        192,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "walk",
+      "frame": 0,
+      "rect": [
+        0,
+        256,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "walk",
+      "frame": 1,
+      "rect": [
+        48,
+        256,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "walk",
+      "frame": 2,
+      "rect": [
+        96,
+        256,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "walk",
+      "frame": 3,
+      "rect": [
+        144,
+        256,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "wave",
+      "frame": 0,
+      "rect": [
+        0,
+        320,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "wave",
+      "frame": 1,
+      "rect": [
+        48,
+        320,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "wave",
+      "frame": 2,
+      "rect": [
+        96,
+        320,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "west",
+      "action": "wave",
+      "frame": 3,
+      "rect": [
+        144,
+        320,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "idle",
+      "frame": 0,
+      "rect": [
+        0,
+        384,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "idle",
+      "frame": 1,
+      "rect": [
+        48,
+        384,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "idle",
+      "frame": 2,
+      "rect": [
+        96,
+        384,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "idle",
+      "frame": 3,
+      "rect": [
+        144,
+        384,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "walk",
+      "frame": 0,
+      "rect": [
+        0,
+        448,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "walk",
+      "frame": 1,
+      "rect": [
+        48,
+        448,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "walk",
+      "frame": 2,
+      "rect": [
+        96,
+        448,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "walk",
+      "frame": 3,
+      "rect": [
+        144,
+        448,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "wave",
+      "frame": 0,
+      "rect": [
+        0,
+        512,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "wave",
+      "frame": 1,
+      "rect": [
+        48,
+        512,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "wave",
+      "frame": 2,
+      "rect": [
+        96,
+        512,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "east",
+      "action": "wave",
+      "frame": 3,
+      "rect": [
+        144,
+        512,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "idle",
+      "frame": 0,
+      "rect": [
+        0,
+        576,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "idle",
+      "frame": 1,
+      "rect": [
+        48,
+        576,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "idle",
+      "frame": 2,
+      "rect": [
+        96,
+        576,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "idle",
+      "frame": 3,
+      "rect": [
+        144,
+        576,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "walk",
+      "frame": 0,
+      "rect": [
+        0,
+        640,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "walk",
+      "frame": 1,
+      "rect": [
+        48,
+        640,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "walk",
+      "frame": 2,
+      "rect": [
+        96,
+        640,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "walk",
+      "frame": 3,
+      "rect": [
+        144,
+        640,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "wave",
+      "frame": 0,
+      "rect": [
+        0,
+        704,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "wave",
+      "frame": 1,
+      "rect": [
+        48,
+        704,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "wave",
+      "frame": 2,
+      "rect": [
+        96,
+        704,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    },
+    {
+      "direction": "north",
+      "action": "wave",
+      "frame": 3,
+      "rect": [
+        144,
+        704,
+        48,
+        64
+      ],
+      "anchor": [
+        24,
+        63
+      ]
+    }
+  ]
+}

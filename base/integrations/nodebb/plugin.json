@@ -1,0 +1,12 @@
+{
+  "id": "nodebb-plugin-hd-base",
+  "name": "HD Base school bridge",
+  "library": "./index.cjs",
+  "hooks": [
+    { "hook": "static:app.preload", "method": "preload" },
+    { "hook": "static:sockets.validateSession", "method": "denySocket" },
+    { "hook": "filter:post-queue.save", "method": "markQueue" },
+    { "hook": "filter:post.create", "method": "markPost" },
+    { "hook": "filter:privileges.posts.edit", "method": "allowReviewedEdit" }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hyper-dimension:scene:v1",
+  "title": "Hyper Dimension scene v1",
+  "type": "object",
+  "required": [
+    "format",
+    "sceneId",
+    "name",
+    "units",
+    "axes",
+    "size",
+    "cellSize",
+    "entry",
+    "levels",
+    "connectors",
+    "source"
+  ],
+  "properties": {
+    "format": {
+      "const": "hyper-dimension.scene/v1"
+    },
+    "sceneId": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]{0,127}$",
+      "not": {
+        "enum": ["constructor", "prototype", "__proto__"]
+      }
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "units": {
+      "const": "m"
+    },
+    "axes": {
+      "const": "Y_UP_X_EAST_Z_SOUTH"
+    },
+    "size": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 4,
+        "maximum": 300
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "cellSize": {
+      "type": "number",
+      "minimum": 0.25,
+      "maximum": 1
+    },
+    "entry": {
+      "type": "object",
+      "required": ["levelId", "z"],
+      "properties": {
+        "levelId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]{0,127}$",
+          "not": {
+            "enum": ["constructor", "prototype", "__proto__"]
+          }
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    },
+    "levels": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "required": ["id", "elevation", "height", "rooms", "voids"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]{0,127}$",
+            "not": {
+              "enum": ["constructor", "prototype", "__proto__"]
+            }
+          },
+          "name": {
+            "type": "string"
+          },
+          "elevation": {
+            "type": "number"
+          },
+          "height": {
+            "type": "number",
+            "minimum": 2,
+            "maximum": 10
+          },
+          "rooms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["entityId", "name", "rect", "access"],
+              "properties": {
+                "entityId": {
+                  "type": "string",
+                  "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]{0,127}$",
+                  "not": {
+                    "enum": ["constructor", "prototype", "__proto__"]
+                  }
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "rect": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                "access": {
+                  "enum": ["public", "restricted"]
+                },
+                "door": {
+                  "type": "object",
+                  "required": ["edge", "offset", "width"],
+                  "properties": {
+                    "edge": {
+                      "enum": ["north", "south", "east", "west"]
+                    },
+                    "offset": {
+                      "type": "number"
+                    },
+                    "width": {
+                      "type": "number",
+                      "minimum": 1.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "voids": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 4,
+              "maxItems": 4
+            }
+          }
+        }
+      }
+    },
+    "connectors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["entityId", "type", "from", "to"],
+        "properties": {
+          "entityId": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]{0,127}$",
+            "not": {
+              "enum": ["constructor", "prototype", "__proto__"]
+            }
+          },
+          "type": {
+            "enum": ["stairs", "elevator"]
+          },
+          "from": {
+            "$ref": "#/$defs/endpoint"
+          },
+          "to": {
+            "$ref": "#/$defs/endpoint"
+          },
+          "width": {
+            "type": "number",
+            "minimum": 1.2
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["kind", "measured", "inferred", "unknown"],
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "measured": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "inferred": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unknown": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "artwork": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["assetId", "entityId", "levelId", "kind", "point", "scale"],
+        "properties": {
+          "assetId": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]{0,127}$",
+            "not": {
+              "enum": ["constructor", "prototype", "__proto__"]
+            }
+          },
+          "entityId": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]{0,127}$",
+            "not": {
+              "enum": ["constructor", "prototype", "__proto__"]
+            }
+          },
+          "levelId": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]{0,127}$",
+            "not": {
+              "enum": ["constructor", "prototype", "__proto__"]
+            }
+          },
+          "kind": {
+            "enum": ["model", "billboard"]
+          },
+          "point": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "scale": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "rotationY": {
+            "type": "number"
+          },
+          "footprint": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 4,
+            "maxItems": 4
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "endpoint": {
+      "type": "object",
+      "required": ["levelId", "point"],
+      "properties": {
+        "levelId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]{0,127}$",
+          "not": {
+            "enum": ["constructor", "prototype", "__proto__"]
+          }
+        },
+        "point": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    }
+  }
+}

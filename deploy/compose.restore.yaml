@@ -1,0 +1,15 @@
+# Use only for a verified restored clone; start selected roles with --no-deps.
+# Do not run the init role against a restored or existing namespace.
+services:
+  keycloak:
+    environment: &restored
+      HD_SERVICE_ROOT: ${UW_RESTORED_ROOT:?Set the new restored root inside /runtime}
+      HD_M0_CONFIG: ${UW_RESTORED_ROOT}/private/config.json
+  forum-uw:
+    environment: *restored
+  nakama-uw:
+    environment: *restored
+  base:
+    environment: *restored
+  utility:
+    environment: *restored

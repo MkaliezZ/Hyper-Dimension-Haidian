@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>贡献与排行榜 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/m1.css" />
+    <link rel="stylesheet" href="/ranking.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <small>HYPER DIMENSION</small>
+        <h1>贡献与排行榜</h1>
+        <p>记录每一次经过审核的贡献，保留规则和纠错过程。</p>
+      </div>
+      <nav>
+        <a href="/community.html">社区</a><a href="/activities.html">活动与志愿</a
+        ><a href="/personal.html">个人中心</a><a href="/auth/login">登录</a>
+      </nav>
+    </header>
+    <main>
+      <p id="status" role="status">正在读取账号…</p>
+      <section class="toolbar">
+        <label>学校<select id="school"></select></label
+        ><label
+          >范围<select id="org">
+            <option value="">学校</option>
+          </select></label
+        ><label
+          >榜单<select id="period">
+            <option value="all">累计榜</option>
+          </select></label
+        ><label>学期筛选<input id="semester" placeholder="留空查看全部" /></label
+        ><button id="refresh">刷新</button>
+      </section>
+      <div class="grid">
+        <section>
+          <h2>贡献榜</h2>
+          <p id="ranking-note"></p>
+          <ol id="ranking"></ol>
+        </section>
+        <section>
+          <h2>我的贡献记录</h2>
+          <p>只展示当前范围；撤回保留原始记录，另记冲正。</p>
+          <div id="entries"></div>
+          <button id="more" hidden>读取更早列表之后的记录</button>
+        </section>
+      </div>
+      <section id="manager" hidden>
+        <h2>规则与时期管理</h2>
+        <p>安装包不自动启用任何学校分值。虚构示例仅用于验证流程，正式政策应由学校确认。</p>
+        <details>
+          <summary>导入并审核规则（学校负责人）</summary>
+          <form id="rule-form">
+            <label
+              >规则 JSON<textarea id="rule-json" rows="14" required spellcheck="false"></textarea>
+            </label>
+            <div>
+              <button type="button" id="example">载入虚构示例</button
+              ><button type="button" id="preview">校验预览</button
+              ><button id="import-rule">导入为待审核版本</button>
+            </div>
+          </form>
+          <pre id="preview-result"></pre>
+          <div id="rules"></div>
+        </details>
+        <details>
+          <summary>建立新的计分时期</summary>
+          <form id="period-form" class="form-grid">
+            <label
+              >时期 ID<input
+                id="new-period"
+                required
+                pattern="[a-zA-Z0-9][a-zA-Z0-9._:-]{0,79}" /></label
+            ><label>名称<input id="period-label" required minlength="2" maxlength="160" /></label
+            ><label>学期 ID<input id="new-semester" required /></label
+            ><label>已批准规则<select id="rule-version"></select></label
+            ><label>开始时间<input id="starts" type="datetime-local" required /></label
+            ><label>结束时间<input id="ends" type="datetime-local" required /></label
+            ><button>建立草稿时期</button>
+          </form>
+        </details>
+        <div id="periods"></div>
+        <details>
+          <summary>新增有理由的人工调整</summary>
+          <form id="adjust-form" class="form-grid">
+            <label>成员 ID<input id="adjust-user" required /></label
+            ><label>时期<select id="adjust-period"></select></label
+            ><label
+              >独立调整分数<input
+                id="delta"
+                type="number"
+                min="-10000"
+                max="10000"
+                step="1" /></label
+            ><label>或冲正原分录 ID<input id="reverse-entry" inputmode="numeric" /></label
+            ><label
+              >理由<textarea
+                id="adjust-reason"
+                required
+                minlength="5"
+                maxlength="1000"
+              ></textarea></label
+            ><button>提交独立流水</button>
+          </form>
+        </details>
+      </section>
+      <footer>
+        学校榜不汇总私有组织贡献。每日额度使用 UTC
+        日期。当前有效身份决定可见范围；已冻结榜单需明确重建才更新。
+      </footer>
+    </main>
+    <script type="module" src="/ranking.js"></script>
+  </body>
+</html>

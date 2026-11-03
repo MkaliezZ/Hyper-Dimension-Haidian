@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>接待资料发布</title>
+    <link rel="stylesheet" href="/partners.css" />
+  </head>
+  <body>
+    <header><a href="/m1.html">← 学校管理</a></header>
+    <main>
+      <h1>接待资料与自动索引</h1>
+      <p>
+        学校负责人审核并发布可公开的资料，供接待 Agent
+        回答。私信、论坛私有内容、联系方式和未获授权的原文件请勿放入此处。论坛历史在独立的权限检索入口查询。
+      </p>
+      <p id="status" role="status">正在读取…</p>
+      <section class="panel">
+        <label>学校<select id="school"></select></label
+        ><button id="refresh">刷新当前版本与索引状态</button>
+      </section>
+      <form id="publish" class="panel" hidden>
+        <h2>审核后的公开资料</h2>
+        <p>
+          JSON 数组；每项提供 id、title、body 和 published:true，revision
+          由服务器维护。删除文档即从当前公开快照撤回；整个数组为这所学校的完整公开资料集合。
+        </p>
+        <label
+          >从 JSON 文件载入<input id="file" type="file" accept=".json,application/json" /></label
+        ><label>资料 JSON<textarea id="documents" rows="18" required></textarea></label
+        ><label
+          ><input
+            id="confirmed"
+            type="checkbox"
+            required
+          />我已核对资料来源与公开权限，确认发布此版本</label
+        ><button>发布并自动更新索引</button>
+      </form>
+      <section class="panel">
+        <h2>索引状态</h2>
+        <pre id="index"></pre>
+      </section>
+    </main>
+    <script type="module" src="/knowledge.js"></script>
+  </body>
+</html>

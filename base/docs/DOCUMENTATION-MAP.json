@@ -1,0 +1,327 @@
+{
+  "format": "hyper-dimension.documentation/v1",
+  "campusVersion": "0.8.3",
+  "baseCoreVersion": "0.2.1",
+  "runtimeBaseline": "0.8.2",
+  "manual": "DEVELOPMENT-MANUAL.md",
+  "entrypoints": [
+    "AGENTS.md",
+    "AGENT-START.md",
+    "START-HERE.md",
+    "CAMPUS-START.md",
+    "README.md",
+    "README.en.md",
+    "PACKAGE-STRUCTURE.md",
+    "INTEGRATIONS-START.md"
+  ],
+  "currentDocumentationAcceptance": "evidence/documentation/ACCEPTANCE.md",
+  "inheritedRuntimeAcceptance": "evidence/ubuntu-hermes/ACCEPTANCE.md",
+  "historicalEvidencePolicy": "Retain original version/results; do not relabel as current execution",
+  "documents": [
+    {
+      "path": "AGENT-START.md",
+      "role": "entry",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "AGENTS.md",
+      "role": "entry",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "CAMPUS-START.md",
+      "role": "entry",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "DEVELOPMENT-MANUAL.md",
+      "role": "manual",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "INTEGRATIONS-START.md",
+      "role": "entry",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "M0-START.md",
+      "role": "historical",
+      "scope": "historical range or source; not current status"
+    },
+    {
+      "path": "M1-SOCIAL-START.md",
+      "role": "historical",
+      "scope": "historical range or source; not current status"
+    },
+    {
+      "path": "M1-START.md",
+      "role": "historical",
+      "scope": "historical range or source; not current status"
+    },
+    {
+      "path": "M2-START.md",
+      "role": "historical",
+      "scope": "historical range or source; not current status"
+    },
+    {
+      "path": "PACKAGE-STRUCTURE.md",
+      "role": "entry",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "README.en.md",
+      "role": "entry",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "README.md",
+      "role": "entry",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "START-HERE.md",
+      "role": "entry",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/ACTIVITIES.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/AGENT-ONBOARDING.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/AGENT-ROLES.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/AGENT-WORKFLOW.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/ANNUAL-MATERIALS-AUDIT.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/ANNUAL-OPERATIONS.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/ATTACHMENTS.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/AUTOMATIC-INDEXING.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/AVATAR-EXTENSION.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/AVATAR-SCHOOL-ART.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/CAMPUS-LEDGER.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/COMMUNITY.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/CONTACTS.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/CURRENT-FEATURES.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/DELIVERY-REQUIREMENTS.md",
+      "role": "historical",
+      "scope": "historical range or source; not current status"
+    },
+    {
+      "path": "docs/DEPLOYMENT-CONTAINERS.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/ENVIRONMENT-ROLES.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/EXTENSIONS.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/INFORMATION.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/JOBS.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/KNOWLEDGE.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/LOCAL-AGENT.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/M0.md",
+      "role": "historical",
+      "scope": "historical range or source; not current status"
+    },
+    {
+      "path": "docs/M1-SOCIAL.md",
+      "role": "historical",
+      "scope": "historical range or source; not current status"
+    },
+    {
+      "path": "docs/M1.md",
+      "role": "historical",
+      "scope": "historical range or source; not current status"
+    },
+    {
+      "path": "docs/M2.md",
+      "role": "historical",
+      "scope": "historical range or source; not current status"
+    },
+    {
+      "path": "docs/MODULES.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/PARTNER-A2A.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/PARTNERS.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/PERSONAL.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/PROTOCOL.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/PROVENANCE.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/RECEPTION-AND-NETWORK-PLAN.md",
+      "role": "historical",
+      "scope": "historical range or source; not current status"
+    },
+    {
+      "path": "docs/RECEPTION-AND-NETWORK.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/RECEPTION.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/REWARDS.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/STARTUP.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "role": "reference",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "docs/history/AGENTS-pre-v0.8.3.md",
+      "role": "archived-contract",
+      "scope": "historical range or source; not current status"
+    },
+    {
+      "path": "prompts/00-BUILD-SCHOOL.md",
+      "role": "task-checklist",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "prompts/01-CONTINUE-AND-ART.md",
+      "role": "task-checklist",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "prompts/02-SCHOOL-KNOWLEDGE.md",
+      "role": "task-checklist",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "prompts/03-DEPLOY-AND-HANDOFF.md",
+      "role": "task-checklist",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "prompts/04-VISUAL-POLISH.md",
+      "role": "task-checklist",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    },
+    {
+      "path": "prompts/05-AVATAR-LIBRARY.md",
+      "role": "task-checklist",
+      "scope": "follow unified manual; module details apply to their named runtime"
+    }
+  ]
+}

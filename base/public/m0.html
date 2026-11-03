@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hyper Dimension · 我的校园身份</title>
+    <link rel="stylesheet" href="/m0.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/vendor/three/three.module.js",
+          "three/addons/": "/vendor/three/addons/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="/m0.html" class="brand"
+        >H↗ <span>HYPER DIMENSION<small>校园身份与共创空间</small></span></a
+      >
+      <div class="account">
+        <span id="name">尚未登录</span
+        ><select id="school" aria-label="学校"></select
+        ><button id="logout" hidden>退出</button>
+      </div>
+    </header>
+    <main>
+      <div class="intro">
+        <p class="eyebrow">MAKE THIS SPACE YOURS</p>
+        <h1>一个形象，一段校园记忆。</h1>
+        <p>选择自己的样子，进入校园；把值得留下的故事，交给大家一起珍藏。</p>
+        <p class="note">M0 集成样例 · 原创技术小样、虚拟学校和示例计分规则</p>
+      </div>
+      <section id="login">
+        <h2>从你的校园账号开始</h2>
+        <p>登录后，形象与校园记忆会保存在服务器，并在下次进入时恢复。</p>
+        <a href="/auth/login" class="primary">登录校园账号 →</a>
+      </section>
+      <div id="workspace" hidden>
+        <div class="grid">
+          <section class="avatar-panel">
+            <div class="section-head">
+              <div>
+                <span class="eyebrow">01 / YOUR AVATAR</span>
+                <h2>我的校园形象</h2>
+              </div>
+              <span id="version" class="pill"></span>
+            </div>
+            <div class="avatar-grid">
+              <div class="stage">
+                <canvas id="avatar" aria-label="人物三维预览"></canvas>
+                <p>拖动旋转 · 滚轮缩放</p>
+              </div>
+              <form id="editor">
+                <div id="parts" class="parts"></div>
+                <div class="actions">
+                  <button class="primary" type="submit">保存形象</button
+                  ><a id="enter" href="/">进入空间 ↗</a>
+                </div>
+                <p id="save-status" role="status"></p>
+              </form>
+            </div>
+          </section>
+          <section class="score-panel">
+            <span class="eyebrow">02 / CONTRIBUTION</span>
+            <h2>校园贡献榜</h2>
+            <p>样例规则：记忆经审核采纳 +10，撤回后冲正。发帖、聊天不直接计分。</p>
+            <ol id="ranking"></ol>
+            <p class="note">测试周期 · m0-trial</p>
+            <a id="forum-link" target="_blank" rel="noopener">打开独立论坛 ↗</a>
+          </section>
+        </div>
+        <section class="memory-panel">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">03 / CAMPUS MEMORIES</span>
+              <h2>留下一段校园记忆</h2>
+            </div>
+            <button id="refresh">刷新</button>
+          </div>
+          <div class="memory-grid">
+            <form id="post">
+              <label
+                >标题<input
+                  id="title"
+                  required
+                  minlength="3"
+                  maxlength="80"
+                  placeholder="例如：初次走进图书馆的那个下午" /></label
+              ><label
+                >记忆<textarea
+                  id="content"
+                  required
+                  minlength="8"
+                  maxlength="3000"
+                  rows="4"
+                  placeholder="写下你想与校园分享的故事。发布前会进入审核。"
+                ></textarea></label
+              ><button class="primary">提交审核</button>
+            </form>
+            <div id="items"></div>
+          </div>
+        </section>
+      </div>
+      <p id="status" role="status"></p>
+    </main>
+    <footer>身份属于你，内容属于所在校园。私密对话不会自动变成公开资料或贡献。</footer>
+    <script type="module" src="/m0.js"></script>
+  </body>
+</html>

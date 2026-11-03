@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: hdbase
+      POSTGRES_USER: hdbase
+      POSTGRES_PASSWORD: ${HDBASE_POSTGRES_PASSWORD:?Set a private password in this terminal}
+    ports:
+      - '127.0.0.1:54329:5432'
+    volumes:
+      - hdbase-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U hdbase -d hdbase']
+      interval: 5s
+      timeout: 3s
+      retries: 12
+volumes:
+  hdbase-postgres:

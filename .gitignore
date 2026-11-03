@@ -1,0 +1,38 @@
+# Private state, credentials and user-provided originals
+**/.local/
+**/.private-inputs/
+**/.tooling/
+**/.env
+**/.env.*
+!**/.env.example
+**/*secrets*/
+**/credentials.json
+**/reception-model-key
+**/*.key
+**/*.pem
+**/*.p12
+sources/
+projects/
+backups/
+data/campus-unsealed.json
+# Installable dependencies and binary caches
+**/node_modules/
+**/__pycache__/
+**/*.pyc
+**/*.log
+**/*.onnx
+**/*.whl
+**/*.tar.gz
+*.zip
+*.sqlite
+*.sqlite3
+*.db
+# Historical runtime evidence and complete-package receipts
+evidence/*
+!evidence/README.md
+base/evidence/*
+!base/evidence/README.md
+PACKAGE-MANIFEST.json
+base/PACKAGE-MANIFEST.json
+scripts/native-campus.ps1
+scripts/import-local-visitor.mjs

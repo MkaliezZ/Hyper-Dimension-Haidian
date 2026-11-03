@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>校园奖励 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/rewards.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/"
+        >H↗ <span>HYPER DIMENSION<small>让每一次参与，都有可追溯的回应。</small></span></a
+      >
+      <nav aria-label="校园导航">
+        <a href="/m2.html">形象与背包</a><a href="/activities.html">活动与志愿</a
+        ><a href="/partners.html">校园周边</a>
+      </nav>
+    </header>
+    <main>
+      <section class="heading">
+        <div>
+          <p class="eyebrow">BASE 03 / RECOGNITION</p>
+          <h1>把参与，变成值得珍藏的认可。</h1>
+          <p class="intro">
+            了解领取条件与期限，再选择适合自己的奖励。历史贡献不会因为领取奖励被扣减。
+          </p>
+        </div>
+        <label>当前学校<select id="school" aria-label="当前学校"></select></label>
+      </section>
+      <p id="status" role="status" aria-live="polite">正在读取账号…</p>
+      <section id="login" class="panel" hidden>
+        <h2>登录后查看学校奖励</h2>
+        <a class="button primary" href="/auth/login">登录 / 注册</a>
+      </section>
+      <div id="workspace" hidden>
+        <p class="notice">
+          奖励不赋予管理员权限，也不代表学校官方学分。标为“演示”的奖励使用虚构条件，需要再次确认。
+        </p>
+        <div class="tabs" role="tablist" aria-label="奖励功能">
+          <button id="tab-explore" data-panel="explore" role="tab" aria-selected="true">
+            发现奖励</button
+          ><button id="tab-mine" data-panel="mine" role="tab">我的领取记录</button
+          ><button id="tab-manage" data-panel="manage" role="tab">负责人工作台</button>
+        </div>
+        <section id="explore-panel">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">CHOOSE WITH CONFIDENCE</p>
+              <h2>先看清楚，再领取。</h2>
+            </div>
+            <button id="refresh">更新奖励</button>
+          </div>
+          <label>查找奖励<input id="search" type="search" placeholder="奖励名称、说明" /></label>
+          <div id="items" class="cards"></div>
+        </section>
+        <section id="mine-panel" hidden>
+          <div class="section-title">
+            <h2>每次领取，都有来源和结果。</h2>
+            <button id="refresh-mine">更新记录</button>
+          </div>
+          <div id="claims" class="cards"></div>
+        </section>
+        <section id="manage-panel" hidden>
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">ORGANIZER WORKSPACE</p>
+              <h2>先明确规则，再批准发放。</h2>
+            </div>
+            <button id="new-reward" class="primary">建立奖励草稿</button>
+          </div>
+          <p>
+            默认不启用任何正式奖励。已发布的规则不可悄悄修改；停止新增领取后，已经发出的权益仍保留，撤销需逐条说明理由。
+          </p>
+          <div id="managed" class="cards"></div>
+          <h2>本范围履约记录</h2>
+          <div id="managed-claims" class="cards"></div>
+        </section>
+        <section id="history" class="panel" hidden>
+          <div class="section-title">
+            <h2>领取与履约轨迹</h2>
+            <button id="close-history">收起</button>
+          </div>
+          <ol id="history-events"></ol>
+        </section>
+      </div>
+    </main>
+    <dialog id="edit-dialog">
+      <form id="edit-form">
+        <p class="eyebrow">REWARD DRAFT</p>
+        <h2 id="edit-heading">建立奖励草稿</h2>
+        <input id="edit-id" type="hidden" />
+        <div class="form-grid">
+          <label>所属范围<select id="edit-org"></select></label
+          ><label
+            >奖励类型<select id="edit-kind">
+              <option value="badge">社区认可徽章</option>
+              <option value="appearance">可选人物绶带资格</option>
+              <option value="activity">指定活动准入资格</option>
+              <option value="partner">合作方权益</option>
+            </select></label
+          >
+          <label class="wide">奖励名称<input id="edit-title" maxlength="120" required /></label
+          ><label class="wide"
+            >用途、条件与领取说明<textarea
+              id="edit-description"
+              minlength="5"
+              maxlength="3000"
+              required
+            ></textarea>
+          </label>
+          <label id="badge-label"
+            >徽章显示文字<input id="edit-badge" maxlength="60" value="校园共同建设者" /></label
+          ><label id="target-label" hidden
+            >绑定活动或合作权益<select id="edit-target"></select
+          ></label>
+          <p id="target-note" class="wide"></p>
+          <label
+            >最低贡献<input
+              id="edit-minimum"
+              type="number"
+              min="0"
+              max="100000000"
+              value="0"
+              required /></label
+          ><label
+            >贡献周期（留空为累计）<input id="edit-period" placeholder="由学校已审核规则定义"
+          /></label>
+          <label
+            >总发放份数<input
+              id="edit-stock"
+              type="number"
+              min="1"
+              max="1000000"
+              value="10"
+              required /></label
+          ><label
+            >性质<select id="edit-demonstration">
+              <option value="true">演示奖励，需要明确确认</option>
+              <option value="false">正式校园奖励</option>
+            </select></label
+          >
+          <label>开放领取时间<input id="edit-start" type="datetime-local" required /></label
+          ><label>权益到期时间<input id="edit-expiry" type="datetime-local" required /></label>
+        </div>
+        <p>每人每项只能领取一次；失败会保留同一份额用于重试。领取与撤销均不修改历史贡献。</p>
+        <div class="actions">
+          <button class="primary" type="submit" id="save-draft">保存草稿</button
+          ><button type="button" data-close>取消</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="action-dialog">
+      <form id="action-form">
+        <p class="eyebrow">CONFIRM DETAILS</p>
+        <h2 id="action-title"></h2>
+        <p id="action-note"></p>
+        <label id="reason-label"
+          >处理理由<textarea id="action-reason" minlength="3" maxlength="500"></textarea></label
+        ><label class="check" id="terms-label"
+          ><input type="checkbox" id="action-terms" />我已读清用途、条件、有效期和领取后果</label
+        ><label class="check" id="demo-label"
+          ><input
+            type="checkbox"
+            id="action-demo"
+          />我知道这是一项演示奖励，不代表真实学校或商户承诺</label
+        >
+        <div class="actions">
+          <button class="primary" type="submit" id="action-submit">确认</button
+          ><button type="button" data-close>返回</button>
+        </div>
+      </form>
+    </dialog>
+    <footer>Hyper Dimension Base · 发放依据服务端记录，模型回复不授予权益。</footer>
+    <script type="module" src="/rewards.js"></script>
+  </body>
+</html>

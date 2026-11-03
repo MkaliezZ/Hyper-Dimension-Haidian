@@ -1,0 +1,151 @@
+{
+  "format": "uw.public-source-review/v1",
+  "sourceDate": "2026-10-28",
+  "records": [
+    {
+      "file": "campus-map-2025.pdf",
+      "url": "https://cdn.uw.edu/wp-content/uploads/sites/57/2025/06/27100126/Web-Campus-Map-June-2025.pdf",
+      "bytes": 1176511,
+      "sha256": "18491f6717b609649a1da962350772e0861d615f6ae5a396d220d9d25d831e04",
+      "downloadedAt": "2026-10-28T09:30:27Z",
+      "review": {
+        "textPages": [
+          1
+        ],
+        "visualPages": [
+          1
+        ]
+      },
+      "redistributedOriginal": false
+    },
+    {
+      "file": "denny-hall-hra.pdf",
+      "url": "https://facilities.uw.edu/files/media/denny-hall-hra.pdf",
+      "bytes": 1691339,
+      "sha256": "49273140f4cb088007ed4c80eac228dd37c8364b70d04c68cf5756f1a5e740fe",
+      "downloadedAt": "2026-10-28T09:30:50Z",
+      "review": {
+        "textPages": [
+          1,
+          6
+        ],
+        "visualPages": [
+          6
+        ]
+      },
+      "redistributedOriginal": false
+    },
+    {
+      "file": "buildings-uw.geojson",
+      "url": "https://services.arcgis.com/ZOyb2t4B0UYuYNYH/arcgis/rest/services/Building_Outlines_2023/FeatureServer/0/query?where=1%3D1&geometry=-122.314%2C47.6500%2C-122.2990%2C47.6620&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2COUTLINE_ID%2CAREA&outSR=4326&f=geojson&returnGeometry=true&resultRecordCount=2000",
+      "bytes": 280441,
+      "sha256": "4b8bf10b90e23f3667a8b52f41c1e5e518f75f0e3b1f9b45beb02b755136e399",
+      "downloadedAt": "2026-10-28T09:30:53Z",
+      "review": {
+        "geometry": "query footprint geometry"
+      },
+      "redistributedOriginal": false
+    },
+    {
+      "file": "raitt-hall-hra.pdf",
+      "url": "https://facilities.uw.edu/files/media/raitt-hall-hra.pdf",
+      "bytes": 2406686,
+      "sha256": "436774afc65d4e77dc31bf29ec1af9229e9ad8cfe5bcc5dce632a26c9dd964be",
+      "downloadedAt": "2026-10-28T09:30:55Z",
+      "review": {
+        "textPages": [
+          1
+        ],
+        "visualPages": []
+      },
+      "redistributedOriginal": false
+    },
+    {
+      "file": "hub-hra.pdf",
+      "url": "https://facilities.uw.edu/files/media/husky-union-building-hra.pdf",
+      "bytes": 4033951,
+      "sha256": "a15d9b93d128dd311c3d97330dd133725d57b6e92569d87d496a120b18ca0dc6",
+      "downloadedAt": "2026-10-28T09:30:55Z",
+      "review": {
+        "textPages": [
+          1
+        ],
+        "visualPages": []
+      },
+      "redistributedOriginal": false
+    },
+    {
+      "file": "savery-hall-hra.pdf",
+      "url": "https://facilities.uw.edu/files/media/savery-hall-hra.pdf",
+      "bytes": 2446869,
+      "sha256": "b4ac5ca02b1abff47018a679bafda4f82342bed3ef0351fa66f17b160261606b",
+      "downloadedAt": "2026-10-28T09:31:07Z",
+      "review": {
+        "textPages": [
+          1
+        ],
+        "visualPages": []
+      },
+      "redistributedOriginal": false
+    },
+    {
+      "file": "uw-building-names.geojson",
+      "url": "https://gis.maps.uw.edu/federated/rest/services/PublicData/PublicData/FeatureServer/12/query?where=1%3D1&geometry=-122.314%2C47.6500%2C-122.2990%2C47.6620&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outSR=4326&f=geojson&returnGeometry=true&resultRecordCount=2000&outFields=OBJECTID%2CFacName%2CFacCode%2CYearBuilt%2CFeatureStatus%2CUnderground",
+      "bytes": 308028,
+      "sha256": "a0cd8dc59f1f10f784e43d589f033ff9b809c411e131c99a2a8504888439b339",
+      "review": {
+        "geometry": "UW official labels / public line network"
+      },
+      "redistributedOriginal": false
+    },
+    {
+      "file": "uw-layer-35.geojson",
+      "url": "https://gis.maps.uw.edu/federated/rest/services/PublicData/PublicData/FeatureServer/35/query?where=1%3D1&geometry=-122.314%2C47.6500%2C-122.2990%2C47.6620&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outSR=4326&f=geojson&returnGeometry=true&resultRecordCount=2000&outFields=OBJECTID",
+      "bytes": 145303,
+      "sha256": "8a63946ee010be9adc1334cff32fca1ef8bec1f8ef2c80b2c225a3bf8295e585",
+      "review": {
+        "geometry": "UW official labels / public line network"
+      },
+      "redistributedOriginal": false
+    },
+    {
+      "file": "uw-layer-36.geojson",
+      "url": "https://gis.maps.uw.edu/federated/rest/services/PublicData/PublicData/FeatureServer/36/query?where=1%3D1&geometry=-122.314%2C47.6500%2C-122.2990%2C47.6620&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outSR=4326&f=geojson&returnGeometry=true&resultRecordCount=2000&outFields=OBJECTID",
+      "bytes": 35479,
+      "sha256": "5ca993377b467e8ec5097a65d30abc7caef6c11ebab1f3610fcb7f21123758e4",
+      "review": {
+        "geometry": "UW official labels / public line network"
+      },
+      "redistributedOriginal": false
+    },
+    {
+      "file": "data/terrain-uw-dem.tif",
+      "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/WA_KingCounty_2021_B21/TIFF/USGS_1M_10_x55y528_WA_KingCounty_2021_B21.tif",
+      "remoteObjectBytes": 238454157,
+      "remoteWholeObjectSha256": null,
+      "croppedFileBytes": 1721902,
+      "croppedSha256": "390a291e4bc9030b45d94624fd4e6124c3d32ffc7f749ce2778ded0340cca6b2",
+      "review": {
+        "coverage": "EPSG26910 GeoTIFF extent covers entire MVP; original1m, 6m display sampling",
+        "verticalDatum": "not independently rechecked"
+      },
+      "redistributedOriginal": false,
+      "redistributedCrop": true
+    }
+  ],
+  "notSelected": [
+    {
+      "source": "2019 Campus Master Plan",
+      "reason": "Planning scenarios are not proof of existing buildings; unnecessary for this central-campus MVP."
+    },
+    {
+      "source": "Landscape Framework / full point cloud / contours / stadium HRA",
+      "reason": "Reserved for later art/site refinement; not claimed reviewed or used in this first functional slice."
+    },
+    {
+      "source": "General ArcGIS geocoder",
+      "reason": "Rejected after results contradicted UW map/building geometry; no candidate geocodes used."
+    }
+  ],
+  "sourceOriginalsIncludedInPublicPackage": false
+}

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>校友发现、学长支持与职业机会</title>
+    <link rel="stylesheet" href="/m1.css" />
+    <link rel="stylesheet" href="/network.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <small>HYPER DIMENSION / BASE 3</small>
+        <h1>校园连接</h1>
+        <p>自愿被发现，预约学长支持，查看经审核的职业与项目机会。</p>
+      </div>
+      <nav>
+        <a href="/">返回空间</a><a href="/community.html">校园论坛</a
+        ><a href="/contacts.html">联系人与私信授权</a><a href="/m1.html">账号与管理</a
+        ><a href="/auth/login">登录</a>
+      </nav>
+    </header>
+    <main>
+      <p id="status" role="status">正在检查学校权限…</p>
+      <section class="toolbar">
+        <label>学校<select id="school"></select></label
+        ><label>地点筛选<select id="place-filter"></select></label
+        ><button id="refresh">刷新</button>
+      </section>
+      <div id="workspace" hidden>
+        <section>
+          <h2>校友与成员发现</h2>
+          <p>
+            目录仅向本校有效成员开放。名片内容由本人自述，不能替代学校身份或履历核验。没有主动加入的人不会出现在这里。
+          </p>
+          <form id="search" class="toolbar">
+            <label>关键词<input id="query" maxlength="100" /></label
+            ><label>院系<input id="department" maxlength="100" /></label
+            ><label>届别<input id="year" maxlength="20" /></label
+            ><label
+              >身份<select id="kind">
+                <option value="">全部</option>
+                <option value="student">在校学生</option>
+                <option value="alumni">校友</option>
+                <option value="staff">教职人员</option>
+              </select></label
+            ><label>兴趣标签<input id="tag" maxlength="30" /></label><button>查找</button>
+          </form>
+          <div id="directory" class="cards"></div>
+          <button id="previous">上一页</button><span id="page"></span
+          ><button id="next">下一页</button>
+          <details>
+            <summary>我的发现名片（自愿加入/退出）</summary>
+            <p id="profile-state"></p>
+            <form id="profile">
+              <input type="hidden" id="profile-revision" /><label
+                >公开昵称<input id="profile-name" maxlength="80" required /></label
+              ><label>院系<input id="profile-department" maxlength="100" /></label
+              ><label>届别<input id="profile-year" maxlength="20" /></label
+              ><label
+                >自述身份<select id="profile-kind">
+                  <option value="student">在校学生</option>
+                  <option value="alumni">校友</option>
+                  <option value="staff">教职人员</option>
+                </select></label
+              ><label>城市<input id="profile-city" maxlength="80" /></label
+              ><label
+                >介绍与可提供的帮助<textarea
+                  id="profile-bio"
+                  minlength="8"
+                  maxlength="1000"
+                  required
+                ></textarea></label
+              ><label>标签（逗号分隔，最多12个）<input id="profile-tags" /></label
+              ><label>公开地点<select id="profile-place"></select></label
+              ><label><input type="checkbox" id="profile-mentor" />我愿意提供学长/导师支持</label
+              ><label
+                ><input
+                  type="checkbox"
+                  id="profile-consent"
+                  required
+                />我同意将以上名片提交审核，并向本校成员展示；不填写联系方式或私人资料</label
+              ><button>提交审核</button
+              ><button id="withdraw-profile" type="button">退出发现目录</button>
+            </form>
+            <p>
+              修改后立即停止展示，需重新审核；已有开放支持时段会关闭，未结束预约会取消并通知参与者。私密人物资料不会自动复制到名片。
+            </p>
+          </details>
+        </section>
+        <section>
+          <h2>学长 / 导师支持</h2>
+          <p>
+            申请后须由支持人确认。此处不自动外发资料、不创建外部会议，也不收费。问题仅对预约双方可见；管理员协调视图只显示状态与时间。
+          </p>
+          <div id="slots" class="cards"></div>
+          <details>
+            <summary>创建我的支持时段</summary>
+            <p>
+              需要已审核、且勾选提供支持的名片。时间按你当前浏览器时区填写，服务器统一保存为 UTC。
+            </p>
+            <form id="slot">
+              <label>主题<input id="slot-topic" minlength="3" maxlength="200" required /></label
+              ><label>开始时间<input type="datetime-local" id="slot-start" required /></label
+              ><label>结束时间<input type="datetime-local" id="slot-end" required /></label
+              ><label
+                >人数（1–20）<input
+                  type="number"
+                  min="1"
+                  max="20"
+                  value="1"
+                  id="slot-capacity"
+                  required /></label
+              ><label>地点<select id="slot-place"></select></label><button>开放时段</button>
+            </form>
+          </details>
+          <h3>我申请的 / 我提供的支持</h3>
+          <div id="bookings" class="cards"></div>
+        </section>
+        <section>
+          <h2>职业与机会</h2>
+          <p>
+            正文与讨论由原生论坛保存及审核；机会卡片另由管理员核对截止日期、申请链接等信息。正文版本变更后须重新核对卡片。请自行核查组织与申请入口，不自动代投简历。
+          </p>
+          <label
+            >类别<select id="opportunity-filter">
+              <option value="">全部</option>
+            </select></label
+          >
+          <div id="opportunities" class="cards"></div>
+          <button id="opportunity-prev">上一页</button><span id="opportunity-page"></span
+          ><button id="opportunity-next">下一页</button>
+          <details>
+            <summary>发布 / 修改机会</summary>
+            <p>
+              先在校园论坛提交正文，复制该内容的编号到这里。完成正文审核后，管理员再核对结构化信息。更改链接或截止日期也需重新审核。
+            </p>
+            <a id="forum-entry" href="/community.html">前往原生论坛写正文 →</a>
+            <form id="opportunity">
+              <label>论坛内容编号<input id="opportunity-source" required maxlength="128" /></label
+              ><label>组织编号（学校范围留空）<input id="opportunity-org" maxlength="128" /></label
+              ><label
+                >元数据版本（初次为0）<input
+                  id="opportunity-revision"
+                  type="number"
+                  min="0"
+                  value="0"
+                  required /></label
+              ><label>类别<select id="opportunity-kind"></select></label
+              ><label
+                >发布组织名称<input
+                  id="opportunity-organization"
+                  minlength="2"
+                  maxlength="160"
+                  required /></label
+              ><label
+                >面向对象<input
+                  id="opportunity-audience"
+                  minlength="2"
+                  maxlength="300"
+                  required /></label
+              ><label
+                >截止时间<input id="opportunity-deadline" type="datetime-local" required /></label
+              ><label
+                >官方申请网址（可选 HTTPS）<input
+                  id="opportunity-url"
+                  type="url"
+                  maxlength="2048" /></label
+              ><label>地点<select id="opportunity-place"></select></label
+              ><button>提交卡片核对</button>
+            </form>
+            <h3>我提交的卡片</h3>
+            <div id="my-opportunities" class="cards"></div>
+          </details>
+        </section>
+        <section id="admin" hidden>
+          <h2>负责人 / 管理员后台</h2>
+          <p>
+            所有操作使用当前账号权限，带版本及原因进入审计。名片审核不自动授予学校资格、校友认证或职业背书。
+          </p>
+          <button id="load-admin">刷新管理列表</button>
+          <p>每类每页最多20条。机会仅列出你当前有审核权限的学校或组织内容。</p>
+          <button id="admin-prev">上一管理页</button><span id="admin-page"></span
+          ><button id="admin-next">下一管理页</button>
+          <div id="school-admin">
+            <h3>名片审核 / 下架</h3>
+            <div id="profile-review" class="cards"></div>
+            <h3>支持时段协调</h3>
+            <div id="slot-admin" class="cards"></div>
+            <h3>预约协调（不含他人问题正文）</h3>
+            <div id="booking-admin" class="cards"></div>
+          </div>
+          <h3>机会核对 / 下架 / 截止维护</h3>
+          <div id="opportunity-admin" class="cards"></div>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="/network.js"></script>
+  </body>
+</html>

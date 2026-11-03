@@ -1,0 +1,6 @@
+{
+  "provider": "hermes",
+  "python": "/absolute/path/to/hermes-venv/bin/python",
+  "hermesRoot": "/absolute/path/to/hermes-agent",
+  "timeoutMs": 60000
+}

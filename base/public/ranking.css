@@ -1,0 +1,101 @@
+.toolbar,
+.form-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: end;
+}
+.toolbar label,
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 160px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 1.2rem;
+}
+#ranking {
+  padding-left: 0;
+  list-style: none;
+}
+#ranking li {
+  padding: 0.8rem;
+  border-bottom: 1px solid #dbe7e1;
+}
+article {
+  border: 1px solid #dbe7e1;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0.75rem 0;
+  overflow-wrap: anywhere;
+}
+article p {
+  margin: 0.4rem 0;
+}
+article button {
+  margin: 0.4rem 0.4rem 0 0;
+}
+details {
+  border-top: 1px solid #dbe7e1;
+  padding: 1rem 0;
+}
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+#rule-json {
+  font-family: monospace;
+  min-height: 260px;
+}
+#preview-result {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.error {
+  color: #aa3232;
+}
+.form-grid textarea {
+  min-width: 230px;
+}
+small {
+  color: #506a60;
+}
+footer {
+  padding: 1rem 0;
+  color: #506a60;
+}
+button:disabled {
+  opacity: 0.5;
+}
+#status {
+  min-height: 1.5rem;
+}
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .toolbar > * {
+    width: 100%;
+    min-width: 0;
+  }
+  .form-grid label {
+    width: 100%;
+    min-width: 0;
+  }
+  header {
+    display: block;
+  }
+  header nav {
+    flex-wrap: wrap;
+  }
+  section {
+    min-width: 0;
+  }
+}

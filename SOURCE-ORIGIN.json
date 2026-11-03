@@ -1,0 +1,11 @@
+{
+  "format": "hyper-dimension.git-source-origin/v1",
+  "applicationVersion": "0.11.3",
+  "sourceDelivery": "UW-Pixel-Campus-v0.11.3-complete.zip",
+  "sourceDeliverySha256": "c14659bda54daa930da9a5a3b6ba58ca3adbd3fedf711b35793c15810323713c",
+  "baseCampusVersion": "0.8.3",
+  "baseCoreVersion": "0.2.1",
+  "repository": "https://github.com/MkaliezZ/Hyper-Dimension-UW",
+  "applicationDevelopment": "paused",
+  "scope": "Sanitized source and runtime assets; public dependencies restored separately; no user data, credentials or historical evidence payloads."
+}

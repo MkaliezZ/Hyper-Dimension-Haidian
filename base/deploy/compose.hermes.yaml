@@ -1,0 +1,23 @@
+# Merge after compose.yaml. Only Base receives the secret; other services retain their core image.
+services:
+  base:
+    image: ${HD_HERMES_IMAGE:-hyper-dimension-base:hermes}
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.hermes
+      args:
+        HD_CORE_IMAGE: ${HD_STACK_IMAGE:-hyper-dimension-base:integrations}
+    environment:
+      HD_RECEPTION_PROVIDER: hermes
+      HD_RECEPTION_MODEL_KEY_FILE: /run/secrets/reception_model_key
+    secrets: [reception_model_key]
+  utility:
+    image: ${HD_HERMES_IMAGE:-hyper-dimension-base:hermes}
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.hermes
+      args:
+        HD_CORE_IMAGE: ${HD_STACK_IMAGE:-hyper-dimension-base:integrations}
+secrets:
+  reception_model_key:
+    file: ${HD_RECEPTION_MODEL_KEY_FILE:?Configure a private reception model key file readable by UID 10001}

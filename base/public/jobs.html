@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>后台任务 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/m1.css" />
+    <link rel="stylesheet" href="/jobs.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <small>HYPER DIMENSION</small>
+        <h1>后台任务</h1>
+        <p>学校负责人检查本校任务，核对原因后重试失败记录。</p>
+      </div>
+      <nav><a href="/admin.html">管理入口</a><a href="/m1.html">账号与权限</a></nav>
+    </header>
+    <main>
+      <p id="status" role="status">正在读取权限…</p>
+      <section>
+        <label>学校<select id="school"></select></label><button id="refresh">刷新</button>
+        <p id="guide">只显示安全状态，不展示任务正文、参与者信息或上游错误详情。</p>
+      </section>
+      <section id="access" hidden>
+        <h2>当前任务</h2>
+        <p>
+          每页最多50条，按登记时间由新到旧。自动重试尚在运行时无需人工操作。业务已处理的任务重试仍沿用原回执。
+        </p>
+        <div id="items"></div>
+        <button id="next" hidden>读取下一页</button>
+      </section>
+    </main>
+    <script type="module" src="/jobs.js"></script>
+  </body>
+</html>

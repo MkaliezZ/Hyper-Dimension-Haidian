@@ -1,0 +1,46 @@
+﻿编号,优先级,功能,当前状态,实现方式,源码或当前文档,说明与待补条件
+B1-01,P0,图纸到运行空间,已实现；对应版本技术验收,Keycloak、PostgreSQL/pgvector、Hermes、BGE ONNX、pg-boss、A2A SDK；场景/权限/发布与任务桥接自研,base/DEVELOPMENT-MANUAL.md,通用图纸示例与 UW 户外适配分别保留；新学校由其 Agent/维护者核对图纸与比例。
+B1-02,P0,素材与视觉升级,已实现；对应版本技术验收,Keycloak、PostgreSQL/pgvector、Hermes、BGE ONNX、pg-boss、A2A SDK；场景/权限/发布与任务桥接自研,base/docs/AVATAR-SCHOOL-ART.md,UW 现用统一分块像素场景；学生会可按素材接口续建美术。
+B1-03,P0,Agent 与 A2A,已实现；对应版本技术验收,Keycloak、PostgreSQL/pgvector、Hermes、BGE ONNX、pg-boss、A2A SDK；场景/权限/发布与任务桥接自研,base/src/a2a/gateway.mjs,后端已有；本轮补本人任务工作台，读取/停止/导出直接使用原网关。
+B1-04,P0,接待与知识库,已实现；对应版本技术验收,Keycloak、PostgreSQL/pgvector、Hermes、BGE ONNX、pg-boss、A2A SDK；场景/权限/发布与任务桥接自研,base/src/reception/index.mjs,真实 Hermes/DeepSeek 已有验证；实际校方资料仍由负责人审核发布。
+B1-05,P0,长期身份映射,已实现；对应版本技术验收,Keycloak、PostgreSQL/pgvector、Hermes、BGE ONNX、pg-boss、A2A SDK；场景/权限/发布与任务桥接自研,base/src/platform/identity.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B1-06,P0,学校与组织权限,已实现；对应版本技术验收,Keycloak、PostgreSQL/pgvector、Hermes、BGE ONNX、pg-boss、A2A SDK；场景/权限/发布与任务桥接自研,base/src/platform/m1.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B1-07,P0,通用信息契约,已实现；对应版本技术验收,Keycloak、PostgreSQL/pgvector、Hermes、BGE ONNX、pg-boss、A2A SDK；场景/权限/发布与任务桥接自研,base/src/platform/ledger.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B1-08,P0,信息治理,已实现；对应版本技术验收,Keycloak、PostgreSQL/pgvector、Hermes、BGE ONNX、pg-boss、A2A SDK；场景/权限/发布与任务桥接自研,base/src/platform/information.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B1-09,P0,订阅与通知,已实现；对应版本技术验收,Keycloak、PostgreSQL/pgvector、Hermes、BGE ONNX、pg-boss、A2A SDK；场景/权限/发布与任务桥接自研,base/src/platform/information.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B1-10,P0,数据与运行维护,已实现；对应版本技术验收,Keycloak、PostgreSQL/pgvector、Hermes、BGE ONNX、pg-boss、A2A SDK；场景/权限/发布与任务桥接自研,base/docs/DEPLOYMENT-CONTAINERS.md,原生五库备份恢复已有记录；目标生产服务器容量与运维尚待实测。
+B1-11,P0,Agent续建与验证,已实现；对应版本技术验收,Keycloak、PostgreSQL/pgvector、Hermes、BGE ONNX、pg-boss、A2A SDK；场景/权限/发布与任务桥接自研,base/DEVELOPMENT-MANUAL.md,统一手册和独立接包记录保留；本轮新功能随 v0.11.3 完整包交付。
+B2-01,P0,首次进入与绑定,已实现；对应版本技术验收,原创轻量编辑器与校园人物渲染；Nakama + PostgreSQL；权限、配方、背包与联系人逻辑自研,base/src/platform/m1.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B2-02,P0,捏人与换装,已实现；对应版本技术验收,原创轻量编辑器与校园人物渲染；Nakama + PostgreSQL；权限、配方、背包与联系人逻辑自研,public/pixel-editor.js,按用户最新决定仅做简单部件搭配；不新增重型捏脸。
+B2-03,P0,形象配方与模型,已实现；对应版本技术验收,原创轻量编辑器与校园人物渲染；Nakama + PostgreSQL；权限、配方、背包与联系人逻辑自研,src/visitor-avatar.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B2-04,P0,持久化与跨设备,已实现；对应版本技术验收,原创轻量编辑器与校园人物渲染；Nakama + PostgreSQL；权限、配方、背包与联系人逻辑自研,base/src/platform/m2.mjs,存档、重启、独立浏览器恢复已有技术证据；物理终端另行验收。
+B2-05,P0,个人主页,已实现；对应版本技术验收,原创轻量编辑器与校园人物渲染；Nakama + PostgreSQL；权限、配方、背包与联系人逻辑自研,base/src/platform/personal.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B2-06,P0,背包,已实现；对应版本技术验收,原创轻量编辑器与校园人物渲染；Nakama + PostgreSQL；权限、配方、背包与联系人逻辑自研,base/src/platform/m2.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B2-07,P0,非破坏性道具,已实现；对应版本技术验收,原创轻量编辑器与校园人物渲染；Nakama + PostgreSQL；权限、配方、背包与联系人逻辑自研,src/campus-world.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B2-08,P0,私信与收件箱,已实现；对应版本技术验收,原创轻量编辑器与校园人物渲染；Nakama + PostgreSQL；权限、配方、背包与联系人逻辑自研,base/src/platform/chat.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B2-09,P0,Agent会话入口,已实现；对应版本技术验收,原创轻量编辑器与校园人物渲染；Nakama + PostgreSQL；权限、配方、背包与联系人逻辑自研,base/src/platform/agents.mjs,本轮补入口和任务回执；活动助理沿用用户确认的活动页面流程。
+B2-10,P1,个人长期记忆,按用户决定从范围移除,用户自带 Agent；平台会话管理自研,base/docs/RECEPTION-AND-NETWORK.md,个人 Agent 由用户自带；平台只管理接待会话，默认30天、学校配置、用户导出/删除。
+B3-01,P0,组织主页,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/community.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-02,P0,论坛与交流,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/community.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-03,P0,地图记忆,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/docs/COMMUNITY.md,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-04,P0,审核与举报,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/docs/COMMUNITY.md,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-05,P0,活动中心,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/activities.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-06,P0,志愿与组织任务,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/activities.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-07,P0,贡献账本,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/campus-ledger.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-08,P0,Ranking,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/campus-ledger.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-09,P0,奖励,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/rewards.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-10,P0,运营timeline,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/operations.mjs,两份用户运营材料的转换/版本/排期已接入；真实 UW 学期日期、分值和预算由负责人确认。
+B3-11,P0,资讯与个人展示,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/personal.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-12,P0,换届与运营资料,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/m1.mjs,交接与撤权沿用实时学校/组织权限，历史记录保留。
+B3-13,P1,成员与校友目录,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/network.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-14,P1,导师与学长支持,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/network.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-15,P1,职业与机会,已实现；对应版本技术验收,NodeBB、Nakama、pg-boss、PostgreSQL/pgvector；运营规则、计分、版本、目录/预约与审核桥接自研,base/src/platform/network.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B3-16,P2,地区社群,按用户决定暂缓,未实施,base/docs/CURRENT-FEATURES.md,不在当前开发范围，不自行恢复。
+B4-01,P0,合作方入驻,已实现；对应版本技术验收,官方 A2A SDK、PostgreSQL、pg-boss；合作业务、委托、字段同意、幂等与履约适配契约自研,base/src/platform/partners.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B4-02,P0,地图服务目录,已实现；对应版本技术验收,官方 A2A SDK、PostgreSQL、pg-boss；合作业务、委托、字段同意、幂等与履约适配契约自研,base/src/platform/partners.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B4-03,P0,合作方接待,已实现；对应版本技术验收,官方 A2A SDK、PostgreSQL、pg-boss；合作业务、委托、字段同意、幂等与履约适配契约自研,base/src/platform/business-a2a.mjs,A2A 委托与查询/提案/查询工单/取消已实现；真实合作服务资料需入驻审核。
+B4-04,P0,咨询预约与工单,已实现；对应版本技术验收,官方 A2A SDK、PostgreSQL、pg-boss；合作业务、委托、字段同意、幂等与履约适配契约自研,base/src/platform/partners.mjs,技术流程经明确标注的虚构适配器验证；正式商户接口及真实履约待接入。
+B4-05,P0,权益与合作活动,已实现；对应版本技术验收,官方 A2A SDK、PostgreSQL、pg-boss；合作业务、委托、字段同意、幂等与履约适配契约自研,base/src/platform/rewards.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B4-06,P0,到店或活动核销,已实现；对应版本技术验收,官方 A2A SDK、PostgreSQL、pg-boss；合作业务、委托、字段同意、幂等与履约适配契约自研,base/src/platform/partners.mjs,实现和既有验收保留，本轮未重跑该模块的全部业务验收。
+B4-07,P0,合作效果,已实现；对应版本技术验收,官方 A2A SDK、PostgreSQL、pg-boss；合作业务、委托、字段同意、幂等与履约适配契约自研,base/src/platform/partners.mjs,统计按范围和定义去重；实际运营效果需要正式运行数据。
+B4-08,P2,订单及复杂交易,按用户决定暂缓,未实施,base/docs/CURRENT-FEATURES.md,不在当前开发范围，不自行恢复。

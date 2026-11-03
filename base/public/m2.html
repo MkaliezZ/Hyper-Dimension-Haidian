@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>我的校园形象 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/m2.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/vendor/three/three.module.js",
+          "three/addons/": "/vendor/three/addons/",
+          "@pixiv/three-vrm": "/vendor/vrm/three-vrm.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/m1.html"
+        >H↗ <span>HYPER DIMENSION <small>校园身份工作室</small></span></a
+      >
+      <nav>
+        <a href="/profile.html">个人主页</a><a href="/inbox.html">校园订阅</a><a href="/partners.html">合作服务</a><a href="/social.html">私信与聊天</a><a href="/m1.html">社区与账号</a
+        ><a id="enter-space" href="/">进入空间 ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="heading">
+        <div>
+          <p class="eyebrow">YOUR CAMPUS, YOUR CHARACTER</p>
+          <h1>以自己的样子，走进校园。</h1>
+          <p>选择喜欢的部件与颜色。形象、背包和私人收藏会保存在当前学校的账号中。</p>
+        </div>
+        <label
+          >当前学校
+          <select id="school" aria-label="当前学校"></select
+        ></label>
+      </section>
+      <p id="status" role="status">正在读取账号…</p>
+      <section id="login" hidden>
+        <p>请先登录学校账号，再保存你的形象。</p>
+        <a class="button" href="/auth/login">登录 / 注册</a>
+      </section>
+      <div id="studio" hidden>
+        <div class="studio-grid">
+          <section class="portrait">
+            <div class="stage-label">
+              <span>01 / CHARACTER</span><span id="model-stats">原创校园部件</span>
+            </div>
+            <canvas id="avatar" aria-label="可旋转的人物三维预览"></canvas>
+            <div class="pose">
+              <button data-pose="Idle">站立</button><button data-pose="Walk">行走</button
+              ><button data-pose="Wave">挥手</button><button id="reset-camera">重置视角</button>
+            </div>
+            <p class="stage-note">
+              拖动旋转 · 滚轮缩放<br />原创卡通人物 / 统一骨架 / 部件可继续扩充
+            </p>
+          </section>
+          <section class="editor">
+            <p class="eyebrow">MAKE IT YOURS</p>
+            <h2>设计我的形象</h2>
+            <div id="migration" class="notice" hidden>
+              检测到旧版人物配方。这里展示迁移预览；点击“迁移并保存”后启用新形象，旧存档会保留。
+            </div>
+            <div id="presets" class="presets" aria-label="预设形象"></div>
+            <div id="parts" class="fields"></div>
+            <div id="colors" class="fields colors"></div>
+            <p id="compatibility" class="error" role="alert"></p>
+            <div class="save-row">
+              <button id="save" class="primary">保存我的形象</button
+              ><button id="reload">恢复已保存形象</button>
+            </div>
+            <p id="saved" class="muted"></p>
+            <details>
+              <summary>部件库、版本与授权</summary>
+              <p id="library-note"></p>
+              <a href="/avatar-library/catalog.json" target="_blank" rel="noopener"
+                >查看可复现部件目录与 SHA-256</a
+              >
+            </details>
+          </section>
+        </div>
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">02 / EVERYDAY EXPLORATION</p>
+              <h2>我的校园背包</h2>
+            </div>
+            <button id="starter">领取欢迎背包</button>
+          </div>
+          <p>
+            地图收藏、到访集章、地点明信片、私人记忆卡与挥手应援。进入空间选择地点后使用；不会修改建筑、删除内容或影响其他访客。
+          </p>
+          <div id="inventory" class="inventory"></div>
+          <details>
+            <summary>发放与使用记录</summary>
+            <ul id="ledger"></ul>
+          </details>
+        </section>
+        <section class="section">
+          <p class="eyebrow">03 / KEEP YOUR MOMENTS</p>
+          <h2>私人收藏</h2>
+          <p>只对当前学校账号可见。记忆草稿可以带到论坛编辑器，由你确认提交审核。</p>
+          <div id="collections" class="collections"></div>
+        </section>
+        <section class="section">
+          <p class="eyebrow">04 / PROFILE</p>
+          <h2>我的学校名片</h2>
+          <form id="profile">
+            <div id="profile-fields" class="fields"></div>
+            <button class="primary">保存名片与可见范围</button>
+          </form>
+          <p>“仅自己”字段不会出现在他人的学校名片，也不会自动交给接待 Agent。</p>
+        </section>
+        <section class="section">
+          <h2>空间接待 Agent</h2>
+          <p>
+            进入空间可询问已发布资料与一般问题；回复会标明资料来源或通用交流。人物、背包与私人记忆不会自动转发给
+            Agent。模型回复不授予权限或发放物品。
+          </p>
+          <a id="agent-space" href="/">前往空间接待 →</a>
+        </section>
+      </div>
+    </main>
+    <footer>Hyper Dimension Base · M2 / 原创校园人物与非破坏性互动</footer>
+    <script type="module" src="/m2.js"></script>
+  </body>
+</html>

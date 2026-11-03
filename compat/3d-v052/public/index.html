@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>UW Seattle · Hyper Dimension</title>
+  <meta name="description" content="在UW中央校园的数字空间中探索建筑、步行路线与校园故事。Hyper Dimension独立概念MVP。">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/visitor.css">
+  <link rel="stylesheet" href="/ui-refresh.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three/three.module.js","three/addons/":"/vendor/three/addons/"}}</script>
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Hyper Dimension 首页"><span class="brand-symbol">H<span>↗</span></span><span>HYPER<br><b>DIMENSION</b></span></a>
+    <div class="school-switch" title="University of Washington · 独立校园体验"><span class="uw-word">W</span><div><strong>UW Seattle</strong><small>CAMPUS EXPLORER</small></div></div>
+    <div class="top-actions"><button id="visitor-edit" class="quiet-button">我的形象</button><button id="visitor-locate" class="quiet-button">找到我</button><button id="campus-services-button" class="quiet-button">校园服务</button><button id="sources-button" class="quiet-button">资料</button></div>
+  </header>
+  <main class="workspace">
+    <nav class="rail" aria-label="主要功能"><button class="rail-button active" id="explore-button"><span>◈</span>探索</button><button class="rail-button" id="tour-button"><span>⌁</span>导览</button><button class="rail-button" id="chat-nav"><span>◌</span>接待</button><div class="rail-bottom"><span>UW</span><small>CAMPUS</small></div></nav>
+    <aside class="sidebar" aria-label="校园地标">
+      <div class="intro"><div class="eyebrow">EXPLORE UW</div><h1>下一站，校园。<span>从一栋建筑，走进一个故事。</span></h1></div>
+      <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索建筑或地标" autocomplete="off" aria-label="搜索建筑或地标"><span>⌕</span></label>
+      <div class="filters" role="group" aria-label="地标分类"><button class="filter active" data-filter="all">全部</button><button class="filter" data-filter="history">历史建筑</button><button class="filter" data-filter="landscape">校园景观</button><button class="filter" data-filter="student">学生生活</button></div>
+      <div class="list-heading"><span>值得停下的地方</span><small id="landmark-count">9 PLACES</small></div>
+      <div id="landmark-list" class="landmark-list" aria-live="polite"></div>
+      <section id="place-card" class="place-card" aria-label="地标详情" data-collapsed="false"></section>
+      <div class="sidebar-foot"><span class="tiny-dot"></span> 基于公开资料的独立体验<span>非 UW 官方服务</span></div>
+    </aside>
+    <section class="map-area" aria-label="UW 三维校园地图">
+      <div class="map-title"><span id="map-region-tag" class="map-tag">中央校园</span><h2 id="map-headline">从红场出发。</h2><p id="map-subtitle">真实轮廓与地形 · 9 处精选地标</p></div>
+      <div class="art-views" role="group" aria-label="特色景观镜头"><button data-art-view="red-square" class="active" aria-label="红场精细近景">Red Square</button><button data-art-view="suzzallo" aria-label="Suzzallo 建筑近景">Suzzallo</button><button data-art-view="fountain" aria-label="喷泉精细近景">Drumheller</button><button data-art-view="vista" aria-label="Rainier Vista 景观轴线">Vista ↗</button><button id="art-focus" aria-label="切换专注景观模式" aria-pressed="false">专注景观</button></div>
+      <div class="map-toolbar"><button id="reset-view" aria-label="返回校园全景" title="校园全景">⌂</button><button id="top-view" aria-label="切换平面视图" title="切换平面视图">▱</button><span></span><button id="zoom-in" aria-label="放大地图">＋</button><button id="zoom-out" aria-label="缩小地图">−</button></div>
+      <canvas id="campus-canvas" tabindex="0" aria-label="三维校园，按 WASD 或方向键移动人物" aria-describedby="walk-help"></canvas>
+      <div id="labels" class="labels"></div>
+      <div id="visitor-marker" class="visitor-marker">校园访客</div>
+      <section id="walk-controls" class="walk-controls" hidden aria-label="人物漫游控制">
+        <div class="walk-heading"><button id="walk-follow">回到人物</button><span id="walk-help">WASD / 方向键</span></div>
+        <div class="walk-pad" role="group" aria-label="按住方向按钮移动，轻点走一步">
+          <button data-walk-key="KeyW" class="walk-up" aria-label="向前移动">↑</button>
+          <button data-walk-key="KeyA" class="walk-left" aria-label="向左移动">←</button>
+          <button id="walk-stop" class="walk-center" aria-label="停止移动">■</button>
+          <button data-walk-key="KeyD" class="walk-right" aria-label="向右移动">→</button>
+          <button data-walk-key="KeyS" class="walk-down" aria-label="向后移动">↓</button>
+        </div>
+        <p id="walk-status" role="status">按住移动 · 松开停下 · 拖动旋转视角</p>
+      </section>
+      <div id="loading" class="loading"><div class="spinner"></div><strong>正在展开校园…</strong><span>加载地形、建筑和步行网络</span></div>
+      <div class="map-compass" aria-label="北向"><span>N</span><b>↑</b></div>
+      <div class="map-footnote"><span><i class="legend-building"></i>校园建筑</span><span><i class="legend-route"></i>步行网络</span><span id="terrain-caption">USGS 地形</span><small>建筑常态参考建模 · 高度/细节推定 · 非实时施工状态</small></div>
+      <div class="map-controls-help">拖动旋转 · 右键平移 · 滚轮缩放</div>
+      <section id="route-card" class="route-card" aria-live="polite" hidden></section>
+      <button id="chat-button" class="chat-launch"><span>✧</span><div>问问空间接待<small>历史、位置与校园故事</small></div><b>↗</b></button>
+    </section>
+  </main>
+  <aside id="chat-panel" class="chat-panel" hidden aria-label="空间接待对话">
+    <div class="chat-heading"><span class="agent-avatar">✧</span><div><h2>UW 空间接待</h2><span id="provider-label">已发布资料 · 非通用模型</span></div><button id="close-chat" aria-label="关闭接待面板">×</button></div>
+    <div class="chat-scope">校园信息有出处。实时开放、预约与无障碍条件请以 UW 官方说明为准。</div>
+    <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+    <div class="chat-suggestions"><button data-question="Denny Hall有什么历史？">Denny Hall 的故事</button><button data-question="介绍一下HUB学生中心">认识 HUB</button></div>
+    <form id="chat-form"><textarea id="chat-input" rows="2" maxlength="4000" aria-label="向空间接待提问" placeholder="想了解校园的什么？"></textarea><button id="send-chat" aria-label="发送问题">↑</button></form>
+    <div class="chat-privacy"><span>独立访客会话 · 默认保留30天</span><div><button id="new-chat">新会话</button><button id="export-chat">导出</button><button id="delete-chat">删除会话</button></div></div>
+  </aside>
+  <dialog id="sources-dialog"><div class="dialog-heading"><div><div class="eyebrow">BEHIND THIS CAMPUS</div><h2>资料、方法与边界</h2></div><button id="close-sources" aria-label="关闭资料面板">×</button></div><p class="dialog-lead">把可信的地理数据，变成可以探索的校园。以下区分了原始依据与概念表达。</p><div id="source-summary" class="source-summary"></div><div id="source-list"></div><div id="assumptions" class="assumptions"></div></dialog>
+  <dialog id="campus-services-dialog" aria-labelledby="campus-services-title"><div class="dialog-heading"><h2 id="campus-services-title">校园服务</h2><button id="close-campus-services" aria-label="关闭校园功能">×</button></div><p id="campus-services-message" role="status"></p><p>活动、社区与校园生活，从这里进入。需要学校账号的服务会引导你登录。</p><div class="service-actions"><a id="campus-services-login" target="_blank" rel="noopener noreferrer" hidden>前往校园登录 ↗</a><button id="campus-services-refresh">刷新连接状态</button></div><div id="campus-services-list" class="campus-services-list"></div></dialog>
+  <div id="toast" role="status" hidden></div>
+</body>
+</html>

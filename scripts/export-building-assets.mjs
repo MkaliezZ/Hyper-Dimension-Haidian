@@ -1,0 +1,20 @@
+// Export all secondary-building artwork once. Runtime loads atlases instead of repainting masonry.
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {join} from 'node:path';import {createHash} from 'node:crypto';import {deflateSync} from 'node:zlib';
+import {projectRoot} from '../src/base.mjs';import {PixelRaster} from '../public/pixel-raster.js';
+import {buildingSprite,BUILDING_ART_VERSION} from '../public/oblique-buildings.js';
+const table=Array.from({length:256},(_,i)=>{let n=i;for(let j=0;j<8;j++)n=n&1?0xedb88320^(n>>>1):n>>>1;return n>>>0;});
+function crc(data){let c=0xffffffff;for(const n of data)c=table[(c^n)&255]^(c>>>8);return (c^0xffffffff)>>>0;}
+function chunk(type,data){const name=Buffer.from(type),out=Buffer.alloc(data.length+12);out.writeUInt32BE(data.length,0);name.copy(out,4);data.copy(out,8);out.writeUInt32BE(crc(Buffer.concat([name,data])),out.length-4);return out;}
+function png(raster){const header=Buffer.alloc(13);header.writeUInt32BE(raster.width);header.writeUInt32BE(raster.height,4);header[8]=8;header[9]=6;const scan=Buffer.alloc((raster.width*4+1)*raster.height);for(let y=0;y<raster.height;y++)Buffer.from(raster.data.buffer,y*raster.width*4,raster.width*4).copy(scan,y*(raster.width*4+1)+1);return Buffer.concat([Buffer.from([137,80,78,71,13,10,26,10]),chunk('IHDR',header),chunk('IDAT',deflateSync(scan,{level:9})),chunk('IEND',Buffer.alloc(0))]);}
+
+const campus=JSON.parse(await readFile(join(projectRoot,'data/campus.json'),'utf8')),dir=join(projectRoot,'public/assets/buildings');await mkdir(dir,{recursive:true});
+const primary=new Set(campus.landmarks.filter(p=>['denny','suzzallo','raitt','savery','hub','kane'].includes(p.id)).map(p=>p.buildingId));
+const sprites=campus.buildings.filter(b=>!primary.has(b.id)).map(b=>({building:b,...buildingSprite(b)})).sort((a,b)=>b.raster.height-a.raster.height||a.building.id.localeCompare(b.building.id));
+const atlases=[],records=[];let atlas=null,x=2,y=2,rowHeight=0,usedHeight=0;
+const newAtlas=()=>{atlas={raster:new PixelRaster(2048,2048),usedHeight:0,index:atlases.length};atlases.push(atlas);x=y=2;rowHeight=0;};newAtlas();
+for(const s of sprites){if(s.raster.width+4>2048||s.raster.height+4>2048)throw Error('Building exceeds atlas bound');if(x+s.raster.width+2>2048){x=2;y+=rowHeight+4;rowHeight=0;}if(y+s.raster.height+2>2048)newAtlas();atlas.raster.blit(s.raster,x,y);rowHeight=Math.max(rowHeight,s.raster.height);atlas.usedHeight=Math.max(atlas.usedHeight,y+s.raster.height+2);records.push({id:s.building.id,code:s.building.code,name:s.building.name,atlas:'street-buildings-'+(atlas.index+1)+'-v1.png',rect:[x,y,s.raster.width,s.raster.height],worldRect:[...s.offset,s.width,s.height],depth:s.depth,style:s.style,heightStatus:s.heightStatus,sourcePixelRatio:s.sourcePixelRatio,roofPixels:s.roofPixels,detail:s.detail});x+=s.raster.width+4;}
+const files=[];for(const a of atlases){const cropped=new PixelRaster(2048,a.usedHeight);cropped.pixels.set(a.raster.pixels.subarray(0,2048*a.usedHeight));const bytes=png(cropped),name='street-buildings-'+(a.index+1)+'-v1.png';await writeFile(join(dir,name),bytes);files.push({path:name,width:cropped.width,height:cropped.height,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')});}
+const styles={};for(const s of records)styles[s.style]=(styles[s.style]||0)+1;
+await writeFile(join(dir,'manifest.json'),JSON.stringify({format:'uw.street-building-atlases/v1',version:'0.8.0',artVersion:BUILDING_ART_VERSION,geometryHash:campus.geometryHash,origin:'original deterministic code-native pixel artwork',generator:'scripts/export-building-assets.mjs',sourcePixelRatio:2,scope:'All 68 secondary buildings; six photo-referenced landmarks remain separate. Every source footprint and courtyard is unchanged. Roof/material/entrance details are illustrative artistic inferences, not measured UW features.',styles,files,buildings:records},null,2)+'\n');
+console.log(JSON.stringify({status:'PASS',buildings:records.length,atlases:files.length,styles,bytes:files.reduce((n,f)=>n+f.bytes,0)}));

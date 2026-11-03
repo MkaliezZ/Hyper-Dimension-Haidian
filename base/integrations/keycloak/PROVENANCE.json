@@ -1,0 +1,7 @@
+{
+  "originalSHA256": "75661cb29cd3139aa7b8bcfed5bad9192cb3a2f4788f88c98777f0888725dc24",
+  "change": "Only register password validator when the password field exists; keep verify-email-before-password flow",
+  "source": "https://github.com/keycloak/keycloak/blob/26.8.1/themes/src/main/resources/theme/keycloak.v2/login/register.ftl",
+  "version": "26.8.1",
+  "license": "Apache-2.0"
+}

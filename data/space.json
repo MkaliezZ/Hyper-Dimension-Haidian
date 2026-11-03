@@ -1,0 +1,9 @@
+{
+  "schema": "hyper-dimension.geo-campus/v1",
+  "spaceId": "uw-seattle",
+  "name": "UW Seattle · 非官方校园空间",
+  "geometry": "campus.json",
+  "reception": "reception.json",
+  "geometryHash": "e77afd817acd8f7912598ec09feb7900329830c228580cfc593115a26a1dfe3d",
+  "host": "UW school adapter; not the Base indoor scene/v1 loader"
+}

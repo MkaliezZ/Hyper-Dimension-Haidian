@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>联系人授权 · Hyper Dimension</title>
+    <link rel="stylesheet" href="/m1.css" />
+    <link rel="stylesheet" href="/contacts.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <small>HYPER DIMENSION</small>
+        <h1>联系人授权</h1>
+        <p>同校身份不会自动成为私信同意。你可以接受、拒绝或随时撤销联系。</p>
+      </div>
+      <nav>
+        <a href="/social.html">校园交流</a><a href="/personal.html">个人中心</a
+        ><a href="/m1.html">账号与组织</a><a href="/auth/login">登录</a>
+      </nav>
+    </header>
+    <main>
+      <p id="status" role="status">正在读取账号…</p>
+      <section class="toolbar">
+        <label>学校<select id="school"></select></label
+        ><label
+          >范围<select id="org">
+            <option value="">学校</option>
+          </select></label
+        ><button id="refresh">刷新授权</button>
+      </section>
+      <section>
+        <h2>私信偏好</h2>
+        <form id="preferences">
+          <label><input id="accepting" type="checkbox" />允许新的联系申请</label
+          ><label><input id="messages" type="checkbox" />允许已授权联系人发来私信</label
+          ><button>保存偏好</button>
+        </form>
+        <p>
+          关闭私信后，双方都不能在与你的私信中发送或修改正文；原有记录仍可查看与撤回。重新开放私信不会恢复已撤销的联系。
+        </p>
+      </section>
+      <div class="grid">
+        <section>
+          <h2>申请与已有授权</h2>
+          <div id="requests"></div>
+        </section>
+        <section>
+          <h2>当前范围可联系成员</h2>
+          <p>只显示你当前有权访问的学校或组织成员。跨组织需单独授权。</p>
+          <div id="directory"></div>
+        </section>
+      </div>
+      <footer>
+        授权与偏好只控制人与人私信，不授权 Agent 自动联系他人，也不将消息放入公开知识库。
+      </footer>
+    </main>
+    <script type="module" src="/contacts.js"></script>
+  </body>
+</html>

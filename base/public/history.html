@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>校园历史检索</title>
+    <link rel="stylesheet" href="/community.css" />
+  </head>
+  <body>
+    <header><a href="/community.html">← 校园社区</a></header>
+    <main>
+      <h1>校园内容与历史版本</h1>
+      <p>
+        只检索已审核的论坛正文。结果按当前学校、组织权限核验；撤回、隐藏或父帖下架后不可检索。历史版本可能已经过时，请核对当前正文。
+      </p>
+      <p id="status" role="status">正在读取…</p>
+      <form id="search" hidden>
+        <label>学校<select id="school"></select></label><label>范围<select id="org"></select></label
+        ><label>查询<input id="query" required maxlength="2000" /></label
+        ><label><input id="history" type="checkbox" />包含历史审核版本</label><button>检索</button>
+      </form>
+      <section id="results"></section>
+    </main>
+    <script type="module" src="/history.js"></script>
+  </body>
+</html>

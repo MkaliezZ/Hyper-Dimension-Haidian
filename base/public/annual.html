@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>学年运营与个人计划</title>
+    <link rel="stylesheet" href="/operations.css" />
+    <link rel="stylesheet" href="/annual.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/">Hyper Dimension</a>
+      <nav>
+        <a href="/operations.html">活动模板</a><a href="/community.html">校园社区</a
+        ><a href="/partners.html">合作服务</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>把一学年的需要，安排清楚。</h1>
+        <p>
+          按年级、月份与渠道查看参考情境。只有本人需要或学生会确认承接的事项才进入计划，参考等级不等于必做任务，也不决定贡献排名。
+        </p>
+      </section>
+      <p id="status" role="status" aria-live="polite">正在读取学校权限…</p>
+      <section class="panel grid">
+        <label>学校<select id="school"></select></label
+        ><label>范围<select id="scope"></select></label
+        ><label>已启用资料<select id="package"></select></label
+        ><label>学年开始年份<input id="year" type="number" min="2000" max="2199" required /></label>
+      </section>
+      <section class="panel">
+        <h2>参考情境</h2>
+        <form id="filters" class="grid">
+          <label>年级<select id="cohort"></select></label
+          ><label
+            >月份<select id="month">
+              <option value="">全部月份</option>
+            </select></label
+          ><label
+            >类别<select id="category">
+              <option value="">全部类别</option>
+              <option value="objective">客观事件</option>
+              <option value="academic">学业</option>
+              <option value="career">职业</option>
+              <option value="life">生活</option>
+              <option value="community">校园活动</option>
+            </select></label
+          ><label
+            >渠道<select id="channel">
+              <option value="">全部渠道</option>
+              <option value="event">活动与服务安排</option>
+              <option value="public">公域资料与宣传</option>
+              <option value="private">私域答疑与协作</option>
+            </select></label
+          ><button>筛选</button>
+        </form>
+        <p id="counts"></p>
+        <p>
+          A：本人当前重要且紧急；B：重要但尚无迫近期限；C：有时限但相对次要。客观事件不评级，已完成或不适用的事项解除评级。日期须按实际学校日历核对。
+        </p>
+        <div id="assumptions"></div>
+        <div class="pagination">
+          <button id="previous-page" type="button" disabled>上一页</button
+          ><span id="page-position"></span
+          ><button id="next-page" type="button" disabled>下一页</button>
+        </div>
+        <div id="entries" class="entries"></div>
+      </section>
+      <section class="panel">
+        <h2>我的自愿行动清单</h2>
+        <p>
+          只有你自己可通过此入口读取、修改和删除。不会通知家人、发奖、发布到论坛或进入接待知识库。同一学年同一主线只保留一条当前记录，避免每个月重复叠加任务。
+        </p>
+        <button id="refresh-mine">刷新我的清单</button>
+        <div id="mine"></div>
+      </section>
+      <div id="management" hidden>
+        <section class="panel">
+          <h2>负责人：导入并启用资料</h2>
+          <p>导入保留版本；启用后成员才可查看。导入和启用均不发布内容、不创建活动或计分。</p>
+          <label>资料文件<input id="file" type="file" accept=".json,application/json" /></label
+          ><label>年度运营 JSON<textarea id="document" rows="9"></textarea></label
+          ><button id="example">载入原创示例</button
+          ><button id="preview-import">预览版本变化</button>
+          <pre id="import-preview"></pre>
+          <label>本次处理理由<input id="reason" minlength="3" maxlength="500" /></label
+          ><label
+            ><input
+              id="confirm-import"
+              type="checkbox"
+            />我已核对来源与公开范围，确认导入此版本</label
+          ><button id="import">确认导入</button>
+          <hr />
+          <label>已导入版本<select id="version"></select></label
+          ><label
+            ><input
+              id="confirm-activate"
+              type="checkbox"
+            />确认启用选中版本，原计划与历史不改写</label
+          ><button id="activate">启用版本</button>
+        </section>
+        <section class="panel">
+          <h2>负责人：安排运营分工</h2>
+          <p>
+            在上方选择情境，再指定当前有管理权限的负责人。每次最多 100
+            项。这里只建立运营事项，确切日期核对后才能另外创建活动草稿。
+          </p>
+          <p id="selected-count">已选 0 项</p>
+          <button id="clear-selection" type="button">清空已选事项</button>
+          <label>负责人<select id="owner"></select></label
+          ><button id="preview-plan">预览选中事项</button>
+          <pre id="plan-preview"></pre>
+          <label
+            ><input id="confirm-plan" type="checkbox" />我确认学年、范围、选中事项和负责人</label
+          ><button id="commit-plan">建立运营事项</button>
+          <div id="tasks"></div>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="/annual.js"></script>
+  </body>
+</html>
