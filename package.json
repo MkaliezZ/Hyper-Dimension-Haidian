@@ -1,6 +1,6 @@
 {
-  "name": "hyper-dimension-uw-mvp",
-  "version": "0.11.3",
+  "name": "hyper-dimension-haidian",
+  "version": "1.1.2",
   "private": true,
   "type": "module",
   "engines": {
@@ -8,8 +8,11 @@
   },
   "scripts": {
     "start": "node server.mjs",
-    "build": "node scripts/build.mjs",
-    "verify": "node scripts/verify.mjs",
-    "test": "node --test tests/*.test.mjs"
+    "build": "node scripts/prepare-haidian-data.mjs && node scripts/export-haidian-scene.mjs && node scripts/verify-haidian.mjs",
+    "verify": "node scripts/verify-haidian.mjs",
+    "test": "node --test tests/a2a-workbench.test.mjs tests/avatar-v3.test.mjs tests/browser-session-refresh.test.mjs tests/campus-identity.test.mjs tests/detailed-avatar.test.mjs tests/environment-adapter.test.mjs tests/forum-bridge.test.mjs tests/service-request.test.mjs tests/visitor-access.test.mjs tests/haidian.test.mjs tests/place-photos.test.mjs tests/haidian-architecture.test.mjs tests/haidian-model-policy.test.mjs tests/haidian-campus-catalog.test.mjs tests/haidian-campus-services.test.mjs tests/haidian-campus-world.test.mjs tests/haidian-npcs.test.mjs tests/haidian-visitor.test.mjs tests/haidian-protocol.test.mjs tests/school-config.test.mjs tests/smooth-walking.test.mjs",
+    "photos:publish": "python scripts/publish-haidian-photos.py",
+    "start:campus": "node scripts/serve-campus.mjs",
+    "review:architecture": "node scripts/render-haidian-architecture.mjs"
   }
 }

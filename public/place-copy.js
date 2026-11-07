@@ -1,12 +1,18 @@
-// Visitor-facing introductions. Source/geometry methodology lives in the sources panel.
+// Published Haidian reference; historical layout is explicitly bounded.
 export const PLACE_COPY={
-  denny:'建成于1895年的 Denny Hall，是 UW 现址校园最早的建筑。陡坡屋顶、中央穹顶与浅色石墙，让这座老楼一直保持着鲜明的轮廓。',
-  raitt:'Raitt Hall 面向 The Quad，与周围的教学楼一起围合出校园里熟悉的庭院风景。砖石立面、尖拱与树荫，很适合在课间慢慢看一眼。',
-  savery:'Savery Hall 分别于1917年、1920年两期建成，由 Bebb and Gould 设计。沿着楼前走，可以看到砖、石与陶土装饰交织的学院哥特式细节。',
-  quad:'樱花、草坪和环绕四周的教学楼，组成了 The Quad 最有辨识度的校园风景。穿过树荫，与朋友碰面，也为自己的校园故事留个坐标。',
-  'red-square':'红砖铺就的 Red Square，是 UW 校园里醒目的交汇点。Suzzallo Library、Kane Hall 与 Odegaard Library 环绕四周，三砖塔和 Broken Obelisk 则让这片广场有了独特的轮廓。',
-  suzzallo:'Suzzallo Library 坐落在 Red Square 东侧。高耸的尖拱、细密的石饰与修长窗格，让这座图书馆成为 UW 最令人难忘的建筑之一。',
-  fountain:'Drumheller Fountain 坐落在 Rainier Vista 景观轴线上。水面、喷泉与远方的雷尼尔山，连成 UW 经典的校园视线；沿池边走一圈，留下今天路过这里的心情。',
-  hub:'Husky Union Building，大家更习惯叫它 HUB。自1949年首翼建成以来，这里伴随着校园不断生长，也是学生交流、活动与相聚的校园节点。',
-  kane:'Kane Hall 位于 Red Square 一侧。开阔的柱廊与广场相接，讲座、课堂和来往的人群，让这里成为校园日常的一部分。',
+  "main-gate": "从杏石口路20号认识海淀校区。总览图中的主门位于校园东侧，中部横向步道连接教学区。",
+  "cultural-garden": "河岸与中式亭廊组成中华文化园，呼应学校对中华文化与国际视野的共同重视。",
+  "ecological-garden": "校园官网介绍百鸟园、动物园等自然体验场所；花园点位据历史总览概括。",
+  "athletics-field": "官网介绍的400米田径场与人造草坪足球场。跑道、看台和周围体育空间形成校园的运动场景。",
+  "tennis-courts": "海淀校区官网介绍设有专业网球场。本图按历史总览中的运动分区表现球场。",
+  "river-bridge": "公开总览以南旱河分隔并连接南北校园。数字步行只通过图示校园桥跨越河道。",
+  "south-basketball": "官网介绍丰富的篮球运动场地。本图据历史总览设置南岸篮球区域。",
+  "primary-teaching": "海淀校区拥有小学教学空间与独立钢琴房；本图按公开总览概括其建筑组合。",
+  "library": "校园总览在小学综合楼西侧标记图书馆。这里可作为阅读与校园记忆的数字地点。",
+  "laboratory": "官网介绍海淀校区设有机器人室、天文台等科技学习设施；不推定它们在本楼的具体楼层。",
+  "art-building": "官网介绍的艺术教育空间涵盖音乐、舞蹈、陶艺、书法等。本地点沿用总览图的艺术楼标记。",
+  "gymnasium": "学校官网介绍有大型综合体育馆，包含篮球、跆拳道、体操训练等设施。",
+  "swimming-hall": "官网介绍海淀校区设有室内游泳馆。具体开放与课程安排请向学校确认。",
+  "table-tennis-dome": "官网介绍的充气式乒羽中心。浅色膜结构根据公开操场照片作美术概括。",
+  "international-teaching": "总览图中位于南旱河南岸的国际教学楼。数字空间保留河岸与教学区的相对关系。"
 };

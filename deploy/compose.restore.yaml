@@ -3,11 +3,11 @@
 services:
   keycloak:
     environment: &restored
-      HD_SERVICE_ROOT: ${UW_RESTORED_ROOT:?Set the new restored root inside /runtime}
-      HD_M0_CONFIG: ${UW_RESTORED_ROOT}/private/config.json
-  forum-uw:
+      HD_SERVICE_ROOT: ${HAIDIAN_RESTORED_ROOT:?Set the new restored root inside /runtime}
+      HD_M0_CONFIG: ${HAIDIAN_RESTORED_ROOT}/private/config.json
+  forum-haidian:
     environment: *restored
-  nakama-uw:
+  nakama-haidian:
     environment: *restored
   base:
     environment: *restored

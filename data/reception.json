@@ -1,1 +1,265 @@
-{"format":"uw.reception-binding/v1","knowledge":[{"id":"uw-denny","title":"Denny Hall 丹尼楼","body":"建成于1895年，是UW现址校园最早的建筑。其陡坡屋顶和中央穹顶体现法国文艺复兴复兴式的历史特征。","keywords":["Denny Hall","丹尼楼","denny","history"],"published":true,"revision":1,"sourceLabel":"Denny Hall · Historic Resources Addendum","entityId":"denny"},{"id":"uw-raitt","title":"Raitt Hall 赖特楼","body":"Raitt Hall构成The Quad周边的历史建筑群。本版依据UW历史资源资料与2025地图确认其位置，细部采用概念化表达。","keywords":["Raitt Hall","赖特楼","raitt","history"],"published":true,"revision":1,"sourceLabel":"Raitt Hall · Historic Resources Addendum","entityId":"raitt"},{"id":"uw-savery","title":"Savery Hall 萨弗里楼","body":"Savery Hall分1917年与1920年两期建成，由Bebb and Gould设计。砖、石和陶土细部体现学院哥特式风格。","keywords":["Savery Hall","萨弗里楼","savery","history"],"published":true,"revision":1,"sourceLabel":"Savery Hall · Historic Resources Addendum","entityId":"savery"},{"id":"uw-quad","title":"The Quad 文理方庭","body":"The Quad位于Raitt、Savery等教学建筑之间，是本次中央校园户外导览的一处停留点。绿地与树木在本版作风格化表达，不代表实时花期。","keywords":["The Quad","文理方庭","quad","landscape"],"published":true,"revision":1,"sourceLabel":"UW Campus Map · June 2025","entityId":"quad"},{"id":"uw-red-square","title":"Red Square 红场","body":"2025 UW校园总图标出Red Square，周边有Odegaard、Kane及Suzzallo等建筑。本版以这里作为访客导览起点。","keywords":["Red Square","红场","red-square","landscape"],"published":true,"revision":1,"sourceLabel":"UW Campus Map · June 2025","entityId":"red-square"},{"id":"uw-suzzallo","title":"Suzzallo Library 苏扎罗图书馆","body":"Suzzallo Library位于Red Square东侧，名称与位置已对照UW官方建筑图层和2025校园地图。本版只展示外部体量，不虚构室内布局。","keywords":["Suzzallo Library","苏扎罗图书馆","suzzallo","learning"],"published":true,"revision":1,"sourceLabel":"UW Engineering Services · Buildings","entityId":"suzzallo"},{"id":"uw-fountain","title":"Drumheller Fountain 德鲁姆赫勒喷泉","body":"2025 UW校园总图在Rainier Vista附近标示Drumheller Fountain。本版以概念水池和景观轴线表现其场地关系，不代表实时喷泉状态。","keywords":["Drumheller Fountain","德鲁姆赫勒喷泉","fountain","landscape"],"published":true,"revision":1,"sourceLabel":"UW Campus Map · June 2025","entityId":"fountain"},{"id":"uw-hub","title":"Husky Union Building 学生中心 HUB","body":"HUB是UW学生联合活动建筑。历史资源附录记载首翼于1949年完工，后续分期扩建；当前体量采用2023建筑轮廓和官方位置核对。","keywords":["Husky Union Building","学生中心 HUB","hub","student"],"published":true,"revision":1,"sourceLabel":"Husky Union Building · Historic Resources Addendum","entityId":"hub"},{"id":"uw-kane","title":"Kane Hall 凯恩楼","body":"Kane Hall的名称和位置来自UW官方建筑图层与2025校园地图。可在这里查看资料或规划下一处户外导览点；未核实当前课程与开放信息。","keywords":["Kane Hall","凯恩楼","kane","learning"],"published":true,"revision":1,"sourceLabel":"UW Engineering Services · Buildings","entityId":"kane"},{"id":"uw-scope","title":"导览范围与资料边界","body":"这里是基于Hyper Dimension Base的UW中央校园非官方MVP。提供公开地标资料、3D地形和概念户外步行路线。建筑高度推定，未核实实时开放、预约、课程与无障碍。访问方Agent可遵循A2A协议访问公开能力。","keywords":["范围","MVP","导览","接待","agent","a2a"],"published":true,"revision":1,"sourceLabel":"UW MVP scope and source review"}],"agents":[{"agentId":"uw-reception","name":"UW 空间接待","description":"公开UW资料与户外导览，非UW官方服务","skills":["space.information","uw.campus.route"]}]}
+{
+  "format": "haidian.reception-binding/v1",
+  "knowledge": [
+    {
+      "id": "haidian-main-gate",
+      "title": "主校区东门",
+      "body": "从杏石口路20号认识海淀校区。总览图中的主门位于校园东侧，中部横向步道连接教学区。",
+      "keywords": [
+        "主校区东门",
+        "main-gate",
+        "student",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀外国语教育集团 · 云赏校园",
+      "entityId": "main-gate"
+    },
+    {
+      "id": "haidian-cultural-garden",
+      "title": "中华文化园",
+      "body": "河岸与中式亭廊组成中华文化园，呼应学校对中华文化与国际视野的共同重视。",
+      "keywords": [
+        "中华文化园",
+        "cultural-garden",
+        "landscape",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀外国语教育集团 · 云赏校园",
+      "entityId": "cultural-garden"
+    },
+    {
+      "id": "haidian-ecological-garden",
+      "title": "校内花园",
+      "body": "校园官网介绍百鸟园、动物园等自然体验场所；花园点位据历史总览概括。",
+      "keywords": [
+        "校内花园",
+        "ecological-garden",
+        "landscape",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀外国语教育集团 · 云赏校园",
+      "entityId": "ecological-garden"
+    },
+    {
+      "id": "haidian-athletics-field",
+      "title": "田径场与足球场",
+      "body": "官网介绍的400米田径场与人造草坪足球场。跑道、看台和周围体育空间形成校园的运动场景。",
+      "keywords": [
+        "田径场与足球场",
+        "athletics-field",
+        "sport",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀外国语教育集团 · 云赏校园",
+      "entityId": "athletics-field"
+    },
+    {
+      "id": "haidian-tennis-courts",
+      "title": "网球场",
+      "body": "海淀校区官网介绍设有专业网球场。本图按历史总览中的运动分区表现球场。",
+      "keywords": [
+        "网球场",
+        "tennis-courts",
+        "sport",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀外国语教育集团 · 云赏校园",
+      "entityId": "tennis-courts"
+    },
+    {
+      "id": "haidian-river-bridge",
+      "title": "南旱河与校园桥",
+      "body": "公开总览以南旱河分隔并连接南北校园。数字步行只通过图示校园桥跨越河道。",
+      "keywords": [
+        "南旱河与校园桥",
+        "river-bridge",
+        "landscape",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀外国语教育集团 · 云赏校园",
+      "entityId": "river-bridge"
+    },
+    {
+      "id": "haidian-south-basketball",
+      "title": "南岸篮球场",
+      "body": "官网介绍丰富的篮球运动场地。本图据历史总览设置南岸篮球区域。",
+      "keywords": [
+        "南岸篮球场",
+        "south-basketball",
+        "sport",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀外国语教育集团 · 云赏校园",
+      "entityId": "south-basketball"
+    },
+    {
+      "id": "haidian-primary-teaching",
+      "title": "小学教学楼与钢琴楼",
+      "body": "海淀校区拥有小学教学空间与独立钢琴房；本图按公开总览概括其建筑组合。",
+      "keywords": [
+        "小学教学楼与钢琴楼",
+        "primary-teaching",
+        "N4",
+        "learning",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀教育 · 海淀外国语校园平面示意（2018）",
+      "entityId": "primary-teaching"
+    },
+    {
+      "id": "haidian-library",
+      "title": "图书馆",
+      "body": "校园总览在小学综合楼西侧标记图书馆。这里可作为阅读与校园记忆的数字地点。",
+      "keywords": [
+        "图书馆",
+        "library",
+        "N5-L",
+        "learning",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀教育 · 海淀外国语校园平面示意（2018）",
+      "entityId": "library"
+    },
+    {
+      "id": "haidian-laboratory",
+      "title": "实验楼",
+      "body": "官网介绍海淀校区设有机器人室、天文台等科技学习设施；不推定它们在本楼的具体楼层。",
+      "keywords": [
+        "实验楼",
+        "laboratory",
+        "N5-B",
+        "learning",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀教育 · 海淀外国语校园平面示意（2018）",
+      "entityId": "laboratory"
+    },
+    {
+      "id": "haidian-art-building",
+      "title": "艺术楼",
+      "body": "官网介绍的艺术教育空间涵盖音乐、舞蹈、陶艺、书法等。本地点沿用总览图的艺术楼标记。",
+      "keywords": [
+        "艺术楼",
+        "art-building",
+        "N6-A",
+        "learning",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀教育 · 海淀外国语校园平面示意（2018）",
+      "entityId": "art-building"
+    },
+    {
+      "id": "haidian-gymnasium",
+      "title": "综合体育馆",
+      "body": "学校官网介绍有大型综合体育馆，包含篮球、跆拳道、体操训练等设施。",
+      "keywords": [
+        "综合体育馆",
+        "gymnasium",
+        "N8-A",
+        "sport",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀教育 · 海淀外国语校园平面示意（2018）",
+      "entityId": "gymnasium"
+    },
+    {
+      "id": "haidian-swimming-hall",
+      "title": "游泳馆",
+      "body": "官网介绍海淀校区设有室内游泳馆。具体开放与课程安排请向学校确认。",
+      "keywords": [
+        "游泳馆",
+        "swimming-hall",
+        "N8-B",
+        "sport",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀教育 · 海淀外国语校园平面示意（2018）",
+      "entityId": "swimming-hall"
+    },
+    {
+      "id": "haidian-table-tennis-dome",
+      "title": "乒羽中心",
+      "body": "官网介绍的充气式乒羽中心。浅色膜结构根据公开操场照片作美术概括。",
+      "keywords": [
+        "乒羽中心",
+        "table-tennis-dome",
+        "N10-A",
+        "sport",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀教育 · 海淀外国语校园平面示意（2018）",
+      "entityId": "table-tennis-dome"
+    },
+    {
+      "id": "haidian-international-teaching",
+      "title": "国际教学楼",
+      "body": "总览图中位于南旱河南岸的国际教学楼。数字空间保留河岸与教学区的相对关系。",
+      "keywords": [
+        "国际教学楼",
+        "international-teaching",
+        "S4",
+        "learning",
+        "海淀外国语"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀教育 · 海淀外国语校园平面示意（2018）",
+      "entityId": "international-teaching"
+    },
+    {
+      "id": "haidian-school",
+      "title": "海淀校区介绍与地址",
+      "body": "北京市海淀外国语实验学校海淀校区地址为北京市海淀区杏石口路20号。学校办学思想是融中西教育之所长，校园提供语言、科技、艺术、运动和自然体验空间。这里复用Hyper Dimension-UW的完整前后端功能。",
+      "keywords": [
+        "学校",
+        "地址",
+        "海淀",
+        "北京",
+        "介绍",
+        "哪里"
+      ],
+      "published": true,
+      "revision": 1,
+      "sourceLabel": "海淀外国语教育集团 · 云赏校园"
+    }
+  ],
+  "agents": [
+    {
+      "agentId": "haidian-reception",
+      "name": "海淀外国语空间接待",
+      "description": "海淀校区资料与校园导览",
+      "skills": [
+        "space.information",
+        "haidian.campus.route"
+      ]
+    }
+  ]
+}

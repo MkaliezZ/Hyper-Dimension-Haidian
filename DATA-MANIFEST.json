@@ -1,22 +1,37 @@
 {
-  "format": "uw.data-manifest/v1",
-  "version": "0.1.0",
-  "geometryHash": "e77afd817acd8f7912598ec09feb7900329830c228580cfc593115a26a1dfe3d",
+  "format": "haidian.data-manifest/v1",
+  "version": "1.1.0",
+  "geometryHash": "07b40de81bc17fecac9fd3c326df0bffff7942d7e604e4e74a0c39f1f47b87ed",
   "files": [
     {
       "path": "data/campus.json",
-      "bytes": 400021,
-      "sha256": "2b6d4fb564f5f17c7c58eceddf804217031c29caf3f33af45f45a31400d0695f"
+      "bytes": 435935,
+      "sha256": "60a5269890ccbf4c7f37a67590eb735d1ce24a0fc0cc4d9f0c9c96f056bfde49"
     },
     {
       "path": "data/reception.json",
-      "bytes": 4151,
-      "sha256": "f9e3e4efb07c15a215ffce9bb0df686fef585e008166194349188ca8a40237b1"
+      "bytes": 8435,
+      "sha256": "4db20d8d83cde866dbd522a1e9adeb05981c2a4c669b7d5028c3a4c0025da9ed"
     },
     {
-      "path": "data/terrain-uw-dem.tif",
-      "bytes": 1721902,
-      "sha256": "390a291e4bc9030b45d94624fd4e6124c3d32ffc7f749ce2778ded0340cca6b2"
+      "path": "data/space.json",
+      "bytes": 328,
+      "sha256": "639de1aa6a4cc274263ff067d7445db479395ef95105ce9b0e025a14eed0a6a8"
+    },
+    {
+      "path": "data/haidian-architecture.json",
+      "bytes": 56802,
+      "sha256": "8793245059e2af7e8d5481f337bae5c46fe09fcdc73894865a08f8cd92c129e5"
+    },
+    {
+      "path": "data/haidian-place-photos.json",
+      "bytes": 28925,
+      "sha256": "40acb40897a0f35c3fbfc39a450d85dd8b8235a3926d05dab45e0cdb0daf5a1f"
+    },
+    {
+      "path": "public/assets/place-photos/manifest.json",
+      "bytes": 33756,
+      "sha256": "5765a75b2663529d1512f9d72130851ae2e9e360d9957629d5b26a5ceeaf0a56"
     }
   ]
 }

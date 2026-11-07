@@ -5,7 +5,7 @@ let spaces=[],client,agent,current=null,active=null,busy=false,pageTokens=[''],n
 const initialTask=query.get('task');
 const status=(text,error=false)=>{$('task-status').textContent=text;$('task-status').dataset.error=String(error);};
 const date=stamp=>{const time=new Date(stamp);return Number.isFinite(time.getTime())?time.toLocaleString():'时间待同步';};
-const skillName=id=>id==='space.information'?'接待对话':id==='uw.campus.route'?'校园导航':id?.startsWith('partner.')?'合作服务':id||'Agent 任务';
+const skillName=id=>id==='space.information'?'接待对话':id==='haidian.campus.route'?'校园导航':id?.startsWith('partner.')?'合作服务':id||'Agent 任务';
 function clearDetail(){selected=null;current=null;$('task-detail').replaceChildren(node('h2','任务详情'),node('p','选择一条记录，查看当前状态与执行结果。'));}
 function denied(error){
   if(error.status===401||error.status===403){$('task-list').replaceChildren();clearDetail();$('task-workspace').hidden=true;$('task-login').hidden=error.status!==401;}

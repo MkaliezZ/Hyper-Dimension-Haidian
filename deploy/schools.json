@@ -1,1 +1,7 @@
-[{"schoolId":"uw","spaceId":"uw-seattle","name":"UW Seattle · 非官方校园空间"}]
+[
+  {
+    "schoolId": "haidian",
+    "spaceId": "haidian-beijing",
+    "name": "海淀外国语 · 海淀校区"
+  }
+]

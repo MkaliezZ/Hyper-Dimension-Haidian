@@ -1,16 +1,16 @@
 import {protocol} from './base.mjs';
 import {positionAlong} from './navigation.mjs';
-export const UW_SCENE='uw-outdoors';
+export const UW_SCENE='haidian-outdoors';
 
 export function createCampusWorld(campus, nav, pack, receptionSessions) {
   const requireSpace=id=>{if(id!==campus.id)protocol.fail('space_missing','School space not found',404);};
   const publicPlaces=spaceId=>{requireSpace(spaceId);return nav.places.map(p=>({
-    sceneId:UW_SCENE,entityId:p.id,label:p.name,name:p.name,sceneName:'UW Seattle · 户外校园',
+    sceneId:UW_SCENE,entityId:p.id,label:p.name,name:p.name,sceneName:'海淀外国语 · 海淀校区 · 户外校园',
     kind:'outdoor-landmark',geometryHash:campus.geometryHash,
   }));};
   const position=(state,principal)=>{
     const move=state.positions?.[protocol.digest([principal.id,campus.id])];
-    const point=positionAlong(move)||[...nav.nodes[nav.landmark('red-square').arrivalNode]];
+    const point=positionAlong(move)||[...nav.nodes[nav.landmark('main-gate').arrivalNode]];
     const last=move?.path?.at(-1)?.point;
     const moving=Boolean(move&&!move.stopped&&last&&Math.hypot(...point.map((v,i)=>v-last[i]))>.01);
     return {sceneId:UW_SCENE,levelId:'outdoors',point,moving};

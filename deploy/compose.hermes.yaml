@@ -1,0 +1,12 @@
+# Optional: independently configure a private key for this school.
+services:
+  base:
+    environment:
+      HD_RECEPTION_PROVIDER: hermes
+      HD_RECEPTION_MODEL_KEY_FILE: /run/secrets/reception_model_key
+      HAIDIAN_RECEPTION_MODE: hermes
+      HAIDIAN_NPC_PROVIDER: deepseek
+    secrets: [reception_model_key]
+secrets:
+  reception_model_key:
+    file: ${HD_RECEPTION_MODEL_KEY_FILE:?Set this school private key file}

@@ -1,6 +1,6 @@
-name: ${HD_STACK_NAME:?Set a dedicated UW project}
+name: ${HD_STACK_NAME:?Set a dedicated Haidian project}
 x-runtime: &runtime
-  image: ${HD_STACK_IMAGE:-hyper-campus:uw-native}
+  image: ${HD_STACK_IMAGE:-hyper-campus:haidian-native}
   build: { context: .., dockerfile: deploy/Dockerfile }
   network_mode: host
   restart: unless-stopped
@@ -65,24 +65,24 @@ services:
       timeout: 5s
       retries: 30
       start_period: 30s
-  forum-uw:
+  forum-haidian:
     <<: *runtime
     mem_limit: 512m
-    command: [forum, uw]
+    command: [forum, haidian]
     depends_on: { init: { condition: service_completed_successfully } }
     healthcheck: &forum-health
-      test: [CMD, node, /uw/deploy/entry.mjs, health, forum, uw]
+      test: [CMD, node, /uw/deploy/entry.mjs, health, forum, haidian]
       interval: 5s
       timeout: 5s
       retries: 30
       start_period: 30s
-  nakama-uw:
+  nakama-haidian:
     <<: *runtime
     mem_limit: 256m
-    command: [nakama, uw]
+    command: [nakama, haidian]
     depends_on: { init: { condition: service_completed_successfully } }
     healthcheck: &nakama-health
-      test: [CMD, node, /uw/deploy/entry.mjs, health, nakama, uw]
+      test: [CMD, node, /uw/deploy/entry.mjs, health, nakama, haidian]
       interval: 5s
       timeout: 5s
       retries: 20
@@ -91,14 +91,12 @@ services:
     command: [base]
     environment:
       <<: *env
-      HD_RECEPTION_PROVIDER: hermes
-      HD_RECEPTION_MODEL_KEY_FILE: /run/secrets/reception_model_key
-      UW_NPC_PROVIDER: deepseek
-    secrets: [reception_model_key]
+      HAIDIAN_RECEPTION_MODE: knowledge
+      HAIDIAN_NPC_PROVIDER: routine
     depends_on:
       keycloak: { condition: service_healthy }
-      forum-uw: { condition: service_healthy }
-      nakama-uw: { condition: service_healthy }
+      forum-haidian: { condition: service_healthy }
+      nakama-haidian: { condition: service_healthy }
     healthcheck:
       test: [CMD, node, /uw/deploy/entry.mjs, health, base]
       interval: 5s
@@ -119,8 +117,6 @@ volumes:
   postgres:
   backups:
 secrets:
-  reception_model_key:
-    file: ${HD_RECEPTION_MODEL_KEY_FILE:?Set a private model key file}
   smtp_config:
     file: ${HD_SMTP_FILE:-../base/deploy/smtp.unconfigured.json}
   postgres_password:

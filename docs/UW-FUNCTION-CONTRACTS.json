@@ -1,0 +1,363 @@
+{
+  "format": "haidian.uw-function-contracts/v1",
+  "upstreamCommit": "665297ab983fb702c034a25f33688f0be91a98c1",
+  "httpLiteralPaths": [
+    "/.well-known/agent-card.json",
+    "/agents/",
+    "/agents/haidian-reception/.well-known/agent-card.json",
+    "/agents/haidian-reception/a2a",
+    "/api/",
+    "/api/avatar",
+    "/api/avatar/history",
+    "/api/campus",
+    "/api/campus-services",
+    "/api/campus-services/open/",
+    "/api/catalog",
+    "/api/me",
+    "/api/move",
+    "/api/move/stop",
+    "/api/npcs",
+    "/api/reception",
+    "/api/route",
+    "/api/sessions",
+    "/api/sources",
+    "/api/walk"
+  ],
+  "mainDomIds": [
+    "art-focus",
+    "assumptions",
+    "campus-canvas",
+    "campus-minimap",
+    "campus-services-button",
+    "campus-services-context",
+    "campus-services-dialog",
+    "campus-services-filters",
+    "campus-services-list",
+    "campus-services-login",
+    "campus-services-message",
+    "campus-services-refresh",
+    "campus-services-title",
+    "chat-button",
+    "chat-form",
+    "chat-input",
+    "chat-messages",
+    "chat-nav",
+    "chat-panel",
+    "close-campus-services",
+    "close-chat",
+    "close-gallery",
+    "close-sources",
+    "delete-chat",
+    "explore-button",
+    "export-chat",
+    "labels",
+    "landmark-count",
+    "landmark-list",
+    "loading",
+    "map-headline",
+    "map-region-tag",
+    "map-subtitle",
+    "minimap-toggle",
+    "new-chat",
+    "npc-index-button",
+    "pixel-gallery",
+    "pixel-gallery-button",
+    "pixel-gallery-list",
+    "pixel-gallery-title",
+    "place-card",
+    "places-toggle",
+    "provider-label",
+    "reset-view",
+    "route-card",
+    "search",
+    "send-chat",
+    "source-list",
+    "source-summary",
+    "sources-button",
+    "sources-dialog",
+    "terrain-caption",
+    "toast",
+    "top-view",
+    "tour-button",
+    "visitor-edit",
+    "visitor-locate",
+    "visitor-marker",
+    "walk-controls",
+    "walk-follow",
+    "walk-help",
+    "walk-status",
+    "walk-stop",
+    "zoom-in",
+    "zoom-out"
+  ],
+  "serviceModules": [
+    [
+      "account",
+      "账号与学校",
+      "正式登录、学校和组织权限",
+      "m1",
+      "m1.html",
+      null
+    ],
+    [
+      "avatar",
+      "我的形象",
+      "编辑与地图一致的校园形象",
+      "m2",
+      "?edit=avatar",
+      "base2"
+    ],
+    [
+      "inventory",
+      "背包与纪念",
+      "随身轻道具、地点纪念与私人草稿",
+      "m2",
+      "inventory.html",
+      "base2"
+    ],
+    [
+      "contacts",
+      "联系人与私信",
+      "联系同意与消息",
+      "contacts",
+      "contacts.html",
+      "base2"
+    ],
+    [
+      "community",
+      "论坛与校园记忆",
+      "发帖、地点记忆和审核",
+      "community",
+      "community.html",
+      "base3"
+    ],
+    [
+      "activities",
+      "校园活动",
+      "报名、志愿与活动管理",
+      "activities",
+      "activities.html",
+      "base3"
+    ],
+    [
+      "ranking",
+      "贡献与排名",
+      "贡献账本与奖励规则",
+      "ledger",
+      "ranking.html",
+      "base3"
+    ],
+    [
+      "network",
+      "校友、学长与机会",
+      "自愿目录、支持预约和职业机会",
+      "network",
+      "network.html",
+      "base3"
+    ],
+    [
+      "operations",
+      "学生会运营",
+      "排期、模板和运营管理",
+      "operations",
+      "operations.html",
+      "base3"
+    ],
+    [
+      "partners",
+      "周边合作",
+      "服务、明确授权工单与权益",
+      "partners",
+      "partners.html",
+      "base4"
+    ],
+    [
+      "environment",
+      "空间反馈",
+      "访客反馈与维护处理",
+      "environment",
+      "environment.html",
+      null
+    ],
+    [
+      "knowledge",
+      "接待资料与索引",
+      "负责人审核资料、发布与撤回、查看自动索引",
+      "campus",
+      "knowledge.html",
+      null,
+      true
+    ],
+    [
+      "session-policy",
+      "接待会话政策",
+      "学校保留期限和受限运行诊断",
+      "reception-sessions",
+      "reception-admin.html",
+      null,
+      "staff"
+    ],
+    [
+      "agents",
+      "Agent 与委托",
+      "接待和合作 Agent、受控技能与授权",
+      "agents",
+      "agents.html",
+      null
+    ],
+    [
+      "agent-tasks",
+      "我的 A2A 任务",
+      "查看进度、结果与回执，停止尚未结束的任务",
+      "agents",
+      "agent-tasks.html",
+      null
+    ],
+    [
+      "admin",
+      "学校管理台",
+      "负责人管理学校、组织、角色和业务记录",
+      "m1",
+      "admin.html",
+      null,
+      true
+    ],
+    [
+      "profile",
+      "校园名片与作品",
+      "自愿展示个人资料、作品和社区徽章",
+      "campus",
+      "profile.html",
+      "base2"
+    ],
+    [
+      "social",
+      "实时校园交流",
+      "学校、组织讨论与授权后的私信",
+      "m1",
+      "social.html",
+      "base2"
+    ],
+    [
+      "history",
+      "论坛长期历史",
+      "按当前学校和组织权限查询审核历史",
+      "community",
+      "history.html",
+      "base3"
+    ],
+    [
+      "rewards",
+      "贡献奖励",
+      "规则约束的奖励、领取和管理",
+      "rewards",
+      "rewards.html",
+      "base3"
+    ],
+    [
+      "annual",
+      "学年与个人计划",
+      "年度材料、学生需求、运营排期与个人选择",
+      "annual",
+      "annual.html",
+      "base3"
+    ],
+    [
+      "inbox",
+      "消息与订阅",
+      "业务通知、订阅偏好和阅读状态",
+      "campus",
+      "inbox.html",
+      "base3"
+    ],
+    [
+      "jobs",
+      "持久任务管理",
+      "负责人查看任务处理、失败与重试状态",
+      "jobs",
+      "jobs.html",
+      "base3",
+      true
+    ]
+  ],
+  "npcFeatures": {
+    "maya": {
+      "module": "inventory",
+      "base": "base2"
+    },
+    "leo": {
+      "module": "network",
+      "base": "base3"
+    },
+    "jordan": {
+      "module": "activities",
+      "base": "base3"
+    },
+    "sam": {
+      "module": "community",
+      "base": "base3"
+    },
+    "aiko": {
+      "module": "contacts",
+      "base": "base2"
+    },
+    "alex": {
+      "type": "reception",
+      "base": "base1"
+    }
+  },
+  "sharedSourceHashes": [
+    {
+      "sha256": "c66373013f570ff1baf15e9cd8c1e69e2012470a3dfd34140a2085646053180c",
+      "path": "public/campus-hud.css"
+    },
+    {
+      "sha256": "a38c45ece85abc9ab2bd1381e1cd282629117eb144c76f931a23d69231a40ad2",
+      "path": "public/campus-services.js"
+    },
+    {
+      "sha256": "2cf358f2f396a7f78aca4e9293ed01cbf682b0a6a29e8856e7ac7355df464982",
+      "path": "public/building-inspection.js"
+    },
+    {
+      "sha256": "eff1ecc7e930dd25e47be5acc273dd162215531b8aaa3e73354ea83f505d6633",
+      "path": "public/native-navigation.js"
+    },
+    {
+      "sha256": "cf6cee6b2b4e93ed1c99242210651b79fad27ac543c1adb8939fc8c63e5416d7",
+      "path": "public/pixel-avatar-v3.js"
+    },
+    {
+      "sha256": "4cdbfd5923adc5e893c062db9245385337cc40c2a1736266a3d5239d5e21c7d7",
+      "path": "public/visitor-walk.js"
+    },
+    {
+      "sha256": "1473a75772d9e8405f30d7bc3408bc4b324d7333846111c7ddd5b0659ef9b640",
+      "path": "public/walk-motion.js"
+    },
+    {
+      "sha256": "6943de688bfd27fb0b3ad33bcb786d6bb1fe37e06d4f9cb5035be4a93fa4aa61",
+      "path": "src/visitor-avatar.mjs"
+    },
+    {
+      "sha256": "86b44f907d58ebfbaaeee670f5357352d11ea51a284ba4fbf1d1027748677fce",
+      "path": "src/campus-identity.mjs"
+    },
+    {
+      "sha256": "82b6b24584786652323448ec6bdaa2ed66f97f3d7df6f4c02526447601ffb5e1",
+      "path": "src/service-request.mjs"
+    },
+    {
+      "sha256": "b35a8e86f4fdb6f138fd27e3abbf54062c42a633d992e0094114931f5c76ef27",
+      "path": "src/visitor-access.mjs"
+    },
+    {
+      "sha256": "881844d9de559d8fa778c1b11d159f7e97fe5e3b9b434ddeaf62edb673d2ec71",
+      "path": "base/src/platform/browser-sessions.mjs"
+    },
+    {
+      "sha256": "f9e32edf95ff2bc0f060e052e7c136b33931a8fde377b146063186fdba9c0685",
+      "path": "base/integrations/nodebb/loopback-http.cjs"
+    }
+  ]
+}

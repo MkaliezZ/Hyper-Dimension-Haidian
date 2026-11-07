@@ -1,0 +1,15 @@
+# Development/QA: mount this school's source read-only over an immutable dependency image.
+# Private configuration and all durable data still live exclusively in named volumes.
+services:
+  init:
+    volumes: ["../:/uw:ro"]
+  keycloak:
+    volumes: ["../:/uw:ro"]
+  forum-haidian:
+    volumes: ["../:/uw:ro"]
+  nakama-haidian:
+    volumes: ["../:/uw:ro"]
+  base:
+    volumes: ["../:/uw:ro"]
+  utility:
+    volumes: ["../:/uw:ro"]

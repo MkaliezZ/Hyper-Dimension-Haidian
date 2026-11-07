@@ -4,10 +4,10 @@ import {projectRoot,protocol} from '../src/base.mjs';
 
 export async function bindCampusData(file){
   const config=JSON.parse(await readFile(file,'utf8'));
-  if(config.schools.length!==1||config.schools[0].schoolId!=='uw'||config.schools[0].spaceId!=='uw-seattle')throw Error('Dedicated UW configuration required');
+  if(config.schools.length!==1||config.schools[0].schoolId!=='haidian'||config.schools[0].spaceId!=='haidian-beijing')throw Error('Dedicated 海淀外国语 configuration required');
   const school=config.schools[0],bundle=school.package||join(projectRoot,'data/space.json');
   const manifest=JSON.parse(await readFile(bundle,'utf8'));
-  if(manifest.schema!=='hyper-dimension.geo-campus/v1'||manifest.spaceId!==school.spaceId||manifest.geometry!=='campus.json'||manifest.reception!=='reception.json')throw Error('Explicit UW outdoor data bundle required');
+  if(manifest.schema!=='hyper-dimension.geo-campus/v1'||manifest.spaceId!==school.spaceId||manifest.geometry!=='campus.json'||manifest.reception!=='reception.json')throw Error('Explicit 海淀外国语 outdoor data bundle required');
   const {geometryHash,...data}=JSON.parse(await readFile(join(dirname(bundle),manifest.geometry),'utf8'));
   if(geometryHash!==manifest.geometryHash||geometryHash!==protocol.digest(data))throw Error('Outdoor bundle geometry mismatch');
   if(!school.package){

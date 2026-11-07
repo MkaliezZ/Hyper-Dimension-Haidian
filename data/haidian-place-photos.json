@@ -1,0 +1,644 @@
+{
+  "format": "hyper-dimension.haidian-place-photos/v1",
+  "campusId": "haidian-beijing",
+  "retrievedAt": "2026-11-06",
+  "officialPage": "https://www.bjfles.com/environment/",
+  "collection": {
+    "title": "北京市海淀外国语实验学校海淀校区",
+    "url": "https://720yun.com/t/b2vkue1es1q?scene_id=38540123",
+    "credit": "海淀外国语信息中心",
+    "rights": "原作者保留权利",
+    "photographer": null,
+    "captureDate": null,
+    "adaptation": "学校官网链接的官方全景原始JPEG立方体面；未裁剪、拼接、生成或重新编码。拍摄日期与摄影者未单独公布。"
+  },
+  "additionalEvidence": [
+    "https://www.sohu.com/a/232407928_391284",
+    "https://www.bjfles.com/government/2019-2020%E5%AD%A6%E5%B9%B4%E5%90%84%E9%83%A8%E5%AE%A4%E7%94%B5%E8%AF%9D/"
+  ],
+  "photos": [
+    {
+      "id": "vr-38547783-l",
+      "sceneId": 38547783,
+      "sceneName": "N1楼",
+      "sceneGroup": "北校区（小学）",
+      "face": "l",
+      "cacheFile": "vr-38547783-l.jpg",
+      "path": "/assets/place-photos/haidian-vr-38547783-l.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547783",
+      "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854813/imgs/mobile_l.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "1db5d43cac0e75d97456dc1ecf368ee605af0094e61e3d385ca28349aa9f3a4b"
+    },
+    {
+      "id": "vr-38569694-f",
+      "sceneId": 38569694,
+      "sceneName": "N2楼",
+      "sceneGroup": "北校区（小学）",
+      "face": "f",
+      "cacheFile": "vr-38569694-f.jpg",
+      "path": "/assets/place-photos/haidian-vr-38569694-f.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38569694",
+      "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869425/imgs/mobile_f.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "fc3936dc7596321023cdd28fad20abf32bac034b24e5fb867de33c0ceaf5191b"
+    },
+    {
+      "id": "vr-38547791-b",
+      "sceneId": 38547791,
+      "sceneName": "N3楼",
+      "sceneGroup": "北校区（小学）",
+      "face": "b",
+      "cacheFile": "vr-38547791-b.jpg",
+      "path": "/assets/place-photos/haidian-vr-38547791-b.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547791",
+      "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854804/imgs/mobile_b.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "cffc4a275a69bbe8818e884e92399456735d89cd59e544a30fe88944bbe0454f"
+    },
+    {
+      "id": "vr-38540111-b",
+      "sceneId": 38540111,
+      "sceneName": "食堂南门",
+      "sceneGroup": "北校区（小学）",
+      "face": "b",
+      "cacheFile": "vr-38540111-b.jpg",
+      "path": "/assets/place-photos/haidian-vr-38540111-b.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38540111",
+      "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23853913/imgs/mobile_b.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "329e1ce245d6d7e66ea968a79d4b8680c7a8dca94db4a7a8abd2124dc33d3866"
+    },
+    {
+      "id": "vr-38548726-f",
+      "sceneId": 38548726,
+      "sceneName": "N4楼",
+      "sceneGroup": "北校区（小学）",
+      "face": "f",
+      "cacheFile": "vr-38548726-f.jpg",
+      "path": "/assets/place-photos/haidian-vr-38548726-f.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38548726",
+      "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23857851/imgs/mobile_f.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "d147bf2d0810de3e39bd8eb939238f8af4a913e3c12d2109ec810a472eb215fd"
+    },
+    {
+      "id": "vr-38547780-r",
+      "sceneId": 38547780,
+      "sceneName": "图书馆西",
+      "sceneGroup": "北校区（小学）",
+      "face": "r",
+      "cacheFile": "vr-38547780-r.jpg",
+      "path": "/assets/place-photos/haidian-vr-38547780-r.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547780",
+      "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854816/imgs/mobile_r.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "f08bdae65d1e7e16f6d4d3106bc3835cf965098ff563ae22e4298504c60bd061"
+    },
+    {
+      "id": "vr-38547785-r",
+      "sceneId": 38547785,
+      "sceneName": "图书馆南",
+      "sceneGroup": "北校区（小学）",
+      "face": "r",
+      "cacheFile": "vr-38547785-r.jpg",
+      "path": "/assets/place-photos/haidian-vr-38547785-r.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547785",
+      "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854811/imgs/mobile_r.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "9c2430ce6fca23be7e1fb0d4a6c32562ca5b173658273c2d583c7e1ea66b87ea"
+    },
+    {
+      "id": "vr-38540122-b",
+      "sceneId": 38540122,
+      "sceneName": "主楼N6楼大厅",
+      "sceneGroup": "北校区（小学）",
+      "face": "b",
+      "cacheFile": "vr-38540122-b.jpg",
+      "path": "/assets/place-photos/haidian-vr-38540122-b.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38540122",
+      "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23853924/imgs/mobile_b.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "3e9b4acc04e0c926f90015c59214a4f29b7bccadb7daa1c6200fbca8df1ba5db"
+    },
+    {
+      "id": "vr-130608866-f",
+      "sceneId": 130608866,
+      "sceneName": "高中楼教室",
+      "sceneGroup": "中小学教室",
+      "face": "f",
+      "cacheFile": "vr-130608866-f.jpg",
+      "path": "/assets/place-photos/haidian-vr-130608866-f.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130608866",
+      "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94382474/imgs/mobile_f.jpg",
+      "width": 2500,
+      "height": 2500,
+      "sha256": "7caefa0559a4fbe14858506fa9973722be51da7eda27b23519a5dd54e45157b5"
+    },
+    {
+      "id": "vr-130627027-r",
+      "sceneId": 130627027,
+      "sceneName": "体育馆",
+      "sceneGroup": "运动场馆",
+      "face": "r",
+      "cacheFile": "vr-130627027-r.jpg",
+      "path": "/assets/place-photos/haidian-vr-130627027-r.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130627027",
+      "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94447880/imgs/mobile_r.jpg",
+      "width": 2500,
+      "height": 2500,
+      "sha256": "e3e90778dd74ce01c02563d7b8684e2df1e285ea8d6bb9d003e7775622373ee3"
+    },
+    {
+      "id": "vr-130623757-f",
+      "sceneId": 130623757,
+      "sceneName": "游泳馆",
+      "sceneGroup": "运动场馆",
+      "face": "f",
+      "cacheFile": "vr-130623757-f.jpg",
+      "path": "/assets/place-photos/haidian-vr-130623757-f.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130623757",
+      "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94431365/imgs/mobile_f.jpg",
+      "width": 2500,
+      "height": 2500,
+      "sha256": "1b1b9af994f5e6b6517cbcb5aa36c9d882bb1924e166a3bce56c6d79d80eb94a"
+    },
+    {
+      "id": "vr-40671541-l",
+      "sceneId": 40671541,
+      "sceneName": "乒羽中心",
+      "sceneGroup": "运动场馆",
+      "face": "l",
+      "cacheFile": "vr-40671541-l.jpg",
+      "path": "/assets/place-photos/haidian-vr-40671541-l.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=40671541",
+      "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/24780298/imgs/mobile_l.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "2155fbe6e368bb494471e99e451b0483cc31893a0114f4d757ab421fa449ae1e"
+    },
+    {
+      "id": "vr-40671543-b",
+      "sceneId": 40671543,
+      "sceneName": "击剑中心",
+      "sceneGroup": "运动场馆",
+      "face": "b",
+      "cacheFile": "vr-40671543-b.jpg",
+      "path": "/assets/place-photos/haidian-vr-40671543-b.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=40671543",
+      "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/24780297/imgs/mobile_b.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "f5d542cdb03b0144dfcae1add9b991c250fb7cec367b093e6280cd16d146184a"
+    },
+    {
+      "id": "vr-130585917-l",
+      "sceneId": 130585917,
+      "sceneName": "S4楼北",
+      "sceneGroup": "南校区（中学）",
+      "face": "l",
+      "cacheFile": "vr-130585917-l.jpg",
+      "path": "/assets/place-photos/haidian-vr-130585917-l.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585917",
+      "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869720/imgs/mobile_l.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "9e3f5785b3da3d231cbc86d7c84ea0efebe77722fad17bc10bf0cd44d5f8c3be"
+    },
+    {
+      "id": "vr-130585909-b",
+      "sceneId": 130585909,
+      "sceneName": "S5楼",
+      "sceneGroup": "南校区（中学）",
+      "face": "b",
+      "cacheFile": "vr-130585909-b.jpg",
+      "path": "/assets/place-photos/haidian-vr-130585909-b.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585909",
+      "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869716/imgs/mobile_b.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "84e86364f5582f206cbd3becd34a67722ef129ade376ed7ef3452a21993e5329"
+    },
+    {
+      "id": "vr-130585910-b",
+      "sceneId": 130585910,
+      "sceneName": "S6楼",
+      "sceneGroup": "南校区（中学）",
+      "face": "b",
+      "cacheFile": "vr-130585910-b.jpg",
+      "path": "/assets/place-photos/haidian-vr-130585910-b.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585910",
+      "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869714/imgs/mobile_b.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "57774b55fe45f10d4d611c09b29961ffc103ebb40971243203252cea3e657419"
+    },
+    {
+      "id": "vr-130585912-b",
+      "sceneId": 130585912,
+      "sceneName": "S7楼",
+      "sceneGroup": "南校区（中学）",
+      "face": "b",
+      "cacheFile": "vr-130585912-b.jpg",
+      "path": "/assets/place-photos/haidian-vr-130585912-b.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585912",
+      "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869710/imgs/mobile_b.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "273c34d903e7dc620390f32565aeee458afeaa556b5727bf14f88fc0d9190e80"
+    },
+    {
+      "id": "vr-130585907-f",
+      "sceneId": 130585907,
+      "sceneName": "S1楼",
+      "sceneGroup": "南校区（中学）",
+      "face": "f",
+      "cacheFile": "vr-130585907-f.jpg",
+      "path": "/assets/place-photos/haidian-vr-130585907-f.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585907",
+      "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869719/imgs/mobile_f.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "e3ff55bb294f8f30394816e8e11628903c0aaf9900bec821dd832f9113d48afa"
+    },
+    {
+      "id": "vr-130585908-b",
+      "sceneId": 130585908,
+      "sceneName": "南校食堂",
+      "sceneGroup": "南校区（中学）",
+      "face": "b",
+      "cacheFile": "vr-130585908-b.jpg",
+      "path": "/assets/place-photos/haidian-vr-130585908-b.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585908",
+      "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869718/imgs/mobile_b.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "072546d19c06a360c8b935fd05528e6c82b9db9d7dfc2fe62317e43c08a0e52f"
+    },
+    {
+      "id": "vr-95774662-b",
+      "sceneId": 95774662,
+      "sceneName": "学校正门（东门）",
+      "sceneGroup": "北校区（小学）",
+      "face": "b",
+      "cacheFile": "vr-95774662-b.jpg",
+      "path": "/assets/place-photos/haidian-vr-95774662-b.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=95774662",
+      "original": "https://ssl-panoimg130.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/52911765/imgs/mobile_b.jpg",
+      "width": 2500,
+      "height": 2500,
+      "sha256": "04be761c1feb4e6dae33fbc1576587241266f5e3fef5c371cf43c1fd98db9c8c"
+    },
+    {
+      "id": "vr-38553237-b",
+      "sceneId": 38553237,
+      "sceneName": "中华文化园",
+      "sceneGroup": "中华文化园",
+      "face": "b",
+      "cacheFile": "vr-38553237-b.jpg",
+      "path": "/assets/place-photos/haidian-vr-38553237-b.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38553237",
+      "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859692/imgs/mobile_b.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "62f0a8868c144ecc1d68ab0bd9e7ce6b17f557ffa374b8924492a5021b2696ec"
+    },
+    {
+      "id": "vr-38540115-b",
+      "sceneId": 38540115,
+      "sceneName": "小花园",
+      "sceneGroup": "北校区（小学）",
+      "face": "b",
+      "cacheFile": "vr-38540115-b.jpg",
+      "path": "/assets/place-photos/haidian-vr-38540115-b.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38540115",
+      "original": "https://ssl-panoimg101.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23853917/imgs/mobile_b.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "36f1fec611b71fe5187cfb55e4cf6f4f8b7471397995ab212ce13372f2e3c8d2"
+    },
+    {
+      "id": "vr-130623756-f",
+      "sceneId": 130623756,
+      "sceneName": "田径场",
+      "sceneGroup": "运动场馆",
+      "face": "f",
+      "cacheFile": "vr-130623756-f.jpg",
+      "path": "/assets/place-photos/haidian-vr-130623756-f.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130623756",
+      "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94421983/imgs/mobile_f.jpg",
+      "width": 2500,
+      "height": 2500,
+      "sha256": "eafea40dfa2ea6f95e24d5a4461ccb20c50960f949725a12aaff9f0734221c1e"
+    },
+    {
+      "id": "vr-130623760-r",
+      "sceneId": 130623760,
+      "sceneName": "北校网球场",
+      "sceneGroup": "运动场馆",
+      "face": "r",
+      "cacheFile": "vr-130623760-r.jpg",
+      "path": "/assets/place-photos/haidian-vr-130623760-r.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130623760",
+      "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94297964/imgs/mobile_r.jpg",
+      "width": 2500,
+      "height": 2500,
+      "sha256": "1dd729c7dfc7a98751dcc2a6469e1814f1fe1032ef15d7db7b9f51ef134419ca"
+    },
+    {
+      "id": "vr-38601824-l",
+      "sceneId": 38601824,
+      "sceneName": "南北校中心点",
+      "sceneGroup": "北校区（小学）",
+      "face": "l",
+      "cacheFile": "vr-38601824-l.jpg",
+      "path": "/assets/place-photos/haidian-vr-38601824-l.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38601824",
+      "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23882874/imgs/mobile_l.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "ae811b57e34058fbaedcc8c30f014bccedeb670e43e3c82a054cfc9aec421921"
+    },
+    {
+      "id": "vr-130585915-l",
+      "sceneId": 130585915,
+      "sceneName": "南校篮球场",
+      "sceneGroup": "运动场馆",
+      "face": "l",
+      "cacheFile": "vr-130585915-l.jpg",
+      "path": "/assets/place-photos/haidian-vr-130585915-l.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585915",
+      "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23858425/imgs/mobile_l.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "b088952e6c49aaaeaeeeb3f4a1bdeb35c098f53ea9ade77b3d97312b8d958dc9"
+    },
+    {
+      "id": "vr-38553239-b",
+      "sceneId": 38553239,
+      "sceneName": "中华文化园",
+      "sceneGroup": "中华文化园",
+      "face": "b",
+      "cacheFile": "vr-38553239-b.jpg",
+      "path": "/assets/place-photos/haidian-vr-38553239-b.jpg",
+      "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38553239",
+      "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859694/imgs/mobile_b.jpg",
+      "width": 1536,
+      "height": 1536,
+      "sha256": "16b0054226a4ae77f4ccbdc9dad03fe4c1f4072e7690b3fe925d93130a8d2449"
+    }
+  ],
+  "places": {
+    "primary-dormitory": {
+      "subject": "小学宿舍楼",
+      "photoId": "vr-38547783-l",
+      "viewLabel": "N1 楼 · 宿舍区外景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "boys-dormitory": {
+      "subject": "男生宿舍楼",
+      "photoId": "vr-38569694-f",
+      "viewLabel": "N2 楼 · 入口外景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "girls-dormitory": {
+      "subject": "女生宿舍楼",
+      "photoId": "vr-38547791-b",
+      "viewLabel": "N3 楼 · 入口外景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "dining-hall": {
+      "subject": "主校区食堂",
+      "photoId": "vr-38540111-b",
+      "viewLabel": "主校区食堂 · 南门外景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "primary-teaching": {
+      "subject": "小学教学楼与钢琴楼",
+      "photoId": "vr-38548726-f",
+      "viewLabel": "N4 楼 · 教学楼外景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "library": {
+      "subject": "图书馆",
+      "photoId": "vr-38547780-r",
+      "viewLabel": "图书馆 · 西侧外景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "primary-complex": {
+      "subject": "小学综合楼",
+      "photoId": "vr-38547785-r",
+      "viewLabel": "N5 楼群外景 · 小学综合楼所在楼群",
+      "match": "shared-complex",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。 当前只确认同一N5/N6楼群，未把照片声称为单独翼部或实验室/艺术室。"
+    },
+    "laboratory": {
+      "subject": "实验楼",
+      "photoId": "vr-38547785-r",
+      "viewLabel": "N5 楼群外景 · 实验楼所在楼群",
+      "match": "shared-complex",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。 当前只确认同一N5/N6楼群，未把照片声称为单独翼部或实验室/艺术室。"
+    },
+    "art-building": {
+      "subject": "艺术楼",
+      "photoId": "vr-38540122-b",
+      "viewLabel": "N6 主楼大厅 · 艺术楼所在楼群",
+      "match": "shared-complex",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。 当前只确认同一N5/N6楼群，未把照片声称为单独翼部或实验室/艺术室。"
+    },
+    "middle-complex": {
+      "subject": "中学综合楼",
+      "photoId": "vr-38540122-b",
+      "viewLabel": "N6 主楼大厅 · 中学综合楼所在楼群",
+      "match": "shared-complex",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。 当前只确认同一N5/N6楼群，未把照片声称为单独翼部或实验室/艺术室。"
+    },
+    "senior-teaching": {
+      "subject": "高中综合楼",
+      "photoId": "vr-130608866-f",
+      "viewLabel": "高中楼教室 · 室内实景",
+      "match": "historical-building-function",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。 全景标注高中楼教室；N7用途另据官网2019-2020部室电话表。"
+    },
+    "gymnasium": {
+      "subject": "综合体育馆",
+      "photoId": "vr-130627027-r",
+      "viewLabel": "综合体育馆 · 室内实景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "swimming-hall": {
+      "subject": "游泳馆",
+      "photoId": "vr-130623757-f",
+      "viewLabel": "游泳馆 · 室内实景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "table-tennis-dome": {
+      "subject": "乒羽中心",
+      "photoId": "vr-40671541-l",
+      "viewLabel": "乒羽中心 · 室内实景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "fencing-center": {
+      "subject": "击剑中心",
+      "photoId": "vr-40671543-b",
+      "viewLabel": "击剑中心 · 室内实景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "chinese-pavilion": {
+      "subject": "中华文化园亭廊",
+      "photoId": "vr-38553239-b",
+      "viewLabel": "中华文化园亭廊 · 室外实景",
+      "match": "landmark-representative",
+      "evidence": "官方中华文化园具名场景的红柱、灰瓦翘檐、开放柱廊与石阶外景；模型为园区亭廊群的概括，并非逐毫米测绘。"
+    },
+    "international-teaching": {
+      "subject": "国际教学楼",
+      "photoId": "vr-130585917-l",
+      "viewLabel": "S4 楼 · 北侧外景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "liberal-arts": {
+      "subject": "文理楼",
+      "photoId": "vr-130585909-b",
+      "viewLabel": "S5 楼 · 外景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "middle-teaching": {
+      "subject": "中学教学楼",
+      "photoId": "vr-130585910-b",
+      "viewLabel": "S6 楼 · 入口外景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "south-boys-dormitory": {
+      "subject": "南岸男生宿舍楼",
+      "photoId": "vr-130585912-b",
+      "viewLabel": "S7 楼 · 外景（楼号对应历史示意）",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "south-primary-dormitory": {
+      "subject": "南岸小学宿舍楼",
+      "photoId": "vr-130585907-f",
+      "viewLabel": "S1 楼 · 外景（楼号对应历史示意）",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "south-dining": {
+      "subject": "南岸食堂",
+      "photoId": "vr-130585908-b",
+      "viewLabel": "南校食堂 · 入口外景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "main-gate": {
+      "subject": "主校区东门",
+      "photoId": "vr-95774662-b",
+      "viewLabel": "学校正门（东门）· 外景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "cultural-garden": {
+      "subject": "中华文化园",
+      "photoId": "vr-38553237-b",
+      "viewLabel": "中华文化园 · 园内实景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "ecological-garden": {
+      "subject": "校内花园",
+      "photoId": "vr-38540115-b",
+      "viewLabel": "校内小花园 · 亭架步道实景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "athletics-field": {
+      "subject": "田径场与足球场",
+      "photoId": "vr-130623756-f",
+      "viewLabel": "田径场与足球场 · 场地实景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "tennis-courts": {
+      "subject": "网球场",
+      "photoId": "vr-130623760-r",
+      "viewLabel": "北校网球场 · 场地实景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "river-bridge": {
+      "subject": "南旱河与校园桥",
+      "photoId": "vr-38601824-l",
+      "viewLabel": "南北校中心点 · 校园桥通道实景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "south-basketball": {
+      "subject": "南岸篮球场",
+      "photoId": "vr-130585915-l",
+      "viewLabel": "南校篮球场 · 场地实景",
+      "match": "named-scene",
+      "evidence": "官方海淀校区全景的具名场景；楼号/功能与2018公开平面示意交叉核对，画面已人工查看。"
+    },
+    "sports-service": {
+      "status": "unavailable",
+      "subject": "体育活动用房",
+      "reason": "尚未找到能核对 N12 楼号的公开实拍。",
+      "reviewedSources": [
+        "https://www.bjfles.com/environment/",
+        "https://720yun.com/t/b2vkue1es1q?scene_id=38540123",
+        "https://www.sohu.com/a/232407928_391284"
+      ]
+    },
+    "south-girls-dormitory": {
+      "status": "unavailable",
+      "subject": "南岸女生宿舍楼",
+      "reason": "公开全景未标明 S3 楼；未用未注明楼号的宿舍照片代替。",
+      "reviewedSources": [
+        "https://www.bjfles.com/environment/",
+        "https://720yun.com/t/b2vkue1es1q?scene_id=38540123",
+        "https://www.sohu.com/a/232407928_391284"
+      ]
+    },
+    "language-training": {
+      "status": "unavailable",
+      "subject": "网球训练馆",
+      "reason": "尚未找到能与历史示意中 S3-A 网球训练馆对应的公开实拍。",
+      "reviewedSources": [
+        "https://www.bjfles.com/environment/",
+        "https://720yun.com/t/b2vkue1es1q?scene_id=38540123",
+        "https://www.sohu.com/a/232407928_391284"
+      ]
+    },
+    "south-gatehouse": {
+      "status": "unavailable",
+      "subject": "南岸生活用房",
+      "reason": "尚未找到能核对 S10 楼号的公开实拍。",
+      "reviewedSources": [
+        "https://www.bjfles.com/environment/",
+        "https://720yun.com/t/b2vkue1es1q?scene_id=38540123",
+        "https://www.sohu.com/a/232407928_391284"
+      ]
+    }
+  }
+}

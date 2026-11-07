@@ -43,7 +43,7 @@ export async function loadCampusServices(file,campus){
 export function createCampusServices(config){
   async function request(path,req,origin){
     // Port-separated localhost services share cookies. A production connection
-    // must likewise use the same browser hostname. Never relay the UW guest
+    // must likewise use the same browser hostname. Never relay the 海淀外国语 guest
     // cookie, personal A2A credentials, arbitrary headers or supplied URLs.
     if(new URL(origin).hostname!==new URL(config.origin).hostname)throw bad();
     const cookies=(req.headers.cookie||'').split(';').map(v=>v.trim()).filter(v=>v.startsWith('hd_m1='));
@@ -62,7 +62,7 @@ export function createCampusServices(config){
       if(current.status===401)return {state:'login-required',message:'请先在校园服务中登录，再返回这里刷新。公开导览访客身份不会自动升级为学校成员。',loginUrl:config.origin+'/auth/login',modules:rows};
       if(current.status===403)return {state:'access-denied',message:'校园账号当前不可用，请联系负责人。',modules:rows};
       const me=current.body,school=me.schools?.find(s=>s.school_id===config.schoolId&&s.space_id===config.spaceId);
-      if(!school||!me.extensions?.includes('m1'))return {state:'school-denied',message:'当前账号未加入此 UW 空间绑定的学校，无法打开校园功能。',modules:rows};
+      if(!school||!me.extensions?.includes('m1'))return {state:'school-denied',message:'当前账号未加入此 海淀外国语 空间绑定的学校，无法打开校园功能。',modules:rows};
       let anchor=null;
       if(placeId&&config.anchors[placeId]&&me.extensions.includes('network')){
         const result=await request('/network/schools/'+encodeURIComponent(config.schoolId)+'/bootstrap',req,origin);

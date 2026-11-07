@@ -1,9 +1,9 @@
 {
   "schema": "hyper-dimension.geo-campus/v1",
-  "spaceId": "uw-seattle",
-  "name": "UW Seattle · 非官方校园空间",
+  "spaceId": "haidian-beijing",
+  "name": "海淀外国语 · 海淀校区",
   "geometry": "campus.json",
   "reception": "reception.json",
-  "geometryHash": "e77afd817acd8f7912598ec09feb7900329830c228580cfc593115a26a1dfe3d",
-  "host": "UW school adapter; not the Base indoor scene/v1 loader"
+  "geometryHash": "07b40de81bc17fecac9fd3c326df0bffff7942d7e604e4e74a0c39f1f47b87ed",
+  "host": "Haidian school copy of UW outdoor adapter"
 }

@@ -1,67 +1,57 @@
-# Hyper Dimension-UW
+# Hyper Dimension · 海淀外国语
 
-基于 Hyper Dimension Base 的 UW Seattle 像素校园应用，当前应用版本 **v0.11.3**。这是私有源码仓库；开发目前暂停，收到明确恢复指令后再继续。
+北京海淀校区版本 **v1.1.2**。从 Hyper Dimension-UW **v0.11.3** 独立派生，复用完整前后端、四个Base、23个校园功能入口、人物系统、6位固定NPC、接待与A2A任务工作台。内嵌`base/`的538个上游源码文件保持字节一致；未复制UW账号、数据库、密钥或私有运行配置。
 
-保存 UW 应用源码、运行素材、内嵌 Base 源码、锁定依赖、测试和部署工具。Git 不保存账号密码、密钥、运行数据库、私人材料、历史日志、截图、聊天或用户存档，也不上传交付 ZIP、模型权重和依赖安装缓存。原完整交付包另外保留。
+本版替换校园信息、26栋建筑与33个可选地点、南北校园和河岸布局、建筑/运动场地/膜结构场馆/树木美术、地点介绍和NPC资料。学校标识为`haidian`，空间为`haidian-beijing`，场景为`haidian-outdoors`，不会将海淀建筑伪装成UW原地点。
 
-## 已有功能
+## 快速查看
 
-- **Base-1 空间与接待**：74栋可选建筑、公开地标资料/照片、自由漫游与寻路、账号/学校隔离、Hermes接待、A2A、知识库及向量索引、数据治理和备份。
-- **Base-2 人物与关系**：简单部件编辑及持久化、背包、非破坏性互动、联系人同意、私信和实时交流。
-- **Base-3 社区运营**：地点留言、论坛审核/历史、组织、活动/志愿、贡献/排名/奖励、运营年历、校友发现、学长支持及职业机会。
-- **Base-4 周边合作**：合作方入驻、服务目录、受控A2A委托、确认工单、回执对账及权益核销。
-- **NPC与任务**：6位固定点位、可选择/对话/功能跳转的演示角色；本人A2A任务查询、筛选、回执导出和确认停止。
-
-逐项范围见 [45项功能对照](docs/BASE-FEATURE-AUDIT-20261102.md)。个人Agent长期记忆已移除；地区/跨校社群和复杂交易P2保持暂停。正式学校资料、生产服务器/身份/邮件、真实商户接口和目标容量/实际参与者验收按上线项目完成。
-
-## 从源码启动
-
-Node.js 22.13+：
+安装Node.js 22.13+，双击`START-HAIDIAN.cmd`，或运行：
 
 ```sh
-node scripts/verify-source.mjs
-node scripts/verify.mjs
 node server.mjs
 ```
 
-打开 `http://127.0.0.1:4190/`。这是轻量参观模式，包含地图、人物、导航和公开资料接待，不连接已有生产数据，没有预置真实账号密码。
+打开`http://127.0.0.1:4290/`。首次选择人物；WASD/方向键漫游，拖动平移、分档缩放、小地图、地点详情、导览和资料接待沿用UW实现。这是公开参观模式。完整账号和社区业务按下述方式启动。
 
-完整校园业务面向Ubuntu/Linux amd64，使用Keycloak、PostgreSQL/pgvector、NodeBB、Nakama、Hermes及Docker Compose，见 [启动与部署](docs/DEPLOY-UW.md) 和 [Base容器部署](base/docs/DEPLOYMENT-CONTAINERS.md)。不要复制其他实例的运行数据库或私有配置。
+## 完整校园后端
 
-### 开发与部署依赖
+保留UW的Ubuntu/Linux amd64与Docker Compose架构：Keycloak、PostgreSQL/pgvector、NodeBB、Nakama及Base。模型、索引、持久任务、授权和数据治理沿用现有实现，未增加另一套账号或业务存储。
 
-运行全量测试或离线场景生成前，安装锁定Node依赖：
+本机已完成独立五服务验收。跨机器部署的具体命令、依赖与可选模型配置见[海淀部署说明](docs/DEPLOY-HAIDIAN.md)。原版通用架构见[Base开发手册](base/DEVELOPMENT-MANUAL.md)。正式学校需独立配置域名、身份、邮件和审核过的运营资料。
+
+本机6290完整实例已启用真实Hermes接待与6位NPC的DeepSeek模型通道，接待和NPC均使用`deepseek-flash`，无Pro回退。2026-11-07核对官方当前对应DeepSeek-V4.1-Flash-1017；API别名随官方Flash系列升级。接待通过原有零工具Hermes运行，NPC沿用UW直接调用DeepSeek的通道。新机器或4290公开参观模式没有私有配置时仍为资料模式。密钥只在海淀实例私有目录，源码包不携带。配置与实测见[Hermes接入](docs/HAIDIAN-HERMES.md)。
+
+## 开发与验证
+
+源码包不包含依赖安装缓存、私有运行数据、历史验收截图或日志。开发前：
 
 ```sh
 npm --prefix base ci --ignore-scripts --no-audit --no-fund
-npm --prefix base/admin ci --no-audit --no-fund
-node --test tests/*.test.mjs
+npm run build
+npm test
+npm run verify
+node scripts/verify-source.mjs
 ```
 
-完整Embedding/Hermes镜像另需3个公开依赖文件。来源、版本和SHA-256在 `SOURCE-DEPENDENCIES.json`、模型清单、Hermes SOURCE.json及bootstrap锁文件中保留：
+`npm test`运行本版67项安全/行为、照片、建筑几何及Flash模型策略回归；空间检查验证66条往返路线和28个颜色/深度文件。真实模型另以显式开关验收，不包含在常规测试中。原版103项基线已在改造前完整通过；原测试文件保留，但其中UW固定几何、照片、数量与位置断言不是本版海淀地图验收标准。完整原生检查还验证9组真实业务链与23个登录后功能入口，详见[交接说明](HANDOFF.md)。
 
-```sh
-# 从已有完整交付ZIP只恢复3个公开依赖，不导入用户数据
-python scripts/restore-source-artifacts.py --delivery /absolute/path/to/UW-Pixel-Campus-v0.11.3-complete.zip
-# 或从固定公开来源联网恢复，并校验原SHA-256
-python scripts/restore-source-artifacts.py --fetch
-```
+v1.1.2逐项对照UW的45项规划：42项在用功能保留，2项P2继续暂缓，个人Agent长期记忆继续按原决定移除；新增A2A任务工作台也保留。23个服务模块、65个地图控件ID、6个NPC功能按钮、20个学校HTTP路径契约全部对应；实际OIDC登录后23个入口均返回200。补入24项原先未在海淀运行的适配回归，未发现产品功能删减。具体范围与可重复的对照见[功能审计](docs/HAIDIAN-FUNCTION-PARITY.md)。
 
-随后按容器手册先构建Base/Hermes依赖镜像，再构建UW镜像。密钥由部署端私有文件或Docker secrets注入。后端接待为Hermes，NPC可接DeepSeek普通API；外部访客Agent品牌不限，沿用A2A及授权。
+学校内容集中在`data/`、`public/place-copy.js`、`src/npc-cast.mjs`及两个`prepare-haidian-data`/`export-haidian-scene`构建脚本。移动、逐像素遮挡、人物配方、权限、A2A、私信、论坛和运营继续复用原实现。
 
-## 接手入口
+## 建筑外形复原
 
-| 内容 | 入口 |
-| --- | --- |
-| Agent约束 | [AGENTS.md](AGENTS.md) |
-| 当前版本交接 | [CURRENT-DEVELOPMENT-0113](docs/CURRENT-DEVELOPMENT-0113.md) |
-| UW完整操作与美术说明 | [UW-APPLICATION](docs/UW-APPLICATION.md) |
-| 四Base统一开发手册 | [base/DEVELOPMENT-MANUAL.md](base/DEVELOPMENT-MANUAL.md) |
-| A2A任务工作台 | [A2A-TASK-WORKBENCH](docs/A2A-TASK-WORKBENCH.md) |
-| 脱敏、数据与许可范围 | [REPOSITORY-SCOPE](docs/REPOSITORY-SCOPE.md) |
+v1.1.0依据82张实拍视图逐栋核对，更新红砖平顶楼、图书馆圆弧端头、南岸浅石材弧形楼、食堂折坡屋面/玻璃门厅、气膜弧壳和开放中式亭廊。26栋模型完成104张四向检查图，实际页面逐栋打开检查。N7、N12、S3、S3-A、S10仍缺可靠整栋外景，卡片明确“外形待核”；楼群翼部、尺寸、隐藏立面和当前准确点位仍有推定。具体依据、实现与核对状态见[逐栋建筑复原表](docs/HAIDIAN-ARCHITECTURE.md)。
 
-`SOURCE-MANIFEST.json`校验Git源码快照；原ZIP的PACKAGE-MANIFEST不直接套用到Git树。旧文档指向的历史evidence正文在本地交付中保留，不随仓库上传。重新做完整分发包时，恢复依赖、完成对应验证并生成新清单，保留封存包。
+构件配置在`data/haidian-architecture.json`，由同一份解析结果驱动外观、碰撞、通行面和小地图；继续复用UW投影、深度分块与全部校园业务。
 
-## 私有代码与第三方许可
+## 建筑实景照片
 
-项目自有UW适配代码和原创素材按私有项目管理，见 [LICENSE](LICENSE)。内嵌Base及第三方组件保持原许可证，见 [LICENSES.md](LICENSES.md)、[base/LICENSE](base/LICENSE)和组件声明；照片逐文件署名、来源和许可保留在素材清单。第三方代码没有重新归为本项目专有代码。
+沿用UW详情卡照片组件，已为22栋建筑和7处室外地点接入27张官网链接的官方海淀校区全景原始实拍，保留逐场景来源和发布署名。N5/N6共用楼群、室内照片及亭廊参考均有明确图注；N12、S3、S3-A、S10尚无可靠对应照片，在卡片中标注待补。逐卡对应、版权来源、离线维护和本轮验收见[照片来源与对应表](docs/HAIDIAN-PHOTOS.md)。
+
+`npm run build`保留照片清单。`npm run photos:publish`从已附带的本地照片离线重建清单；不需要运行时连接外部图库。
+
+## 资料精度
+
+布局基于2018年公开校园总览与学校官网，属于有来源的示意复原。可见建筑特征参考实景，尺寸/楼高、未见立面、种植及平坦地面仍是美术推定，尚未取得校方当前总图或完成实地核验。来源和具体边界见[校园资料](docs/HAIDIAN-SOURCES.md)。这也不构成学校官方产品或实际师生验收。

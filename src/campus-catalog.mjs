@@ -11,7 +11,7 @@ export function campusCatalog({principal,pack,platform,reception,knowledge,geome
     version:protocol.BASE_VERSION,platform:platform?'m0':null,extensions:platform?.extensions||[],
     spaces:visible?[{spaceId:pack.spaceId,...(schoolId?{schoolId}:{}),name:pack.name,description:pack.description,
       agents:structuredClone(agents),sceneContract:'hyper-dimension.geo-campus/v1',geometryHash,
-      scenes:[{sceneId:UW_SCENE,name:'UW Seattle · 户外校园'}]}]:[],
+      scenes:[{sceneId:UW_SCENE,name:'海淀外国语 · 海淀校区 · 户外校园'}]}]:[],
     receptionMode:reception.live?'live-model':'knowledge-only',receptionProvider:reception.provider,
     generalConversation:reception.general,knowledge:knowledge?knowledge.mode+'-pgvector':'published-keyword',
   };

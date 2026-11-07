@@ -1,0 +1,11 @@
+{
+  "repository": "Hyper-Dimension-UW",
+  "commit": "665297ab983fb702c034a25f33688f0be91a98c1",
+  "version": "0.11.3",
+  "baselineTests": {
+    "pass": 103,
+    "fail": 0,
+    "date": "2026-11-03"
+  },
+  "basePolicy": "Embedded base/ is byte-for-byte retained. New school data and independent configuration only."
+}

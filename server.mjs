@@ -15,9 +15,9 @@ import {campusCatalog} from './src/campus-catalog.mjs';
 import {createCampusNpcs} from './src/campus-npcs.mjs';
 import {createNpcModel} from './src/npc-model.mjs';
 
-export async function startUw({port=Number(process.env.PORT||4190),dataDir=resolve(process.env.UW_DATA_DIR||resolve(projectRoot,'.local/uw-runtime')),host='127.0.0.1',publicOrigin=process.env.UW_PUBLIC_ORIGIN,provider,npcModel,campusServicesFile=process.env.UW_CAMPUS_SERVICES_CONFIG,platform,schoolId}={}) {
+export async function startUw({port=Number(process.env.PORT||4290),dataDir=resolve(process.env.HAIDIAN_DATA_DIR||resolve(projectRoot,'.local/haidian-runtime')),host='127.0.0.1',publicOrigin=process.env.HAIDIAN_PUBLIC_ORIGIN,provider,npcModel,campusServicesFile=process.env.HAIDIAN_CAMPUS_SERVICES_CONFIG,platform,schoolId}={}) {
   const version=JSON.parse(await readFile(join(projectRoot,'package.json'),'utf8')).version;
-  if(publicOrigin){const u=new URL(publicOrigin);if(!['https:','http:'].includes(u.protocol)||u.origin!==publicOrigin)throw Error('UW_PUBLIC_ORIGIN must be an exact HTTP(S) origin');}
+  if(publicOrigin){const u=new URL(publicOrigin);if(!['https:','http:'].includes(u.protocol)||u.origin!==publicOrigin)throw Error('HAIDIAN_PUBLIC_ORIGIN must be an exact HTTP(S) origin');}
   const campusData=platform?dirname(platform.services.school(schoolId).package):join(projectRoot,'data');
   const campus=JSON.parse(await readFile(join(campusData,'campus.json'),'utf8'));
   const binding=JSON.parse(await readFile(join(campusData,'reception.json'),'utf8'));
@@ -35,15 +35,15 @@ export async function startUw({port=Number(process.env.PORT||4190),dataDir=resol
   }:await loadCampusServices(campusServicesFile,campus));
   // This binding carries knowledge/Agent identity only. The outdoor contract is explicitly
   // geo-campus/v1; it is not passed off as the Base indoor scene/v1 package.
-  const catalogKnowledge=nav.places.filter(p=>p.category==='building').map(p=>({id:'uw-'+p.id,title:p.name,
+  const catalogKnowledge=nav.places.filter(p=>p.category==='building').map(p=>({id:'haidian-'+p.id,title:p.name,
     body:p.name+' 是此校园地图收录的建筑地点。'+(p.nameZh?'公开建筑代码：'+p.nameZh+'。':'')+'可以在地图选择此处，查看地点留言、校园活动和背包互动。',
-    keywords:[p.name,p.id,...(p.nameZh?[p.nameZh]:[])],published:true,revision:1,sourceLabel:'UW public building catalog / Seattle outlines',entityId:p.id}));
+    keywords:[p.name,p.id,...(p.nameZh?[p.nameZh]:[])],published:true,revision:1,sourceLabel:'海淀教育2018校园总览 / 海淀外国语官网',entityId:p.id}));
   const introductions=binding.knowledge.map(k=>({...k,body:nav.places.find(p=>p.id===k.entityId)?.description||k.body}));
-  const pack={spaceId:campus.id,name:'UW Seattle · 校园空间',description:'UW 校园导览与社区空间',scenes:[],knowledge:[...introductions,...catalogKnowledge],agents:binding.agents};
+  const pack={spaceId:campus.id,name:campus.name,description:'海淀外国语海淀校区导览与社区空间',scenes:[],knowledge:[...introductions,...catalogKnowledge],agents:binding.agents};
   protocol.identifier(pack.spaceId);
   for(const row of pack.knowledge){protocol.identifier(row.id);protocol.text(row.body,10000);if(row.published!==true)throw Error('Unreviewed reception source');}
-  const receptionMode=process.env.UW_RECEPTION_MODE||'auto';
-  if(!['auto','hermes','knowledge'].includes(receptionMode))throw Error('Invalid UW_RECEPTION_MODE');
+  const receptionMode=process.env.HAIDIAN_RECEPTION_MODE||'auto';
+  if(!['auto','hermes','knowledge'].includes(receptionMode))throw Error('Invalid HAIDIAN_RECEPTION_MODE');
   if(provider===undefined && receptionMode!=='knowledge'){
     provider=await configuredHermes(dataDir);
     if(!provider&&receptionMode==='hermes')throw Error('Hermes mode requested, but this UW instance has no private reception.json configuration.');
@@ -53,7 +53,8 @@ export async function startUw({port=Number(process.env.PORT||4190),dataDir=resol
   const visitorAccess=createVisitorAccess(auth,{secure:Boolean(publicOrigin?.startsWith('https:'))});
   const store=await (platform?platform.openStore(dataDir):openStore(dataDir));
   const avatars=createVisitorAvatars(store,pack.spaceId);
-  const npcs=createCampusNpcs({store,nav,spaceId:pack.spaceId,model:npcModel===undefined?(process.env.UW_NPC_PROVIDER==='deepseek'?createNpcModel():null):npcModel});
+  const configuredNpcModel=npcModel===undefined?(process.env.HAIDIAN_NPC_PROVIDER==='deepseek'?createNpcModel():null):npcModel;
+  const npcs=createCampusNpcs({store,nav,spaceId:pack.spaceId,model:configuredNpcModel});
   pack.agents.push(...npcs.agents);
   let knowledge;
   try{knowledge=await openKnowledge({dataDir,root:baseRoot,forumHistory:Boolean(platform)});platform?.bindKnowledge(knowledge);}
@@ -62,25 +63,25 @@ export async function startUw({port=Number(process.env.PORT||4190),dataDir=resol
   const safeReception={...reception,async answer(input){
     if(input.pack.npcId)return npcs.answer({id:input.pack.npcId,message:input.message,history:input.history,signal:input.signal});
     if(/开放|营业|开门|关门|票价|门票|预约|电话|无障碍|轮椅|open(?:ing)? hours|accessible|wheelchair|ticket|phone/i.test(input.message))
-      return {text:'当前发布资料只覆盖建筑历史、校园位置与概念导览，未核实实时开放、预约、票价或无障碍条件。请通过 UW 官方校园地图或相关场所官网确认。',sources:[],mode:'published-unknown'};
+      return {text:'当前发布资料只覆盖建筑历史、校园位置与概念导览，未核实实时开放、预约、票价或无障碍条件。请通过海淀外国语官网或校方确认。',sources:[],mode:'published-unknown'};
     const current=input.message.toLowerCase();
     const question=/它|这里|这栋|that|\bit\b/i.test(current)
       ? (input.history||[]).filter(t=>t.role==='user').slice(-1).map(t=>t.text).join(' ')+' '+current
       : current;
-    const explicit=nav.places.filter(p=>[p.name,p.nameZh,p.id==='hub'?'HUB':p.id].some(name=>name?.length>2&&question.toLowerCase().includes(name.toLowerCase())));
-    const focused=explicit.length?{...input.pack,knowledge:input.pack.knowledge.filter(k=>explicit.some(p=>k.id==='uw-'+p.id))}:input.pack;
+    const explicit=nav.places.filter(p=>[p.name,p.nameZh,p.id==='international-teaching'?'HUB':p.id].some(name=>name?.length>2&&question.toLowerCase().includes(name.toLowerCase())));
+    const focused=explicit.length?{...input.pack,knowledge:input.pack.knowledge.filter(k=>explicit.some(p=>k.id==='haidian-'+p.id))}:input.pack;
     return reception.answer({...input,pack:focused});
   }};
   const capabilities={
-    'uw.campus.route':{scope:'a2a:call',async execute({arguments:args}){
+    'haidian.campus.route':{scope:'a2a:call',async execute({arguments:args}){
       protocol.fields(args,['fromId','toId'],'UW route');
       const from=nav.landmark(args.fromId),to=nav.landmark(args.toId);
       return {text:`${from.name} → ${to.name} 的户外导览路线`,...nav.route(from.arrivalNode,to.id),sources:[],mode:'uw-outdoor-route'};
     }},
   };
-  const primaryPack={...pack,agents:pack.agents.filter(a=>!a.agentId.startsWith('uw-npc-'))};
-  const npcPacks=npcs.agents.map(agent=>({...pack,npcId:agent.agentId.slice('uw-npc-'.length),agents:[agent]}));
-  const gateway=createGateway({store,packs:[...(platform?platform.augmentPacks([primaryPack]):[primaryPack]),...npcPacks],reception:safeReception,navigate:()=>{throw Error('Use the advertised uw.campus.route outdoor capability.');},capabilities:{...capabilities,...platform?.capabilities},maxModelCallsPerDay:40});
+  const primaryPack={...pack,agents:pack.agents.filter(a=>!a.agentId.startsWith('haidian-npc-'))};
+  const npcPacks=npcs.agents.map(agent=>({...pack,npcId:agent.agentId.slice('haidian-npc-'.length),agents:[agent]}));
+  const gateway=createGateway({store,packs:[...(platform?platform.augmentPacks([primaryPack]):[primaryPack]),...npcPacks],reception:safeReception,navigate:()=>{throw Error('Use the advertised haidian.campus.route outdoor capability.');},capabilities:{...capabilities,...platform?.capabilities},maxModelCallsPerDay:40});
   platform?.bindWorld(createCampusWorld(campus,nav,pack,gateway.receptionSessions));
   try{await gateway.receptionSessions.expire();}
   catch(error){await gateway.close();await knowledge?.close();await store.close();throw error;}
@@ -92,7 +93,7 @@ export async function startUw({port=Number(process.env.PORT||4190),dataDir=resol
   }
   const campusPrincipal=createCampusPrincipal({platform,visitorAccess,spaceId:pack.spaceId});
   const resolvePrincipal=(req,res,browser=false)=>campusPrincipal(req,res,{browser});
-  const position=(principal)=>positionAlong(store.read().positions?.[protocol.digest([principal.id,pack.spaceId])]) || [...nav.nodes[nav.landmark('red-square').arrivalNode]];
+  const position=(principal)=>positionAlong(store.read().positions?.[protocol.digest([principal.id,pack.spaceId])]) || [...nav.nodes[nav.landmark('main-gate').arrivalNode]];
   const server=http.createServer(async(req,res)=>{
     res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','no-referrer');
     res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; frame-ancestors 'none'");
@@ -103,7 +104,7 @@ export async function startUw({port=Number(process.env.PORT||4190),dataDir=resol
       if(platform&&await platform.handle(req,res,{url,json,body}))return;
       if(platform&&method==='GET'&&url.pathname==='/m0.html'){res.writeHead(303,{Location:'/','Cache-Control':'no-store'});return res.end();}
       if(platform&&method==='GET'&&url.pathname==='/m2.html'){res.writeHead(303,{Location:'/inventory.html','Cache-Control':'no-store'});return res.end();}
-      if(method==='GET'&&url.pathname==='/health')return json(res,200,{ok:true,project:'uw-mvp',version,baseVersion:protocol.BASE_VERSION,geometryHash,provider:reception.provider,generalConversation:reception.general,nativeCampus:Boolean(platform),schoolId:platform?schoolId:null,terrainSource:'USGS GeoTIFF',buildingHeight:'inferred',official:false,npcCount:npcs.agents.length,npcProvider:process.env.UW_NPC_PROVIDER==='deepseek'?'deepseek':'routine'});
+      if(method==='GET'&&url.pathname==='/health')return json(res,200,{ok:true,project:'hyper-dimension-haidian',version,baseVersion:protocol.BASE_VERSION,geometryHash,provider:reception.provider,generalConversation:reception.general,receptionModel:reception.provider==='hermes'?'deepseek-flash':null,nativeCampus:Boolean(platform),schoolId:platform?schoolId:null,terrainSource:'flat-schematic; no surveyed DEM',buildingHeight:'inferred',official:false,npcCount:npcs.agents.length,npcProvider:configuredNpcModel?.name||'routine',npcModel:configuredNpcModel?.model||null});
       if(method==='GET'&&url.pathname==='/api/catalog'){
         const principal=platform?await platform.identity.principal(req):await resolvePrincipal(req,res,true);
         const visiblePack=platform?platform.augmentPacks([pack])[0]:pack;
@@ -128,10 +129,10 @@ export async function startUw({port=Number(process.env.PORT||4190),dataDir=resol
         if(method==='GET'&&url.pathname.endsWith('/.well-known/agent-card.json'))return json(res,200,gateway.card(businessAgent,origin));
         if(method==='POST'&&url.pathname.endsWith('/a2a'))return json(res,200,await gateway.handle({agentId:businessAgent,principal:actor,request:await body(req),version:req.headers['a2a-version']||'1.0',origin}));
       }
-      const cardPath='/agents/uw-reception/.well-known/agent-card.json';
-      if(method==='GET'&&(url.pathname===cardPath||url.pathname==='/.well-known/agent-card.json'))return json(res,200,gateway.card('uw-reception',origin));
-      if(method==='POST'&&url.pathname==='/agents/uw-reception/a2a'){
-        const actor=await resolvePrincipal(req,res);return json(res,200,await gateway.handle({agentId:'uw-reception',principal:actor,request:await body(req),version:req.headers['a2a-version']||'1.0',origin}));
+      const cardPath='/agents/haidian-reception/.well-known/agent-card.json';
+      if(method==='GET'&&(url.pathname===cardPath||url.pathname==='/.well-known/agent-card.json'))return json(res,200,gateway.card('haidian-reception',origin));
+      if(method==='POST'&&url.pathname==='/agents/haidian-reception/a2a'){
+        const actor=await resolvePrincipal(req,res);return json(res,200,await gateway.handle({agentId:'haidian-reception',principal:actor,request:await body(req),version:req.headers['a2a-version']||'1.0',origin}));
       }
       if(url.pathname.startsWith('/api/')){
         const actor=await resolvePrincipal(req,res,true);protocol.authorize(actor,pack.spaceId);
@@ -157,7 +158,7 @@ export async function startUw({port=Number(process.env.PORT||4190),dataDir=resol
             return json(res,200,await gateway.handle({agentId:person.agentId,principal,request,version:'1.0',origin}));
           }
         }
-        if(method==='GET'&&url.pathname==='/api/me')return json(res,200,{visitorId:principal.id,identityMode:principal.tenantBound?'member':'visitor',loginExpired:Boolean(principal.loginExpired),position:position(principal),move:store.read().positions?.[protocol.digest([principal.id,pack.spaceId])]||null,serverTime:Date.now(),walking:{speed:WALK_SPEED,maxIntentMs:500,collision:'campus-footprints-and-terrain'},provider:reception.provider,generalConversation:reception.general,baseVersion:protocol.BASE_VERSION});
+        if(method==='GET'&&url.pathname==='/api/me')return json(res,200,{visitorId:principal.id,identityMode:principal.tenantBound?'member':'visitor',loginExpired:Boolean(principal.loginExpired),position:position(principal),move:store.read().positions?.[protocol.digest([principal.id,pack.spaceId])]||null,serverTime:Date.now(),walking:{speed:WALK_SPEED,maxIntentMs:500,collision:'campus-footprints-and-terrain'},provider:reception.provider,generalConversation:reception.general,receptionModel:reception.provider==='hermes'?'deepseek-flash':null,baseVersion:protocol.BASE_VERSION});
         if(method==='GET'&&url.pathname==='/api/avatar')return json(res,200,{catalog:visitorCatalog,profile:avatars.read(principal),presentation:avatars.presentation(principal),identityMode:principal.tenantBound?'member':'visitor'});
         if(method==='GET'&&url.pathname==='/api/avatar/history')return json(res,200,{profiles:avatars.history(principal)});
         if(method==='POST'&&url.pathname==='/api/avatar')return json(res,200,await avatars.save(principal,await body(req)));
@@ -197,16 +198,16 @@ export async function startUw({port=Number(process.env.PORT||4190),dataDir=resol
         }
         const sessions=gateway.receptionSessions;
         if(url.pathname==='/api/sessions'){
-          if(method==='GET')return json(res,200,await sessions.list(principal,pack.spaceId,'uw-reception'));
-          if(method==='POST'){const b=protocol.fields(await body(req),['requestId'],'session');return json(res,200,await sessions.create(principal,pack.spaceId,'uw-reception',b.requestId));}
+          if(method==='GET')return json(res,200,await sessions.list(principal,pack.spaceId,'haidian-reception'));
+          if(method==='POST'){const b=protocol.fields(await body(req),['requestId'],'session');return json(res,200,await sessions.create(principal,pack.spaceId,'haidian-reception',b.requestId));}
         }
         const sessionMatch=url.pathname.match(/^\/api\/sessions\/([^/]+)\/(export|delete)$/);
         if(sessionMatch){
           const id=protocol.identifier(decodeURIComponent(sessionMatch[1]));
-          if(method==='GET'&&sessionMatch[2]==='export')return json(res,200,await sessions.export(principal,pack.spaceId,'uw-reception',id));
+          if(method==='GET'&&sessionMatch[2]==='export')return json(res,200,await sessions.export(principal,pack.spaceId,'haidian-reception',id));
           if(method==='POST'&&sessionMatch[2]==='delete'){
             const b=protocol.fields(await body(req),['requestId','expectedRevision'],'delete');
-            return json(res,200,await sessions.remove(principal,pack.spaceId,'uw-reception',id,b.expectedRevision,b.requestId));
+            return json(res,200,await sessions.remove(principal,pack.spaceId,'haidian-reception',id,b.expectedRevision,b.requestId));
           }
         }
         if(method==='POST'&&url.pathname==='/api/reception'){
@@ -215,7 +216,7 @@ export async function startUw({port=Number(process.env.PORT||4190),dataDir=resol
           if(rates.get(key)>20)throw Object.assign(Error('请稍后再问。'),{status:429});
           if(rates.size>1000)rates.clear();
           const request={jsonrpc:'2.0',id:b.messageId,method:'SendMessage',params:{message:{messageId:b.messageId,role:'ROLE_USER',parts:[{text:b.message}],...(b.contextId?{contextId:b.contextId}:{})}}};
-          return json(res,200,await gateway.handle({agentId:'uw-reception',principal,request,version:'1.0',origin}));
+          return json(res,200,await gateway.handle({agentId:'haidian-reception',principal,request,version:'1.0',origin}));
         }
         throw Object.assign(Error('API not found'),{status:404});
       }
@@ -232,7 +233,7 @@ export async function startUw({port=Number(process.env.PORT||4190),dataDir=resol
       const file=await realpath(resolve(directory,relative)).catch(()=>{throw Object.assign(Error('Not found'),{status:404});});
       if(!file.startsWith((await realpath(directory))+sep))throw Object.assign(Error('Path denied'),{status:403});
       const info=await stat(file);if(!info.isFile())throw Object.assign(Error('Not found'),{status:404});
-      const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.json':'application/json; charset=utf-8','.png':'image/png'};
+      const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg'};
       if(platform&&relative==='index.html'){
         const html=(await readFile(file,'utf8')).replace('</head>','<script type="module" src="/native-navigation.js"></script></head>');
         res.writeHead(200,{'Content-Type':mime['.html'],'Content-Length':Buffer.byteLength(html),'Cache-Control':'no-cache'});return res.end(method==='HEAD'?undefined:html);
@@ -259,9 +260,10 @@ export async function startUw({port=Number(process.env.PORT||4190),dataDir=resol
   return {server,origin,close,campus,nav,auth,gateway,store,npcs};
 }
 
+export {startUw as startHaidian};
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const app=await startUw();
-  console.log(`UW MVP ready: ${app.origin} · Base ${protocol.BASE_VERSION}`);
+  console.log(`Haidian Campus ready: ${app.origin} · Base ${protocol.BASE_VERSION}`);
   let closing=false;const shutdown=async()=>{if(closing)return;closing=true;await app.close();process.exit(0);};
   for(const signal of ['SIGINT','SIGTERM'])process.on(signal,shutdown);
   process.stdin.setEncoding('utf8');process.stdin.on('data',chunk=>{if(chunk.trim()==='shutdown')shutdown();});

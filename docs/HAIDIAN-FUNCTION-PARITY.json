@@ -1,0 +1,568 @@
+{
+  "format": "haidian.function-parity/v1",
+  "at": "2026-11-07T09:37:00.942162+00:00",
+  "status": "PASS",
+  "applicationVersion": "1.1.2",
+  "upstreamVersion": "UW 0.11.3",
+  "upstreamCommit": "665297ab983fb702c034a25f33688f0be91a98c1",
+  "missingUpstreamFiles": [],
+  "upstreamFiles": 985,
+  "identicalUpstreamFiles": 937,
+  "baseFilesUnchanged": 538,
+  "adaptedUpstreamFiles": [
+    "AGENTS.md",
+    "DATA-MANIFEST.json",
+    "README.md",
+    "data/campus.json",
+    "data/reception.json",
+    "data/space.json",
+    "deploy/compose.restore.yaml",
+    "deploy/compose.yaml",
+    "deploy/schools.json",
+    "docs/REPOSITORY-SCOPE.md",
+    "package.json",
+    "public/agent-tasks.js",
+    "public/app.js",
+    "public/assets/coherent/manifest.json",
+    "public/assets/place-photos/manifest.json",
+    "public/campus-landscape-data.js",
+    "public/campus-landscape.js",
+    "public/campus-layout.js",
+    "public/campus-npcs.js",
+    "public/campus-places.js",
+    "public/campus-walking.js",
+    "public/index.html",
+    "public/inventory.html",
+    "public/inventory.js",
+    "public/pixel-campus-art.js",
+    "public/pixel-scene.js",
+    "public/place-copy.js",
+    "public/place-photo.js",
+    "public/red-square-layout.js",
+    "scripts/a2a-example.mjs",
+    "scripts/bind-campus-data.mjs",
+    "scripts/build.mjs",
+    "scripts/export-coherent-scene.mjs",
+    "scripts/seed-campus-fixtures.mjs",
+    "scripts/serve-campus.mjs",
+    "scripts/serve-hermes-linux.mjs",
+    "scripts/verify-campus-live.mjs",
+    "scripts/verify-hermes-live.mjs",
+    "scripts/verify-restored-campus.mjs",
+    "scripts/verify.mjs",
+    "server.mjs",
+    "src/campus-catalog.mjs",
+    "src/campus-npcs.mjs",
+    "src/campus-services.mjs",
+    "src/campus-world.mjs",
+    "src/coherent-buildings.mjs",
+    "src/npc-cast.mjs",
+    "src/npc-model.mjs"
+  ],
+  "httpLiteralContracts": 20,
+  "mainControlsRetained": 65,
+  "campusModules": 23,
+  "npcFunctionButtons": 6,
+  "sharedBehaviorHashes": 13,
+  "activePlannedFunctions": 42,
+  "matrix": [
+    {
+      "id": "B1-01",
+      "priority": "P0",
+      "name": "图纸到运行空间",
+      "state": "retained",
+      "source": "base/DEVELOPMENT-MANUAL.md",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B1-02",
+      "priority": "P0",
+      "name": "素材与视觉升级",
+      "state": "retained",
+      "source": "base/docs/AVATAR-SCHOOL-ART.md",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B1-03",
+      "priority": "P0",
+      "name": "Agent 与 A2A",
+      "state": "retained",
+      "source": "base/src/a2a/gateway.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B1-04",
+      "priority": "P0",
+      "name": "接待与知识库",
+      "state": "retained",
+      "source": "base/src/reception/index.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B1-05",
+      "priority": "P0",
+      "name": "长期身份映射",
+      "state": "retained",
+      "source": "base/src/platform/identity.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B1-06",
+      "priority": "P0",
+      "name": "学校与组织权限",
+      "state": "retained",
+      "source": "base/src/platform/m1.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B1-07",
+      "priority": "P0",
+      "name": "通用信息契约",
+      "state": "retained",
+      "source": "base/src/platform/ledger.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B1-08",
+      "priority": "P0",
+      "name": "信息治理",
+      "state": "retained",
+      "source": "base/src/platform/information.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B1-09",
+      "priority": "P0",
+      "name": "订阅与通知",
+      "state": "retained",
+      "source": "base/src/platform/information.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B1-10",
+      "priority": "P0",
+      "name": "数据与运行维护",
+      "state": "retained",
+      "source": "base/docs/DEPLOYMENT-CONTAINERS.md",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B1-11",
+      "priority": "P0",
+      "name": "Agent续建与验证",
+      "state": "retained",
+      "source": "base/DEVELOPMENT-MANUAL.md",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B2-01",
+      "priority": "P0",
+      "name": "首次进入与绑定",
+      "state": "retained",
+      "source": "base/src/platform/m1.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B2-02",
+      "priority": "P0",
+      "name": "捏人与换装",
+      "state": "retained",
+      "source": "public/pixel-editor.js",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B2-03",
+      "priority": "P0",
+      "name": "形象配方与模型",
+      "state": "retained",
+      "source": "src/visitor-avatar.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B2-04",
+      "priority": "P0",
+      "name": "持久化与跨设备",
+      "state": "retained",
+      "source": "base/src/platform/m2.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B2-05",
+      "priority": "P0",
+      "name": "个人主页",
+      "state": "retained",
+      "source": "base/src/platform/personal.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B2-06",
+      "priority": "P0",
+      "name": "背包",
+      "state": "retained",
+      "source": "base/src/platform/m2.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B2-07",
+      "priority": "P0",
+      "name": "非破坏性道具",
+      "state": "retained",
+      "source": "src/campus-world.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B2-08",
+      "priority": "P0",
+      "name": "私信与收件箱",
+      "state": "retained",
+      "source": "base/src/platform/chat.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B2-09",
+      "priority": "P0",
+      "name": "Agent会话入口",
+      "state": "retained",
+      "source": "base/src/platform/agents.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B2-10",
+      "priority": "P1",
+      "name": "个人长期记忆",
+      "state": "removed",
+      "source": "base/docs/RECEPTION-AND-NETWORK.md",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-01",
+      "priority": "P0",
+      "name": "组织主页",
+      "state": "retained",
+      "source": "base/src/platform/community.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-02",
+      "priority": "P0",
+      "name": "论坛与交流",
+      "state": "retained",
+      "source": "base/src/platform/community.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-03",
+      "priority": "P0",
+      "name": "地图记忆",
+      "state": "retained",
+      "source": "base/docs/COMMUNITY.md",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-04",
+      "priority": "P0",
+      "name": "审核与举报",
+      "state": "retained",
+      "source": "base/docs/COMMUNITY.md",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-05",
+      "priority": "P0",
+      "name": "活动中心",
+      "state": "retained",
+      "source": "base/src/platform/activities.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-06",
+      "priority": "P0",
+      "name": "志愿与组织任务",
+      "state": "retained",
+      "source": "base/src/platform/activities.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-07",
+      "priority": "P0",
+      "name": "贡献账本",
+      "state": "retained",
+      "source": "base/src/platform/campus-ledger.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-08",
+      "priority": "P0",
+      "name": "Ranking",
+      "state": "retained",
+      "source": "base/src/platform/campus-ledger.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-09",
+      "priority": "P0",
+      "name": "奖励",
+      "state": "retained",
+      "source": "base/src/platform/rewards.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-10",
+      "priority": "P0",
+      "name": "运营timeline",
+      "state": "retained",
+      "source": "base/src/platform/operations.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-11",
+      "priority": "P0",
+      "name": "资讯与个人展示",
+      "state": "retained",
+      "source": "base/src/platform/personal.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-12",
+      "priority": "P0",
+      "name": "换届与运营资料",
+      "state": "retained",
+      "source": "base/src/platform/m1.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-13",
+      "priority": "P1",
+      "name": "成员与校友目录",
+      "state": "retained",
+      "source": "base/src/platform/network.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-14",
+      "priority": "P1",
+      "name": "导师与学长支持",
+      "state": "retained",
+      "source": "base/src/platform/network.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-15",
+      "priority": "P1",
+      "name": "职业与机会",
+      "state": "retained",
+      "source": "base/src/platform/network.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B3-16",
+      "priority": "P2",
+      "name": "地区社群",
+      "state": "paused",
+      "source": "base/docs/CURRENT-FEATURES.md",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B4-01",
+      "priority": "P0",
+      "name": "合作方入驻",
+      "state": "retained",
+      "source": "base/src/platform/partners.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B4-02",
+      "priority": "P0",
+      "name": "地图服务目录",
+      "state": "retained",
+      "source": "base/src/platform/partners.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B4-03",
+      "priority": "P0",
+      "name": "合作方接待",
+      "state": "retained",
+      "source": "base/src/platform/business-a2a.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B4-04",
+      "priority": "P0",
+      "name": "咨询预约与工单",
+      "state": "retained",
+      "source": "base/src/platform/partners.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B4-05",
+      "priority": "P0",
+      "name": "权益与合作活动",
+      "state": "retained",
+      "source": "base/src/platform/rewards.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B4-06",
+      "priority": "P0",
+      "name": "到店或活动核销",
+      "state": "retained",
+      "source": "base/src/platform/partners.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B4-07",
+      "priority": "P0",
+      "name": "合作效果",
+      "state": "retained",
+      "source": "base/src/platform/partners.mjs",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    },
+    {
+      "id": "B4-08",
+      "priority": "P2",
+      "name": "订单及复杂交易",
+      "state": "paused",
+      "source": "base/docs/CURRENT-FEATURES.md",
+      "validation": "source retained; current tests and runtime coverage are reported separately"
+    }
+  ],
+  "runtime": {
+    "state": "PASS",
+    "at": "2026-11-07T09:31:49.320Z",
+    "checks": [
+      "real OIDC authorization-code login and opaque browser cookie",
+      "current owner identity bound to the independent school",
+      "all 23 owner-visible service links resolve through original access checks",
+      "native catalog exposes Haidian reception, six NPCs and the outdoor scene",
+      "original A2A ListTasks works under the actual browser identity"
+    ],
+    "modules": [
+      {
+        "module": "account",
+        "status": 200,
+        "path": "/m1.html"
+      },
+      {
+        "module": "avatar",
+        "status": 200,
+        "path": "/"
+      },
+      {
+        "module": "inventory",
+        "status": 200,
+        "path": "/inventory.html"
+      },
+      {
+        "module": "contacts",
+        "status": 200,
+        "path": "/contacts.html"
+      },
+      {
+        "module": "community",
+        "status": 200,
+        "path": "/community.html"
+      },
+      {
+        "module": "activities",
+        "status": 200,
+        "path": "/activities.html"
+      },
+      {
+        "module": "ranking",
+        "status": 200,
+        "path": "/ranking.html"
+      },
+      {
+        "module": "network",
+        "status": 200,
+        "path": "/network.html"
+      },
+      {
+        "module": "operations",
+        "status": 200,
+        "path": "/operations.html"
+      },
+      {
+        "module": "partners",
+        "status": 200,
+        "path": "/partners.html"
+      },
+      {
+        "module": "environment",
+        "status": 200,
+        "path": "/environment.html"
+      },
+      {
+        "module": "knowledge",
+        "status": 200,
+        "path": "/knowledge.html"
+      },
+      {
+        "module": "session-policy",
+        "status": 200,
+        "path": "/reception-admin.html"
+      },
+      {
+        "module": "agents",
+        "status": 200,
+        "path": "/agents.html"
+      },
+      {
+        "module": "agent-tasks",
+        "status": 200,
+        "path": "/agent-tasks.html"
+      },
+      {
+        "module": "admin",
+        "status": 200,
+        "path": "/admin.html"
+      },
+      {
+        "module": "profile",
+        "status": 200,
+        "path": "/profile.html"
+      },
+      {
+        "module": "social",
+        "status": 200,
+        "path": "/social.html"
+      },
+      {
+        "module": "history",
+        "status": 200,
+        "path": "/history.html"
+      },
+      {
+        "module": "rewards",
+        "status": 200,
+        "path": "/rewards.html"
+      },
+      {
+        "module": "annual",
+        "status": 200,
+        "path": "/annual.html"
+      },
+      {
+        "module": "inbox",
+        "status": 200,
+        "path": "/inbox.html"
+      },
+      {
+        "module": "jobs",
+        "status": 200,
+        "path": "/jobs.html"
+      }
+    ],
+    "health": {
+      "version": "1.1.2",
+      "provider": "hermes",
+      "generalConversation": true,
+      "receptionModel": "deepseek-flash",
+      "npcProvider": "deepseek",
+      "npcModel": "deepseek-flash",
+      "geometryHash": "07b40de81bc17fecac9fd3c326df0bffff7942d7e604e4e74a0c39f1f47b87ed"
+    }
+  },
+  "scope": "Source and interface parity; no claim of repeating every business operation, production acceptance or external merchant fulfillment."
+}

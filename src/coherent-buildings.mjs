@@ -5,15 +5,17 @@ const {default:earcut,deviation}=await import(pathToFileURL(join(baseRoot,'node_
 import {inFootprint} from '../public/pixel-campus-art.js';
 import {buildingStyle} from '../public/oblique-buildings.js';
 import {surfaceProject} from '../public/surface-depth.js';
-export const BUILDING_LANGUAGE='uw-collegiate-materials-1.0.0';
+import {buildHaidianArchitecturalMesh} from './haidian-buildings.mjs';
+export const BUILDING_LANGUAGE='haidian-photo-reviewed-architecture-1.1.0';
 const LANDMARKS={DEN:{family:'sandstone',window:'roman',roof:3.4,feature:'cupola'},SUZ:{family:'collegiate',window:'great-gothic',roof:4.8,feature:'pinnacles'},RAI:{family:'collegiate',window:'gothic',roof:4.5},SAV:{family:'collegiate',window:'gothic',roof:4.8},HUB:{family:'contemporary',window:'curtain',roof:.7},KNE:{family:'contemporary',window:'colonnade',roof:.5},OUG:{family:'contemporary',window:'curtain',roof:.6}};
 const distance=(p,a,b)=>{const dx=b[0]-a[0],dz=b[1]-a[1],d=dx*dx+dz*dz,t=d?Math.max(0,Math.min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dz)/d)):0;return Math.hypot(p[0]-a[0]-dx*t,p[1]-a[1]-dz*t);};
 export function footprintArea(rings){return rings.reduce((sum,ring,index)=>sum+(index?-1:1)*Math.abs(ring.reduce((n,p,i)=>{const q=ring[(i+1)%ring.length];return n+p[0]*q[1]-q[0]*p[1];},0))/2,0);}
 export function buildingRecipe(building){
-  const family=buildingStyle(building),override=LANDMARKS[building.code]||{},profile={family,window:['collegiate','sandstone'].includes(family)?'gothic':'regular',roof:['collegiate','sandstone','timber'].includes(family)?Math.min(4,building.height*.22):.65,...override};
-  profile.height=building.height;profile.wallHeight=building.height-profile.roof-(profile.feature==='cupola'?4.4:0);profile.wallHeight=Math.max(5,profile.wallHeight);return profile;
+  const family=building.schoolProfile?.family||buildingStyle(building),override=building.schoolProfile||LANDMARKS[building.code]||{},profile={family,window:['collegiate','sandstone'].includes(family)?'gothic':'regular',roof:['collegiate','sandstone','timber'].includes(family)?Math.min(4,building.height*.22):.65,...override};
+  profile.height=building.height;profile.wallHeight=building.height-profile.roof-(profile.feature==='cupola'?4.4:0);profile.wallHeight=Math.max(profile.family==='membrane'?2:4,profile.wallHeight);return profile;
 }
 export function buildArchitecturalMesh(building){
+  if(building.architecture)return buildHaidianArchitecturalMesh(building);
   const profile=buildingRecipe(building),rings=building.rings.map(r=>r.length>1&&r[0][0]===r.at(-1)[0]&&r[0][1]===r.at(-1)[1]?r.slice(0,-1):r),faces=[],flat=[],holes=[];let count=0;
   for(let i=0;i<rings.length;i++){if(i)holes.push(count);for(const p of rings[i]){flat.push(...p);count++;}}
   const indices=earcut(flat,holes,2),base=rings.flat(),edges=rings.flatMap(r=>r.map((a,i)=>[a,r[(i+1)%r.length]]));
@@ -23,6 +25,7 @@ export function buildArchitecturalMesh(building){
   const westWeight=p=>Math.max(0,Math.min(1,(-8-p[0])/18));
   const wallHeight=p=>building.code==='SUZ'?13.1+4.9*westWeight(p):profile.wallHeight;
   const roofHeight=p=>{
+    if(profile.family==='membrane'){const xs=base.map(p=>p[0]),zs=base.map(p=>p[1]),x0=Math.min(...xs),x1=Math.max(...xs),z0=Math.min(...zs),z1=Math.max(...zs),short=x1-x0<z1-z0,lo=short?x0:z0,hi=short?x1:z1,v=short?p[0]:p[1];return profile.wallHeight+profile.roof*Math.sqrt(Math.max(0,1-((v-(lo+hi)/2)/((hi-lo)/2))**2));}
     if(building.code==='SUZ'){
       const weight=westWeight(p),gable=Math.max(0,1-Math.abs(p[0]+43)/23),edgeEnd=Math.min(1,edgeClearance(p)/2.5);
       return wallHeight(p)+(weight*4.8*gable+(1-weight)*.45)*edgeEnd;

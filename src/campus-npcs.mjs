@@ -69,10 +69,10 @@ export function createCampusNpcs({store,nav,spaceId,model=null,now=Date.now,maxM
   async function answer({id,message,history=[],signal}){
     const p=person(id);if(!model)throw problem('npc_model_unavailable','这会儿先逛逛校园，稍后再来找我聊天吧。',503);
     watchUntil=now()+45000;await tick();await budget('chats');const w=store.read().uwCampusNpcs,n=w.people[id];
-    const state={time:formatTime(w.minute),mobility:'stationary',activity:n.activityLabel,intention:n.intention,place:nav.landmark(p.home).name,goal:p.goal,schedule:p.schedule,topics:p.topics,places:nav.places.filter(a=>['quad','red-square','fountain','hub','kane','suzzallo','raitt'].includes(a.id)).map(a=>a.name)};
+    const state={time:formatTime(w.minute),mobility:'stationary',activity:n.activityLabel,intention:n.intention,place:nav.landmark(p.home).name,goal:p.goal,schedule:p.schedule,topics:p.topics,places:nav.places.filter(a=>['ecological-garden','main-gate','river-bridge','international-teaching','gymnasium','library','art-building'].includes(a.id)).map(a=>a.name)};
     const campusFacts=Object.entries(PLACE_COPY).map(([id,text])=>({id,name:nav.landmark(id).name,text}));
     const text=await model.talk({person:p,state,feature:p.feature,campusFacts,message,history},signal);await store.transact(d=>{d.uwCampusNpcs.people[id].pauseUntil=now()+15000;});return {text,sources:[],mode:'npc-deepseek',npcId:id};
   }
-  const agents=NPC_CAST.map(p=>({agentId:p.agentId,name:p.name+' · '+p.role,description:'校园生活 AI 角色',skills:['space.information','uw.campus.route']}));
+  const agents=NPC_CAST.map(p=>({agentId:p.agentId,name:p.name+' · '+p.role,description:'校园生活 AI 角色',skills:['space.information','haidian.campus.route']}));
   return {agents,person,initialize,snapshot,answer,async observe(){watchUntil=now()+45000;await tick();return snapshot();},start(){timer=setInterval(()=>tick().catch(()=>{}),5000);timer.unref();},async close(){closed=true;clearInterval(timer);for(const c of controllers)c.abort();await pending;await activeThought;},tick};
 }

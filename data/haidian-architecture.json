@@ -1,0 +1,1412 @@
+{
+  "format": "hyper-dimension.haidian-architecture/v1",
+  "version": "1.1.0",
+  "campusId": "haidian-beijing",
+  "officialPage": "https://www.bjfles.com/environment/",
+  "sourceAccuracy": "2018 schematic layout; visually reviewed photos; dimensions and hidden surfaces estimated",
+  "recipes": {
+    "primary-dormitory": {
+      "kind": "north-dorm",
+      "height": 16.5,
+      "floors": 5,
+      "material": "brick",
+      "bay": 4.2,
+      "confidence": "multi-view-exterior",
+      "observed": [
+        "五层长条红砖体量",
+        "平屋顶/女儿墙",
+        "浅灰基座、白框窗与分段入口",
+        "东端室外短楼梯"
+      ],
+      "review": [
+        {
+          "sceneId": 38547783,
+          "sceneName": "N1楼",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547783",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38547783-f.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854813/imgs/mobile_f.jpg",
+              "sha256": "f9f4e0dce0e724b2dcfd328b177ed8877664a2daccfa8465a0c882d00caa8344"
+            },
+            {
+              "face": "r",
+              "file": "vr-38547783-r.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854813/imgs/mobile_r.jpg",
+              "sha256": "8e803375349b3d6ed5a1d61a917ca852e899a7dc2c3fcde1267953cb90c95cbc"
+            },
+            {
+              "face": "l",
+              "file": "vr-38547783-l.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854813/imgs/mobile_l.jpg",
+              "sha256": "1db5d43cac0e75d97456dc1ecf368ee605af0094e61e3d385ca28349aa9f3a4b"
+            }
+          ]
+        },
+        {
+          "sceneId": 38547789,
+          "sceneName": "N1楼东",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547789",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38547789-f.jpg",
+              "original": "https://ssl-panoimg101.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854806/imgs/mobile_f.jpg",
+              "sha256": "4a0c92055d8101d5084af3c04d6a1c387b5051e4bdb6787c66edb71bb8370dab"
+            },
+            {
+              "face": "l",
+              "file": "vr-38547789-l.jpg",
+              "original": "https://ssl-panoimg101.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854806/imgs/mobile_l.jpg",
+              "sha256": "e1b652d849e063f184bbb541809ab35d8f16679b72d40a436ab72223352e9d38"
+            }
+          ]
+        },
+        {
+          "sceneId": 130623755,
+          "sceneName": "N1楼西",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130623755",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130623755-f.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94431220/imgs/mobile_f.jpg",
+              "sha256": "b5848407534f4f90bbb92c6392fcc6d9bf311edf9886af7eb364a0bd18faf69a"
+            },
+            {
+              "face": "b",
+              "file": "vr-130623755-b.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94431220/imgs/mobile_b.jpg",
+              "sha256": "052f2bf2e962c3150e5cfb6c8e11579578233551f37b9ac8af29cd778c49dc81"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured"
+    },
+    "boys-dormitory": {
+      "kind": "louver-dorm",
+      "height": 16.5,
+      "floors": 5,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "multi-view-exterior",
+      "observed": [
+        "五层红砖长条",
+        "入口横向挑板",
+        "银灰色竖向楼梯/百叶带"
+      ],
+      "review": [
+        {
+          "sceneId": 38569694,
+          "sceneName": "N2楼",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38569694",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38569694-f.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869425/imgs/mobile_f.jpg",
+              "sha256": "fc3936dc7596321023cdd28fad20abf32bac034b24e5fb867de33c0ceaf5191b"
+            },
+            {
+              "face": "r",
+              "file": "vr-38569694-r.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869425/imgs/mobile_r.jpg",
+              "sha256": "5e8f0b0eea0c1713e70a9e64289f0c3a4c4eaede20c8fa5a353fa406a69872f6"
+            }
+          ]
+        },
+        {
+          "sceneId": 38547782,
+          "sceneName": "N2楼东",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547782",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-38547782-b.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854814/imgs/mobile_b.jpg",
+              "sha256": "b8589fe1123cff0509cdc7cbdd59bef13ed92d936dcbb317249cb8224e5f7390"
+            },
+            {
+              "face": "l",
+              "file": "vr-38547782-l.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854814/imgs/mobile_l.jpg",
+              "sha256": "c0b8d693087087e248f2f2feb0e9710a8af13205ef0f8c57f82085cad2ed999c"
+            }
+          ]
+        },
+        {
+          "sceneId": 38547783,
+          "sceneName": "N1楼",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547783",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-38547783-b.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854813/imgs/mobile_b.jpg",
+              "sha256": "bd5e2baf428f7c69be7994e0821d0b86d463769477c05d6fe47692ec2fd73636"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured"
+    },
+    "girls-dormitory": {
+      "kind": "portico-dorm",
+      "height": 16.5,
+      "floors": 5,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "multi-view-exterior",
+      "observed": [
+        "五层红砖体量",
+        "灰色圆柱入口雨棚",
+        "上部阳台与浅色水平栏板"
+      ],
+      "review": [
+        {
+          "sceneId": 38547791,
+          "sceneName": "N3楼",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547791",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-38547791-b.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854804/imgs/mobile_b.jpg",
+              "sha256": "cffc4a275a69bbe8818e884e92399456735d89cd59e544a30fe88944bbe0454f"
+            },
+            {
+              "face": "l",
+              "file": "vr-38547791-l.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854804/imgs/mobile_l.jpg",
+              "sha256": "07bf3cff78bdea911278fb2763bdcbe2ee47909c4b9b0c4d8db29567faf70c89"
+            },
+            {
+              "face": "r",
+              "file": "vr-38547791-r.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854804/imgs/mobile_r.jpg",
+              "sha256": "06ab00807d0bfaf07e9bd2e7b1761d53e5e0d12d1f9e10d225fba3a069291449"
+            }
+          ]
+        },
+        {
+          "sceneId": 38547781,
+          "sceneName": "N3楼东",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547781",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-38547781-b.jpg",
+              "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854815/imgs/mobile_b.jpg",
+              "sha256": "2cfd86ff2c3da36c92f5782f3fa99072b635caee84dadf57b842493fa1746e1e"
+            },
+            {
+              "face": "l",
+              "file": "vr-38547781-l.jpg",
+              "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854815/imgs/mobile_l.jpg",
+              "sha256": "51d156155b1dcea68be2ecbadaa0bcb04b01c50fa3b35728959dce5886204653"
+            }
+          ]
+        },
+        {
+          "sceneId": 38569694,
+          "sceneName": "N2楼",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38569694",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-38569694-b.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869425/imgs/mobile_b.jpg",
+              "sha256": "3a8961284d9c21ca90ffb263d26f4af169f2aa9e6193a35e7ee44c3265ac7552"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "axis": 3.141592653589793,
+      "orientationBasis": "北侧走道的N2/N3观察点与历史总览相对关系；柱廊朝北，朝向为图像/示意推定。"
+    },
+    "dining-hall": {
+      "kind": "north-dining",
+      "height": 11.3,
+      "floors": 3,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "multi-view-exterior",
+      "observed": [
+        "红砖餐厅体量",
+        "平顶与集中玻璃/浅面板楼梯间",
+        "南侧柱式入口、东侧门厅"
+      ],
+      "review": [
+        {
+          "sceneId": 38540111,
+          "sceneName": "食堂南门",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38540111",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-38540111-b.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23853913/imgs/mobile_b.jpg",
+              "sha256": "329e1ce245d6d7e66ea968a79d4b8680c7a8dca94db4a7a8abd2124dc33d3866"
+            }
+          ]
+        },
+        {
+          "sceneId": 38540112,
+          "sceneName": "食堂东门",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38540112",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-38540112-b.jpg",
+              "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23853914/imgs/mobile_b.jpg",
+              "sha256": "13011e1d34be143195b693519df50d9b61305424289c7ce3791fed7dc8b19a3a"
+            },
+            {
+              "face": "l",
+              "file": "vr-38540112-l.jpg",
+              "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23853914/imgs/mobile_l.jpg",
+              "sha256": "ceff96c7ff5c1d4303ffd742e3f0f4aa6d86c733e2170c7a50f91bdb7f1f9ed8"
+            }
+          ]
+        },
+        {
+          "sceneId": 38540113,
+          "sceneName": "食堂电梯路口",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38540113",
+          "views": [
+            {
+              "face": "l",
+              "file": "vr-38540113-l.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23853915/imgs/mobile_l.jpg",
+              "sha256": "a5a3119b923d96627eaf502194ad6788109c2358d54debba3b6e8b4fc89aefce"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "axis": 0
+    },
+    "primary-teaching": {
+      "kind": "teaching-wing",
+      "height": 14.0,
+      "floors": 4,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "multi-view-exterior",
+      "observed": [
+        "红砖L形教学/钢琴楼组合",
+        "平顶、窄白窗框",
+        "连接处大面玻璃竖带；庭院侧低矮曲线砖墙"
+      ],
+      "review": [
+        {
+          "sceneId": 38548726,
+          "sceneName": "N4楼",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38548726",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38548726-f.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23857851/imgs/mobile_f.jpg",
+              "sha256": "d147bf2d0810de3e39bd8eb939238f8af4a913e3c12d2109ec810a472eb215fd"
+            },
+            {
+              "face": "r",
+              "file": "vr-38548726-r.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23857851/imgs/mobile_r.jpg",
+              "sha256": "f83d4894c7184b95f98b7f472f60f4fcd73341443a38ec912d2305a94913cf93"
+            },
+            {
+              "face": "b",
+              "file": "vr-38548726-b.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23857851/imgs/mobile_b.jpg",
+              "sha256": "eb9552544658a0e9dc4a5c06bd25fc7d81f21b6f5773cde203e673981e3e44f8"
+            },
+            {
+              "face": "l",
+              "file": "vr-38548726-l.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23857851/imgs/mobile_l.jpg",
+              "sha256": "e968c17abb7ba9ce006a955c7d3f9eeda1a5fec66da885ded7c6e6c892dcbbe4"
+            }
+          ]
+        },
+        {
+          "sceneId": 38547787,
+          "sceneName": "N4楼东",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547787",
+          "views": [
+            {
+              "face": "r",
+              "file": "vr-38547787-r.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854808/imgs/mobile_r.jpg",
+              "sha256": "0bf0ab8a82fc501791094e020d0e6698fb4759d5457b8e0ded7d148b085399e6"
+            },
+            {
+              "face": "l",
+              "file": "vr-38547787-l.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854808/imgs/mobile_l.jpg",
+              "sha256": "e436b3e436a46c389e9e06e35a2f7b2707634fdb7ac1a538047665d22a624b99"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured"
+    },
+    "library": {
+      "kind": "round-library",
+      "height": 10.5,
+      "floors": 3,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "multi-view-exterior",
+      "observed": [
+        "三层红砖圆弧西端",
+        "沿弧面连续横向窗带",
+        "平顶、女儿墙与白窗框"
+      ],
+      "review": [
+        {
+          "sceneId": 38547780,
+          "sceneName": "图书馆西",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547780",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38547780-f.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854816/imgs/mobile_f.jpg",
+              "sha256": "99cef9f99cd51559411fdf7efe5d1c21ab3bd20a8ab29751ef5f202c5952ff22"
+            },
+            {
+              "face": "r",
+              "file": "vr-38547780-r.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854816/imgs/mobile_r.jpg",
+              "sha256": "f08bdae65d1e7e16f6d4d3106bc3835cf965098ff563ae22e4298504c60bd061"
+            }
+          ]
+        },
+        {
+          "sceneId": 38547785,
+          "sceneName": "图书馆南",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547785",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38547785-f.jpg",
+              "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854811/imgs/mobile_f.jpg",
+              "sha256": "8ad5b1ef0b4711fc9d3e17d31f11261daabf0eceecd45702116e7fb1bf99ae35"
+            },
+            {
+              "face": "r",
+              "file": "vr-38547785-r.jpg",
+              "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854811/imgs/mobile_r.jpg",
+              "sha256": "9c2430ce6fca23be7e1fb0d4a6c32562ca5b173658273c2d583c7e1ea66b87ea"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "axis": 0
+    },
+    "primary-complex": {
+      "kind": "teaching-wing",
+      "height": 14.2,
+      "floors": 4,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "shared-complex-exterior",
+      "observed": [
+        "N5连续红砖楼群",
+        "平顶与规则窗带",
+        "楼梯间竖向玻璃条；不把独立翼部当作已测绘"
+      ],
+      "review": [
+        {
+          "sceneId": 38547785,
+          "sceneName": "图书馆南",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547785",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38547785-f.jpg",
+              "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854811/imgs/mobile_f.jpg",
+              "sha256": "8ad5b1ef0b4711fc9d3e17d31f11261daabf0eceecd45702116e7fb1bf99ae35"
+            },
+            {
+              "face": "r",
+              "file": "vr-38547785-r.jpg",
+              "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854811/imgs/mobile_r.jpg",
+              "sha256": "9c2430ce6fca23be7e1fb0d4a6c32562ca5b173658273c2d583c7e1ea66b87ea"
+            }
+          ]
+        },
+        {
+          "sceneId": 38547780,
+          "sceneName": "图书馆西",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547780",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38547780-f.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854816/imgs/mobile_f.jpg",
+              "sha256": "99cef9f99cd51559411fdf7efe5d1c21ab3bd20a8ab29751ef5f202c5952ff22"
+            },
+            {
+              "face": "r",
+              "file": "vr-38547780-r.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854816/imgs/mobile_r.jpg",
+              "sha256": "f08bdae65d1e7e16f6d4d3106bc3835cf965098ff563ae22e4298504c60bd061"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "connectorEnd": true
+    },
+    "laboratory": {
+      "kind": "laboratory-wing",
+      "height": 14.2,
+      "floors": 4,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "shared-complex-exterior",
+      "observed": [
+        "N5红砖楼群东段",
+        "平顶、竖向玻璃楼梯",
+        "实验翼部依据历史图定位，独立外立面未完全分离"
+      ],
+      "review": [
+        {
+          "sceneId": 38547785,
+          "sceneName": "图书馆南",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547785",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38547785-f.jpg",
+              "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854811/imgs/mobile_f.jpg",
+              "sha256": "8ad5b1ef0b4711fc9d3e17d31f11261daabf0eceecd45702116e7fb1bf99ae35"
+            },
+            {
+              "face": "r",
+              "file": "vr-38547785-r.jpg",
+              "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854811/imgs/mobile_r.jpg",
+              "sha256": "9c2430ce6fca23be7e1fb0d4a6c32562ca5b173658273c2d583c7e1ea66b87ea"
+            }
+          ]
+        },
+        {
+          "sceneId": 38547780,
+          "sceneName": "图书馆西",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547780",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38547780-f.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854816/imgs/mobile_f.jpg",
+              "sha256": "99cef9f99cd51559411fdf7efe5d1c21ab3bd20a8ab29751ef5f202c5952ff22"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured"
+    },
+    "art-building": {
+      "kind": "teaching-wing",
+      "height": 10.6,
+      "floors": 3,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "shared-complex-exterior",
+      "observed": [
+        "N6红砖艺术/综合楼群",
+        "低矮横向翼部与平顶",
+        "独立翼部受树木遮挡，保留历史组合轮廓"
+      ],
+      "review": [
+        {
+          "sceneId": 38540123,
+          "sceneName": "名人名言广场",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38540123",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-38540123-b.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23853925/imgs/mobile_b.jpg",
+              "sha256": "d305f0df77cc9f5ab5f1bd9c074b89b9071ad59745152e8cc64d7d68b32e3950"
+            },
+            {
+              "face": "l",
+              "file": "vr-38540123-l.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23853925/imgs/mobile_l.jpg",
+              "sha256": "679502528578d0375ba367a496f1dfe82edf343175006c7392cebb6317dbfa16"
+            }
+          ]
+        },
+        {
+          "sceneId": 38547784,
+          "sceneName": "N6楼南",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547784",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-38547784-b.jpg",
+              "original": "https://ssl-panoimg101.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854812/imgs/mobile_b.jpg",
+              "sha256": "30e0f5b7651cf6dffa196fd8ae30e946930df6341e85879ce4c0678c3d99b318"
+            },
+            {
+              "face": "l",
+              "file": "vr-38547784-l.jpg",
+              "original": "https://ssl-panoimg101.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854812/imgs/mobile_l.jpg",
+              "sha256": "9e342d6d3579f60cd0ce7e4a0857d75f9069a7672bec42010c4d6686d1176243"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured"
+    },
+    "middle-complex": {
+      "kind": "main-complex",
+      "height": 13.8,
+      "floors": 4,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "shared-complex-exterior",
+      "observed": [
+        "红砖主楼",
+        "入口两层高蓝色玻璃中厅",
+        "浅色三角山花/檐口与门廊"
+      ],
+      "review": [
+        {
+          "sceneId": 38540123,
+          "sceneName": "名人名言广场",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38540123",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-38540123-b.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23853925/imgs/mobile_b.jpg",
+              "sha256": "d305f0df77cc9f5ab5f1bd9c074b89b9071ad59745152e8cc64d7d68b32e3950"
+            },
+            {
+              "face": "l",
+              "file": "vr-38540123-l.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23853925/imgs/mobile_l.jpg",
+              "sha256": "679502528578d0375ba367a496f1dfe82edf343175006c7392cebb6317dbfa16"
+            }
+          ]
+        },
+        {
+          "sceneId": 38547784,
+          "sceneName": "N6楼南",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38547784",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-38547784-b.jpg",
+              "original": "https://ssl-panoimg101.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854812/imgs/mobile_b.jpg",
+              "sha256": "30e0f5b7651cf6dffa196fd8ae30e946930df6341e85879ce4c0678c3d99b318"
+            },
+            {
+              "face": "l",
+              "file": "vr-38547784-l.jpg",
+              "original": "https://ssl-panoimg101.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23854812/imgs/mobile_l.jpg",
+              "sha256": "9e342d6d3579f60cd0ce7e4a0857d75f9069a7672bec42010c4d6686d1176243"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "axis": -1.5707963267948966,
+      "additionalReference": {
+        "source": "https://www.bjfles.com/environment/",
+        "localResearchFile": "sources/campus-plan.jpg",
+        "observed": "官网全景入口封面：N6红砖、两层高玻璃入口及浅色山花"
+      },
+      "orientationBasis": "名人名言广场与东门的相对位置；玻璃主入口朝东，朝向为图像/示意推定。"
+    },
+    "senior-teaching": {
+      "kind": "teaching-wing",
+      "height": 14.2,
+      "floors": 4,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "interior-only",
+      "observed": [
+        "官方高中教室可确认校内用途，无法从室内照片确认整栋外形",
+        "保守使用历史轮廓与校园红砖平顶语言，外形继续待核"
+      ],
+      "review": [
+        {
+          "sceneId": 130608866,
+          "sceneName": "高中楼教室",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130608866",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130608866-f.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94382474/imgs/mobile_f.jpg",
+              "sha256": "7caefa0559a4fbe14858506fa9973722be51da7eda27b23519a5dd54e45157b5"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured"
+    },
+    "gymnasium": {
+      "kind": "sports-hall",
+      "height": 12.6,
+      "floors": 2,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "exterior-context-and-interior",
+      "observed": [
+        "体育区红砖/浅色组合",
+        "深灰坡屋顶、跨度较大的厅体",
+        "利用球场远景与体育馆内景核对，独立外墙仍为局部依据"
+      ],
+      "review": [
+        {
+          "sceneId": 130623761,
+          "sceneName": "北校篮球场",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130623761",
+          "views": [
+            {
+              "face": "r",
+              "file": "vr-130623761-r.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94297787/imgs/mobile_r.jpg",
+              "sha256": "d2603e1b9e430b502f4502290d303718c0e101b1f33dbe020289e3df46b3f96d"
+            }
+          ]
+        },
+        {
+          "sceneId": 130623756,
+          "sceneName": "田径场",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130623756",
+          "views": [
+            {
+              "face": "r",
+              "file": "vr-130623756-r.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94421983/imgs/mobile_r.jpg",
+              "sha256": "d2bbeca09dc3bc2c23f49a4b38a574568ac9e85b398f072e824fb02a488257c0"
+            },
+            {
+              "face": "l",
+              "file": "vr-130623756-l.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94421983/imgs/mobile_l.jpg",
+              "sha256": "9f737b0a591150d4b2e21df64395cf94c7935f89440a8eb5a20f471a01c849c9"
+            }
+          ]
+        },
+        {
+          "sceneId": 130627027,
+          "sceneName": "体育馆",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130627027",
+          "views": [
+            {
+              "face": "r",
+              "file": "vr-130627027-r.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94447880/imgs/mobile_r.jpg",
+              "sha256": "e3e90778dd74ce01c02563d7b8684e2df1e285ea8d6bb9d003e7775622373ee3"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "roofRise": 2.7,
+      "roofMaterial": "slate"
+    },
+    "swimming-hall": {
+      "kind": "pool-hall",
+      "height": 10.8,
+      "floors": 2,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "exterior-context-and-interior",
+      "observed": [
+        "低层大跨度厅体",
+        "深色坡顶与高窗带",
+        "泳馆内景钢结构屋架；外墙分界仍依历史图"
+      ],
+      "review": [
+        {
+          "sceneId": 130623761,
+          "sceneName": "北校篮球场",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130623761",
+          "views": [
+            {
+              "face": "r",
+              "file": "vr-130623761-r.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94297787/imgs/mobile_r.jpg",
+              "sha256": "d2603e1b9e430b502f4502290d303718c0e101b1f33dbe020289e3df46b3f96d"
+            }
+          ]
+        },
+        {
+          "sceneId": 130623760,
+          "sceneName": "北校网球场",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130623760",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-130623760-b.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94297964/imgs/mobile_b.jpg",
+              "sha256": "3f2678d2809d9ada7776f1ae7e27aa125cef66cea5d18522148bf385994bfa6f"
+            },
+            {
+              "face": "l",
+              "file": "vr-130623760-l.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94297964/imgs/mobile_l.jpg",
+              "sha256": "55df1386962441ddce0e43d73ea20d4eadfc996f180727c83e642da066954a0d"
+            }
+          ]
+        },
+        {
+          "sceneId": 130623757,
+          "sceneName": "游泳馆",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130623757",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130623757-f.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94431365/imgs/mobile_f.jpg",
+              "sha256": "1b1b9af994f5e6b6517cbcb5aa36c9d882bb1924e166a3bce56c6d79d80eb94a"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "roofRise": 2.7,
+      "roofMaterial": "slate"
+    },
+    "table-tennis-dome": {
+      "kind": "air-dome",
+      "height": 13.0,
+      "floors": 1,
+      "material": "membrane",
+      "bay": 3.8,
+      "confidence": "exterior-context-and-interior",
+      "observed": [
+        "浅色充气膜弧壳",
+        "低裙边与圆钝端部",
+        "无常规楼层窗格"
+      ],
+      "review": [
+        {
+          "sceneId": 130623756,
+          "sceneName": "田径场",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130623756",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130623756-f.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94421983/imgs/mobile_f.jpg",
+              "sha256": "eafea40dfa2ea6f95e24d5a4461ccb20c50960f949725a12aaff9f0734221c1e"
+            },
+            {
+              "face": "r",
+              "file": "vr-130623756-r.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94421983/imgs/mobile_r.jpg",
+              "sha256": "d2bbeca09dc3bc2c23f49a4b38a574568ac9e85b398f072e824fb02a488257c0"
+            }
+          ]
+        },
+        {
+          "sceneId": 40671541,
+          "sceneName": "乒羽中心",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=40671541",
+          "views": [
+            {
+              "face": "l",
+              "file": "vr-40671541-l.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/24780298/imgs/mobile_l.jpg",
+              "sha256": "2155fbe6e368bb494471e99e451b0483cc31893a0114f4d757ab421fa449ae1e"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured"
+    },
+    "fencing-center": {
+      "kind": "air-dome",
+      "height": 11.0,
+      "floors": 1,
+      "material": "membrane",
+      "bay": 3.8,
+      "confidence": "exterior-context-and-interior",
+      "observed": [
+        "浅色充气膜拱壳",
+        "气膜跨度与侧面低入口",
+        "无红砖高墙或常规楼层窗格"
+      ],
+      "review": [
+        {
+          "sceneId": 130623756,
+          "sceneName": "田径场",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130623756",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130623756-f.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94421983/imgs/mobile_f.jpg",
+              "sha256": "eafea40dfa2ea6f95e24d5a4461ccb20c50960f949725a12aaff9f0734221c1e"
+            },
+            {
+              "face": "r",
+              "file": "vr-130623756-r.jpg",
+              "original": "https://ssl-panoimg140.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/94421983/imgs/mobile_r.jpg",
+              "sha256": "d2bbeca09dc3bc2c23f49a4b38a574568ac9e85b398f072e824fb02a488257c0"
+            }
+          ]
+        },
+        {
+          "sceneId": 40671543,
+          "sceneName": "击剑中心",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=40671543",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-40671543-b.jpg",
+              "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/24780297/imgs/mobile_b.jpg",
+              "sha256": "f5d542cdb03b0144dfcae1add9b991c250fb7cec367b093e6280cd16d146184a"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured"
+    },
+    "sports-service": {
+      "kind": "unverified-annex",
+      "height": 3.6,
+      "floors": 1,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "unverified-exterior",
+      "observed": [
+        "尚无N12可独立定位的外景；采用历史图低矮附属体量，细部不作实景确认"
+      ],
+      "review": [],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "axis": 0
+    },
+    "chinese-pavilion": {
+      "kind": "chinese-courtyard",
+      "height": 6.2,
+      "floors": 1,
+      "material": "pavilion",
+      "bay": 3.8,
+      "confidence": "multi-view-exterior",
+      "observed": [
+        "开放红柱与绿/金彩绘梁架",
+        "灰瓦四坡翘檐和屋脊",
+        "石平台、台阶、侧翼连廊与中间开敞庭院",
+        "不是封闭红砖楼房"
+      ],
+      "review": [
+        {
+          "sceneId": 38553235,
+          "sceneName": "中华文化园",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38553235",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38553235-f.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859695/imgs/mobile_f.jpg",
+              "sha256": "cbbbfdd1d93019b06878086a2a01cfbcebfd809ada5cc88ba766d0d9e6bb5797"
+            },
+            {
+              "face": "b",
+              "file": "vr-38553235-b.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859695/imgs/mobile_b.jpg",
+              "sha256": "84a8723115f7b046c194c0c18c2d485c777e7cbe9653c86cfa9d051d11f53b7e"
+            }
+          ]
+        },
+        {
+          "sceneId": 38553236,
+          "sceneName": "中华文化园",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38553236",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38553236-f.jpg",
+              "original": "https://ssl-panoimg101.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859693/imgs/mobile_f.jpg",
+              "sha256": "b505a5d806afbe5d45a4a3be94cbf5da43fe1ade1dd32df43cbcf0404c3c0315"
+            },
+            {
+              "face": "r",
+              "file": "vr-38553236-r.jpg",
+              "original": "https://ssl-panoimg101.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859693/imgs/mobile_r.jpg",
+              "sha256": "503c0e9107c8e84ceb48e0e4bdefb9c3a87bd5e1cbd9d2469e1539714b20ee96"
+            },
+            {
+              "face": "b",
+              "file": "vr-38553236-b.jpg",
+              "original": "https://ssl-panoimg101.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859693/imgs/mobile_b.jpg",
+              "sha256": "ccbac73a030151e5bdf78e95485424c152333e9d62dd74fd43f32bab38d8ab42"
+            },
+            {
+              "face": "l",
+              "file": "vr-38553236-l.jpg",
+              "original": "https://ssl-panoimg101.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859693/imgs/mobile_l.jpg",
+              "sha256": "0ba85384f8db6bd37667df54eaf8f6e66ebf3eaf7d619894cae68afd079fc571"
+            }
+          ]
+        },
+        {
+          "sceneId": 38553239,
+          "sceneName": "中华文化园",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38553239",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38553239-f.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859694/imgs/mobile_f.jpg",
+              "sha256": "cf63083433df2989b1b5dff784e789dc6813eee2570e1057d5a73685fa48d292"
+            },
+            {
+              "face": "r",
+              "file": "vr-38553239-r.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859694/imgs/mobile_r.jpg",
+              "sha256": "934fbf30d42e3356e67e4ba7db2a785709eeeb847a95dd61f44990228f9f98c2"
+            },
+            {
+              "face": "b",
+              "file": "vr-38553239-b.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859694/imgs/mobile_b.jpg",
+              "sha256": "16b0054226a4ae77f4ccbdc9dad03fe4c1f4072e7690b3fe925d93130a8d2449"
+            },
+            {
+              "face": "l",
+              "file": "vr-38553239-l.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859694/imgs/mobile_l.jpg",
+              "sha256": "96b762ae1fa29a673f209f18ade547a408a9ce3e66ba2ff30292af2329ad41e5"
+            }
+          ]
+        },
+        {
+          "sceneId": 38553240,
+          "sceneName": "文化园山坡亭子",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=38553240",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-38553240-f.jpg",
+              "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859690/imgs/mobile_f.jpg",
+              "sha256": "7157fb259b6ae120ef706064106ca01400e269d14adabc91329da44cfe5133f3"
+            },
+            {
+              "face": "r",
+              "file": "vr-38553240-r.jpg",
+              "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859690/imgs/mobile_r.jpg",
+              "sha256": "2e930a0d9d5b76cacbcf4abafe7f6b2dd393b939ca40f074ce890fedccf0f2d4"
+            },
+            {
+              "face": "b",
+              "file": "vr-38553240-b.jpg",
+              "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859690/imgs/mobile_b.jpg",
+              "sha256": "28a3a16d3117b5d136b22bf049c263444144dae2622193d271eb6272d42c70bd"
+            },
+            {
+              "face": "l",
+              "file": "vr-38553240-l.jpg",
+              "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859690/imgs/mobile_l.jpg",
+              "sha256": "4a71bea649f294ea89d7bdc7f44066e838288b7e240109a9fe575e158dda21d1"
+            },
+            {
+              "face": "u",
+              "file": "vr-38553240-u.jpg",
+              "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23859690/imgs/mobile_u.jpg",
+              "sha256": "004412ecfd43a7e97efc56f766231780ef1eeb2554fd6cd3c5c78912f8da22e4"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "axis": 0
+    },
+    "international-teaching": {
+      "kind": "international-low",
+      "height": 7.8,
+      "floors": 2,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "partial-exterior",
+      "observed": [
+        "低层两层红砖长条",
+        "浅色基座、宽幅深窗与金属百叶带",
+        "平顶与局部较高的端部厅体"
+      ],
+      "review": [
+        {
+          "sceneId": 130585917,
+          "sceneName": "S4楼北",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585917",
+          "views": [
+            {
+              "face": "l",
+              "file": "vr-130585917-l.jpg",
+              "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869720/imgs/mobile_l.jpg",
+              "sha256": "9e3f5785b3da3d231cbc86d7c84ea0efebe77722fad17bc10bf0cd44d5f8c3be"
+            }
+          ]
+        },
+        {
+          "sceneId": 130585913,
+          "sceneName": "南校亭子",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585913",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130585913-f.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869712/imgs/mobile_f.jpg",
+              "sha256": "3865179ef8990b80346a5342cd0250fc1de7d03f3341e3f5aed6134179d313c7"
+            },
+            {
+              "face": "l",
+              "file": "vr-130585913-l.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869712/imgs/mobile_l.jpg",
+              "sha256": "825566758561714b7d546a5127457bb1edc421f4684a88aa1649786a37b17b76"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured"
+    },
+    "liberal-arts": {
+      "kind": "curved-stone",
+      "height": 11.4,
+      "floors": 3,
+      "material": "stone",
+      "bay": 3.8,
+      "confidence": "multi-view-exterior",
+      "observed": [
+        "三层浅石材板墙",
+        "弧形轮廓、横向窗带与玻璃转角",
+        "浅色薄挑檐和底层玻璃入口"
+      ],
+      "review": [
+        {
+          "sceneId": 130585909,
+          "sceneName": "S5楼",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585909",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130585909-f.jpg",
+              "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869716/imgs/mobile_f.jpg",
+              "sha256": "e96ea89c55b7f0087a13d84441c68dfe3a40f4f059eee61975c956c587ae2802"
+            },
+            {
+              "face": "r",
+              "file": "vr-130585909-r.jpg",
+              "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869716/imgs/mobile_r.jpg",
+              "sha256": "4db2e1aaa8b2f841ee48d8080859ba55a2f8cf005309e5bba816a748e1cdcb8c"
+            },
+            {
+              "face": "b",
+              "file": "vr-130585909-b.jpg",
+              "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869716/imgs/mobile_b.jpg",
+              "sha256": "84e86364f5582f206cbd3becd34a67722ef129ade376ed7ef3452a21993e5329"
+            }
+          ]
+        },
+        {
+          "sceneId": 130585916,
+          "sceneName": "南小花园",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585916",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130585916-f.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869713/imgs/mobile_f.jpg",
+              "sha256": "19979a6bfef0b3ec7bc12518a5cbb658a22ff1e6271d3c19337d70d81cc97cd6"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "roofSlope": [
+        0.4,
+        0
+      ]
+    },
+    "middle-teaching": {
+      "kind": "curved-stone",
+      "height": 11.4,
+      "floors": 3,
+      "material": "stone",
+      "bay": 3.8,
+      "confidence": "multi-view-exterior",
+      "observed": [
+        "三层浅石材弧面楼体",
+        "连续深色窗带",
+        "突出的玻璃门厅及大挑檐"
+      ],
+      "review": [
+        {
+          "sceneId": 130585910,
+          "sceneName": "S6楼",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585910",
+          "views": [
+            {
+              "face": "b",
+              "file": "vr-130585910-b.jpg",
+              "original": "https://ssl-panoimg105.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869714/imgs/mobile_b.jpg",
+              "sha256": "57774b55fe45f10d4d611c09b29961ffc103ebb40971243203252cea3e657419"
+            }
+          ]
+        },
+        {
+          "sceneId": 130585911,
+          "sceneName": "S6楼西",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585911",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130585911-f.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869721/imgs/mobile_f.jpg",
+              "sha256": "745a2d60053324f3b815215e7f595626eaf4f0f4653b970c09e435d6488533ed"
+            }
+          ]
+        },
+        {
+          "sceneId": 130585916,
+          "sceneName": "南小花园",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585916",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130585916-f.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869713/imgs/mobile_f.jpg",
+              "sha256": "19979a6bfef0b3ec7bc12518a5cbb658a22ff1e6271d3c19337d70d81cc97cd6"
+            },
+            {
+              "face": "b",
+              "file": "vr-130585916-b.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869713/imgs/mobile_b.jpg",
+              "sha256": "a2fa59c2a6058851217cd765b7fec4575bde2a22b1e19203956b4a4f9c4674e3"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "roofSlope": [
+        0.4,
+        0
+      ]
+    },
+    "south-boys-dormitory": {
+      "kind": "curved-stone",
+      "height": 11.4,
+      "floors": 3,
+      "material": "stone",
+      "bay": 3.8,
+      "confidence": "multi-view-exterior",
+      "observed": [
+        "三层浅石材/玻璃楼体",
+        "弧形端部与带形窗",
+        "端部有较明显的上挑薄屋面"
+      ],
+      "review": [
+        {
+          "sceneId": 130585912,
+          "sceneName": "S7楼",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585912",
+          "views": [
+            {
+              "face": "r",
+              "file": "vr-130585912-r.jpg",
+              "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869710/imgs/mobile_r.jpg",
+              "sha256": "695bc601a620cb7e3231a739a2bfc29bd209d89689b189faafde1789560d0aa3"
+            },
+            {
+              "face": "b",
+              "file": "vr-130585912-b.jpg",
+              "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869710/imgs/mobile_b.jpg",
+              "sha256": "273c34d903e7dc620390f32565aeee458afeaa556b5727bf14f88fc0d9190e80"
+            },
+            {
+              "face": "l",
+              "file": "vr-130585912-l.jpg",
+              "original": "https://ssl-panoimg107.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869710/imgs/mobile_l.jpg",
+              "sha256": "86b96decd5b8013d79c7da719b3ae8323705a97f5b7b98e4a4b13a2648982ef1"
+            }
+          ]
+        },
+        {
+          "sceneId": 130585911,
+          "sceneName": "S6楼西",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585911",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130585911-f.jpg",
+              "original": "https://ssl-panoimg106.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869721/imgs/mobile_f.jpg",
+              "sha256": "745a2d60053324f3b815215e7f595626eaf4f0f4653b970c09e435d6488533ed"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "roofSlope": [
+        1.5,
+        0
+      ]
+    },
+    "south-primary-dormitory": {
+      "kind": "teaching-wing",
+      "height": 10.7,
+      "floors": 3,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "multi-view-exterior",
+      "observed": [
+        "三层红砖长条体量",
+        "平顶和高窄楼梯窗",
+        "餐厅北侧观察点可见S1楼牌；历史名称不等同当前住宿分配"
+      ],
+      "review": [
+        {
+          "sceneId": 130585907,
+          "sceneName": "S1楼",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585907",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130585907-f.jpg",
+              "original": "https://ssl-panoimg104.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869719/imgs/mobile_f.jpg",
+              "sha256": "e3ff55bb294f8f30394816e8e11628903c0aaf9900bec821dd832f9113d48afa"
+            }
+          ]
+        },
+        {
+          "sceneId": 130585908,
+          "sceneName": "南校食堂",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585908",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130585908-f.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869718/imgs/mobile_f.jpg",
+              "sha256": "73434414d9a79f5d4a7ee587e09e2af5e1ac59723e20b7aa01c70f2dd3f27926"
+            },
+            {
+              "face": "r",
+              "file": "vr-130585908-r.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869718/imgs/mobile_r.jpg",
+              "sha256": "4423b1009b2fa2ca1186883421565db5be715caf0ca1b0f9ebacefd1afb4e3ea"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured"
+    },
+    "south-dining": {
+      "kind": "south-dining",
+      "height": 12.2,
+      "floors": 2,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "multi-view-exterior",
+      "observed": [
+        "长条红砖餐厅/艺术楼体",
+        "深灰坡屋面",
+        "高竖窗、中央玻璃中厅和前凸玻璃门厅"
+      ],
+      "review": [
+        {
+          "sceneId": 130585908,
+          "sceneName": "南校食堂",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585908",
+          "views": [
+            {
+              "face": "r",
+              "file": "vr-130585908-r.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869718/imgs/mobile_r.jpg",
+              "sha256": "4423b1009b2fa2ca1186883421565db5be715caf0ca1b0f9ebacefd1afb4e3ea"
+            },
+            {
+              "face": "b",
+              "file": "vr-130585908-b.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869718/imgs/mobile_b.jpg",
+              "sha256": "072546d19c06a360c8b935fd05528e6c82b9db9d7dfc2fe62317e43c08a0e52f"
+            },
+            {
+              "face": "l",
+              "file": "vr-130585908-l.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/23869718/imgs/mobile_l.jpg",
+              "sha256": "2bbea854d8e8167c1b29b97566fa6c661a8fa124e02fa542c826fc50071ce9a2"
+            }
+          ]
+        },
+        {
+          "sceneId": 130585920,
+          "sceneName": "南校食堂",
+          "source": "https://720yun.com/t/b2vkue1es1q?scene_id=130585920",
+          "views": [
+            {
+              "face": "f",
+              "file": "vr-130585920-f.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/24780734/imgs/mobile_f.jpg",
+              "sha256": "bb3dbc5418c44aec83d0f1857431026490288967bad2435fd1632916f22bdf4d"
+            },
+            {
+              "face": "r",
+              "file": "vr-130585920-r.jpg",
+              "original": "https://ssl-panoimg103.720static.com/resource/prod/9d1355e0s7t/833jOgyaey0/24780734/imgs/mobile_r.jpg",
+              "sha256": "3d65eb24ead4053a9f1fd562b0d145236be4f85385a27c6c5cc8836e4a9c504e"
+            }
+          ]
+        }
+      ],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "axis": 0
+    },
+    "south-girls-dormitory": {
+      "kind": "unverified-annex",
+      "height": 10.7,
+      "floors": 3,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "unverified-exterior",
+      "observed": [
+        "尚无可靠S3独立外景；保留历史轮廓并谨慎采用低层红砖语言"
+      ],
+      "review": [],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "axis": 0
+    },
+    "language-training": {
+      "kind": "training-hall",
+      "height": 6.5,
+      "floors": 1,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "unverified-exterior",
+      "observed": [
+        "历史示意标为网球训练馆；暂无可明确对应的外景，不借用室外球场照片确认室内体量"
+      ],
+      "review": [],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "axis": 0
+    },
+    "south-gatehouse": {
+      "kind": "unverified-annex",
+      "height": 6.5,
+      "floors": 2,
+      "material": "brick",
+      "bay": 3.8,
+      "confidence": "unverified-exterior",
+      "observed": [
+        "尚无可靠S10独立外景；以历史附属轮廓保守处理，不编造入口与装饰"
+      ],
+      "review": [],
+      "dimensionStatus": "photo-informed visual estimate; not measured",
+      "axis": 0
+    }
+  }
+}
